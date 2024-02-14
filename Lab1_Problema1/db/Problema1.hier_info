@@ -1,0 +1,21 @@
+|Problema1
+a => Decoder0.IN0
+b => Decoder0.IN1
+c => Decoder0.IN2
+d => Decoder0.IN3
+s1[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+s1[1] <= <VCC>
+s1[2] <= <VCC>
+s1[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+s1[4] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+s1[5] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+s1[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+s2[0] <= <GND>
+s2[1] <= <GND>
+s2[2] <= <GND>
+s2[3] <= <GND>
+s2[4] <= <GND>
+s2[5] <= <GND>
+s2[6] <= <GND>
+
+
