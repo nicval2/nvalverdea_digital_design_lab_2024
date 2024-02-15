@@ -62,3 +62,21 @@ set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_location_assignment PIN_AF10 -to a
+set_location_assignment PIN_AF9 -to b
+set_location_assignment PIN_AC12 -to c
+set_location_assignment PIN_AB12 -to d
+set_location_assignment PIN_AD27 -to s1[6]
+set_location_assignment PIN_AF30 -to s1[5]
+set_location_assignment PIN_AF29 -to s1[4]
+set_location_assignment PIN_AG30 -to s1[3]
+set_location_assignment PIN_AH30 -to s1[2]
+set_location_assignment PIN_AH29 -to s1[1]
+set_location_assignment PIN_AJ29 -to s1[0]
+set_location_assignment PIN_AH28 -to s2[6]
+set_location_assignment PIN_AG28 -to s2[5]
+set_location_assignment PIN_AF28 -to s2[4]
+set_location_assignment PIN_AG27 -to s2[3]
+set_location_assignment PIN_AE28 -to s2[2]
+set_location_assignment PIN_AE27 -to s2[1]
+set_location_assignment PIN_AE26 -to s2[0]
