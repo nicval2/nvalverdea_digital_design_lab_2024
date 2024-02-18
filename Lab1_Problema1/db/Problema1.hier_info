@@ -3,19 +3,19 @@ a => Decoder0.IN0
 b => Decoder0.IN1
 c => Decoder0.IN2
 d => Decoder0.IN3
-s1[0] <= <VCC>
-s1[1] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-s1[2] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-s1[3] <= <VCC>
-s1[4] <= <VCC>
-s1[5] <= <VCC>
-s1[6] <= <VCC>
-s2[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
-s2[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
-s2[2] <= segments2.DB_MAX_OUTPUT_PORT_TYPE
-s2[3] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
-s2[4] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
-s2[5] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
-s2[6] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+s1[0] << <VCC>
+s1[1] << WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+s1[2] << WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+s1[3] << <VCC>
+s1[4] << <VCC>
+s1[5] << <VCC>
+s1[6] << <VCC>
+s2[0] << WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+s2[1] << WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+s2[2] << segments2.DB_MAX_OUTPUT_PORT_TYPE
+s2[3] << WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+s2[4] << WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+s2[5] << WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+s2[6] << WideOr1.DB_MAX_OUTPUT_PORT_TYPE
 
 

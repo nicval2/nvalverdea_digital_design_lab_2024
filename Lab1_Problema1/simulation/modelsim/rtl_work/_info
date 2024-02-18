@@ -11,24 +11,24 @@ cModel Technology
 Z0 dC:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/Lab1_Problema1/simulation/modelsim
 vProblema1
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1708114366
+Z2 !s110 1708227125
 !i10b 1
-!s100 8R3:eVojzQCGB[IO2T1U73
+!s100 Q8@Bg>GE8RX<TY3J:@kRf1
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-I3gzJXFc65KWTKP=I_i:V?2
+I;6o3hPK4;RVCEn@N3zC]V0
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-w1708114258
+w1708120497
 8C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/Lab1_Problema1/Problema1.sv
 FC:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/Lab1_Problema1/Problema1.sv
 !i122 0
-L0 1 109
+L0 1 111
 Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1708114366.000000
+Z6 !s108 1708227125.000000
 !s107 C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/Lab1_Problema1/Problema1.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/Lab1_Problema1|C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/Lab1_Problema1/Problema1.sv|
 !i113 1
@@ -40,17 +40,17 @@ vProblema1_tb
 R1
 R2
 !i10b 1
-!s100 O<ElYnB0U1^Ech5QGBVA51
+!s100 9=WINjnTi;Ri?51STeng92
 R3
-IVISBUVlaMcBUPOBa6mz3l0
+IX<HcG[@:>TO:T2TZo>Y[P1
 R4
 S1
 R0
-w1708028936
+w1708226791
 8C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/Lab1_Problema1/Problema1_tb.sv
 FC:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/Lab1_Problema1/Problema1_tb.sv
 !i122 1
-L0 1 40
+L0 1 58
 R5
 r1
 !s85 0
