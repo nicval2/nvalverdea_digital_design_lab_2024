@@ -1,0 +1,61 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "oCarry",
+					"strict" : false
+				},
+				{
+					"name" : "ovSuma_4bit[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ovSuma_4bit[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ovSuma_4bit[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ovSuma_4bit[3]",
+					"strict" : false
+				},
+				{
+					"name" : "iAv[3]",
+					"strict" : false
+				},
+				{
+					"name" : "iBv[3]",
+					"strict" : false
+				},
+				{
+					"name" : "iAv[2]",
+					"strict" : false
+				},
+				{
+					"name" : "iBv[2]",
+					"strict" : false
+				},
+				{
+					"name" : "iAv[1]",
+					"strict" : false
+				},
+				{
+					"name" : "iBv[1]",
+					"strict" : false
+				},
+				{
+					"name" : "iAv[0]",
+					"strict" : false
+				},
+				{
+					"name" : "iBv[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
