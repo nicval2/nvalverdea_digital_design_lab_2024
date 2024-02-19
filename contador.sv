@@ -1,4 +1,4 @@
-module contador #(parameter N = 6) (
+module contador #(parameter N = 8) (
     input wire clk,
     input wire reset,
     output reg [N-1:0] cont 

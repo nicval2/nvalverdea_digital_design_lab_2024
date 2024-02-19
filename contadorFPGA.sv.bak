@@ -1,0 +1,22 @@
+module contador (
+    input wire clk,       // Señal de reloj
+    input wire reset,     // Switch de reset
+    input wire dec_btn,   // Botón de decremento
+    output wire [6:0] seg // Salida para display de 7 segmentos
+);
+
+reg [5:0] count = 6'b000000; // Contador de 6 bits
+
+always @(posedge clk or posedge reset) begin
+    if (reset) begin
+        count <= 6'b000000; // Reiniciar el contador cuando se activa el reset
+    end else if (dec_btn) begin
+        count <= count - 1; // Decrementar el contador cuando se presiona el botón de decremento
+    end else begin
+        count <= count + 1; // Incrementar el contador por defecto
+    end
+end
+
+assign seg = count; // Salida del contador para el display de 7 segmentos
+
+endmodule
