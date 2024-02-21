@@ -8,56 +8,56 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/simulation/modelsim
+Z0 dC:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/Problema 3/simulation/modelsim
 vcontadorFPGA
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1708311414
+Z2 !s110 1708492218
 !i10b 1
-!s100 fj=eai17H54D0i9ZzEL7C2
+!s100 j2<i:MFW1Ad<QC][mk8KF3
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IK4RG9]>=HL0@5zcA9@IGC2
+IlMl6YEDC=bXXADn:l?>g60
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-w1708309554
-8C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/contadorFPGA.sv
-FC:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/contadorFPGA.sv
+w1708492128
+8C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/Problema 3/contadorFPGA.sv
+FC:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/Problema 3/contadorFPGA.sv
 !i122 0
-L0 1 22
+L0 1 285
 Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1708311414.000000
-!s107 C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/contadorFPGA.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024|C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/contadorFPGA.sv|
+Z6 !s108 1708492218.000000
+!s107 C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/Problema 3/contadorFPGA.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/Problema 3|C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/Problema 3/contadorFPGA.sv|
 !i113 1
 Z7 o-sv -work work
-Z8 !s92 -sv -work work +incdir+C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024
+Z8 !s92 -sv -work work {+incdir+C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/Problema 3}
 Z9 tCvgOpt 0
 ncontador@f@p@g@a
 vcontadorFPGA_tb
 R1
 R2
 !i10b 1
-!s100 Qb]X4FDA6mNV_T<m9:fjh2
+!s100 2^ZH^[<8T_X3=>FRfgFac1
 R3
-INEK7R788n_2T[eV;;;7l_2
+I9aX5ahNiP@DVz45Ad5joR0
 R4
 S1
 R0
-w1708311278
-8C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/contadorFPGA_tb.sv
-FC:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/contadorFPGA_tb.sv
+w1708465860
+8C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/Problema 3/contadorFPGA_tb.sv
+FC:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/Problema 3/contadorFPGA_tb.sv
 !i122 1
-L0 3 44
+L0 1 44
 R5
 r1
 !s85 0
 31
 R6
-!s107 C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/contadorFPGA_tb.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024|C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/contadorFPGA_tb.sv|
+!s107 C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/Problema 3/contadorFPGA_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/Problema 3|C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/Problema 3/contadorFPGA_tb.sv|
 !i113 1
 R7
 R8
