@@ -2,10 +2,15 @@ module contadorFPGA (
     input wire clk,      
     input wire reset,     
     input wire dec_btn, 
-    output reg [13:0] seg
+    output reg [6:0] seg,
+	 output reg [6:0] seg_2
+
 );
 
+reg [3:0] BCD_count;
+reg [3:0] BCD_count_2;
 reg [5:0] count = 6'b000000;
+reg [5:0] count_2 = 6'b000000;
 
 always @(posedge clk or posedge reset) begin
     if (reset) begin
@@ -17,269 +22,57 @@ always @(posedge clk or posedge reset) begin
     end
 end
 
-always @(*) begin
-    case(count)
-        6'b000000: begin
-            seg[6:0] = 7'b1111110; 
-            seg[13:7] = 7'b1111110; 
-        end
-        6'b000001: begin
-            seg[6:0] = 7'b0110000; 
-            seg[13:7] = 7'b1111110; 
-        end
-        6'b000010: begin
-            seg[6:0] = 7'b1101101; 
-            seg[13:7] = 7'b1111110; 
-        end
-        6'b000011: begin
-            seg[6:0] = 7'b1111001;
-            seg[13:7] = 7'b1111110;
-        end
-        6'b000100: begin
-            seg[6:0] = 7'b0110011;
-            seg[13:7] = 7'b1111110; 
-        end
-        6'b000101: begin
-            seg[6:0] = 7'b1011011; 
-            seg[13:7] = 7'b1111110;
-        end
-        6'b000110: begin
-            seg[6:0] = 7'b1011111;
-            seg[13:7] = 7'b1111110;
-        end
-        6'b000111: begin
-            seg[6:0] = 7'b1110000;
-            seg[13:7] = 7'b1111110;
-        end
-        6'b001000: begin
-            seg[6:0] = 7'b1111111;
-            seg[13:7] = 7'b1111110;
-        end
-        6'b001001: begin
-            seg[6:0] = 7'b1111011;
-            seg[13:7] = 7'b1111110;
-        end
-        6'b001010: begin
-            seg[6:0] = 7'b1110111;
-            seg[13:7] = 7'b0110000;
-        end
-        6'b001011: begin
-            seg[6:0] = 7'b0110000;
-            seg[13:7] = 7'b0110000;
-        end
-        6'b001100: begin
-            seg[6:0] = 7'b1101101;
-            seg[13:7] = 7'b0110000;
-        end
-        6'b001101: begin
-            seg[6:0] = 7'b1111001;
-            seg[13:7] = 7'b0110000;
-        end
-        6'b001110: begin
-            seg[6:0] = 7'b0110011;
-            seg[13:7] = 7'b0110000;
-        end
-        6'b001111: begin
-            seg[6:0] = 7'b1011011;
-            seg[13:7] = 7'b0110000;
-        end
-        6'b010000: begin
-            seg[6:0] = 7'b1011111; 
-            seg[13:7] = 7'b0110000; 
-        end
-        6'b010001: begin
-            seg[6:0] = 7'b1110000; 
-            seg[13:7] = 7'b0110000; 
-        end
-        6'b010010: begin
-            seg[6:0] = 7'b1111111; 
-            seg[13:7] = 7'b0110000;
-        end
-        6'b010011: begin
-            seg[6:0] = 7'b1111011; 
-            seg[13:7] = 7'b0110000; 
-        end
-        6'b010100: begin
-            seg[6:0] = 7'b1110111;
-            seg[13:7] = 7'b1101101; 
-        end
-        6'b010101: begin
-            seg[6:0] = 7'b0110000; 
-            seg[13:7] = 7'b1101101; 
-        end
-        6'b010110: begin
-            seg[6:0] = 7'b1101101; 
-            seg[13:7] = 7'b1101101;
-        end
-        6'b010111: begin
-            seg[6:0] = 7'b1111001;
-            seg[13:7] = 7'b1101101; 
-        end
-        6'b011000: begin
-            seg[6:0] = 7'b0110011; 
-            seg[13:7] = 7'b1101101; 
-        end
-        6'b011001: begin
-            seg[6:0] = 7'b1011011; 
-            seg[13:7] = 7'b1101101; 
-        end
-        6'b011010: begin
-            seg[6:0] = 7'b1011111; 
-            seg[13:7] = 7'b1101101; 
-        end
-        6'b011011: begin
-            seg[6:0] = 7'b1110000;
-            seg[13:7] = 7'b1101101;
-        end
-        6'b011100: begin
-            seg[6:0] = 7'b1111111; 
-            seg[13:7] = 7'b1101101; 
-        end
-        6'b011101: begin
-            seg[6:0] = 7'b1111011; 
-            seg[13:7] = 7'b1101101; 
-        end
-        6'b011110: begin
-            seg[6:0] = 7'b1110111; 
-            seg[13:7] = 7'b1011111; 
-        end
-        6'b011111: begin
-            seg[6:0] = 7'b0110000; 
-            seg[13:7] = 7'b1011111; 
-        end
-        6'b100000: begin
-            seg[6:0] = 7'b1101101; 
-            seg[13:7] = 7'b1011111; 
-        end
-        6'b100001: begin
-            seg[6:0] = 7'b1111001; 
-            seg[13:7] = 7'b1011111; 
-        end
-        6'b100010: begin
-            seg[6:0] = 7'b0110011; 
-            seg[13:7] = 7'b1011111;
-        end
-        6'b100011: begin
-            seg[6:0] = 7'b1011011; 
-            seg[13:7] = 7'b1011111; 
-        end
-        6'b100100: begin
-            seg[6:0] = 7'b1011111;
-            seg[13:7] = 7'b1011111; 
-        end
-        6'b100101: begin
-            seg[6:0] = 7'b1110000; 
-            seg[13:7] = 7'b1011111;
-        end
-        6'b100110: begin
-            seg[6:0] = 7'b1111111; 
-            seg[13:7] = 7'b1011111; 
-        end
-        6'b100111: begin
-            seg[6:0] = 7'b1111011; 
-            seg[13:7] = 7'b1011111; 
-        end
-        6'b101000: begin
-            seg[6:0] = 7'b1110111; 
-            seg[13:7] = 7'b1011110; 
-        end
-        6'b101001: begin
-            seg[6:0] = 7'b0110000; 
-            seg[13:7] = 7'b1011110; 
-        end
-        6'b101010: begin
-            seg[6:0] = 7'b1101101; 
-            seg[13:7] = 7'b1011110; 
-        end
-        6'b101011: begin
-            seg[6:0] = 7'b1111001;
-            seg[13:7] = 7'b1011110; 
-        end
-        6'b101100: begin
-            seg[6:0] = 7'b0110011; 
-            seg[13:7] = 7'b1011110; 
-        end
-        6'b101101: begin
-            seg[6:0] = 7'b1011011; 
-            seg[13:7] = 7'b1011110; 
-        end
-        6'b101110: begin
-            seg[6:0] = 7'b1011111;
-            seg[13:7] = 7'b1011110;
-        end
-        6'b101111: begin
-            seg[6:0] = 7'b1110000;
-            seg[13:7] = 7'b1011110; 
-        end
-        6'b110000: begin
-            seg[6:0] = 7'b1111111; 
-            seg[13:7] = 7'b1011110;
-        end
-        6'b110001: begin
-            seg[6:0] = 7'b1111011; 
-            seg[13:7] = 7'b1011110; 
-        end
-        6'b110010: begin
-            seg[6:0] = 7'b1110111; 
-            seg[13:7] = 7'b1011101;
-        end
-        6'b110011: begin
-            seg[6:0] = 7'b0110000;
-            seg[13:7] = 7'b1011101;
-        end
-        6'b110100: begin
-            seg[6:0] = 7'b1101101;
-            seg[13:7] = 7'b1011101;
-        end
-        6'b110101: begin
-            seg[6:0] = 7'b1111001;
-            seg[13:7] = 7'b1011101; 
-        end
-        6'b110110: begin
-            seg[6:0] = 7'b0110011;
-            seg[13:7] = 7'b1011101;
-        end
-        6'b110111: begin
-            seg[6:0] = 7'b1011011;
-            seg[13:7] = 7'b1011101;
-        end
-        6'b111000: begin
-            seg[6:0] = 7'b1011111; 
-            seg[13:7] = 7'b1011101; 
-        end
-        6'b111001: begin
-            seg[6:0] = 7'b1110000; 
-            seg[13:7] = 7'b1011101;
-        end
-        6'b111010: begin
-            seg[6:0] = 7'b1111111; 
-            seg[13:7] = 7'b1011101; 
-        end
-        6'b111011: begin
-            seg[6:0] = 7'b1111011; 
-            seg[13:7] = 7'b1011101; 
-        end
-        6'b111100: begin
-            seg[6:0] = 7'b1110111; 
-            seg[13:7] = 7'b1011011; 
-        end
-        6'b111101: begin
-            seg[6:0] = 7'b0110000; 
-            seg[13:7] = 7'b1011011; 
-        end
-        6'b111110: begin
-            seg[6:0] = 7'b1101101; 
-            seg[13:7] = 7'b1011011; 
-        end
-        6'b111111: begin
-            seg[6:0] = 7'b1111001; 
-            seg[13:7] = 7'b1011011; 
-        end
-        default: begin
-            seg[6:0] = 7'b0000000; 
-            seg[13:7] = 7'b0000000; 
-        end
+always @* begin
+    if (count < 10) begin
+        BCD_count = count;
+    end else begin
+        BCD_count = count % 10;
+    end
+end
+
+always @* begin
+    if (count < 10) begin
+        BCD_count_2 = 0;
+    end else begin
+        BCD_count_2 = count/10;
+    end
+end
+
+
+always @* begin
+    case (BCD_count)
+        4'b0000: seg = 7'b1000000; // 0
+        4'b0001: seg = 7'b1111001; // 1
+        4'b0010: seg = 7'b0100100; // 2
+		  4'b0011: seg = 7'b0110000; // 3
+        4'b0100: seg = 7'b0011001; // 4
+        4'b0101: seg = 7'b0010010; // 5
+        4'b0110: seg = 7'b0000010; // 6
+        4'b0111: seg = 7'b1111000; // 7
+        4'b1000: seg = 7'b0000000; // 8
+        4'b1001: seg = 7'b0010000; // 9
+        default: seg = 7'b1111111; // Off
+
+
     endcase
 end
+always @* begin
+    case (BCD_count_2)
+        4'b0000: seg_2 = 7'b1000000; // 0
+        4'b0001: seg_2 = 7'b1111001; // 1
+        4'b0010: seg_2 = 7'b0100100; // 2
+        4'b0011: seg_2 = 7'b0110000; // 3
+        4'b0100: seg_2 = 7'b0011001; // 4
+        4'b0101: seg_2 = 7'b0010010; // 5
+        4'b0110: seg_2 = 7'b0000010; // 6
+        4'b0111: seg_2 = 7'b1111000; // 7
+        4'b1000: seg_2 = 7'b0000000; // 8
+        4'b1001: seg_2 = 7'b0010000; // 9
+        default: seg_2 = 7'b1111111; // Off
+    endcase
+
+	 
+end
+
 
 endmodule

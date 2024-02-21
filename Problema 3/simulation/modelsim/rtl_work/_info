@@ -11,24 +11,24 @@ cModel Technology
 Z0 dC:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/Problema 3/simulation/modelsim
 vcontadorFPGA
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1708492218
+Z2 !s110 1708492947
 !i10b 1
-!s100 j2<i:MFW1Ad<QC][mk8KF3
+!s100 3:Gn_OLBW6:E2h2FObEi;0
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IlMl6YEDC=bXXADn:l?>g60
+I[jfb88ZJI=1m9[]R3SScW3
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-w1708492128
+w1708492892
 8C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/Problema 3/contadorFPGA.sv
 FC:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/Problema 3/contadorFPGA.sv
 !i122 0
-L0 1 285
+L0 1 78
 Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1708492218.000000
+Z6 !s108 1708492947.000000
 !s107 C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/Problema 3/contadorFPGA.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/Problema 3|C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/Problema 3/contadorFPGA.sv|
 !i113 1
