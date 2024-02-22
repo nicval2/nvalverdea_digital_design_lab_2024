@@ -1,0 +1,57 @@
+# Reading pref.tcl
+# ERROR: No extended dataflow license exists
+# do Problema3_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/Problema\ 3 {C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/Problema 3/contadorFPGA.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:22:27 on Feb 20,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/Problema 3" C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/Problema 3/contadorFPGA.sv 
+# -- Compiling module contadorFPGA
+# 
+# Top level modules:
+# 	contadorFPGA
+# End time: 23:22:27 on Feb 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/Problema\ 3 {C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/Problema 3/contadorFPGA_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:22:27 on Feb 20,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/Problema 3" C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/Problema 3/contadorFPGA_tb.sv 
+# -- Compiling module contadorFPGA_tb
+# 
+# Top level modules:
+# 	contadorFPGA_tb
+# End time: 23:22:27 on Feb 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  contadorFPGA_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" contadorFPGA_tb 
+# Start time: 23:22:27 on Feb 20,2024
+# Loading sv_std.std
+# Loading work.contadorFPGA_tb
+# Loading work.contadorFPGA
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'uut'.  Expected 5, found 4.
+#    Time: 0 ps  Iteration: 0  Instance: /contadorFPGA_tb/uut File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/Problema 3/contadorFPGA_tb.sv Line: 10
+# ** Warning: (vsim-3722) C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/Problema 3/contadorFPGA_tb.sv(10): [TFMPC] - Missing connection for port 'seg_2'.
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: $finish    : C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/Problema 3/contadorFPGA_tb.sv(41)
+#    Time: 355 ps  Iteration: 0  Instance: /contadorFPGA_tb
+# 1
+# Break in Module contadorFPGA_tb at C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/Problema 3/contadorFPGA_tb.sv line 41
+# End time: 23:22:56 on Feb 20,2024, Elapsed time: 0:00:29
+# Errors: 0, Warnings: 2

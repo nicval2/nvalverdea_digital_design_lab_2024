@@ -1,0 +1,42 @@
+//`timescale 1ns / 1ps // Escala de tiempo para simulación
+
+module contador_tb;
+
+    // Definición de constantes
+    parameter CLK_PERIOD = 10; // Período del reloj en unidades de tiempo
+
+    // Definición de señales
+    reg clk;
+    reg reset;
+    reg dec_btn;
+    wire [6:0] seg;
+
+    // Instanciación del módulo bajo prueba (DUT)
+    contador dut (
+        .clk(clk),
+        .reset(reset),
+        .dec_btn(dec_btn),
+        .seg(seg)
+    );
+
+    // Generación de reloj
+    always #((CLK_PERIOD)/2) clk = ~clk;
+
+    // Inicialización de señales
+    initial begin
+        clk = 0;
+        reset = 1; // Inicialmente se activa el reset
+        dec_btn = 0;
+
+        #50 reset = 0; // Desactivar el reset después de 50 unidades de tiempo
+
+        // Simular el conteo
+        #200; // Esperar un tiempo antes de cambiar dec_btn
+        dec_btn = 1; // Presionar el botón de decremento
+        #100; // Esperar un tiempo para ver el cambio
+        dec_btn = 0; // Soltar el botón de decremento
+        #200; // Esperar un tiempo antes de terminar la simulación
+        $stop; // Finalizar la simulación
+    end
+
+endmodule
