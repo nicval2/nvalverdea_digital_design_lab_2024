@@ -1,0 +1,82 @@
+|alu_4bit
+a[0] => a[0].IN2
+a[1] => a[1].IN2
+a[2] => a[2].IN2
+a[3] => a[3].IN2
+b[0] => b[0].IN2
+b[1] => b[1].IN2
+b[2] => b[2].IN2
+b[3] => b[3].IN2
+op[0] => Equal0.IN5
+op[0] => Equal1.IN5
+op[1] => Equal0.IN4
+op[1] => Equal1.IN4
+op[2] => Equal0.IN3
+op[2] => Equal1.IN3
+out[0] <= Selector4.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= Selector3.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= Selector2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= Selector1.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= Selector0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_4bit|adder_4bit:adder_inst
+a[0] => carry.IN0
+a[0] => sum.IN0
+a[1] => carry.IN0
+a[1] => carry.IN1
+a[1] => sum.IN0
+a[2] => carry.IN0
+a[2] => carry.IN1
+a[2] => sum.IN0
+a[3] => carry.IN0
+a[3] => carry.IN1
+a[3] => sum.IN0
+b[0] => carry.IN1
+b[0] => sum.IN1
+b[1] => carry.IN1
+b[1] => carry.IN1
+b[1] => sum.IN1
+b[2] => carry.IN1
+b[2] => carry.IN1
+b[2] => sum.IN1
+b[3] => carry.IN1
+b[3] => carry.IN1
+b[3] => sum.IN1
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[1] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[2] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[3] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[4] <= carry.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_4bit|subtractor_4bit:subtractor_inst
+a[0] => diff.IN0
+a[0] => borrow.IN0
+a[1] => diff.IN0
+a[1] => borrow.IN1
+a[1] => borrow.IN0
+a[2] => diff.IN0
+a[2] => borrow.IN1
+a[2] => borrow.IN0
+a[3] => diff.IN0
+a[3] => borrow.IN1
+a[3] => borrow.IN0
+b[0] => borrow.IN1
+b[0] => diff.IN1
+b[1] => borrow.IN1
+b[1] => borrow.IN1
+b[1] => diff.IN1
+b[2] => borrow.IN1
+b[2] => borrow.IN1
+b[2] => diff.IN1
+b[3] => borrow.IN1
+b[3] => borrow.IN1
+b[3] => diff.IN1
+diff[0] <= diff.DB_MAX_OUTPUT_PORT_TYPE
+diff[1] <= diff.DB_MAX_OUTPUT_PORT_TYPE
+diff[2] <= diff.DB_MAX_OUTPUT_PORT_TYPE
+diff[3] <= diff.DB_MAX_OUTPUT_PORT_TYPE
+diff[4] <= borrow.DB_MAX_OUTPUT_PORT_TYPE
+
+
