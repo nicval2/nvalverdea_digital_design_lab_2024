@@ -1,29 +1,24 @@
 module alu_4bit(
   input logic [3:0] a,
   input logic [3:0] b,
-  input logic [2:0] op,
-  output logic [4:0] out
+  input logic [1:0] op,
+  output logic [7:0] result
 );
+  wire [4:0] add_result;
+  wire [4:0] sub_result;
+  wire [7:0] mul_result;
 
-  wire [4:0] add;
-  wire [4:0] sub;
-
-  // Instantiate arithmetic modules
-  adder_4bit adder_inst(a, b, add[4:0]);
-  subtractor_4bit subtractor_inst(a, b, sub[4:0]);
+  adder_4bit adder (a, b, add_result[4:0]);
+  subtractor_4bit subtractor (a, b, sub_result[4:0]);
+  multiplier_4bit multiplier (a, b, mul_result[7:0]);
 
   always_comb begin
-    case(op)
-      3'b000: out = add; // add
-      3'b001: out = sub; // subtract
-      //3'b010: out = a & b;    // bitwise AND
-      //3'b011: out = a | b;    // bitwise OR
-      //3'b100: out = a ^ b;    // bitwise XOR
-      //3'b101: out = ~a;       // bitwise NOT of a
-      //3'b110: out = ~b;       // bitwise NOT of b
-      //3'b111: out = 4'b0;     // clear output
-      default: out = 4'b0;    // clear output for undefined op
+    case (op)
+      2'b00: result = add_result[4] ? add_result : {4'b0, add_result[3:0]}; // Zero-extend add_result to 8 bits only if it's 4 bits
+      2'b01: result = {4'b0, sub_result}; 
+      2'b10: result = mul_result;
+      default: result = 8'b00000000;
     endcase
-  end
 
+  end
 endmodule
