@@ -1,5 +1,5 @@
 Analysis & Elaboration report for alu_4bit
-Sat Feb 24 19:06:04 2024
+Sat Feb 24 23:30:14 2024
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -10,7 +10,8 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
   2. Analysis & Elaboration Summary
   3. Parallel Compilation
   4. Analysis & Elaboration Settings
-  5. Analysis & Elaboration Messages
+  5. Port Connectivity Checks: "subtractor_4bit:subtractor"
+  6. Analysis & Elaboration Messages
 
 
 
@@ -37,7 +38,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                 ;
 +-------------------------------+------------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Sat Feb 24 19:06:04 2024          ;
+; Analysis & Elaboration Status ; Successful - Sat Feb 24 23:30:14 2024          ;
 ; Quartus Prime Version         ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                 ; alu_4bit                                       ;
 ; Top-level Entity Name         ; alu_4bit                                       ;
@@ -155,13 +156,22 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "subtractor_4bit:subtractor"                                                            ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; diff[4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +---------------------------------+
 ; Analysis & Elaboration Messages ;
 +---------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Sat Feb 24 19:05:20 2024
+    Info: Processing started: Sat Feb 24 23:29:51 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off alu_4bit -c alu_4bit --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
@@ -175,15 +185,31 @@ Info (12021): Found 1 design units, including 1 entities, in source file alu_4bi
     Info (12023): Found entity 1: alu_4bit_tb File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file multiplier_4bit.sv
     Info (12023): Found entity 1: multiplier_4bit File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/multiplier_4bit.sv Line: 1
+Warning (12019): Can't analyze file -- file BinaryToDecimal.sv is missing
+Info (12021): Found 1 design units, including 1 entities, in source file digitextractor.sv
+    Info (12023): Found entity 1: DigitExtractor File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/DigitExtractor.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file segmentoutput.sv
+    Info (12023): Found entity 1: segmentOutput File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 1
 Info (12127): Elaborating entity "alu_4bit" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at alu_4bit.sv(18): truncated value with size 9 to match size of target (8) File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 18
-Info (12128): Elaborating entity "adder_4bit" for hierarchy "adder_4bit:adder" File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 11
-Info (12128): Elaborating entity "subtractor_4bit" for hierarchy "subtractor_4bit:subtractor" File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 12
-Info (12128): Elaborating entity "multiplier_4bit" for hierarchy "multiplier_4bit:multiplier" File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 13
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4804 megabytes
-    Info: Processing ended: Sat Feb 24 19:06:04 2024
-    Info: Elapsed time: 00:00:44
-    Info: Total CPU time (on all processors): 00:00:26
+Info (12128): Elaborating entity "adder_4bit" for hierarchy "adder_4bit:adder" File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 17
+Info (12128): Elaborating entity "subtractor_4bit" for hierarchy "subtractor_4bit:subtractor" File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 18
+Info (12128): Elaborating entity "multiplier_4bit" for hierarchy "multiplier_4bit:multiplier" File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 19
+Info (12128): Elaborating entity "DigitExtractor" for hierarchy "DigitExtractor:extractor" File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 21
+Warning (10762): Verilog HDL Case Statement warning at DigitExtractor.sv(16): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/DigitExtractor.sv Line: 16
+Info (12128): Elaborating entity "segmentOutput" for hierarchy "segmentOutput:segment1" File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 22
+Warning (10270): Verilog HDL Case Statement warning at segmentOutput.sv(10): incomplete case statement has no default case item File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 10
+Warning (10240): Verilog HDL Always Construct warning at segmentOutput.sv(8): inferring latch(es) for variable "segments1", which holds its previous value in one or more paths through the always construct File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
+Info (10041): Inferred latch for "segments1[0]" at segmentOutput.sv(8) File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
+Info (10041): Inferred latch for "segments1[1]" at segmentOutput.sv(8) File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
+Info (10041): Inferred latch for "segments1[2]" at segmentOutput.sv(8) File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
+Info (10041): Inferred latch for "segments1[3]" at segmentOutput.sv(8) File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
+Info (10041): Inferred latch for "segments1[4]" at segmentOutput.sv(8) File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
+Info (10041): Inferred latch for "segments1[5]" at segmentOutput.sv(8) File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
+Info (10041): Inferred latch for "segments1[6]" at segmentOutput.sv(8) File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4788 megabytes
+    Info: Processing ended: Sat Feb 24 23:30:14 2024
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:34
 
 
