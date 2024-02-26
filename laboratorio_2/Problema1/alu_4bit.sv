@@ -23,7 +23,7 @@ module alu_4bit(
     segmentOutput segment2(.digit(digit_2), .seg(s2));
     segmentOutput segment3(.digit(digit_3), .seg(s3));
 
-    always_ff @(posedge start) begin
+    always_comb begin
     if (start) begin
         case (op)
             2'b00: result <= add_result[4] ? add_result[4:0] : {3'b0, add_result[3:0]}; // Zero-extend add_result to 8 bits only if it's 4 bits

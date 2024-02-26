@@ -27,18 +27,21 @@ module alu_4bit_tb;
     a = 4'b0110; // 6
     b = 4'b0011; // 3
     op = 2'b00; // Add
-					// 9 = 1001
+					// 9
+	 #80; // Wait for computation
 	 start = 1;
-    #80;
-	 // Test case 2: Addition
+    #80; // Wait for completion
+	 
+    // Test case 2: Addition
 	 start = 0;
 	 #40;
     a = 4'b1100; // 12
     b = 4'b0101; // 5
     op = 2'b00; // Add
-					// 17 = 10001
+					// 17
+	 #80; // Wait for computation
 	 start = 1;
-    #80;
+    #80; // Wait for completion
 	 
 	 // Test case 3: Subtraction
 	 start = 0;
@@ -46,19 +49,21 @@ module alu_4bit_tb;
     a = 4'b0110; // 6
     b = 4'b0011; // 3
     op = 2'b01; // Subtract
-					// 3 = 11
+					// 3
+	 #80; // Wait for computation
 	 start = 1;
-    #80;
+    #80; // Wait for completion
 	 
 	 // Test case 4: Subtraction
 	 start = 0;
 	 #40;
     a = 4'b1100; // 12
-    b = 4'b0101; // 5
+    b = 4'b1000; // 8
     op = 2'b01; // Subtract
-	 				// 7 = 111
+					// 4
+	 #80; // Wait for computation
 	 start = 1;
-    #80;
+    #80; // Wait for completion
 	 
 	 // Test case 5: Multiplier
 	 start = 0;
@@ -66,18 +71,21 @@ module alu_4bit_tb;
     a = 4'b0110; // 6
     b = 4'b0011; // 3
     op = 2'b10; // Multiply
-					// 18 = 10010
-    start = 1;
-    #80;
+					// 18
+	 #80; // Wait for computation
+	 start = 1;
+    #80; // Wait for completion
 	 
 	 // Test case 6: Multiplier
 	 start = 0;
 	 #40;
-    a = 4'b1111; // 12
-    b = 4'b1111; // 5
+    a = 4'b1111; // 15
+    b = 4'b1111; // 15
     op = 2'b10; // Multiply
-	 				// 60 = 111100
+					// 225
+	 #80; // Wait for computation
 	 start = 1;
+	 #80; // Wait for completion
  
   end
 
