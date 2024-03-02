@@ -7,51 +7,60 @@ b[0] => b[0].IN3
 b[1] => b[1].IN3
 b[2] => b[2].IN3
 b[3] => b[3].IN3
-op[0] => Decoder0.IN1
-op[0] => Decoder1.IN1
-op[0] => Decoder2.IN1
-op[0] => Mux0.IN4
-op[0] => Mux1.IN2
-op[0] => Mux2.IN2
-op[0] => Mux3.IN2
-op[0] => Mux4.IN2
-op[1] => Decoder0.IN0
-op[1] => Decoder1.IN0
-op[1] => Decoder2.IN0
-op[1] => Mux0.IN3
-op[1] => Mux1.IN1
-op[1] => Mux2.IN1
-op[1] => Mux3.IN1
-op[1] => Mux4.IN1
+op[0] => Mux0.IN16
+op[0] => Mux1.IN16
+op[0] => Mux2.IN16
+op[0] => Mux3.IN16
+op[0] => Decoder0.IN3
+op[0] => Mux4.IN16
+op[0] => Mux5.IN16
+op[1] => Mux0.IN15
+op[1] => Mux1.IN15
+op[1] => Mux2.IN15
+op[1] => Mux3.IN15
+op[1] => Decoder0.IN2
+op[1] => Mux4.IN15
+op[1] => Mux5.IN15
+op[2] => Mux0.IN14
+op[2] => Mux1.IN14
+op[2] => Mux2.IN14
+op[2] => Mux3.IN14
+op[2] => Decoder0.IN1
+op[2] => Mux4.IN14
+op[2] => Mux5.IN14
+op[3] => Mux0.IN13
+op[3] => Mux1.IN13
+op[3] => Mux2.IN13
+op[3] => Mux3.IN13
+op[3] => Decoder0.IN0
+op[3] => Mux4.IN13
+op[3] => Mux5.IN13
 start => result.OUTPUTSELECT
 start => result.OUTPUTSELECT
 start => result.OUTPUTSELECT
 start => result.OUTPUTSELECT
-start => result.OUTPUTSELECT
-start => result.OUTPUTSELECT
-start => result.OUTPUTSELECT
-start => result.OUTPUTSELECT
-s1[0] << segmentOutput:segment1.seg
-s1[1] << segmentOutput:segment1.seg
-s1[2] << segmentOutput:segment1.seg
-s1[3] << segmentOutput:segment1.seg
-s1[4] << segmentOutput:segment1.seg
-s1[5] << segmentOutput:segment1.seg
-s1[6] << segmentOutput:segment1.seg
-s2[0] << segmentOutput:segment2.seg
-s2[1] << segmentOutput:segment2.seg
-s2[2] << segmentOutput:segment2.seg
-s2[3] << segmentOutput:segment2.seg
-s2[4] << segmentOutput:segment2.seg
-s2[5] << segmentOutput:segment2.seg
-s2[6] << segmentOutput:segment2.seg
-s3[0] << segmentOutput:segment3.seg
-s3[1] << segmentOutput:segment3.seg
-s3[2] << segmentOutput:segment3.seg
-s3[3] << segmentOutput:segment3.seg
-s3[4] << segmentOutput:segment3.seg
-s3[5] << segmentOutput:segment3.seg
-s3[6] << segmentOutput:segment3.seg
+start => NFlag.OUTPUTSELECT
+start => ZFlag.OUTPUTSELECT
+start => CFlag.OUTPUTSELECT
+start => VFlag.OUTPUTSELECT
+s1[0] <= segmentOutput:segment1.seg
+s1[1] <= segmentOutput:segment1.seg
+s1[2] <= segmentOutput:segment1.seg
+s1[3] <= segmentOutput:segment1.seg
+s1[4] <= segmentOutput:segment1.seg
+s1[5] <= segmentOutput:segment1.seg
+s1[6] <= segmentOutput:segment1.seg
+s2[0] <= segmentOutput:segment2.seg
+s2[1] <= segmentOutput:segment2.seg
+s2[2] <= segmentOutput:segment2.seg
+s2[3] <= segmentOutput:segment2.seg
+s2[4] <= segmentOutput:segment2.seg
+s2[5] <= segmentOutput:segment2.seg
+s2[6] <= segmentOutput:segment2.seg
+NFlag <= NFlag.DB_MAX_OUTPUT_PORT_TYPE
+ZFlag <= ZFlag.DB_MAX_OUTPUT_PORT_TYPE
+CFlag <= CFlag.DB_MAX_OUTPUT_PORT_TYPE
+VFlag <= VFlag.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |alu_4bit|adder_4bit:adder
@@ -63,9 +72,10 @@ a[1] => sum.IN0
 a[2] => carry.IN0
 a[2] => carry.IN1
 a[2] => sum.IN0
-a[3] => carry.IN0
 a[3] => carry.IN1
 a[3] => sum.IN0
+a[3] => carry_out.IN0
+a[3] => carry_out.IN0
 b[0] => carry.IN1
 b[0] => sum.IN1
 b[1] => carry.IN1
@@ -75,13 +85,16 @@ b[2] => carry.IN1
 b[2] => carry.IN1
 b[2] => sum.IN1
 b[3] => carry.IN1
-b[3] => carry.IN1
 b[3] => sum.IN1
+b[3] => carry_out.IN1
+b[3] => carry_out.IN1
 sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 sum[1] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 sum[2] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 sum[3] <= sum.DB_MAX_OUTPUT_PORT_TYPE
-sum[4] <= carry.DB_MAX_OUTPUT_PORT_TYPE
+carry_out <= carry_out.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= carry[4].DB_MAX_OUTPUT_PORT_TYPE
+zero <= zero.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |alu_4bit|subtractor_4bit:subtractor
@@ -94,8 +107,8 @@ a[2] => diff.IN0
 a[2] => borrow.IN1
 a[2] => borrow.IN0
 a[3] => diff.IN0
-a[3] => borrow.IN1
-a[3] => borrow.IN0
+a[3] => overflow.IN0
+a[3] => overflow.IN0
 b[0] => borrow.IN1
 b[0] => diff.IN1
 b[1] => borrow.IN1
@@ -104,14 +117,17 @@ b[1] => diff.IN1
 b[2] => borrow.IN1
 b[2] => borrow.IN1
 b[2] => diff.IN1
-b[3] => borrow.IN1
-b[3] => borrow.IN1
 b[3] => diff.IN1
+b[3] => overflow.IN1
+b[3] => overflow.IN1
 diff[0] <= diff.DB_MAX_OUTPUT_PORT_TYPE
 diff[1] <= diff.DB_MAX_OUTPUT_PORT_TYPE
 diff[2] <= diff.DB_MAX_OUTPUT_PORT_TYPE
 diff[3] <= diff.DB_MAX_OUTPUT_PORT_TYPE
-diff[4] <= borrow.DB_MAX_OUTPUT_PORT_TYPE
+carry_out <= borrow.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+zero <= zero.DB_MAX_OUTPUT_PORT_TYPE
+negative <= diff.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |alu_4bit|multiplier_4bit:multiplier
@@ -145,46 +161,28 @@ b[2] => product.OUTPUTSELECT
 b[2] => product.OUTPUTSELECT
 b[2] => product.OUTPUTSELECT
 b[2] => product.OUTPUTSELECT
-b[3] => product.OUTPUTSELECT
-b[3] => product.OUTPUTSELECT
-b[3] => product.OUTPUTSELECT
-b[3] => product.OUTPUTSELECT
+b[3] => product[7].OUTPUTSELECT
+b[3] => product[6].OUTPUTSELECT
+b[3] => product[5].OUTPUTSELECT
+b[3] => product[4].OUTPUTSELECT
 b[3] => product.OUTPUTSELECT
 out[0] <= product.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= product.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= product.DB_MAX_OUTPUT_PORT_TYPE
 out[3] <= product.DB_MAX_OUTPUT_PORT_TYPE
-out[4] <= product.DB_MAX_OUTPUT_PORT_TYPE
-out[5] <= product.DB_MAX_OUTPUT_PORT_TYPE
-out[6] <= product.DB_MAX_OUTPUT_PORT_TYPE
-out[7] <= product.DB_MAX_OUTPUT_PORT_TYPE
+V <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |alu_4bit|DigitExtractor:extractor
-input_number[0] => Div0.IN16
-input_number[0] => Div1.IN13
-input_number[0] => Mod1.IN13
-input_number[1] => Div0.IN15
-input_number[1] => Div1.IN12
-input_number[1] => Mod1.IN12
-input_number[2] => Div0.IN14
-input_number[2] => Div1.IN11
-input_number[2] => Mod1.IN11
-input_number[3] => Div0.IN13
-input_number[3] => Div1.IN10
-input_number[3] => Mod1.IN10
-input_number[4] => Div0.IN12
-input_number[4] => Div1.IN9
-input_number[4] => Mod1.IN9
-input_number[5] => Div0.IN11
-input_number[5] => Div1.IN8
-input_number[5] => Mod1.IN8
-input_number[6] => Div0.IN10
-input_number[6] => Div1.IN7
-input_number[6] => Mod1.IN7
-input_number[7] => Div0.IN9
-input_number[7] => Div1.IN6
-input_number[7] => Mod1.IN6
+input_number[0] => Div0.IN9
+input_number[0] => Mod1.IN9
+input_number[1] => Div0.IN8
+input_number[1] => Mod1.IN8
+input_number[2] => Div0.IN7
+input_number[2] => Mod1.IN7
+input_number[3] => Div0.IN6
+input_number[3] => Mod1.IN6
 digit_1[0] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
 digit_1[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
 digit_1[2] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
@@ -193,10 +191,6 @@ digit_2[0] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
 digit_2[1] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
 digit_2[2] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
 digit_2[3] <= get_binary.DB_MAX_OUTPUT_PORT_TYPE
-digit_3[0] <= WideOr8.DB_MAX_OUTPUT_PORT_TYPE
-digit_3[1] <= WideOr7.DB_MAX_OUTPUT_PORT_TYPE
-digit_3[2] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
-digit_3[3] <= get_binary.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |alu_4bit|segmentOutput:segment1
@@ -242,48 +236,6 @@ seg[6] <= segments1[6].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |alu_4bit|segmentOutput:segment2
-digit[0] => Mux0.IN19
-digit[0] => Mux1.IN19
-digit[0] => Mux2.IN19
-digit[0] => Mux3.IN19
-digit[0] => Mux4.IN19
-digit[0] => Mux5.IN19
-digit[0] => Mux6.IN19
-digit[0] => Mux7.IN19
-digit[1] => Mux0.IN18
-digit[1] => Mux1.IN18
-digit[1] => Mux2.IN18
-digit[1] => Mux3.IN18
-digit[1] => Mux4.IN18
-digit[1] => Mux5.IN18
-digit[1] => Mux6.IN18
-digit[1] => Mux7.IN18
-digit[2] => Mux0.IN17
-digit[2] => Mux1.IN17
-digit[2] => Mux2.IN17
-digit[2] => Mux3.IN17
-digit[2] => Mux4.IN17
-digit[2] => Mux5.IN17
-digit[2] => Mux6.IN17
-digit[2] => Mux7.IN17
-digit[3] => Mux0.IN16
-digit[3] => Mux1.IN16
-digit[3] => Mux2.IN16
-digit[3] => Mux3.IN16
-digit[3] => Mux4.IN16
-digit[3] => Mux5.IN16
-digit[3] => Mux6.IN16
-digit[3] => Mux7.IN16
-seg[0] <= segments1[0].DB_MAX_OUTPUT_PORT_TYPE
-seg[1] <= segments1[1].DB_MAX_OUTPUT_PORT_TYPE
-seg[2] <= segments1[2].DB_MAX_OUTPUT_PORT_TYPE
-seg[3] <= segments1[3].DB_MAX_OUTPUT_PORT_TYPE
-seg[4] <= segments1[4].DB_MAX_OUTPUT_PORT_TYPE
-seg[5] <= segments1[5].DB_MAX_OUTPUT_PORT_TYPE
-seg[6] <= segments1[6].DB_MAX_OUTPUT_PORT_TYPE
-
-
-|alu_4bit|segmentOutput:segment3
 digit[0] => Mux0.IN19
 digit[0] => Mux1.IN19
 digit[0] => Mux2.IN19

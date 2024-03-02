@@ -60,35 +60,47 @@
 					"strict" : false
 				},
 				{
-					"name" : "s3[0]",
+					"name" : "NFlag",
 					"strict" : false
 				},
 				{
-					"name" : "s3[1]",
+					"name" : "ZFlag",
 					"strict" : false
 				},
 				{
-					"name" : "s3[2]",
+					"name" : "CFlag",
 					"strict" : false
 				},
 				{
-					"name" : "s3[3]",
+					"name" : "VFlag",
 					"strict" : false
 				},
 				{
-					"name" : "s3[4]",
+					"name" : "b[0]",
 					"strict" : false
 				},
 				{
-					"name" : "s3[5]",
+					"name" : "a[0]",
 					"strict" : false
 				},
 				{
-					"name" : "s3[6]",
+					"name" : "op[0]",
 					"strict" : false
 				},
 				{
-					"name" : "b[3]",
+					"name" : "start",
+					"strict" : false
+				},
+				{
+					"name" : "op[4]",
+					"strict" : false
+				},
+				{
+					"name" : "op[2]",
+					"strict" : false
+				},
+				{
+					"name" : "op[3]",
 					"strict" : false
 				},
 				{
@@ -96,7 +108,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "b[3]",
+					"strict" : false
+				},
+				{
 					"name" : "b[2]",
+					"strict" : false
+				},
+				{
+					"name" : "b[1]",
 					"strict" : false
 				},
 				{
@@ -108,27 +128,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "b[1]",
-					"strict" : false
-				},
-				{
-					"name" : "b[0]",
-					"strict" : false
-				},
-				{
 					"name" : "a[1]",
-					"strict" : false
-				},
-				{
-					"name" : "a[0]",
-					"strict" : false
-				},
-				{
-					"name" : "start",
-					"strict" : false
-				},
-				{
-					"name" : "op[0]",
 					"strict" : false
 				}
 			]

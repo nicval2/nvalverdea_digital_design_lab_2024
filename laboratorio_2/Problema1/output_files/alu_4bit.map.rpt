@@ -1,5 +1,5 @@
-Analysis & Synthesis report for alu_4bit
-Sun Feb 25 18:49:14 2024
+Analysis & Elaboration report for alu_4bit
+Sat Mar  2 14:06:01 2024
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -7,22 +7,10 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Parameter Settings for Inferred Entity Instance: DigitExtractor:extractor|lpm_divide:Div1
- 11. Parameter Settings for Inferred Entity Instance: DigitExtractor:extractor|lpm_divide:Mod0
- 12. Parameter Settings for Inferred Entity Instance: DigitExtractor:extractor|lpm_divide:Mod1
- 13. Parameter Settings for Inferred Entity Instance: DigitExtractor:extractor|lpm_divide:Div0
- 14. Port Connectivity Checks: "subtractor_4bit:subtractor"
- 15. Post-Synthesis Netlist Statistics for Top Partition
- 16. Elapsed Time Per Partition
- 17. Analysis & Synthesis Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Analysis & Elaboration Settings
+  5. Analysis & Elaboration Messages
 
 
 
@@ -46,31 +34,42 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                     ;
-+---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Feb 25 18:49:14 2024          ;
-; Quartus Prime Version           ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
-; Revision Name                   ; alu_4bit                                       ;
-; Top-level Entity Name           ; alu_4bit                                       ;
-; Family                          ; Cyclone V                                      ;
-; Logic utilization (in ALMs)     ; N/A                                            ;
-; Total registers                 ; 0                                              ;
-; Total pins                      ; 32                                             ;
-; Total virtual pins              ; 0                                              ;
-; Total block memory bits         ; 0                                              ;
-; Total DSP Blocks                ; 0                                              ;
-; Total HSSI RX PCSs              ; 0                                              ;
-; Total HSSI PMA RX Deserializers ; 0                                              ;
-; Total HSSI TX PCSs              ; 0                                              ;
-; Total HSSI PMA TX Serializers   ; 0                                              ;
-; Total PLLs                      ; 0                                              ;
-; Total DLLs                      ; 0                                              ;
-+---------------------------------+------------------------------------------------+
++--------------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                                 ;
++-------------------------------+------------------------------------------------+
+; Analysis & Elaboration Status ; Successful - Sat Mar  2 14:06:01 2024          ;
+; Quartus Prime Version         ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
+; Revision Name                 ; alu_4bit                                       ;
+; Top-level Entity Name         ; alu_4bit                                       ;
+; Family                        ; Cyclone V                                      ;
+; Logic utilization (in ALMs)   ; N/A until Partition Merge                      ;
+; Total registers               ; N/A until Partition Merge                      ;
+; Total pins                    ; N/A until Partition Merge                      ;
+; Total virtual pins            ; N/A until Partition Merge                      ;
+; Total block memory bits       ; N/A until Partition Merge                      ;
+; Total PLLs                    ; N/A until Partition Merge                      ;
+; Total DLLs                    ; N/A until Partition Merge                      ;
++-------------------------------+------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 10          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                             ;
+; Analysis & Elaboration Settings                                                                                           ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
@@ -156,284 +155,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 10          ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                   ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                               ; Library ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------------+---------+
-; adder_4bit.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/adder_4bit.sv          ;         ;
-; subtractor_4bit.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/subtractor_4bit.sv     ;         ;
-; alu_4bit.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv            ;         ;
-; multiplier_4bit.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/multiplier_4bit.sv     ;         ;
-; DigitExtractor.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/DigitExtractor.sv      ;         ;
-; segmentOutput.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv       ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_divide.tdf                                                   ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/abs_divider.inc                                                  ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sign_div_unsign.inc                                              ;         ;
-; aglobal221.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/aglobal221.inc                                                   ;         ;
-; db/lpm_divide_vno.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/db/lpm_divide_vno.tdf  ;         ;
-; db/abs_divider_8ag.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/db/abs_divider_8ag.tdf ;         ;
-; db/alt_u_div_0te.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/db/alt_u_div_0te.tdf   ;         ;
-; db/lpm_abs_kn9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/db/lpm_abs_kn9.tdf     ;         ;
-; db/lpm_abs_on9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/db/lpm_abs_on9.tdf     ;         ;
-; db/lpm_divide_2go.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/db/lpm_divide_2go.tdf  ;         ;
-; db/lpm_divide_2oo.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/db/lpm_divide_2oo.tdf  ;         ;
-; db/abs_divider_bag.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/db/abs_divider_bag.tdf ;         ;
-; db/alt_u_div_6te.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/db/alt_u_div_6te.tdf   ;         ;
-; db/lpm_abs_nn9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/db/lpm_abs_nn9.tdf     ;         ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------------+---------+
-
-
-+-----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary               ;
-+---------------------------------------------+-------------+
-; Resource                                    ; Usage       ;
-+---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 157         ;
-;                                             ;             ;
-; Combinational ALUT usage for logic          ; 303         ;
-;     -- 7 input functions                    ; 3           ;
-;     -- 6 input functions                    ; 7           ;
-;     -- 5 input functions                    ; 22          ;
-;     -- 4 input functions                    ; 70          ;
-;     -- <=3 input functions                  ; 201         ;
-;                                             ;             ;
-; Dedicated logic registers                   ; 0           ;
-;                                             ;             ;
-; I/O pins                                    ; 32          ;
-;                                             ;             ;
-; Total DSP Blocks                            ; 0           ;
-;                                             ;             ;
-; Maximum fan-out node                        ; start~input ;
-; Maximum fan-out                             ; 37          ;
-; Total fan-out                               ; 1027        ;
-; Average fan-out                             ; 2.80        ;
-+---------------------------------------------+-------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                 ;
-+------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; Compilation Hierarchy Node               ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                            ; Entity Name     ; Library Name ;
-+------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |alu_4bit                                ; 303 (16)            ; 0 (0)                     ; 0                 ; 0          ; 32   ; 0            ; |alu_4bit                                                                                                                      ; alu_4bit        ; work         ;
-;    |DigitExtractor:extractor|            ; 247 (8)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_4bit|DigitExtractor:extractor                                                                                             ; DigitExtractor  ; work         ;
-;       |lpm_divide:Div0|                  ; 41 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_4bit|DigitExtractor:extractor|lpm_divide:Div0                                                                             ; lpm_divide      ; work         ;
-;          |lpm_divide_2oo:auto_generated| ; 41 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_4bit|DigitExtractor:extractor|lpm_divide:Div0|lpm_divide_2oo:auto_generated                                               ; lpm_divide_2oo  ; work         ;
-;             |abs_divider_bag:divider|    ; 41 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_4bit|DigitExtractor:extractor|lpm_divide:Div0|lpm_divide_2oo:auto_generated|abs_divider_bag:divider                       ; abs_divider_bag ; work         ;
-;                |alt_u_div_6te:divider|   ; 41 (41)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_4bit|DigitExtractor:extractor|lpm_divide:Div0|lpm_divide_2oo:auto_generated|abs_divider_bag:divider|alt_u_div_6te:divider ; alt_u_div_6te   ; work         ;
-;       |lpm_divide:Div1|                  ; 67 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_4bit|DigitExtractor:extractor|lpm_divide:Div1                                                                             ; lpm_divide      ; work         ;
-;          |lpm_divide_vno:auto_generated| ; 67 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_4bit|DigitExtractor:extractor|lpm_divide:Div1|lpm_divide_vno:auto_generated                                               ; lpm_divide_vno  ; work         ;
-;             |abs_divider_8ag:divider|    ; 67 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_4bit|DigitExtractor:extractor|lpm_divide:Div1|lpm_divide_vno:auto_generated|abs_divider_8ag:divider                       ; abs_divider_8ag ; work         ;
-;                |alt_u_div_0te:divider|   ; 67 (67)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_4bit|DigitExtractor:extractor|lpm_divide:Div1|lpm_divide_vno:auto_generated|abs_divider_8ag:divider|alt_u_div_0te:divider ; alt_u_div_0te   ; work         ;
-;       |lpm_divide:Mod0|                  ; 59 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_4bit|DigitExtractor:extractor|lpm_divide:Mod0                                                                             ; lpm_divide      ; work         ;
-;          |lpm_divide_2go:auto_generated| ; 59 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_4bit|DigitExtractor:extractor|lpm_divide:Mod0|lpm_divide_2go:auto_generated                                               ; lpm_divide_2go  ; work         ;
-;             |abs_divider_8ag:divider|    ; 59 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_4bit|DigitExtractor:extractor|lpm_divide:Mod0|lpm_divide_2go:auto_generated|abs_divider_8ag:divider                       ; abs_divider_8ag ; work         ;
-;                |alt_u_div_0te:divider|   ; 59 (59)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_4bit|DigitExtractor:extractor|lpm_divide:Mod0|lpm_divide_2go:auto_generated|abs_divider_8ag:divider|alt_u_div_0te:divider ; alt_u_div_0te   ; work         ;
-;       |lpm_divide:Mod1|                  ; 72 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_4bit|DigitExtractor:extractor|lpm_divide:Mod1                                                                             ; lpm_divide      ; work         ;
-;          |lpm_divide_2go:auto_generated| ; 72 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_4bit|DigitExtractor:extractor|lpm_divide:Mod1|lpm_divide_2go:auto_generated                                               ; lpm_divide_2go  ; work         ;
-;             |abs_divider_8ag:divider|    ; 72 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_4bit|DigitExtractor:extractor|lpm_divide:Mod1|lpm_divide_2go:auto_generated|abs_divider_8ag:divider                       ; abs_divider_8ag ; work         ;
-;                |alt_u_div_0te:divider|   ; 72 (72)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_4bit|DigitExtractor:extractor|lpm_divide:Mod1|lpm_divide_2go:auto_generated|abs_divider_8ag:divider|alt_u_div_0te:divider ; alt_u_div_0te   ; work         ;
-;    |adder_4bit:adder|                    ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_4bit|adder_4bit:adder                                                                                                     ; adder_4bit      ; work         ;
-;    |multiplier_4bit:multiplier|          ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_4bit|multiplier_4bit:multiplier                                                                                           ; multiplier_4bit ; work         ;
-;    |segmentOutput:segment1|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_4bit|segmentOutput:segment1                                                                                               ; segmentOutput   ; work         ;
-;    |segmentOutput:segment2|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_4bit|segmentOutput:segment2                                                                                               ; segmentOutput   ; work         ;
-;    |segmentOutput:segment3|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_4bit|segmentOutput:segment3                                                                                               ; segmentOutput   ; work         ;
-;    |subtractor_4bit:subtractor|          ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_4bit|subtractor_4bit:subtractor                                                                                           ; subtractor_4bit ; work         ;
-+------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |alu_4bit|result[6]        ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-
-
-+-------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: DigitExtractor:extractor|lpm_divide:Div1 ;
-+------------------------+----------------+-------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                            ;
-+------------------------+----------------+-------------------------------------------------+
-; LPM_WIDTHN             ; 9              ; Untyped                                         ;
-; LPM_WIDTHD             ; 5              ; Untyped                                         ;
-; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                         ;
-; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                         ;
-; LPM_PIPELINE           ; 0              ; Untyped                                         ;
-; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                         ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                         ;
-; CBXI_PARAMETER         ; lpm_divide_vno ; Untyped                                         ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                         ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                         ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                      ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                    ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                    ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                  ;
-+------------------------+----------------+-------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: DigitExtractor:extractor|lpm_divide:Mod0 ;
-+------------------------+----------------+-------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                            ;
-+------------------------+----------------+-------------------------------------------------+
-; LPM_WIDTHN             ; 9              ; Untyped                                         ;
-; LPM_WIDTHD             ; 5              ; Untyped                                         ;
-; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                         ;
-; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                         ;
-; LPM_PIPELINE           ; 0              ; Untyped                                         ;
-; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                         ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                         ;
-; CBXI_PARAMETER         ; lpm_divide_2go ; Untyped                                         ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                         ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                         ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                      ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                    ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                    ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                  ;
-+------------------------+----------------+-------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: DigitExtractor:extractor|lpm_divide:Mod1 ;
-+------------------------+----------------+-------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                            ;
-+------------------------+----------------+-------------------------------------------------+
-; LPM_WIDTHN             ; 9              ; Untyped                                         ;
-; LPM_WIDTHD             ; 5              ; Untyped                                         ;
-; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                         ;
-; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                         ;
-; LPM_PIPELINE           ; 0              ; Untyped                                         ;
-; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                         ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                         ;
-; CBXI_PARAMETER         ; lpm_divide_2go ; Untyped                                         ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                         ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                         ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                      ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                    ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                    ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                  ;
-+------------------------+----------------+-------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: DigitExtractor:extractor|lpm_divide:Div0 ;
-+------------------------+----------------+-------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                            ;
-+------------------------+----------------+-------------------------------------------------+
-; LPM_WIDTHN             ; 9              ; Untyped                                         ;
-; LPM_WIDTHD             ; 8              ; Untyped                                         ;
-; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                         ;
-; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                         ;
-; LPM_PIPELINE           ; 0              ; Untyped                                         ;
-; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                         ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                         ;
-; CBXI_PARAMETER         ; lpm_divide_2oo ; Untyped                                         ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                         ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                         ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                      ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                    ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                    ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                  ;
-+------------------------+----------------+-------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "subtractor_4bit:subtractor"                                                            ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                             ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; diff[4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 306                         ;
-;     arith             ; 167                         ;
-;         0 data inputs ; 44                          ;
-;         1 data inputs ; 14                          ;
-;         2 data inputs ; 17                          ;
-;         3 data inputs ; 41                          ;
-;         4 data inputs ; 47                          ;
-;         5 data inputs ; 4                           ;
-;     extend            ; 3                           ;
-;         7 data inputs ; 3                           ;
-;     normal            ; 130                         ;
-;         1 data inputs ; 3                           ;
-;         2 data inputs ; 39                          ;
-;         3 data inputs ; 40                          ;
-;         4 data inputs ; 23                          ;
-;         5 data inputs ; 18                          ;
-;         6 data inputs ; 7                           ;
-;     shared            ; 6                           ;
-;         0 data inputs ; 4                           ;
-;         1 data inputs ; 2                           ;
-; boundary_port         ; 32                          ;
-;                       ;                             ;
-; Max LUT depth         ; 20.60                       ;
-; Average LUT depth     ; 17.10                       ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:03     ;
-+----------------+--------------+
-
-
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
+Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Sun Feb 25 18:48:23 2024
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off alu_4bit -c alu_4bit
+    Info: Processing started: Sat Mar  2 14:05:14 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off alu_4bit -c alu_4bit --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file adder_4bit.sv
@@ -452,12 +181,12 @@ Info (12021): Found 1 design units, including 1 entities, in source file digitex
 Info (12021): Found 1 design units, including 1 entities, in source file segmentoutput.sv
     Info (12023): Found entity 1: segmentOutput File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 1
 Info (12127): Elaborating entity "alu_4bit" for the top level hierarchy
-Info (12128): Elaborating entity "adder_4bit" for hierarchy "adder_4bit:adder" File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 17
-Info (12128): Elaborating entity "subtractor_4bit" for hierarchy "subtractor_4bit:subtractor" File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 18
-Info (12128): Elaborating entity "multiplier_4bit" for hierarchy "multiplier_4bit:multiplier" File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 19
-Info (12128): Elaborating entity "DigitExtractor" for hierarchy "DigitExtractor:extractor" File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 21
-Warning (10762): Verilog HDL Case Statement warning at DigitExtractor.sv(16): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/DigitExtractor.sv Line: 16
-Info (12128): Elaborating entity "segmentOutput" for hierarchy "segmentOutput:segment1" File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 22
+Info (12128): Elaborating entity "adder_4bit" for hierarchy "adder_4bit:adder" File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 23
+Info (12128): Elaborating entity "subtractor_4bit" for hierarchy "subtractor_4bit:subtractor" File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 24
+Info (12128): Elaborating entity "multiplier_4bit" for hierarchy "multiplier_4bit:multiplier" File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 25
+Info (12128): Elaborating entity "DigitExtractor" for hierarchy "DigitExtractor:extractor" File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 27
+Warning (10762): Verilog HDL Case Statement warning at DigitExtractor.sv(14): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/DigitExtractor.sv Line: 14
+Info (12128): Elaborating entity "segmentOutput" for hierarchy "segmentOutput:segment1" File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 28
 Warning (10270): Verilog HDL Case Statement warning at segmentOutput.sv(10): incomplete case statement has no default case item File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 10
 Warning (10240): Verilog HDL Always Construct warning at segmentOutput.sv(8): inferring latch(es) for variable "segments1", which holds its previous value in one or more paths through the always construct File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
 Info (10041): Inferred latch for "segments1[0]" at segmentOutput.sv(8) File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
@@ -467,91 +196,10 @@ Info (10041): Inferred latch for "segments1[3]" at segmentOutput.sv(8) File: C:/
 Info (10041): Inferred latch for "segments1[4]" at segmentOutput.sv(8) File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
 Info (10041): Inferred latch for "segments1[5]" at segmentOutput.sv(8) File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
 Info (10041): Inferred latch for "segments1[6]" at segmentOutput.sv(8) File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
-Warning (14026): LATCH primitive "segmentOutput:segment2|segments1[0]" is permanently enabled File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
-Warning (14026): LATCH primitive "segmentOutput:segment2|segments1[1]" is permanently enabled File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
-Warning (14026): LATCH primitive "segmentOutput:segment2|segments1[2]" is permanently enabled File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
-Warning (14026): LATCH primitive "segmentOutput:segment2|segments1[3]" is permanently enabled File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
-Warning (14026): LATCH primitive "segmentOutput:segment2|segments1[4]" is permanently enabled File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
-Warning (14026): LATCH primitive "segmentOutput:segment2|segments1[5]" is permanently enabled File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
-Warning (14026): LATCH primitive "segmentOutput:segment2|segments1[6]" is permanently enabled File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
-Warning (14026): LATCH primitive "segmentOutput:segment3|segments1[0]" is permanently enabled File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
-Warning (14026): LATCH primitive "segmentOutput:segment3|segments1[1]" is permanently enabled File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
-Warning (14026): LATCH primitive "segmentOutput:segment3|segments1[2]" is permanently enabled File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
-Warning (14026): LATCH primitive "segmentOutput:segment3|segments1[3]" is permanently enabled File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
-Warning (14026): LATCH primitive "segmentOutput:segment3|segments1[4]" is permanently enabled File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
-Warning (14026): LATCH primitive "segmentOutput:segment3|segments1[5]" is permanently enabled File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
-Warning (14026): LATCH primitive "segmentOutput:segment3|segments1[6]" is permanently enabled File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
-Info (278001): Inferred 4 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DigitExtractor:extractor|Div1" File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/DigitExtractor.sv Line: 40
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DigitExtractor:extractor|Mod0" File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/DigitExtractor.sv Line: 40
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DigitExtractor:extractor|Mod1" File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/DigitExtractor.sv Line: 41
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DigitExtractor:extractor|Div0" File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/DigitExtractor.sv Line: 39
-Info (12130): Elaborated megafunction instantiation "DigitExtractor:extractor|lpm_divide:Div1" File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/DigitExtractor.sv Line: 40
-Info (12133): Instantiated megafunction "DigitExtractor:extractor|lpm_divide:Div1" with the following parameter: File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/DigitExtractor.sv Line: 40
-    Info (12134): Parameter "LPM_WIDTHN" = "9"
-    Info (12134): Parameter "LPM_WIDTHD" = "5"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
-    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_vno.tdf
-    Info (12023): Found entity 1: lpm_divide_vno File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/db/lpm_divide_vno.tdf Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_8ag.tdf
-    Info (12023): Found entity 1: abs_divider_8ag File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/db/abs_divider_8ag.tdf Line: 29
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_0te.tdf
-    Info (12023): Found entity 1: alt_u_div_0te File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/db/alt_u_div_0te.tdf Line: 23
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_kn9.tdf
-    Info (12023): Found entity 1: lpm_abs_kn9 File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/db/lpm_abs_kn9.tdf Line: 23
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_on9.tdf
-    Info (12023): Found entity 1: lpm_abs_on9 File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/db/lpm_abs_on9.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "DigitExtractor:extractor|lpm_divide:Mod0" File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/DigitExtractor.sv Line: 40
-Info (12133): Instantiated megafunction "DigitExtractor:extractor|lpm_divide:Mod0" with the following parameter: File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/DigitExtractor.sv Line: 40
-    Info (12134): Parameter "LPM_WIDTHN" = "9"
-    Info (12134): Parameter "LPM_WIDTHD" = "5"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
-    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_2go.tdf
-    Info (12023): Found entity 1: lpm_divide_2go File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/db/lpm_divide_2go.tdf Line: 25
-Info (12130): Elaborated megafunction instantiation "DigitExtractor:extractor|lpm_divide:Mod1" File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/DigitExtractor.sv Line: 41
-Info (12133): Instantiated megafunction "DigitExtractor:extractor|lpm_divide:Mod1" with the following parameter: File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/DigitExtractor.sv Line: 41
-    Info (12134): Parameter "LPM_WIDTHN" = "9"
-    Info (12134): Parameter "LPM_WIDTHD" = "5"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
-    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
-Info (12130): Elaborated megafunction instantiation "DigitExtractor:extractor|lpm_divide:Div0" File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/DigitExtractor.sv Line: 39
-Info (12133): Instantiated megafunction "DigitExtractor:extractor|lpm_divide:Div0" with the following parameter: File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/DigitExtractor.sv Line: 39
-    Info (12134): Parameter "LPM_WIDTHN" = "9"
-    Info (12134): Parameter "LPM_WIDTHD" = "8"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
-    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_2oo.tdf
-    Info (12023): Found entity 1: lpm_divide_2oo File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/db/lpm_divide_2oo.tdf Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_bag.tdf
-    Info (12023): Found entity 1: abs_divider_bag File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/db/abs_divider_bag.tdf Line: 29
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_6te.tdf
-    Info (12023): Found entity 1: alt_u_div_6te File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/db/alt_u_div_6te.tdf Line: 23
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_nn9.tdf
-    Info (12023): Found entity 1: lpm_abs_nn9 File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/db/lpm_abs_nn9.tdf Line: 23
-Warning (14026): LATCH primitive "segmentOutput:segment1|segments1[0]" is permanently enabled File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
-Warning (14026): LATCH primitive "segmentOutput:segment1|segments1[1]" is permanently enabled File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
-Warning (14026): LATCH primitive "segmentOutput:segment1|segments1[2]" is permanently enabled File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
-Warning (14026): LATCH primitive "segmentOutput:segment1|segments1[3]" is permanently enabled File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
-Warning (14026): LATCH primitive "segmentOutput:segment1|segments1[4]" is permanently enabled File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
-Warning (14026): LATCH primitive "segmentOutput:segment1|segments1[5]" is permanently enabled File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
-Warning (14026): LATCH primitive "segmentOutput:segment1|segments1[6]" is permanently enabled File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
-Info (286030): Timing-Driven Synthesis is running
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 335 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 11 input pins
-    Info (21059): Implemented 21 output pins
-    Info (21061): Implemented 303 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 26 warnings
-    Info: Peak virtual memory: 4876 megabytes
-    Info: Processing ended: Sun Feb 25 18:49:14 2024
-    Info: Elapsed time: 00:00:51
-    Info: Total CPU time (on all processors): 00:00:28
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4796 megabytes
+    Info: Processing ended: Sat Mar  2 14:06:01 2024
+    Info: Elapsed time: 00:00:47
+    Info: Total CPU time (on all processors): 00:00:26
 
 

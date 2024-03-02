@@ -1,14 +1,12 @@
 module DigitExtractor (
-    input [7:0] input_number,
+    input [3:0] input_number,
     output reg [3:0] digit_1,
-    output reg [3:0] digit_2,
-    output reg [3:0] digit_3
+    output reg [3:0] digit_2
 );
 
     integer decimal_number;
     integer digit_1_decimal;
     integer digit_2_decimal;
-    integer digit_3_decimal;
 
     // Function to return binary value of a digit
     function [3:0] get_binary;
@@ -31,20 +29,18 @@ module DigitExtractor (
     // Calculate decimal_number based on input_number
     always_comb begin
         decimal_number = 0;
-        for (integer i = 0; i < 8; i = i + 1) begin
+        for (integer i = 0; i < 4; i = i + 1) begin
             decimal_number = decimal_number + input_number[i] * (1 << i);
         end
 
         // Separate the digits
-        digit_1_decimal = decimal_number / 100;
-        digit_2_decimal = (decimal_number / 10) % 10;
-        digit_3_decimal = decimal_number % 10;
+        digit_1_decimal = (decimal_number / 10) % 10;
+        digit_2_decimal = decimal_number % 10;
     end
 
     // Convert each digit to its 4-bit binary form
     always_comb begin
         digit_1 = get_binary(digit_1_decimal);
         digit_2 = get_binary(digit_2_decimal);
-        digit_3 = get_binary(digit_3_decimal);
     end
 endmodule
