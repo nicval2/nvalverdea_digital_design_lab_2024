@@ -10,8 +10,6 @@ module multiplier_4bit(
 
     always_comb begin
         product = 8'b0;
-        V = 1'b0; 
-        Z = 1'b0; 
 
         for (int i = 0; i < 4; i++) begin
             if (b[i]) begin
@@ -19,15 +17,13 @@ module multiplier_4bit(
                 product = product + (a << i);
             end
         end
+	end
 
         // Set Zero flag
-        if (product == 8'b0)
-            Z = 1'b1;
+		  assign Z = (product == 8'b0);
 
         // Check for Overflow
-        if (product[7:4] != 4'b0)
-            V = 1'b1;
+		  assign V = (product[7:4] != 4'b0);
 				
-        out = product[3:0];
-    end
+        assign out = product[3:0];
 endmodule

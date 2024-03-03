@@ -13,7 +13,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work altera_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_primitives.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:13:50 on Mar 02,2024
+# Start time: 16:50:07 on Mar 03,2024
 # vlog -reportprogress 300 -vlog01compat -work altera_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_primitives.v 
 # -- Compiling module global
 # -- Compiling module carry
@@ -95,7 +95,7 @@
 # 	alt_iobuf_diff
 # 	alt_bidir_diff
 # 	alt_bidir_buf
-# End time: 20:13:52 on Mar 02,2024, Elapsed time: 0:00:02
+# End time: 16:50:09 on Mar 03,2024, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/lpm_ver
@@ -106,7 +106,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work lpm_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/220model.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:13:53 on Mar 02,2024
+# Start time: 16:50:10 on Mar 03,2024
 # vlog -reportprogress 300 -vlog01compat -work lpm_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/220model.v 
 # -- Compiling module LPM_MEMORY_INITIALIZATION
 # -- Compiling module LPM_HINT_EVALUATION
@@ -170,7 +170,7 @@
 # 	lpm_inpad
 # 	lpm_outpad
 # 	lpm_bipad
-# End time: 20:13:54 on Mar 02,2024, Elapsed time: 0:00:01
+# End time: 16:50:11 on Mar 03,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/sgate_ver
@@ -181,7 +181,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work sgate_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/sgate.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:13:55 on Mar 02,2024
+# Start time: 16:50:12 on Mar 03,2024
 # vlog -reportprogress 300 -vlog01compat -work sgate_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/sgate.v 
 # -- Compiling module oper_add
 # -- Compiling module oper_addsub
@@ -223,7 +223,7 @@
 # 	oper_decoder
 # 	oper_bus_mux
 # 	oper_latch
-# End time: 20:13:56 on Mar 02,2024, Elapsed time: 0:00:01
+# End time: 16:50:12 on Mar 03,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/altera_mf_ver
@@ -234,7 +234,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work altera_mf_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_mf.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:13:57 on Mar 02,2024
+# Start time: 16:50:13 on Mar 03,2024
 # vlog -reportprogress 300 -vlog01compat -work altera_mf_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_mf.v 
 # -- Compiling module lcell
 # -- Compiling module ALTERA_MF_MEMORY_INITIALIZATION
@@ -364,7 +364,7 @@
 # 	alt_fault_injection
 # 	sld_virtual_jtag_basic
 # 	altsource_probe
-# End time: 20:14:00 on Mar 02,2024, Elapsed time: 0:00:03
+# End time: 16:50:15 on Mar 03,2024, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/altera_lnsim_ver
@@ -375,7 +375,7 @@
 # Modifying modelsim.ini
 # vlog -sv -work altera_lnsim_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_lnsim.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:14:02 on Mar 02,2024
+# Start time: 16:50:16 on Mar 03,2024
 # vlog -reportprogress 300 -sv -work altera_lnsim_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_lnsim.sv 
 # -- Compiling package altera_lnsim_functions
 # -- Compiling package altera_generic_pll_functions
@@ -458,7 +458,7 @@
 # 	altera_iopll
 # 	fourteennm_altera_iopll
 # 	fourteennm_simple_iopll
-# End time: 20:14:04 on Mar 02,2024, Elapsed time: 0:00:02
+# End time: 16:50:18 on Mar 03,2024, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/cyclonev_ver
@@ -469,7 +469,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work cyclonev_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_atoms_ncrypt.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:14:04 on Mar 02,2024
+# Start time: 16:50:19 on Mar 03,2024
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_atoms_ncrypt.v 
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
@@ -483,19 +483,19 @@
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # 
 # Top level modules:
-# End time: 20:14:11 on Mar 02,2024, Elapsed time: 0:00:07
+# End time: 16:50:25 on Mar 03,2024, Elapsed time: 0:00:06
 # Errors: 0, Warnings: 10
 # vlog -vlog01compat -work cyclonev_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_hmi_atoms_ncrypt.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:14:12 on Mar 02,2024
+# Start time: 16:50:25 on Mar 03,2024
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_hmi_atoms_ncrypt.v 
 # 
 # Top level modules:
-# End time: 20:14:16 on Mar 02,2024, Elapsed time: 0:00:04
+# End time: 16:50:29 on Mar 03,2024, Elapsed time: 0:00:04
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work cyclonev_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_atoms.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:14:16 on Mar 02,2024
+# Start time: 16:50:29 on Mar 03,2024
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_atoms.v 
 # -- Compiling UDP CYCLONEV_PRIM_DFFE
 # -- Compiling UDP CYCLONEV_PRIM_DFFEAS
@@ -635,7 +635,7 @@
 # 	cyclonev_mem_phy
 # 	cyclonev_oscillator
 # 	cyclonev_hps_interface_fpga2sdram
-# End time: 20:14:18 on Mar 02,2024, Elapsed time: 0:00:02
+# End time: 16:50:31 on Mar 03,2024, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/cyclonev_hssi_ver
@@ -646,15 +646,15 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work cyclonev_hssi_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_hssi_atoms_ncrypt.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:14:20 on Mar 02,2024
+# Start time: 16:50:32 on Mar 03,2024
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_hssi_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_hssi_atoms_ncrypt.v 
 # 
 # Top level modules:
-# End time: 20:14:26 on Mar 02,2024, Elapsed time: 0:00:06
+# End time: 16:50:37 on Mar 03,2024, Elapsed time: 0:00:05
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work cyclonev_hssi_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_hssi_atoms.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:14:26 on Mar 02,2024
+# Start time: 16:50:37 on Mar 03,2024
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_hssi_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_hssi_atoms.v 
 # -- Compiling module cyclonev_hssi_8g_pcs_aggregate
 # -- Compiling module cyclonev_hssi_8g_rx_pcs
@@ -754,7 +754,7 @@
 # 	arriav_hssi_avmm_interface
 # 	arriav_hssi_pma_hi_pmaif
 # 	arriav_hssi_pma_hi_xcvrif
-# End time: 20:14:27 on Mar 02,2024, Elapsed time: 0:00:01
+# End time: 16:50:38 on Mar 03,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/cyclonev_pcie_hip_ver
@@ -765,7 +765,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work cyclonev_pcie_hip_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_pcie_hip_atoms_ncrypt.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:14:29 on Mar 02,2024
+# Start time: 16:50:39 on Mar 03,2024
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_pcie_hip_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_pcie_hip_atoms_ncrypt.v 
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
@@ -775,18 +775,18 @@
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # 
 # Top level modules:
-# End time: 20:14:36 on Mar 02,2024, Elapsed time: 0:00:07
+# End time: 16:50:45 on Mar 03,2024, Elapsed time: 0:00:06
 # Errors: 0, Warnings: 6
 # vlog -vlog01compat -work cyclonev_pcie_hip_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_pcie_hip_atoms.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:14:36 on Mar 02,2024
+# Start time: 16:50:46 on Mar 03,2024
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_pcie_hip_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_pcie_hip_atoms.v 
 # -- Compiling module cyclonev_hd_altpe2_hip_top
 # -- Compiling module arriav_hd_altpe2_hip_top
 # 
 # Top level modules:
 # 	cyclonev_hd_altpe2_hip_top
-# End time: 20:14:37 on Mar 02,2024, Elapsed time: 0:00:01
+# End time: 16:50:46 on Mar 03,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # if {[file exists rtl_work]} {
@@ -800,139 +800,139 @@
 # 
 # vlog -sv -work work +incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1 {C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/adder_4bit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:14:38 on Mar 02,2024
+# Start time: 16:50:47 on Mar 03,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1" C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/adder_4bit.sv 
 # -- Compiling module adder_4bit
 # 
 # Top level modules:
 # 	adder_4bit
-# End time: 20:14:38 on Mar 02,2024, Elapsed time: 0:00:00
+# End time: 16:50:47 on Mar 03,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1 {C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/subtractor_4bit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:14:38 on Mar 02,2024
+# Start time: 16:50:47 on Mar 03,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1" C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/subtractor_4bit.sv 
 # -- Compiling module subtractor_4bit
 # 
 # Top level modules:
 # 	subtractor_4bit
-# End time: 20:14:38 on Mar 02,2024, Elapsed time: 0:00:00
+# End time: 16:50:47 on Mar 03,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1 {C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:14:38 on Mar 02,2024
+# Start time: 16:50:47 on Mar 03,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1" C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv 
 # -- Compiling module alu_4bit
 # 
 # Top level modules:
 # 	alu_4bit
-# End time: 20:14:38 on Mar 02,2024, Elapsed time: 0:00:00
+# End time: 16:50:48 on Mar 03,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1 {C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/multiplier_4bit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:14:39 on Mar 02,2024
+# Start time: 16:50:48 on Mar 03,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1" C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/multiplier_4bit.sv 
 # -- Compiling module multiplier_4bit
 # 
 # Top level modules:
 # 	multiplier_4bit
-# End time: 20:14:39 on Mar 02,2024, Elapsed time: 0:00:00
+# End time: 16:50:48 on Mar 03,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1 {C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/DigitExtractor.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:14:39 on Mar 02,2024
+# Start time: 16:50:48 on Mar 03,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1" C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/DigitExtractor.sv 
 # -- Compiling module DigitExtractor
 # 
 # Top level modules:
 # 	DigitExtractor
-# End time: 20:14:39 on Mar 02,2024, Elapsed time: 0:00:00
+# End time: 16:50:48 on Mar 03,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1 {C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:14:39 on Mar 02,2024
+# Start time: 16:50:48 on Mar 03,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1" C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv 
 # -- Compiling module segmentOutput
 # 
 # Top level modules:
 # 	segmentOutput
-# End time: 20:14:40 on Mar 02,2024, Elapsed time: 0:00:01
+# End time: 16:50:49 on Mar 03,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1 {C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/divider_4bit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:14:40 on Mar 02,2024
+# Start time: 16:50:49 on Mar 03,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1" C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/divider_4bit.sv 
 # -- Compiling module divider_4bit
 # 
 # Top level modules:
 # 	divider_4bit
-# End time: 20:14:40 on Mar 02,2024, Elapsed time: 0:00:00
+# End time: 16:50:49 on Mar 03,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1 {C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/and_4bit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:14:40 on Mar 02,2024
+# Start time: 16:50:49 on Mar 03,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1" C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/and_4bit.sv 
 # -- Compiling module and_4bit
 # 
 # Top level modules:
 # 	and_4bit
-# End time: 20:14:40 on Mar 02,2024, Elapsed time: 0:00:00
+# End time: 16:50:49 on Mar 03,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1 {C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/or_4bit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:14:40 on Mar 02,2024
+# Start time: 16:50:49 on Mar 03,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1" C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/or_4bit.sv 
 # -- Compiling module or_4bit
 # 
 # Top level modules:
 # 	or_4bit
-# End time: 20:14:41 on Mar 02,2024, Elapsed time: 0:00:01
+# End time: 16:50:49 on Mar 03,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1 {C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/xor_4bit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:14:41 on Mar 02,2024
+# Start time: 16:50:49 on Mar 03,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1" C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/xor_4bit.sv 
 # -- Compiling module xor_4bit
 # 
 # Top level modules:
 # 	xor_4bit
-# End time: 20:14:41 on Mar 02,2024, Elapsed time: 0:00:00
+# End time: 16:50:50 on Mar 03,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1 {C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/shiftLeft_4bit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:14:41 on Mar 02,2024
+# Start time: 16:50:50 on Mar 03,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1" C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/shiftLeft_4bit.sv 
 # -- Compiling module shiftLeft_4bit
 # 
 # Top level modules:
 # 	shiftLeft_4bit
-# End time: 20:14:41 on Mar 02,2024, Elapsed time: 0:00:00
+# End time: 16:50:50 on Mar 03,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1 {C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/shiftRight_4bit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:14:42 on Mar 02,2024
+# Start time: 16:50:50 on Mar 03,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1" C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/shiftRight_4bit.sv 
 # -- Compiling module shiftRight_4bit
 # 
 # Top level modules:
 # 	shiftRight_4bit
-# End time: 20:14:42 on Mar 02,2024, Elapsed time: 0:00:00
+# End time: 16:50:50 on Mar 03,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -sv -work work +incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1 {C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit_tb.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:14:42 on Mar 02,2024
+# Start time: 16:50:50 on Mar 03,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1" C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit_tb.sv 
 # -- Compiling module alu_4bit_tb
 # 
 # Top level modules:
 # 	alu_4bit_tb
-# End time: 20:14:42 on Mar 02,2024, Elapsed time: 0:00:00
+# End time: 16:50:50 on Mar 03,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  alu_4bit_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" alu_4bit_tb 
-# Start time: 20:14:42 on Mar 02,2024
+# Start time: 16:50:51 on Mar 03,2024
 # Loading sv_std.std
 # Loading work.alu_4bit_tb
 # Loading work.alu_4bit
@@ -951,28 +951,32 @@
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: ale-r  Hostname: ALE_XPS  ProcessID: 33076
-#           Attempting to use alternate WLF file "./wlft0y7x9a".
+#           Attempting to use alternate WLF file "./wlftkt1zsh".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft0y7x9a
+#           Using alternate file: ./wlftkt1zsh
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
+# ** Error: Test case 3.2 failed: Expected s2 to be 0011001
+#    Time: 600 ps  Scope: alu_4bit_tb File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit_tb.sv Line: 103
+# ** Error: Test case 3.2 failed: Expected VFlag to be 0
+#    Time: 600 ps  Scope: alu_4bit_tb File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit_tb.sv Line: 107
 # ** Error: Test case 4.1 failed: Expected s2 to be 0100100
-#    Time: 700 ps  Scope: alu_4bit_tb File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit_tb.sv Line: 112
+#    Time: 720 ps  Scope: alu_4bit_tb File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit_tb.sv Line: 119
 # ** Error: Test case 4.1 failed: Expected ZFlag to be 0
-#    Time: 700 ps  Scope: alu_4bit_tb File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit_tb.sv Line: 114
+#    Time: 720 ps  Scope: alu_4bit_tb File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit_tb.sv Line: 121
 # ** Error: Test case 4.1 failed: Expected VFlag to be 0
-#    Time: 700 ps  Scope: alu_4bit_tb File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit_tb.sv Line: 116
+#    Time: 720 ps  Scope: alu_4bit_tb File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit_tb.sv Line: 123
 # ** Error: Test case 4.2 failed: Expected ZFlag to be 1
-#    Time: 800 ps  Scope: alu_4bit_tb File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit_tb.sv Line: 127
+#    Time: 840 ps  Scope: alu_4bit_tb File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit_tb.sv Line: 136
 # ** Error: Test case 4.2 failed: Expected VFlag to be 0
-#    Time: 800 ps  Scope: alu_4bit_tb File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit_tb.sv Line: 129
+#    Time: 840 ps  Scope: alu_4bit_tb File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit_tb.sv Line: 138
 # ** Error: Test case 4.3 failed: Expected s2 to be 1111001
-#    Time: 900 ps  Scope: alu_4bit_tb File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit_tb.sv Line: 138
+#    Time: 960 ps  Scope: alu_4bit_tb File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit_tb.sv Line: 149
 # ** Error: Test case 4.3 failed: Expected ZFlag to be 0
-#    Time: 900 ps  Scope: alu_4bit_tb File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit_tb.sv Line: 140
+#    Time: 960 ps  Scope: alu_4bit_tb File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit_tb.sv Line: 151
 # ** Error: Test case 4.3 failed: Expected VFlag to be 1
-#    Time: 900 ps  Scope: alu_4bit_tb File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit_tb.sv Line: 142
+#    Time: 960 ps  Scope: alu_4bit_tb File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit_tb.sv Line: 153
 # Test finished

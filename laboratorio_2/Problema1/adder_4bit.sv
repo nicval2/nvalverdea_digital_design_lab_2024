@@ -26,5 +26,5 @@ module adder_4bit(
   assign overflow = carry[4];
 
   // Calculate zero flag
-  assign zero = (sum[3] == 0) & (sum[2] == 0) & (sum[1] == 0) & (sum[0] == 0) & !overflow;
+  assign zero = ((sum == 4'b0) & !overflow);
 endmodule

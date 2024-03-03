@@ -35,66 +35,66 @@ module alu_4bit(
     segmentOutput segment1(.digit(digit_1), .seg(s1));
     segmentOutput segment2(.digit(digit_2), .seg(s2));
 
-always_comb begin
+always @(start) begin
     if (start) begin
         case (op)
-            4'b0000: begin
+            4'b0001: begin //Add
                 result = add_result;
                 NFlag = 1'b0;
                 ZFlag = add_ZFlag;
                 CFlag = add_CFlag;
                 VFlag = add_VFlag;
             end
-            4'b0001: begin
+            4'b0010: begin //Subtract
                 result = sub_result;
                 NFlag = sub_NFlag;
                 ZFlag = sub_ZFlag;
                 CFlag = sub_CFlag;
                 VFlag = sub_VFlag;
             end
-            4'b0010: begin
+            4'b0011: begin //Multiply
                 result = mul_result;
                 NFlag = 1'b0;
                 ZFlag = mul_ZFlag;
                 CFlag = 1'b0;
                 VFlag = mul_VFlag;
             end
-				4'b0011: begin
+				4'b0100: begin //Divide
                 result = div_result;
                 NFlag = 1'b0;
                 ZFlag = div_ZFlag;
                 CFlag = 1'b0;
                 VFlag = div_VFlag;
             end
-				4'b0100: begin
+				4'b0101: begin //AND
                 result = and_result;
                 NFlag = 1'b0;
                 ZFlag = and_ZFlag;
                 CFlag = 1'b0;
                 VFlag = 1'b0;
             end
-				4'b0101: begin
+				4'b0110: begin //OR
                 result = or_result;
                 NFlag = 1'b0;
                 ZFlag = or_ZFlag;
                 CFlag = 1'b0;
                 VFlag = 1'b0;
             end
-				4'b0110: begin
+				4'b0111: begin //XOR
                 result = xor_result;
                 NFlag = 1'b0;
                 ZFlag = xor_ZFlag;
                 CFlag = 1'b0;
                 VFlag = 1'b0;
             end
-				4'b0111: begin
+				4'b1000: begin //LEFTSHIFT
                 result = left_result;
                 NFlag = 1'b0;
                 ZFlag = left_ZFlag;
                 CFlag = left_CFlag;
                 VFlag = 1'b0;
             end
-				4'b1000: begin
+				4'b1001: begin //RIGHTSHIFT
                 result = right_result;
                 NFlag = 1'b0;
                 ZFlag = right_ZFlag;
@@ -111,11 +111,11 @@ always_comb begin
 				
         endcase
     end else begin
-        result = 4'b0000;
-        NFlag = 1'b0;
-        ZFlag = 1'b0;
-        CFlag = 1'b0;
-        VFlag = 1'b0;
+        result = result;
+        NFlag = NFlag;
+        ZFlag = ZFlag;
+        CFlag = CFlag;
+        VFlag = VFlag;
     end
 end
 endmodule

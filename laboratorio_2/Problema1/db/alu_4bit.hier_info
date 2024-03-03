@@ -39,14 +39,14 @@ op[3] => Decoder0.IN0
 op[3] => Mux4.IN7
 op[3] => Mux5.IN12
 op[3] => Mux6.IN12
-start => result.OUTPUTSELECT
-start => result.OUTPUTSELECT
-start => result.OUTPUTSELECT
-start => result.OUTPUTSELECT
-start => NFlag.OUTPUTSELECT
-start => ZFlag.OUTPUTSELECT
-start => CFlag.OUTPUTSELECT
-start => VFlag.OUTPUTSELECT
+start => VFlag$latch.LATCH_ENABLE
+start => CFlag$latch.LATCH_ENABLE
+start => ZFlag$latch.LATCH_ENABLE
+start => NFlag$latch.LATCH_ENABLE
+start => result[0].LATCH_ENABLE
+start => result[1].LATCH_ENABLE
+start => result[2].LATCH_ENABLE
+start => result[3].LATCH_ENABLE
 s1[0] << segmentOutput:segment1.seg
 s1[1] << segmentOutput:segment1.seg
 s1[2] << segmentOutput:segment1.seg
@@ -61,10 +61,10 @@ s2[3] << segmentOutput:segment2.seg
 s2[4] << segmentOutput:segment2.seg
 s2[5] << segmentOutput:segment2.seg
 s2[6] << segmentOutput:segment2.seg
-NFlag << NFlag.DB_MAX_OUTPUT_PORT_TYPE
-ZFlag << ZFlag.DB_MAX_OUTPUT_PORT_TYPE
-CFlag << CFlag.DB_MAX_OUTPUT_PORT_TYPE
-VFlag << VFlag.DB_MAX_OUTPUT_PORT_TYPE
+NFlag << NFlag$latch.DB_MAX_OUTPUT_PORT_TYPE
+ZFlag << ZFlag$latch.DB_MAX_OUTPUT_PORT_TYPE
+CFlag << CFlag$latch.DB_MAX_OUTPUT_PORT_TYPE
+VFlag << VFlag$latch.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |alu_4bit|adder_4bit:adder

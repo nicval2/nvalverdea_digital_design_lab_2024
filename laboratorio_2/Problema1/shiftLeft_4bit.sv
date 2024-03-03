@@ -14,11 +14,6 @@ module shiftLeft_4bit(
   assign zero_flag = (result == 4'b0000);
 
   // Set carry flag based on the value of the MSB of input 'a'
-  always_comb begin
-    if (a[3] == 1'b1)
-      carry_flag = 1'b1;
-    else
-      carry_flag = 1'b0;
-  end
+  assign carry_flag = (a[3] == 1'b1);
 
 endmodule
