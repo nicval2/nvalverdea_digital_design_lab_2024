@@ -101,6 +101,45 @@ module alu_4bit_tb;
     assert(ZFlag === 1'b1) else $error("Test case 3.2 failed: Expected ZFlag to be 0");
     assert(CFlag === 1'b0) else $error("Test case 3.2 failed: Expected CFlag to be 0");
     assert(VFlag === 1'b0) else $error("Test case 3.2 failed: Expected VFlag to be 1");
+	 
+	 // Test case 4.1: Division
+    start = 1;
+    a = 4'b0110; // 6
+    b = 4'b0011; // 3
+    op = 4'b0011; // divide
+    #100; // Wait for computation
+	 assert(s1 === 7'b1000000) else $error("Test case 4.1 failed: Expected s1 to be 1000000");
+    assert(s2 === 7'b0100100) else $error("Test case 4.1 failed: Expected s2 to be 0100100");
+    assert(NFlag === 1'b0) else $error("Test case 4.1 failed: Expected NFlag to be 0");
+    assert(ZFlag === 1'b0) else $error("Test case 4.1 failed: Expected ZFlag to be 0");
+    assert(CFlag === 1'b0) else $error("Test case 4.1 failed: Expected CFlag to be 0");
+    assert(VFlag === 1'b0) else $error("Test case 4.1 failed: Expected VFlag to be 0");
+	 
+	 // Test case 4.2: Division
+    start = 1;
+    a = 4'b0000; // 0
+    b = 4'b0011; // 3
+    op = 4'b0011; // divide
+    #100; // Wait for computation
+	 assert(s1 === 7'b1000000) else $error("Test case 4.2 failed: Expected s1 to be 1000000");
+    assert(s2 === 7'b1000000) else $error("Test case 4.2 failed: Expected s2 to be 1000000");
+    assert(NFlag === 1'b0) else $error("Test case 4.2 failed: Expected NFlag to be 0");
+    assert(ZFlag === 1'b1) else $error("Test case 4.2 failed: Expected ZFlag to be 1");
+    assert(CFlag === 1'b0) else $error("Test case 4.2 failed: Expected CFlag to be 0");
+    assert(VFlag === 1'b0) else $error("Test case 4.2 failed: Expected VFlag to be 0");
+	 
+	 // Test case 4.3: Division
+    start = 1;
+    a = 4'b1001; // 9
+    b = 4'b0110; // 6
+    op = 4'b0011; // divide
+    #100; // Wait for computation
+	 assert(s1 === 7'b1000000) else $error("Test case 4.3 failed: Expected s1 to be 1000000");
+    assert(s2 === 7'b1111001) else $error("Test case 4.3 failed: Expected s2 to be 1111001");
+    assert(NFlag === 1'b0) else $error("Test case 4.3 failed: Expected NFlag to be 0");
+    assert(ZFlag === 1'b0) else $error("Test case 4.3 failed: Expected ZFlag to be 0");
+    assert(CFlag === 1'b0) else $error("Test case 4.3 failed: Expected CFlag to be 0");
+    assert(VFlag === 1'b1) else $error("Test case 4.3 failed: Expected VFlag to be 1");
 
 	 $display("Test finished");
 
