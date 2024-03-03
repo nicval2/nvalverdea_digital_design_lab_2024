@@ -15,14 +15,16 @@ module alu_4bit(
 	 logic sub_CFlag, sub_VFlag, sub_ZFlag, sub_NFlag;
 	 logic mul_VFlag, mul_ZFlag;
 	 logic div_VFlag, div_ZFlag;
-    wire [3:0] add_result, sub_result, mul_result, div_result;
+	 logic and_ZFlag;
+    wire [3:0] add_result, sub_result, mul_result, div_result, and_result;
 	 
     wire [3:0] digit_1, digit_2;
 
-    adder_4bit adder (a, b, add_result[3:0], add_CFlag, add_VFlag, add_ZFlag);
-    subtractor_4bit subtractor (a, b, sub_result[3:0], sub_CFlag, sub_VFlag, sub_ZFlag, sub_NFlag);
-    multiplier_4bit multiplier (a, b, mul_result[3:0], mul_VFlag, mul_ZFlag);
-	 divider_4bit divider (a, b, div_result[3:0], div_VFlag, div_ZFlag);
+    adder_4bit adder (a, b, add_result, add_CFlag, add_VFlag, add_ZFlag);
+    subtractor_4bit subtractor (a, b, sub_result, sub_CFlag, sub_VFlag, sub_ZFlag, sub_NFlag);
+    multiplier_4bit multiplier (a, b, mul_result, mul_VFlag, mul_ZFlag);
+	 divider_4bit divider (a, b, div_result, div_VFlag, div_ZFlag);
+	 and_4bit andd (a,b, and_result, and_ZFlag);
 	 
 	 DigitExtractor extractor(.input_number(result), .digit_1(digit_1), .digit_2(digit_2));
     segmentOutput segment1(.digit(digit_1), .seg(s1));
@@ -58,6 +60,13 @@ always_comb begin
                 ZFlag = div_ZFlag;
                 CFlag = 1'b0;
                 VFlag = div_VFlag;
+            end
+				4'b00100: begin
+                result = and_result;
+                NFlag = 1'b0;
+                ZFlag = and_ZFlag;
+                CFlag = 1'b0;
+                VFlag = 1'b0;
             end
             default: begin
                 result = 4'b0000;

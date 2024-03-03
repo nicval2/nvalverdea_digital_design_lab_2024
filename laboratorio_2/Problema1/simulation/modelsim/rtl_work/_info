@@ -11,12 +11,12 @@ cModel Technology
 Z0 dC:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/simulation/modelsim
 vadder_4bit
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-!s110 1709426387
+Z2 !s110 1709427618
 !i10b 1
 !s100 mU[QS7iL=4X9YQQPhaGm73
-Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
 I<o<IkLXdKjm4WR<`VoRO92
-Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
 w1709402416
@@ -24,77 +24,103 @@ w1709402416
 FC:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/adder_4bit.sv
 !i122 0
 L0 1 30
-Z4 OV;L;2020.1;71
+Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-!s108 1709426387.000000
+Z6 !s108 1709427618.000000
 !s107 C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/adder_4bit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/adder_4bit.sv|
 !i113 1
-Z5 o-sv -work work
-Z6 !s92 -sv -work work +incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1
-Z7 tCvgOpt 0
+Z7 o-sv -work work
+Z8 !s92 -sv -work work +incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1
+Z9 tCvgOpt 0
 valu_4bit
 R1
-Z8 !s110 1709426388
-!i10b 1
-!s100 bo[?F4]ZRG;X961Mc_HO<2
 R2
-I00?Uh^3M^?6@dOhK`S>ab2
+!i10b 1
+!s100 A8QgzR_G8IbWQS:9KAC`E2
 R3
+IRZb^Ol:T0[FfdbzeCo>zn2
+R4
 S1
 R0
-w1709412049
+w1709427509
 8C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv
 FC:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv
 !i122 2
-L0 1 78
-R4
+L0 1 87
+R5
 r1
 !s85 0
 31
-Z9 !s108 1709426388.000000
+R6
 !s107 C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv|
 !i113 1
-R5
-R6
 R7
+R8
+R9
 valu_4bit_tb
 R1
-!s110 1709426390
+!s110 1709427621
 !i10b 1
-!s100 =J?ICL1:16AUKGfQP@5nk1
-R2
-IIQ@i0Lh51S]VEV0L4ad<o2
+!s100 Pmn`emBmNiB5?m<o8180_2
 R3
+IQN<OMCZJiz@IZ:2=TMeic2
+R4
 S1
 R0
-w1709412050
+w1709427510
 8C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit_tb.sv
 FC:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit_tb.sv
-!i122 7
-L0 1 148
-R4
+!i122 8
+L0 1 174
+R5
 r1
 !s85 0
 31
-!s108 1709426390.000000
+!s108 1709427621.000000
 !s107 C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit_tb.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit_tb.sv|
 !i113 1
-R5
-R6
 R7
+R8
+R9
+vand_4bit
+R1
+Z10 !s110 1709427620
+!i10b 1
+!s100 IWQC5l`>WaXYl49Q>QL8i3
+R3
+IUX]8M^I]Adc0M9oAUj_6n3
+R4
+S1
+R0
+w1709427508
+8C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/and_4bit.sv
+FC:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/and_4bit.sv
+!i122 7
+L0 1 16
+R5
+r1
+!s85 0
+31
+Z11 !s108 1709427620.000000
+!s107 C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/and_4bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/and_4bit.sv|
+!i113 1
+R7
+R8
+R9
 vDigitExtractor
 R1
-Z10 !s110 1709426389
+Z12 !s110 1709427619
 !i10b 1
 !s100 QCOLIFU4AF4504nGhlGo41
-R2
-IG]oRVZAF=l9nVFSAbM^^;0
 R3
+IG]oRVZAF=l9nVFSAbM^^;0
+R4
 S1
 R0
 w1709398309
@@ -102,26 +128,26 @@ w1709398309
 FC:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/DigitExtractor.sv
 !i122 4
 L0 1 46
-R4
+R5
 r1
 !s85 0
 31
-Z11 !s108 1709426389.000000
+Z13 !s108 1709427619.000000
 !s107 C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/DigitExtractor.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/DigitExtractor.sv|
 !i113 1
-R5
-R6
 R7
+R8
+R9
 n@digit@extractor
 vdivider_4bit
 R1
 R10
 !i10b 1
 !s100 zadUg?P]9=FRi8Y`1LJ<E3
-R2
-IOS9eJLk_6bg4eJ@0DJc0o2
 R3
+IOS9eJLk_6bg4eJ@0DJc0o2
+R4
 S1
 R0
 w1709426278
@@ -129,7 +155,7 @@ w1709426278
 FC:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/divider_4bit.sv
 !i122 6
 L0 1 42
-R4
+R5
 r1
 !s85 0
 31
@@ -137,17 +163,17 @@ R11
 !s107 C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/divider_4bit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/divider_4bit.sv|
 !i113 1
-R5
-R6
 R7
+R8
+R9
 vmultiplier_4bit
 R1
-R8
+R12
 !i10b 1
 !s100 1Ei=d]YCN7fWdzVl:bgH<1
-R2
-IROBSOBQHi8U^RHWU@_zzg2
 R3
+IROBSOBQHi8U^RHWU@_zzg2
+R4
 S1
 R0
 w1709409571
@@ -155,25 +181,25 @@ w1709409571
 FC:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/multiplier_4bit.sv
 !i122 3
 L0 1 33
-R4
+R5
 r1
 !s85 0
 31
-R9
+R13
 !s107 C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/multiplier_4bit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/multiplier_4bit.sv|
 !i113 1
-R5
-R6
 R7
+R8
+R9
 vsegmentOutput
 R1
 R10
 !i10b 1
 !s100 H3:LVdl2Hn`VmgkR>iV@h1
-R2
-IDH1KLN@;6l33_E?<=R7jA1
 R3
+IDH1KLN@;6l33_E?<=R7jA1
+R4
 S1
 R0
 w1708833173
@@ -181,26 +207,26 @@ w1708833173
 FC:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv
 !i122 5
 L0 1 43
-R4
+R5
 r1
 !s85 0
 31
-R11
+R13
 !s107 C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv|
 !i113 1
-R5
-R6
 R7
+R8
+R9
 nsegment@output
 vsubtractor_4bit
 R1
-R8
+R2
 !i10b 1
 !s100 0^RRHJm>g9mKX:8<J5Ol30
-R2
-IX8PHdK:GgMDJQU;Tai^9[3
 R3
+IX8PHdK:GgMDJQU;Tai^9[3
+R4
 S1
 R0
 w1709425932
@@ -208,14 +234,14 @@ w1709425932
 FC:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/subtractor_4bit.sv
 !i122 1
 L0 1 34
-R4
+R5
 r1
 !s85 0
 31
-R9
+R6
 !s107 C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/subtractor_4bit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/subtractor_4bit.sv|
 !i113 1
-R5
-R6
 R7
+R8
+R9

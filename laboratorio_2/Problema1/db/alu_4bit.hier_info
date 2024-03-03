@@ -1,39 +1,39 @@
 |alu_4bit
-a[0] => a[0].IN4
-a[1] => a[1].IN4
-a[2] => a[2].IN4
-a[3] => a[3].IN4
-b[0] => b[0].IN4
-b[1] => b[1].IN4
-b[2] => b[2].IN4
-b[3] => b[3].IN4
-op[0] => Mux0.IN15
-op[0] => Mux1.IN15
-op[0] => Mux2.IN15
-op[0] => Mux3.IN15
+a[0] => a[0].IN5
+a[1] => a[1].IN5
+a[2] => a[2].IN5
+a[3] => a[3].IN5
+b[0] => b[0].IN5
+b[1] => b[1].IN5
+b[2] => b[2].IN5
+b[3] => b[3].IN5
+op[0] => Mux0.IN14
+op[0] => Mux1.IN14
+op[0] => Mux2.IN14
+op[0] => Mux3.IN14
 op[0] => Decoder0.IN3
-op[0] => Mux4.IN15
+op[0] => Mux4.IN14
 op[0] => Mux5.IN15
-op[1] => Mux0.IN14
-op[1] => Mux1.IN14
-op[1] => Mux2.IN14
-op[1] => Mux3.IN14
+op[1] => Mux0.IN13
+op[1] => Mux1.IN13
+op[1] => Mux2.IN13
+op[1] => Mux3.IN13
 op[1] => Decoder0.IN2
-op[1] => Mux4.IN14
+op[1] => Mux4.IN13
 op[1] => Mux5.IN14
-op[2] => Mux0.IN13
-op[2] => Mux1.IN13
-op[2] => Mux2.IN13
-op[2] => Mux3.IN13
+op[2] => Mux0.IN12
+op[2] => Mux1.IN12
+op[2] => Mux2.IN12
+op[2] => Mux3.IN12
 op[2] => Decoder0.IN1
-op[2] => Mux4.IN13
+op[2] => Mux4.IN12
 op[2] => Mux5.IN13
-op[3] => Mux0.IN12
-op[3] => Mux1.IN12
-op[3] => Mux2.IN12
-op[3] => Mux3.IN12
+op[3] => Mux0.IN11
+op[3] => Mux1.IN11
+op[3] => Mux2.IN11
+op[3] => Mux3.IN11
 op[3] => Decoder0.IN0
-op[3] => Mux4.IN12
+op[3] => Mux4.IN11
 op[3] => Mux5.IN12
 start => result.OUTPUTSELECT
 start => result.OUTPUTSELECT
@@ -43,24 +43,24 @@ start => NFlag.OUTPUTSELECT
 start => ZFlag.OUTPUTSELECT
 start => CFlag.OUTPUTSELECT
 start => VFlag.OUTPUTSELECT
-s1[0] << segmentOutput:segment1.seg
-s1[1] << segmentOutput:segment1.seg
-s1[2] << segmentOutput:segment1.seg
-s1[3] << segmentOutput:segment1.seg
-s1[4] << segmentOutput:segment1.seg
-s1[5] << segmentOutput:segment1.seg
-s1[6] << segmentOutput:segment1.seg
-s2[0] << segmentOutput:segment2.seg
-s2[1] << segmentOutput:segment2.seg
-s2[2] << segmentOutput:segment2.seg
-s2[3] << segmentOutput:segment2.seg
-s2[4] << segmentOutput:segment2.seg
-s2[5] << segmentOutput:segment2.seg
-s2[6] << segmentOutput:segment2.seg
-NFlag << NFlag.DB_MAX_OUTPUT_PORT_TYPE
-ZFlag << ZFlag.DB_MAX_OUTPUT_PORT_TYPE
-CFlag << CFlag.DB_MAX_OUTPUT_PORT_TYPE
-VFlag << VFlag.DB_MAX_OUTPUT_PORT_TYPE
+s1[0] <= segmentOutput:segment1.seg
+s1[1] <= segmentOutput:segment1.seg
+s1[2] <= segmentOutput:segment1.seg
+s1[3] <= segmentOutput:segment1.seg
+s1[4] <= segmentOutput:segment1.seg
+s1[5] <= segmentOutput:segment1.seg
+s1[6] <= segmentOutput:segment1.seg
+s2[0] <= segmentOutput:segment2.seg
+s2[1] <= segmentOutput:segment2.seg
+s2[2] <= segmentOutput:segment2.seg
+s2[3] <= segmentOutput:segment2.seg
+s2[4] <= segmentOutput:segment2.seg
+s2[5] <= segmentOutput:segment2.seg
+s2[6] <= segmentOutput:segment2.seg
+NFlag <= NFlag.DB_MAX_OUTPUT_PORT_TYPE
+ZFlag <= ZFlag.DB_MAX_OUTPUT_PORT_TYPE
+CFlag <= CFlag.DB_MAX_OUTPUT_PORT_TYPE
+VFlag <= VFlag.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |alu_4bit|adder_4bit:adder
@@ -222,6 +222,22 @@ carry_out <= borrow.DB_MAX_OUTPUT_PORT_TYPE
 overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
 zero <= zero.DB_MAX_OUTPUT_PORT_TYPE
 negative <= diff.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_4bit|and_4bit:andd
+a[0] => result.IN0
+a[1] => result.IN0
+a[2] => result.IN0
+a[3] => result.IN0
+b[0] => result.IN1
+b[1] => result.IN1
+b[2] => result.IN1
+b[3] => result.IN1
+result[0] <= result.DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result.DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result.DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= result.DB_MAX_OUTPUT_PORT_TYPE
+zero_flag <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |alu_4bit|DigitExtractor:extractor

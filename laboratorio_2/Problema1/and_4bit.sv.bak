@@ -1,0 +1,18 @@
+module and_4bit(
+  input logic [3:0] a,
+  input logic [3:0] b,
+  output logic [3:0] result,
+  output logic zero_flag,
+  output logic carry_flag,
+  output logic overflow_flag
+);
+
+  // Perform AND operation
+  assign result = a & b;
+
+  // Set flags
+  assign zero_flag = (result == 4'b0000);
+  assign carry_flag = 1'b0; // No carry in AND operation
+  assign overflow_flag = 1'b0; // No overflow in AND operation
+
+endmodule
