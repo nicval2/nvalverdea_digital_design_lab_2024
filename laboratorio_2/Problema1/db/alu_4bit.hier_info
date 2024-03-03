@@ -47,24 +47,24 @@ start => NFlag.OUTPUTSELECT
 start => ZFlag.OUTPUTSELECT
 start => CFlag.OUTPUTSELECT
 start => VFlag.OUTPUTSELECT
-s1[0] <= segmentOutput:segment1.seg
-s1[1] <= segmentOutput:segment1.seg
-s1[2] <= segmentOutput:segment1.seg
-s1[3] <= segmentOutput:segment1.seg
-s1[4] <= segmentOutput:segment1.seg
-s1[5] <= segmentOutput:segment1.seg
-s1[6] <= segmentOutput:segment1.seg
-s2[0] <= segmentOutput:segment2.seg
-s2[1] <= segmentOutput:segment2.seg
-s2[2] <= segmentOutput:segment2.seg
-s2[3] <= segmentOutput:segment2.seg
-s2[4] <= segmentOutput:segment2.seg
-s2[5] <= segmentOutput:segment2.seg
-s2[6] <= segmentOutput:segment2.seg
-NFlag <= NFlag.DB_MAX_OUTPUT_PORT_TYPE
-ZFlag <= ZFlag.DB_MAX_OUTPUT_PORT_TYPE
-CFlag <= CFlag.DB_MAX_OUTPUT_PORT_TYPE
-VFlag <= VFlag.DB_MAX_OUTPUT_PORT_TYPE
+s1[0] << segmentOutput:segment1.seg
+s1[1] << segmentOutput:segment1.seg
+s1[2] << segmentOutput:segment1.seg
+s1[3] << segmentOutput:segment1.seg
+s1[4] << segmentOutput:segment1.seg
+s1[5] << segmentOutput:segment1.seg
+s1[6] << segmentOutput:segment1.seg
+s2[0] << segmentOutput:segment2.seg
+s2[1] << segmentOutput:segment2.seg
+s2[2] << segmentOutput:segment2.seg
+s2[3] << segmentOutput:segment2.seg
+s2[4] << segmentOutput:segment2.seg
+s2[5] << segmentOutput:segment2.seg
+s2[6] << segmentOutput:segment2.seg
+NFlag << NFlag.DB_MAX_OUTPUT_PORT_TYPE
+ZFlag << ZFlag.DB_MAX_OUTPUT_PORT_TYPE
+CFlag << CFlag.DB_MAX_OUTPUT_PORT_TYPE
+VFlag << VFlag.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |alu_4bit|adder_4bit:adder
@@ -183,49 +183,16 @@ dividend[0] => ~NO_FANOUT~
 dividend[1] => ~NO_FANOUT~
 dividend[2] => ~NO_FANOUT~
 dividend[3] => ~NO_FANOUT~
-divisor[0] => divisor[0].IN1
-divisor[1] => divisor[1].IN1
-divisor[2] => divisor[2].IN1
-divisor[3] => divisor[3].IN1
-quotient[0] <= temp_quotient[0].DB_MAX_OUTPUT_PORT_TYPE
-quotient[1] <= temp_quotient[1].DB_MAX_OUTPUT_PORT_TYPE
-quotient[2] <= temp_quotient[2].DB_MAX_OUTPUT_PORT_TYPE
-quotient[3] <= temp_quotient[3].DB_MAX_OUTPUT_PORT_TYPE
-overflow <= subtractor_4bit:subtractor.overflow
-zero <= subtractor_4bit:subtractor.zero
-
-
-|alu_4bit|divider_4bit:divider|subtractor_4bit:subtractor
-a[0] => diff.IN0
-a[0] => borrow.IN0
-a[1] => diff.IN0
-a[1] => borrow.IN1
-a[1] => borrow.IN0
-a[2] => diff.IN0
-a[2] => borrow.IN1
-a[2] => borrow.IN0
-a[3] => diff.IN0
-a[3] => overflow.IN0
-a[3] => overflow.IN0
-b[0] => borrow.IN1
-b[0] => diff.IN1
-b[1] => borrow.IN1
-b[1] => borrow.IN1
-b[1] => diff.IN1
-b[2] => borrow.IN1
-b[2] => borrow.IN1
-b[2] => diff.IN1
-b[3] => diff.IN1
-b[3] => overflow.IN1
-b[3] => overflow.IN1
-diff[0] <= diff.DB_MAX_OUTPUT_PORT_TYPE
-diff[1] <= diff.DB_MAX_OUTPUT_PORT_TYPE
-diff[2] <= diff.DB_MAX_OUTPUT_PORT_TYPE
-diff[3] <= diff.DB_MAX_OUTPUT_PORT_TYPE
-carry_out <= borrow.DB_MAX_OUTPUT_PORT_TYPE
-overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
-zero <= zero.DB_MAX_OUTPUT_PORT_TYPE
-negative <= diff.DB_MAX_OUTPUT_PORT_TYPE
+divisor[0] => ~NO_FANOUT~
+divisor[1] => ~NO_FANOUT~
+divisor[2] => ~NO_FANOUT~
+divisor[3] => ~NO_FANOUT~
+quotient[0] <= <GND>
+quotient[1] <= <GND>
+quotient[2] <= <GND>
+quotient[3] <= <GND>
+overflow <= <GND>
+zero <= <GND>
 
 
 |alu_4bit|and_4bit:andd
