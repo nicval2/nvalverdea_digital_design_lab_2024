@@ -11,7 +11,7 @@ cModel Technology
 Z0 dC:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/simulation/modelsim
 vadder_4bit
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-!s110 1709428340
+!s110 1709428900
 !i10b 1
 !s100 mU[QS7iL=4X9YQQPhaGm73
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -28,7 +28,7 @@ Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
-!s108 1709428340.000000
+!s108 1709428900.000000
 !s107 C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/adder_4bit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/adder_4bit.sv|
 !i113 1
@@ -37,24 +37,24 @@ Z6 !s92 -sv -work work +incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverd
 Z7 tCvgOpt 0
 valu_4bit
 R1
-Z8 !s110 1709428341
+Z8 !s110 1709428901
 !i10b 1
-!s100 zQGd_@1=K;9BYLCP5<:z^2
+!s100 V6B>hKX0bLGBNQORhigcc1
 R2
-I1I4MBzeM?al<;[?_60=cE2
+IH;zog2`d8@TeIDTM^cm=n1
 R3
 S1
 R0
-w1709428067
+Z9 w1709428764
 8C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv
 FC:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv
 !i122 2
-L0 1 96
+L0 1 104
 R4
 r1
 !s85 0
 31
-Z9 !s108 1709428341.000000
+Z10 !s108 1709428901.000000
 !s107 C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv|
 !i113 1
@@ -63,24 +63,24 @@ R6
 R7
 valu_4bit_tb
 R1
-Z10 !s110 1709428343
+!s110 1709428904
 !i10b 1
-!s100 ?@9@::5cEOSVmIZb4OhOj1
+!s100 RWZgGUG^X?68ZzXbOiQ1h3
 R2
-IP0ZCRXI@NU0Bh<Z<TSi182
+Ig@56]]Zl9gRJ1e@>bbh?S0
 R3
 S1
 R0
-w1709428250
+R9
 8C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit_tb.sv
 FC:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit_tb.sv
-!i122 9
-L0 1 200
+!i122 10
+L0 1 228
 R4
 r1
 !s85 0
 31
-Z11 !s108 1709428343.000000
+Z11 !s108 1709428903.000000
 !s107 C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit_tb.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit_tb.sv|
 !i113 1
@@ -89,7 +89,7 @@ R6
 R7
 vand_4bit
 R1
-R10
+Z12 !s110 1709428903
 !i10b 1
 !s100 IWQC5l`>WaXYl49Q>QL8i3
 R2
@@ -101,7 +101,7 @@ w1709427508
 8C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/and_4bit.sv
 FC:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/and_4bit.sv
 !i122 7
-Z12 L0 1 16
+Z13 L0 1 16
 R4
 r1
 !s85 0
@@ -115,7 +115,7 @@ R6
 R7
 vDigitExtractor
 R1
-Z13 !s110 1709428342
+Z14 !s110 1709428902
 !i10b 1
 !s100 QCOLIFU4AF4504nGhlGo41
 R2
@@ -132,7 +132,7 @@ R4
 r1
 !s85 0
 31
-Z14 !s108 1709428342.000000
+Z15 !s108 1709428902.000000
 !s107 C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/DigitExtractor.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/DigitExtractor.sv|
 !i113 1
@@ -142,7 +142,7 @@ R7
 n@digit@extractor
 vdivider_4bit
 R1
-R13
+R14
 !i10b 1
 !s100 zadUg?P]9=FRi8Y`1LJ<E3
 R2
@@ -159,7 +159,7 @@ R4
 r1
 !s85 0
 31
-R14
+R15
 !s107 C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/divider_4bit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/divider_4bit.sv|
 !i113 1
@@ -168,7 +168,7 @@ R6
 R7
 vmultiplier_4bit
 R1
-R13
+R8
 !i10b 1
 !s100 1Ei=d]YCN7fWdzVl:bgH<1
 R2
@@ -185,7 +185,7 @@ R4
 r1
 !s85 0
 31
-R9
+R10
 !s107 C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/multiplier_4bit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/multiplier_4bit.sv|
 !i113 1
@@ -194,7 +194,7 @@ R6
 R7
 vor_4bit
 R1
-R10
+R12
 !i10b 1
 !s100 [MBO4hle52Tn8^g4o09cl1
 R2
@@ -206,7 +206,7 @@ w1709428066
 8C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/or_4bit.sv
 FC:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/or_4bit.sv
 !i122 8
-R12
+R13
 R4
 r1
 !s85 0
@@ -220,7 +220,7 @@ R6
 R7
 vsegmentOutput
 R1
-R13
+R14
 !i10b 1
 !s100 H3:LVdl2Hn`VmgkR>iV@h1
 R2
@@ -237,7 +237,7 @@ R4
 r1
 !s85 0
 31
-R14
+R15
 !s107 C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv|
 !i113 1
@@ -264,9 +264,35 @@ R4
 r1
 !s85 0
 31
-R9
+R10
 !s107 C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/subtractor_4bit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/subtractor_4bit.sv|
+!i113 1
+R5
+R6
+R7
+vxor_4bit
+R1
+R12
+!i10b 1
+!s100 aH]:dGZ`<;BKkI9V8ZCbm1
+R2
+I0i<27e1hBbPLJN2k<CAbj1
+R3
+S1
+R0
+w1709428763
+8C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/xor_4bit.sv
+FC:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/xor_4bit.sv
+!i122 9
+R13
+R4
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/xor_4bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/xor_4bit.sv|
 !i113 1
 R5
 R6

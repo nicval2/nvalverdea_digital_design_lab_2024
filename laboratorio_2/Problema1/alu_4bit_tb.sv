@@ -158,7 +158,7 @@ module alu_4bit_tb;
     start = 1;
     a = 4'b0100; // 4
     b = 4'b1011; // 11
-    op = 4'b0100; // and
+    op = 4'b0100; // or
     #100; // Wait for computation
 	 assert(s1 === 7'b1000000) else $error("Test case 5.2 failed: Expected s1 to be 1000000");
     assert(s2 === 7'b1000000) else $error("Test case 5.2 failed: Expected s2 to be 1000000");
@@ -171,7 +171,7 @@ module alu_4bit_tb;
     start = 1;
     a = 4'b0110; // 6
     b = 4'b0011; // 3
-    op = 4'b0101; // and
+    op = 4'b0101; // or
     #100; // Wait for computation
 	 assert(s1 === 7'b1000000) else $error("Test case 6.1 failed: Expected s1 to be 1000000");
     assert(s2 === 7'b1111000) else $error("Test case 6.1 failed: Expected s2 to be 1111000");
@@ -184,7 +184,7 @@ module alu_4bit_tb;
     start = 1;
     a = 4'b0100; // 4
     b = 4'b1011; // 11
-    op = 4'b0101; // and
+    op = 4'b0101; // xor
     #100; // Wait for computation
 	 assert(s1 === 7'b1111001) else $error("Test case 6.2 failed: Expected s1 to be 1111001");
     assert(s2 === 7'b0010010) else $error("Test case 6.2 failed: Expected s2 to be 0010010");
@@ -192,6 +192,33 @@ module alu_4bit_tb;
     assert(ZFlag === 1'b0) else $error("Test case 6.2 failed: Expected ZFlag to be 0");
     assert(CFlag === 1'b0) else $error("Test case 6.2 failed: Expected CFlag to be 0");
     assert(VFlag === 1'b0) else $error("Test case 6.2 failed: Expected VFlag to be 0");
+
+	 
+	 // Test case 7.1: XOR
+    start = 1;
+    a = 4'b0110; // 6
+    b = 4'b0011; // 3
+    op = 4'b0110; // and
+    #100; // Wait for computation
+	 assert(s1 === 7'b1000000) else $error("Test case 7.1 failed: Expected s1 to be 1000000");
+    assert(s2 === 7'b0010010) else $error("Test case 7.1 failed: Expected s2 to be 0010010");
+    assert(NFlag === 1'b0) else $error("Test case 7.1 failed: Expected NFlag to be 0");
+    assert(ZFlag === 1'b0) else $error("Test case 7.1 failed: Expected ZFlag to be 0");
+    assert(CFlag === 1'b0) else $error("Test case 7.1 failed: Expected CFlag to be 0");
+    assert(VFlag === 1'b0) else $error("Test case 7.1 failed: Expected VFlag to be 0");
+	 
+	 // Test case 7.2: XOR
+    start = 1;
+    a = 4'b1111; // 15
+    b = 4'b1111; // 15
+    op = 4'b0110; // xor
+    #100; // Wait for computation
+	 assert(s1 === 7'b1000000) else $error("Test case 7.2 failed: Expected s1 to be 1000000");
+    assert(s2 === 7'b1000000) else $error("Test case 7.2 failed: Expected s2 to be 1000000");
+    assert(NFlag === 1'b0) else $error("Test case 7.2 failed: Expected NFlag to be 0");
+    assert(ZFlag === 1'b1) else $error("Test case 7.2 failed: Expected ZFlag to be 1");
+    assert(CFlag === 1'b0) else $error("Test case 7.2 failed: Expected CFlag to be 0");
+    assert(VFlag === 1'b0) else $error("Test case 7.2 failed: Expected VFlag to be 0");
 
 	 $display("Test finished");
 
