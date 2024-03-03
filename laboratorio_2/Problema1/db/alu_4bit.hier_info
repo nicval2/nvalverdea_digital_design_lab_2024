@@ -1,40 +1,44 @@
 |alu_4bit
-a[0] => a[0].IN7
-a[1] => a[1].IN7
-a[2] => a[2].IN7
-a[3] => a[3].IN7
+a[0] => a[0].IN9
+a[1] => a[1].IN9
+a[2] => a[2].IN9
+a[3] => a[3].IN9
 b[0] => b[0].IN7
 b[1] => b[1].IN7
 b[2] => b[2].IN7
 b[3] => b[3].IN7
-op[0] => Mux0.IN12
-op[0] => Mux1.IN12
-op[0] => Mux2.IN12
-op[0] => Mux3.IN12
+op[0] => Mux0.IN10
+op[0] => Mux1.IN10
+op[0] => Mux2.IN10
+op[0] => Mux3.IN10
 op[0] => Decoder0.IN3
-op[0] => Mux4.IN12
+op[0] => Mux4.IN10
 op[0] => Mux5.IN15
-op[1] => Mux0.IN11
-op[1] => Mux1.IN11
-op[1] => Mux2.IN11
-op[1] => Mux3.IN11
+op[0] => Mux6.IN15
+op[1] => Mux0.IN9
+op[1] => Mux1.IN9
+op[1] => Mux2.IN9
+op[1] => Mux3.IN9
 op[1] => Decoder0.IN2
-op[1] => Mux4.IN11
+op[1] => Mux4.IN9
 op[1] => Mux5.IN14
-op[2] => Mux0.IN10
-op[2] => Mux1.IN10
-op[2] => Mux2.IN10
-op[2] => Mux3.IN10
+op[1] => Mux6.IN14
+op[2] => Mux0.IN8
+op[2] => Mux1.IN8
+op[2] => Mux2.IN8
+op[2] => Mux3.IN8
 op[2] => Decoder0.IN1
-op[2] => Mux4.IN10
+op[2] => Mux4.IN8
 op[2] => Mux5.IN13
-op[3] => Mux0.IN9
-op[3] => Mux1.IN9
-op[3] => Mux2.IN9
-op[3] => Mux3.IN9
+op[2] => Mux6.IN13
+op[3] => Mux0.IN7
+op[3] => Mux1.IN7
+op[3] => Mux2.IN7
+op[3] => Mux3.IN7
 op[3] => Decoder0.IN0
-op[3] => Mux4.IN9
+op[3] => Mux4.IN7
 op[3] => Mux5.IN12
+op[3] => Mux6.IN12
 start => result.OUTPUTSELECT
 start => result.OUTPUTSELECT
 start => result.OUTPUTSELECT
@@ -270,6 +274,38 @@ result[1] <= result.DB_MAX_OUTPUT_PORT_TYPE
 result[2] <= result.DB_MAX_OUTPUT_PORT_TYPE
 result[3] <= result.DB_MAX_OUTPUT_PORT_TYPE
 zero_flag <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_4bit|shiftLeft_4bit:left
+a[0] => result[1].DATAIN
+a[0] => Equal0.IN3
+a[1] => result[2].DATAIN
+a[1] => Equal0.IN2
+a[2] => result[3].DATAIN
+a[2] => Equal0.IN1
+a[3] => carry_flag.DATAIN
+result[0] <= <GND>
+result[1] <= a[0].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= a[1].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= a[2].DB_MAX_OUTPUT_PORT_TYPE
+zero_flag <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+carry_flag <= a[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu_4bit|shiftRight_4bit:right
+a[0] => carry_flag.DATAIN
+a[1] => result[0].DATAIN
+a[1] => Equal0.IN4
+a[2] => result[1].DATAIN
+a[2] => Equal0.IN3
+a[3] => result[2].DATAIN
+a[3] => Equal0.IN2
+result[0] <= a[1].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= a[2].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= a[3].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= <GND>
+zero_flag <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+carry_flag <= a[0].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |alu_4bit|DigitExtractor:extractor

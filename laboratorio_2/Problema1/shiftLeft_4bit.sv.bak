@@ -1,0 +1,21 @@
+module shiftLeft_4bit(
+  input logic [3:0] a,
+  input logic [3:0] b,
+  output logic [3:0] result,
+  output logic zero_flag,
+  output logic carry_flag
+);
+
+	assign result[0] = 1'b0;
+  assign result[1] = a[0];
+  assign result[2] = a[1];
+  assign result[3] = a[2];
+
+  // Set flags
+  assign zero_flag = (result == 4'b0000);
+  if (a[3]== 1'b1)
+		carry_flag = 1'b1;
+	else
+		carry_flag = 1'b0;
+
+endmodule

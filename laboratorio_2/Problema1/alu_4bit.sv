@@ -16,7 +16,8 @@ module alu_4bit(
 	 logic mul_VFlag, mul_ZFlag;
 	 logic div_VFlag, div_ZFlag;
 	 logic and_ZFlag, or_ZFlag, xor_ZFlag;
-    wire [3:0] add_result, sub_result, mul_result, div_result, and_result, or_result, xor_result;
+	 logic left_ZFlag, left_CFlag, right_ZFlag, right_CFlag;
+    wire [3:0] add_result, sub_result, mul_result, div_result, and_result, or_result, xor_result, left_result, right_result;
 	 
     wire [3:0] digit_1, digit_2;
 
@@ -27,6 +28,8 @@ module alu_4bit(
 	 and_4bit andd (a,b, and_result, and_ZFlag);
 	 or_4bit orr (a,b, or_result, or_ZFlag);
 	 xor_4bit xorr (a,b, xor_result, xor_ZFlag);
+	 shiftLeft_4bit left (a,left_result, left_ZFlag, left_CFlag);
+	 shiftRight_4bit right (a,right_result, right_ZFlag, right_CFlag);
 	 
 	 DigitExtractor extractor(.input_number(result), .digit_1(digit_1), .digit_2(digit_2));
     segmentOutput segment1(.digit(digit_1), .seg(s1));
@@ -63,25 +66,39 @@ always_comb begin
                 CFlag = 1'b0;
                 VFlag = div_VFlag;
             end
-				4'b00100: begin
+				4'b0100: begin
                 result = and_result;
                 NFlag = 1'b0;
                 ZFlag = and_ZFlag;
                 CFlag = 1'b0;
                 VFlag = 1'b0;
             end
-				4'b00101: begin
+				4'b0101: begin
                 result = or_result;
                 NFlag = 1'b0;
                 ZFlag = or_ZFlag;
                 CFlag = 1'b0;
                 VFlag = 1'b0;
             end
-				4'b00110: begin
+				4'b0110: begin
                 result = xor_result;
                 NFlag = 1'b0;
                 ZFlag = xor_ZFlag;
                 CFlag = 1'b0;
+                VFlag = 1'b0;
+            end
+				4'b0111: begin
+                result = left_result;
+                NFlag = 1'b0;
+                ZFlag = left_ZFlag;
+                CFlag = left_CFlag;
+                VFlag = 1'b0;
+            end
+				4'b1000: begin
+                result = right_result;
+                NFlag = 1'b0;
+                ZFlag = right_ZFlag;
+                CFlag = right_CFlag;
                 VFlag = 1'b0;
             end
             default: begin

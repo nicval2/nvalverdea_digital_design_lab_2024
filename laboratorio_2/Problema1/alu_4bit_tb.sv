@@ -219,6 +219,54 @@ module alu_4bit_tb;
     assert(ZFlag === 1'b1) else $error("Test case 7.2 failed: Expected ZFlag to be 1");
     assert(CFlag === 1'b0) else $error("Test case 7.2 failed: Expected CFlag to be 0");
     assert(VFlag === 1'b0) else $error("Test case 7.2 failed: Expected VFlag to be 0");
+	 
+	 // Test case 8.1: SHIFTLEFT
+    start = 1;
+    a = 4'b0110; // 6
+    op = 4'b0111; // shift
+    #100; // Wait for computation
+	 assert(s1 === 7'b1111001) else $error("Test case 8.1 failed: Expected s1 to be 1111001");
+    assert(s2 === 7'b0100100) else $error("Test case 8.1 failed: Expected s2 to be 0100100");
+    assert(NFlag === 1'b0) else $error("Test case 8.1 failed: Expected NFlag to be 0");
+    assert(ZFlag === 1'b0) else $error("Test case 8.1 failed: Expected ZFlag to be 0");
+    assert(CFlag === 1'b0) else $error("Test case 8.1 failed: Expected CFlag to be 0");
+    assert(VFlag === 1'b0) else $error("Test case 8.1 failed: Expected VFlag to be 0");
+	 
+	 // Test case 8.2: SHIFTLEFT
+    start = 1;
+    a = 4'b1111; // 15
+    op = 4'b0111; // shift
+    #100; // Wait for computation
+	 assert(s1 === 7'b1111001) else $error("Test case 8.2 failed: Expected s1 to be 1111001");
+    assert(s2 === 7'b0011001) else $error("Test case 8.2 failed: Expected s2 to be 0011001");
+    assert(NFlag === 1'b0) else $error("Test case 8.2 failed: Expected NFlag to be 0");
+    assert(ZFlag === 1'b0) else $error("Test case 8.2 failed: Expected ZFlag to be 0");
+    assert(CFlag === 1'b1) else $error("Test case 8.2 failed: Expected CFlag to be 1");
+    assert(VFlag === 1'b0) else $error("Test case 8.2 failed: Expected VFlag to be 0");
+	 
+	 // Test case 9.1: SHIFTRIGHT
+    start = 1;
+    a = 4'b0101; // 5
+    op = 4'b1000; // shift
+    #100; // Wait for computation
+	 assert(s1 === 7'b1000000) else $error("Test case 9.1 failed: Expected s1 to be 1000000");
+    assert(s2 === 7'b0100100) else $error("Test case 9.1 failed: Expected s2 to be 0100100");
+    assert(NFlag === 1'b0) else $error("Test case 9.1 failed: Expected NFlag to be 0");
+    assert(ZFlag === 1'b0) else $error("Test case 9.1 failed: Expected ZFlag to be 0");
+    assert(CFlag === 1'b1) else $error("Test case 9.1 failed: Expected CFlag to be 1");
+    assert(VFlag === 1'b0) else $error("Test case 9.1 failed: Expected VFlag to be 0");
+	 
+	 // Test case 9.2: SHIFTRIGHT
+    start = 1;
+    a = 4'b1111; // 15
+    op = 4'b1000; // shift
+    #100; // Wait for computation
+	 assert(s1 === 7'b1000000) else $error("Test case 9.2 failed: Expected s1 to be 1000000");
+    assert(s2 === 7'b1111000) else $error("Test case 9.2 failed: Expected s2 to be 1111000");
+    assert(NFlag === 1'b0) else $error("Test case 9.2 failed: Expected NFlag to be 0");
+    assert(ZFlag === 1'b0) else $error("Test case 9.2 failed: Expected ZFlag to be 0");
+    assert(CFlag === 1'b1) else $error("Test case 9.2 failed: Expected CFlag to be 1");
+    assert(VFlag === 1'b0) else $error("Test case 9.2 failed: Expected VFlag to be 0");
 
 	 $display("Test finished");
 
