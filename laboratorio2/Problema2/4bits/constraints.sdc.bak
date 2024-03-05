@@ -1,0 +1,13 @@
+# Especificación de la frecuencia de reloj
+create_clock -name clk -period 10 [get_ports {clock}] ; # Reemplaza "clock" con el nombre de tu puerto de reloj
+
+# Restricciones de tiempo de reloj
+derive_clock_uncertainty
+
+# Restricción de tiempo de propagación máxima
+set_multicycle_path -from [get_clocks clk] -to [get_ports {*}] -setup 0 -hold 0
+
+# Restricción de tiempo de propagación mínima
+set_multicycle_path -from [get_clocks clk] -to [get_ports {*}] -setup 0 -hold 0
+
+# Otras restricciones de tiempo adicionales pueden agregarse según sea necesario
