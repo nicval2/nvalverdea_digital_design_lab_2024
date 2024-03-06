@@ -1,5 +1,5 @@
-Analysis & Elaboration report for alu_2bit
-Tue Mar 05 17:56:53 2024
+Analysis & Synthesis report for alu_2bit
+Tue Mar 05 22:55:44 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -7,20 +7,27 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Analysis & Elaboration Settings
-  5. Port Connectivity Checks: "shiftRight_2bit:right"
-  6. Port Connectivity Checks: "shiftLeft_2bit:left"
-  7. Port Connectivity Checks: "xor_2bit:xorr"
-  8. Port Connectivity Checks: "or_2bit:orr"
-  9. Port Connectivity Checks: "and_2bit:andd"
- 10. Port Connectivity Checks: "divider_2bit:divider"
- 11. Port Connectivity Checks: "multiplier_2bit:multiplier"
- 12. Port Connectivity Checks: "subtractor_2bit:subtractor"
- 13. Port Connectivity Checks: "adder_2bit:adder"
- 14. Analysis & Elaboration Messages
- 15. Analysis & Elaboration Suppressed Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Parameter Settings for Inferred Entity Instance: divider_2bit:divider|lpm_divide:Div0
+ 10. Port Connectivity Checks: "shiftRight_2bit:right"
+ 11. Port Connectivity Checks: "shiftLeft_2bit:left"
+ 12. Port Connectivity Checks: "xor_2bit:xorr"
+ 13. Port Connectivity Checks: "or_2bit:orr"
+ 14. Port Connectivity Checks: "and_2bit:andd"
+ 15. Port Connectivity Checks: "divider_2bit:divider"
+ 16. Port Connectivity Checks: "multiplier_2bit:multiplier"
+ 17. Port Connectivity Checks: "subtractor_2bit:subtractor"
+ 18. Port Connectivity Checks: "adder_2bit:adder"
+ 19. Post-Synthesis Netlist Statistics for Top Partition
+ 20. Elapsed Time Per Partition
+ 21. Analysis & Synthesis Messages
+ 22. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -44,42 +51,31 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-----------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                              ;
-+-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Tue Mar 05 17:56:53 2024       ;
-; Quartus Prime Version         ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
-; Revision Name                 ; alu_2bit                                    ;
-; Top-level Entity Name         ; alu_2bit                                    ;
-; Family                        ; Cyclone V                                   ;
-; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
-; Total registers               ; N/A until Partition Merge                   ;
-; Total pins                    ; N/A until Partition Merge                   ;
-; Total virtual pins            ; N/A until Partition Merge                   ;
-; Total block memory bits       ; N/A until Partition Merge                   ;
-; Total PLLs                    ; N/A until Partition Merge                   ;
-; Total DLLs                    ; N/A until Partition Merge                   ;
-+-------------------------------+---------------------------------------------+
-
-
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 6           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Tue Mar 05 22:55:44 2024       ;
+; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name                   ; alu_2bit                                    ;
+; Top-level Entity Name           ; alu_2bit                                    ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 0                                           ;
+; Total pins                      ; 17                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                                           ;
+; Analysis & Synthesis Settings                                                                                             ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
@@ -163,6 +159,128 @@ https://fpgasoftware.intel.com/eula.
 ; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
 ; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                   ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                               ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------------+---------+
+; alu_2bit.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/alu_2bit.sv                ;         ;
+; adder_2bit.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/adder_2bit.sv              ;         ;
+; and_2bit.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/and_2bit.sv                ;         ;
+; divider_2bit.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/divider_2bit.sv            ;         ;
+; multiplier_2bit.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/multiplier_2bit.sv         ;         ;
+; or_2bit.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/or_2bit.sv                 ;         ;
+; shiftLeft_2bit.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/shiftLeft_2bit.sv          ;         ;
+; shiftRight_2bit.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/shiftRight_2bit.sv         ;         ;
+; subtractor_2bit.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/subtractor_2bit.sv         ;         ;
+; xor_2bit.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/xor_2bit.sv                ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf                                                      ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc                                                     ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc                                                 ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                                                      ;         ;
+; db/lpm_divide_t9m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/db/lpm_divide_t9m.tdf      ;         ;
+; db/sign_div_unsign_3kh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/db/sign_div_unsign_3kh.tdf ;         ;
+; db/alt_u_div_cse.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/db/alt_u_div_cse.tdf       ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimate of Logic utilization (ALMs needed) ; 12          ;
+;                                             ;             ;
+; Combinational ALUT usage for logic          ; 19          ;
+;     -- 7 input functions                    ; 1           ;
+;     -- 6 input functions                    ; 3           ;
+;     -- 5 input functions                    ; 3           ;
+;     -- 4 input functions                    ; 5           ;
+;     -- <=3 input functions                  ; 7           ;
+;                                             ;             ;
+; Dedicated logic registers                   ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 17          ;
+;                                             ;             ;
+; Total DSP Blocks                            ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; op[2]~input ;
+; Maximum fan-out                             ; 7           ;
+; Total fan-out                               ; 96          ;
+; Average fan-out                             ; 1.81        ;
++---------------------------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                      ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                            ; Entity Name         ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |alu_2bit                                 ; 19 (13)             ; 0 (0)                     ; 0                 ; 0          ; 17   ; 0            ; |alu_2bit                                                                                                                      ; alu_2bit            ; work         ;
+;    |adder_2bit:adder|                     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_2bit|adder_2bit:adder                                                                                                     ; adder_2bit          ; work         ;
+;    |divider_2bit:divider|                 ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_2bit|divider_2bit:divider                                                                                                 ; divider_2bit        ; work         ;
+;       |lpm_divide:Div0|                   ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_2bit|divider_2bit:divider|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_t9m:auto_generated|  ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_2bit|divider_2bit:divider|lpm_divide:Div0|lpm_divide_t9m:auto_generated                                                   ; lpm_divide_t9m      ; work         ;
+;             |sign_div_unsign_3kh:divider| ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_2bit|divider_2bit:divider|lpm_divide:Div0|lpm_divide_t9m:auto_generated|sign_div_unsign_3kh:divider                       ; sign_div_unsign_3kh ; work         ;
+;                |alt_u_div_cse:divider|    ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_2bit|divider_2bit:divider|lpm_divide:Div0|lpm_divide_t9m:auto_generated|sign_div_unsign_3kh:divider|alt_u_div_cse:divider ; alt_u_div_cse       ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: divider_2bit:divider|lpm_divide:Div0 ;
++------------------------+----------------+---------------------------------------------+
+; Parameter Name         ; Value          ; Type                                        ;
++------------------------+----------------+---------------------------------------------+
+; LPM_WIDTHN             ; 2              ; Untyped                                     ;
+; LPM_WIDTHD             ; 2              ; Untyped                                     ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
+; LPM_PIPELINE           ; 0              ; Untyped                                     ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                     ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                     ;
+; CBXI_PARAMETER         ; lpm_divide_t9m ; Untyped                                     ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                     ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                     ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                              ;
++------------------------+----------------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -273,87 +391,149 @@ https://fpgasoftware.intel.com/eula.
 +-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_lcell_comb     ; 20                          ;
+;     extend            ; 1                           ;
+;         7 data inputs ; 1                           ;
+;     normal            ; 14                          ;
+;         0 data inputs ; 1                           ;
+;         3 data inputs ; 3                           ;
+;         4 data inputs ; 4                           ;
+;         5 data inputs ; 3                           ;
+;         6 data inputs ; 3                           ;
+;     shared            ; 5                           ;
+;         0 data inputs ; 2                           ;
+;         2 data inputs ; 2                           ;
+;         4 data inputs ; 1                           ;
+; boundary_port         ; 17                          ;
+;                       ;                             ;
+; Max LUT depth         ; 3.20                        ;
+; Average LUT depth     ; 2.77                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Tue Mar 05 17:56:46 2024
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off alu_2bit -c alu_2bit --analysis_and_elaboration
+    Info: Processing started: Tue Mar 05 22:55:29 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off alu_2bit -c alu_2bit
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file digitextractor.sv
-    Info (12023): Found entity 1: DigitExtractor File: C:/Users/nicva/2_bit/DigitExtractor.sv Line: 1
+    Info (12023): Found entity 1: DigitExtractor File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/DigitExtractor.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu_2bit.sv
-    Info (12023): Found entity 1: alu_2bit File: C:/Users/nicva/2_bit/alu_2bit.sv Line: 1
+    Info (12023): Found entity 1: alu_2bit File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/alu_2bit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file adder_2bit.sv
-    Info (12023): Found entity 1: adder_2bit File: C:/Users/nicva/2_bit/adder_2bit.sv Line: 1
+    Info (12023): Found entity 1: adder_2bit File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/adder_2bit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu_2bit_tb.sv
-    Info (12023): Found entity 1: alu_2bit_tb File: C:/Users/nicva/2_bit/alu_2bit_tb.sv Line: 1
+    Info (12023): Found entity 1: alu_2bit_tb File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/alu_2bit_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file and_2bit.sv
-    Info (12023): Found entity 1: and_2bit File: C:/Users/nicva/2_bit/and_2bit.sv Line: 1
+    Info (12023): Found entity 1: and_2bit File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/and_2bit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file divider_2bit.sv
-    Info (12023): Found entity 1: divider_2bit File: C:/Users/nicva/2_bit/divider_2bit.sv Line: 1
+    Info (12023): Found entity 1: divider_2bit File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/divider_2bit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file multiplier_2bit.sv
-    Info (12023): Found entity 1: multiplier_2bit File: C:/Users/nicva/2_bit/multiplier_2bit.sv Line: 1
+    Info (12023): Found entity 1: multiplier_2bit File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/multiplier_2bit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file or_2bit.sv
-    Info (12023): Found entity 1: or_2bit File: C:/Users/nicva/2_bit/or_2bit.sv Line: 1
+    Info (12023): Found entity 1: or_2bit File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/or_2bit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file segmentoutput.sv
-    Info (12023): Found entity 1: segmentOutput File: C:/Users/nicva/2_bit/segmentOutput.sv Line: 1
+    Info (12023): Found entity 1: segmentOutput File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/segmentOutput.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file shiftleft_2bit.sv
-    Info (12023): Found entity 1: shiftLeft_2bit File: C:/Users/nicva/2_bit/shiftLeft_2bit.sv Line: 1
+    Info (12023): Found entity 1: shiftLeft_2bit File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/shiftLeft_2bit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file shiftright_2bit.sv
-    Info (12023): Found entity 1: shiftRight_2bit File: C:/Users/nicva/2_bit/shiftRight_2bit.sv Line: 1
+    Info (12023): Found entity 1: shiftRight_2bit File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/shiftRight_2bit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file subtractor_2bit.sv
-    Info (12023): Found entity 1: subtractor_2bit File: C:/Users/nicva/2_bit/subtractor_2bit.sv Line: 1
+    Info (12023): Found entity 1: subtractor_2bit File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/subtractor_2bit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file xor_2bit.sv
-    Info (12023): Found entity 1: xor_2bit File: C:/Users/nicva/2_bit/xor_2bit.sv Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at alu_2bit.sv(15): created implicit net for "add_CFlag" File: C:/Users/nicva/2_bit/alu_2bit.sv Line: 15
-Warning (10236): Verilog HDL Implicit Net warning at alu_2bit.sv(15): created implicit net for "add_VFlag" File: C:/Users/nicva/2_bit/alu_2bit.sv Line: 15
-Warning (10236): Verilog HDL Implicit Net warning at alu_2bit.sv(15): created implicit net for "add_ZFlag" File: C:/Users/nicva/2_bit/alu_2bit.sv Line: 15
-Warning (10236): Verilog HDL Implicit Net warning at alu_2bit.sv(16): created implicit net for "sub_CFlag" File: C:/Users/nicva/2_bit/alu_2bit.sv Line: 16
-Warning (10236): Verilog HDL Implicit Net warning at alu_2bit.sv(16): created implicit net for "sub_VFlag" File: C:/Users/nicva/2_bit/alu_2bit.sv Line: 16
-Warning (10236): Verilog HDL Implicit Net warning at alu_2bit.sv(16): created implicit net for "sub_ZFlag" File: C:/Users/nicva/2_bit/alu_2bit.sv Line: 16
-Warning (10236): Verilog HDL Implicit Net warning at alu_2bit.sv(16): created implicit net for "sub_NFlag" File: C:/Users/nicva/2_bit/alu_2bit.sv Line: 16
-Warning (10236): Verilog HDL Implicit Net warning at alu_2bit.sv(17): created implicit net for "mul_VFlag" File: C:/Users/nicva/2_bit/alu_2bit.sv Line: 17
-Warning (10236): Verilog HDL Implicit Net warning at alu_2bit.sv(17): created implicit net for "mul_ZFlag" File: C:/Users/nicva/2_bit/alu_2bit.sv Line: 17
-Warning (10236): Verilog HDL Implicit Net warning at alu_2bit.sv(18): created implicit net for "div_VFlag" File: C:/Users/nicva/2_bit/alu_2bit.sv Line: 18
-Warning (10236): Verilog HDL Implicit Net warning at alu_2bit.sv(18): created implicit net for "div_ZFlag" File: C:/Users/nicva/2_bit/alu_2bit.sv Line: 18
-Warning (10236): Verilog HDL Implicit Net warning at alu_2bit.sv(19): created implicit net for "and_ZFlag" File: C:/Users/nicva/2_bit/alu_2bit.sv Line: 19
-Warning (10236): Verilog HDL Implicit Net warning at alu_2bit.sv(20): created implicit net for "or_ZFlag" File: C:/Users/nicva/2_bit/alu_2bit.sv Line: 20
-Warning (10236): Verilog HDL Implicit Net warning at alu_2bit.sv(21): created implicit net for "xor_ZFlag" File: C:/Users/nicva/2_bit/alu_2bit.sv Line: 21
-Warning (10236): Verilog HDL Implicit Net warning at alu_2bit.sv(22): created implicit net for "left_ZFlag" File: C:/Users/nicva/2_bit/alu_2bit.sv Line: 22
-Warning (10236): Verilog HDL Implicit Net warning at alu_2bit.sv(22): created implicit net for "left_CFlag" File: C:/Users/nicva/2_bit/alu_2bit.sv Line: 22
-Warning (10236): Verilog HDL Implicit Net warning at alu_2bit.sv(23): created implicit net for "right_ZFlag" File: C:/Users/nicva/2_bit/alu_2bit.sv Line: 23
-Warning (10236): Verilog HDL Implicit Net warning at alu_2bit.sv(23): created implicit net for "right_CFlag" File: C:/Users/nicva/2_bit/alu_2bit.sv Line: 23
+    Info (12023): Found entity 1: xor_2bit File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/xor_2bit.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at alu_2bit.sv(15): created implicit net for "add_CFlag" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/alu_2bit.sv Line: 15
+Warning (10236): Verilog HDL Implicit Net warning at alu_2bit.sv(15): created implicit net for "add_VFlag" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/alu_2bit.sv Line: 15
+Warning (10236): Verilog HDL Implicit Net warning at alu_2bit.sv(15): created implicit net for "add_ZFlag" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/alu_2bit.sv Line: 15
+Warning (10236): Verilog HDL Implicit Net warning at alu_2bit.sv(16): created implicit net for "sub_CFlag" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/alu_2bit.sv Line: 16
+Warning (10236): Verilog HDL Implicit Net warning at alu_2bit.sv(16): created implicit net for "sub_VFlag" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/alu_2bit.sv Line: 16
+Warning (10236): Verilog HDL Implicit Net warning at alu_2bit.sv(16): created implicit net for "sub_ZFlag" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/alu_2bit.sv Line: 16
+Warning (10236): Verilog HDL Implicit Net warning at alu_2bit.sv(16): created implicit net for "sub_NFlag" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/alu_2bit.sv Line: 16
+Warning (10236): Verilog HDL Implicit Net warning at alu_2bit.sv(17): created implicit net for "mul_VFlag" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/alu_2bit.sv Line: 17
+Warning (10236): Verilog HDL Implicit Net warning at alu_2bit.sv(17): created implicit net for "mul_ZFlag" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/alu_2bit.sv Line: 17
+Warning (10236): Verilog HDL Implicit Net warning at alu_2bit.sv(18): created implicit net for "div_VFlag" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/alu_2bit.sv Line: 18
+Warning (10236): Verilog HDL Implicit Net warning at alu_2bit.sv(18): created implicit net for "div_ZFlag" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/alu_2bit.sv Line: 18
+Warning (10236): Verilog HDL Implicit Net warning at alu_2bit.sv(19): created implicit net for "and_ZFlag" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/alu_2bit.sv Line: 19
+Warning (10236): Verilog HDL Implicit Net warning at alu_2bit.sv(20): created implicit net for "or_ZFlag" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/alu_2bit.sv Line: 20
+Warning (10236): Verilog HDL Implicit Net warning at alu_2bit.sv(21): created implicit net for "xor_ZFlag" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/alu_2bit.sv Line: 21
+Warning (10236): Verilog HDL Implicit Net warning at alu_2bit.sv(22): created implicit net for "left_ZFlag" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/alu_2bit.sv Line: 22
+Warning (10236): Verilog HDL Implicit Net warning at alu_2bit.sv(22): created implicit net for "left_CFlag" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/alu_2bit.sv Line: 22
+Warning (10236): Verilog HDL Implicit Net warning at alu_2bit.sv(23): created implicit net for "right_ZFlag" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/alu_2bit.sv Line: 23
+Warning (10236): Verilog HDL Implicit Net warning at alu_2bit.sv(23): created implicit net for "right_CFlag" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/alu_2bit.sv Line: 23
 Info (12127): Elaborating entity "alu_2bit" for the top level hierarchy
-Info (12128): Elaborating entity "adder_2bit" for hierarchy "adder_2bit:adder" File: C:/Users/nicva/2_bit/alu_2bit.sv Line: 15
-Info (12128): Elaborating entity "subtractor_2bit" for hierarchy "subtractor_2bit:subtractor" File: C:/Users/nicva/2_bit/alu_2bit.sv Line: 16
-Info (12128): Elaborating entity "multiplier_2bit" for hierarchy "multiplier_2bit:multiplier" File: C:/Users/nicva/2_bit/alu_2bit.sv Line: 17
-Warning (10034): Output port "out" at multiplier_2bit.sv(4) has no driver File: C:/Users/nicva/2_bit/multiplier_2bit.sv Line: 4
-Warning (10034): Output port "V" at multiplier_2bit.sv(5) has no driver File: C:/Users/nicva/2_bit/multiplier_2bit.sv Line: 5
-Warning (10034): Output port "Z" at multiplier_2bit.sv(7) has no driver File: C:/Users/nicva/2_bit/multiplier_2bit.sv Line: 7
-Info (12128): Elaborating entity "divider_2bit" for hierarchy "divider_2bit:divider" File: C:/Users/nicva/2_bit/alu_2bit.sv Line: 18
-Warning (10034): Output port "overflow" at divider_2bit.sv(5) has no driver File: C:/Users/nicva/2_bit/divider_2bit.sv Line: 5
-Warning (10034): Output port "zero" at divider_2bit.sv(8) has no driver File: C:/Users/nicva/2_bit/divider_2bit.sv Line: 8
-Info (12128): Elaborating entity "and_2bit" for hierarchy "and_2bit:andd" File: C:/Users/nicva/2_bit/alu_2bit.sv Line: 19
-Info (12128): Elaborating entity "or_2bit" for hierarchy "or_2bit:orr" File: C:/Users/nicva/2_bit/alu_2bit.sv Line: 20
-Info (12128): Elaborating entity "xor_2bit" for hierarchy "xor_2bit:xorr" File: C:/Users/nicva/2_bit/alu_2bit.sv Line: 21
-Info (12128): Elaborating entity "shiftLeft_2bit" for hierarchy "shiftLeft_2bit:left" File: C:/Users/nicva/2_bit/alu_2bit.sv Line: 22
-Info (12128): Elaborating entity "shiftRight_2bit" for hierarchy "shiftRight_2bit:right" File: C:/Users/nicva/2_bit/alu_2bit.sv Line: 23
+Info (12128): Elaborating entity "adder_2bit" for hierarchy "adder_2bit:adder" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/alu_2bit.sv Line: 15
+Info (12128): Elaborating entity "subtractor_2bit" for hierarchy "subtractor_2bit:subtractor" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/alu_2bit.sv Line: 16
+Info (12128): Elaborating entity "multiplier_2bit" for hierarchy "multiplier_2bit:multiplier" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/alu_2bit.sv Line: 17
+Warning (10034): Output port "out" at multiplier_2bit.sv(4) has no driver File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/multiplier_2bit.sv Line: 4
+Warning (10034): Output port "V" at multiplier_2bit.sv(5) has no driver File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/multiplier_2bit.sv Line: 5
+Warning (10034): Output port "Z" at multiplier_2bit.sv(7) has no driver File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/multiplier_2bit.sv Line: 7
+Info (12128): Elaborating entity "divider_2bit" for hierarchy "divider_2bit:divider" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/alu_2bit.sv Line: 18
+Warning (10034): Output port "overflow" at divider_2bit.sv(5) has no driver File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/divider_2bit.sv Line: 5
+Warning (10034): Output port "zero" at divider_2bit.sv(8) has no driver File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/divider_2bit.sv Line: 8
+Info (12128): Elaborating entity "and_2bit" for hierarchy "and_2bit:andd" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/alu_2bit.sv Line: 19
+Info (12128): Elaborating entity "or_2bit" for hierarchy "or_2bit:orr" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/alu_2bit.sv Line: 20
+Info (12128): Elaborating entity "xor_2bit" for hierarchy "xor_2bit:xorr" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/alu_2bit.sv Line: 21
+Info (12128): Elaborating entity "shiftLeft_2bit" for hierarchy "shiftLeft_2bit:left" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/alu_2bit.sv Line: 22
+Info (12128): Elaborating entity "shiftRight_2bit" for hierarchy "shiftRight_2bit:right" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/alu_2bit.sv Line: 23
+Info (278001): Inferred 1 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "divider_2bit:divider|Div0" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/divider_2bit.sv Line: 12
+Info (12130): Elaborated megafunction instantiation "divider_2bit:divider|lpm_divide:Div0" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/divider_2bit.sv Line: 12
+Info (12133): Instantiated megafunction "divider_2bit:divider|lpm_divide:Div0" with the following parameter: File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/divider_2bit.sv Line: 12
+    Info (12134): Parameter "LPM_WIDTHN" = "2"
+    Info (12134): Parameter "LPM_WIDTHD" = "2"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_t9m.tdf
+    Info (12023): Found entity 1: lpm_divide_t9m File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/db/lpm_divide_t9m.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_3kh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_3kh File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/db/sign_div_unsign_3kh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_cse.tdf
+    Info (12023): Found entity 1: alt_u_div_cse File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/db/alt_u_div_cse.tdf Line: 23
 Warning (12241): 9 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (144001): Generated suppressed messages file C:/Users/nicva/2_bit/output_files/alu_2bit.map.smsg
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 25 warnings
-    Info: Peak virtual memory: 4770 megabytes
-    Info: Processing ended: Tue Mar 05 17:56:53 2024
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:08
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "result[3]" is stuck at GND File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/alu_2bit.sv Line: 9
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/output_files/alu_2bit.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 4 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "a[2]" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/alu_2bit.sv Line: 2
+    Warning (15610): No output dependent on input pin "a[3]" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/alu_2bit.sv Line: 2
+    Warning (15610): No output dependent on input pin "b[2]" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/alu_2bit.sv Line: 3
+    Warning (15610): No output dependent on input pin "b[3]" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/alu_2bit.sv Line: 3
+Info (21057): Implemented 36 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 13 input pins
+    Info (21059): Implemented 4 output pins
+    Info (21061): Implemented 19 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 32 warnings
+    Info: Peak virtual memory: 4803 megabytes
+    Info: Processing ended: Tue Mar 05 22:55:44 2024
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:31
 
 
-+--------------------------------------------+
-; Analysis & Elaboration Suppressed Messages ;
-+--------------------------------------------+
-The suppressed messages can be found in C:/Users/nicva/2_bit/output_files/alu_2bit.map.smsg.
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/output_files/alu_2bit.map.smsg.
 
 

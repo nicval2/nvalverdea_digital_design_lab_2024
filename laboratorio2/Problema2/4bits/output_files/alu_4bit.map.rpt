@@ -1,5 +1,5 @@
 Analysis & Synthesis report for alu_4bit
-Mon Mar 04 20:37:18 2024
+Tue Mar 05 21:56:17 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -49,7 +49,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Mar 04 20:37:18 2024       ;
+; Analysis & Synthesis Status     ; Successful - Tue Mar 05 21:56:17 2024       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; alu_4bit                                    ;
 ; Top-level Entity Name           ; alu_4bit                                    ;
@@ -161,8 +161,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 12          ;
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -172,32 +172,32 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                        ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                    ; Library ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------+---------+
-; adder_4bit.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/adder_4bit.sv          ;         ;
-; subtractor_4bit.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/subtractor_4bit.sv     ;         ;
-; alu_4bit.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/alu_4bit.sv            ;         ;
-; multiplier_4bit.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/multiplier_4bit.sv     ;         ;
-; DigitExtractor.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/DigitExtractor.sv      ;         ;
-; segmentOutput.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv       ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf                                           ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc                                          ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc                                      ;         ;
-; aglobal201.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                                           ;         ;
-; db/lpm_divide_vno.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/db/lpm_divide_vno.tdf  ;         ;
-; db/abs_divider_8ag.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/db/abs_divider_8ag.tdf ;         ;
-; db/alt_u_div_0te.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/db/alt_u_div_0te.tdf   ;         ;
-; db/lpm_abs_kn9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/db/lpm_abs_kn9.tdf     ;         ;
-; db/lpm_abs_on9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/db/lpm_abs_on9.tdf     ;         ;
-; db/lpm_divide_2go.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/db/lpm_divide_2go.tdf  ;         ;
-; db/lpm_divide_2oo.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/db/lpm_divide_2oo.tdf  ;         ;
-; db/abs_divider_bag.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/db/abs_divider_bag.tdf ;         ;
-; db/alt_u_div_6te.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/db/alt_u_div_6te.tdf   ;         ;
-; db/lpm_abs_nn9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/db/lpm_abs_nn9.tdf     ;         ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                               ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                           ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------------------------+---------+
+; adder_4bit.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/adder_4bit.sv          ;         ;
+; subtractor_4bit.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/subtractor_4bit.sv     ;         ;
+; alu_4bit.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/alu_4bit.sv            ;         ;
+; multiplier_4bit.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/multiplier_4bit.sv     ;         ;
+; DigitExtractor.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/DigitExtractor.sv      ;         ;
+; segmentOutput.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv       ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf                                                  ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc                                                 ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc                                             ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                                                  ;         ;
+; db/lpm_divide_vno.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/db/lpm_divide_vno.tdf  ;         ;
+; db/abs_divider_8ag.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/db/abs_divider_8ag.tdf ;         ;
+; db/alt_u_div_0te.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/db/alt_u_div_0te.tdf   ;         ;
+; db/lpm_abs_kn9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/db/lpm_abs_kn9.tdf     ;         ;
+; db/lpm_abs_on9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/db/lpm_abs_on9.tdf     ;         ;
+; db/lpm_divide_2go.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/db/lpm_divide_2go.tdf  ;         ;
+; db/lpm_divide_2oo.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/db/lpm_divide_2oo.tdf  ;         ;
+; db/abs_divider_bag.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/db/abs_divider_bag.tdf ;         ;
+; db/alt_u_div_6te.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/db/alt_u_div_6te.tdf   ;         ;
+; db/lpm_abs_nn9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/db/lpm_abs_nn9.tdf     ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -432,115 +432,115 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Mon Mar 04 20:37:11 2024
+    Info: Processing started: Tue Mar 05 21:56:02 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off alu_4bit -c alu_4bit
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file adder_4bit.sv
-    Info (12023): Found entity 1: adder_4bit File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/adder_4bit.sv Line: 1
+    Info (12023): Found entity 1: adder_4bit File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/adder_4bit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file subtractor_4bit.sv
-    Info (12023): Found entity 1: subtractor_4bit File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/subtractor_4bit.sv Line: 1
+    Info (12023): Found entity 1: subtractor_4bit File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/subtractor_4bit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu_4bit.sv
-    Info (12023): Found entity 1: alu_4bit File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/alu_4bit.sv Line: 1
+    Info (12023): Found entity 1: alu_4bit File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/alu_4bit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu_4bit_tb.sv
-    Info (12023): Found entity 1: alu_4bit_tb File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/alu_4bit_tb.sv Line: 1
+    Info (12023): Found entity 1: alu_4bit_tb File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/alu_4bit_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file multiplier_4bit.sv
-    Info (12023): Found entity 1: multiplier_4bit File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/multiplier_4bit.sv Line: 1
+    Info (12023): Found entity 1: multiplier_4bit File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/multiplier_4bit.sv Line: 1
 Warning (12019): Can't analyze file -- file BinaryToDecimal.sv is missing
 Info (12021): Found 1 design units, including 1 entities, in source file digitextractor.sv
-    Info (12023): Found entity 1: DigitExtractor File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/DigitExtractor.sv Line: 1
+    Info (12023): Found entity 1: DigitExtractor File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/DigitExtractor.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file segmentoutput.sv
-    Info (12023): Found entity 1: segmentOutput File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 1
+    Info (12023): Found entity 1: segmentOutput File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 1
 Info (12127): Elaborating entity "alu_4bit" for the top level hierarchy
-Info (12128): Elaborating entity "adder_4bit" for hierarchy "adder_4bit:adder" File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/alu_4bit.sv Line: 17
-Info (12128): Elaborating entity "subtractor_4bit" for hierarchy "subtractor_4bit:subtractor" File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/alu_4bit.sv Line: 18
-Info (12128): Elaborating entity "multiplier_4bit" for hierarchy "multiplier_4bit:multiplier" File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/alu_4bit.sv Line: 19
-Info (12128): Elaborating entity "DigitExtractor" for hierarchy "DigitExtractor:extractor" File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/alu_4bit.sv Line: 21
-Warning (10762): Verilog HDL Case Statement warning at DigitExtractor.sv(16): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/DigitExtractor.sv Line: 16
-Info (12128): Elaborating entity "segmentOutput" for hierarchy "segmentOutput:segment1" File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/alu_4bit.sv Line: 22
-Warning (10270): Verilog HDL Case Statement warning at segmentOutput.sv(10): incomplete case statement has no default case item File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 10
-Warning (10240): Verilog HDL Always Construct warning at segmentOutput.sv(8): inferring latch(es) for variable "segments1", which holds its previous value in one or more paths through the always construct File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
-Info (10041): Inferred latch for "segments1[0]" at segmentOutput.sv(8) File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
-Info (10041): Inferred latch for "segments1[1]" at segmentOutput.sv(8) File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
-Info (10041): Inferred latch for "segments1[2]" at segmentOutput.sv(8) File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
-Info (10041): Inferred latch for "segments1[3]" at segmentOutput.sv(8) File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
-Info (10041): Inferred latch for "segments1[4]" at segmentOutput.sv(8) File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
-Info (10041): Inferred latch for "segments1[5]" at segmentOutput.sv(8) File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
-Info (10041): Inferred latch for "segments1[6]" at segmentOutput.sv(8) File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
-Warning (14026): LATCH primitive "segmentOutput:segment2|segments1[0]" is permanently enabled File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
-Warning (14026): LATCH primitive "segmentOutput:segment2|segments1[1]" is permanently enabled File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
-Warning (14026): LATCH primitive "segmentOutput:segment2|segments1[2]" is permanently enabled File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
-Warning (14026): LATCH primitive "segmentOutput:segment2|segments1[3]" is permanently enabled File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
-Warning (14026): LATCH primitive "segmentOutput:segment2|segments1[4]" is permanently enabled File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
-Warning (14026): LATCH primitive "segmentOutput:segment2|segments1[5]" is permanently enabled File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
-Warning (14026): LATCH primitive "segmentOutput:segment2|segments1[6]" is permanently enabled File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
-Warning (14026): LATCH primitive "segmentOutput:segment3|segments1[0]" is permanently enabled File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
-Warning (14026): LATCH primitive "segmentOutput:segment3|segments1[1]" is permanently enabled File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
-Warning (14026): LATCH primitive "segmentOutput:segment3|segments1[2]" is permanently enabled File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
-Warning (14026): LATCH primitive "segmentOutput:segment3|segments1[3]" is permanently enabled File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
-Warning (14026): LATCH primitive "segmentOutput:segment3|segments1[4]" is permanently enabled File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
-Warning (14026): LATCH primitive "segmentOutput:segment3|segments1[5]" is permanently enabled File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
-Warning (14026): LATCH primitive "segmentOutput:segment3|segments1[6]" is permanently enabled File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
+Info (12128): Elaborating entity "adder_4bit" for hierarchy "adder_4bit:adder" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/alu_4bit.sv Line: 17
+Info (12128): Elaborating entity "subtractor_4bit" for hierarchy "subtractor_4bit:subtractor" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/alu_4bit.sv Line: 18
+Info (12128): Elaborating entity "multiplier_4bit" for hierarchy "multiplier_4bit:multiplier" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/alu_4bit.sv Line: 19
+Info (12128): Elaborating entity "DigitExtractor" for hierarchy "DigitExtractor:extractor" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/alu_4bit.sv Line: 21
+Warning (10762): Verilog HDL Case Statement warning at DigitExtractor.sv(16): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/DigitExtractor.sv Line: 16
+Info (12128): Elaborating entity "segmentOutput" for hierarchy "segmentOutput:segment1" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/alu_4bit.sv Line: 22
+Warning (10270): Verilog HDL Case Statement warning at segmentOutput.sv(10): incomplete case statement has no default case item File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 10
+Warning (10240): Verilog HDL Always Construct warning at segmentOutput.sv(8): inferring latch(es) for variable "segments1", which holds its previous value in one or more paths through the always construct File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
+Info (10041): Inferred latch for "segments1[0]" at segmentOutput.sv(8) File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
+Info (10041): Inferred latch for "segments1[1]" at segmentOutput.sv(8) File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
+Info (10041): Inferred latch for "segments1[2]" at segmentOutput.sv(8) File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
+Info (10041): Inferred latch for "segments1[3]" at segmentOutput.sv(8) File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
+Info (10041): Inferred latch for "segments1[4]" at segmentOutput.sv(8) File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
+Info (10041): Inferred latch for "segments1[5]" at segmentOutput.sv(8) File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
+Info (10041): Inferred latch for "segments1[6]" at segmentOutput.sv(8) File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment2|segments1[0]" is permanently enabled File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment2|segments1[1]" is permanently enabled File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment2|segments1[2]" is permanently enabled File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment2|segments1[3]" is permanently enabled File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment2|segments1[4]" is permanently enabled File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment2|segments1[5]" is permanently enabled File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment2|segments1[6]" is permanently enabled File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment3|segments1[0]" is permanently enabled File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment3|segments1[1]" is permanently enabled File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment3|segments1[2]" is permanently enabled File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment3|segments1[3]" is permanently enabled File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment3|segments1[4]" is permanently enabled File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment3|segments1[5]" is permanently enabled File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment3|segments1[6]" is permanently enabled File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
 Info (278001): Inferred 4 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DigitExtractor:extractor|Div1" File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/DigitExtractor.sv Line: 40
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DigitExtractor:extractor|Mod0" File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/DigitExtractor.sv Line: 40
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DigitExtractor:extractor|Mod1" File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/DigitExtractor.sv Line: 41
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DigitExtractor:extractor|Div0" File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/DigitExtractor.sv Line: 39
-Info (12130): Elaborated megafunction instantiation "DigitExtractor:extractor|lpm_divide:Div1" File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/DigitExtractor.sv Line: 40
-Info (12133): Instantiated megafunction "DigitExtractor:extractor|lpm_divide:Div1" with the following parameter: File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/DigitExtractor.sv Line: 40
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DigitExtractor:extractor|Div1" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/DigitExtractor.sv Line: 40
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DigitExtractor:extractor|Mod0" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/DigitExtractor.sv Line: 40
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DigitExtractor:extractor|Mod1" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/DigitExtractor.sv Line: 41
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DigitExtractor:extractor|Div0" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/DigitExtractor.sv Line: 39
+Info (12130): Elaborated megafunction instantiation "DigitExtractor:extractor|lpm_divide:Div1" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/DigitExtractor.sv Line: 40
+Info (12133): Instantiated megafunction "DigitExtractor:extractor|lpm_divide:Div1" with the following parameter: File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/DigitExtractor.sv Line: 40
     Info (12134): Parameter "LPM_WIDTHN" = "9"
     Info (12134): Parameter "LPM_WIDTHD" = "5"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
     Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_vno.tdf
-    Info (12023): Found entity 1: lpm_divide_vno File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/db/lpm_divide_vno.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_vno File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/db/lpm_divide_vno.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_8ag.tdf
-    Info (12023): Found entity 1: abs_divider_8ag File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/db/abs_divider_8ag.tdf Line: 29
+    Info (12023): Found entity 1: abs_divider_8ag File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/db/abs_divider_8ag.tdf Line: 29
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_0te.tdf
-    Info (12023): Found entity 1: alt_u_div_0te File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/db/alt_u_div_0te.tdf Line: 23
+    Info (12023): Found entity 1: alt_u_div_0te File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/db/alt_u_div_0te.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_kn9.tdf
-    Info (12023): Found entity 1: lpm_abs_kn9 File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/db/lpm_abs_kn9.tdf Line: 23
+    Info (12023): Found entity 1: lpm_abs_kn9 File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/db/lpm_abs_kn9.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_on9.tdf
-    Info (12023): Found entity 1: lpm_abs_on9 File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/db/lpm_abs_on9.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "DigitExtractor:extractor|lpm_divide:Mod0" File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/DigitExtractor.sv Line: 40
-Info (12133): Instantiated megafunction "DigitExtractor:extractor|lpm_divide:Mod0" with the following parameter: File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/DigitExtractor.sv Line: 40
+    Info (12023): Found entity 1: lpm_abs_on9 File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/db/lpm_abs_on9.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "DigitExtractor:extractor|lpm_divide:Mod0" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/DigitExtractor.sv Line: 40
+Info (12133): Instantiated megafunction "DigitExtractor:extractor|lpm_divide:Mod0" with the following parameter: File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/DigitExtractor.sv Line: 40
     Info (12134): Parameter "LPM_WIDTHN" = "9"
     Info (12134): Parameter "LPM_WIDTHD" = "5"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
     Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_2go.tdf
-    Info (12023): Found entity 1: lpm_divide_2go File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/db/lpm_divide_2go.tdf Line: 25
-Info (12130): Elaborated megafunction instantiation "DigitExtractor:extractor|lpm_divide:Mod1" File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/DigitExtractor.sv Line: 41
-Info (12133): Instantiated megafunction "DigitExtractor:extractor|lpm_divide:Mod1" with the following parameter: File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/DigitExtractor.sv Line: 41
+    Info (12023): Found entity 1: lpm_divide_2go File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/db/lpm_divide_2go.tdf Line: 25
+Info (12130): Elaborated megafunction instantiation "DigitExtractor:extractor|lpm_divide:Mod1" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/DigitExtractor.sv Line: 41
+Info (12133): Instantiated megafunction "DigitExtractor:extractor|lpm_divide:Mod1" with the following parameter: File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/DigitExtractor.sv Line: 41
     Info (12134): Parameter "LPM_WIDTHN" = "9"
     Info (12134): Parameter "LPM_WIDTHD" = "5"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
     Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
-Info (12130): Elaborated megafunction instantiation "DigitExtractor:extractor|lpm_divide:Div0" File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/DigitExtractor.sv Line: 39
-Info (12133): Instantiated megafunction "DigitExtractor:extractor|lpm_divide:Div0" with the following parameter: File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/DigitExtractor.sv Line: 39
+Info (12130): Elaborated megafunction instantiation "DigitExtractor:extractor|lpm_divide:Div0" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/DigitExtractor.sv Line: 39
+Info (12133): Instantiated megafunction "DigitExtractor:extractor|lpm_divide:Div0" with the following parameter: File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/DigitExtractor.sv Line: 39
     Info (12134): Parameter "LPM_WIDTHN" = "9"
     Info (12134): Parameter "LPM_WIDTHD" = "8"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
     Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_2oo.tdf
-    Info (12023): Found entity 1: lpm_divide_2oo File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/db/lpm_divide_2oo.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_2oo File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/db/lpm_divide_2oo.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_bag.tdf
-    Info (12023): Found entity 1: abs_divider_bag File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/db/abs_divider_bag.tdf Line: 29
+    Info (12023): Found entity 1: abs_divider_bag File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/db/abs_divider_bag.tdf Line: 29
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_6te.tdf
-    Info (12023): Found entity 1: alt_u_div_6te File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/db/alt_u_div_6te.tdf Line: 23
+    Info (12023): Found entity 1: alt_u_div_6te File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/db/alt_u_div_6te.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_nn9.tdf
-    Info (12023): Found entity 1: lpm_abs_nn9 File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/db/lpm_abs_nn9.tdf Line: 23
-Warning (14026): LATCH primitive "segmentOutput:segment1|segments1[0]" is permanently enabled File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
-Warning (14026): LATCH primitive "segmentOutput:segment1|segments1[1]" is permanently enabled File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
-Warning (14026): LATCH primitive "segmentOutput:segment1|segments1[2]" is permanently enabled File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
-Warning (14026): LATCH primitive "segmentOutput:segment1|segments1[3]" is permanently enabled File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
-Warning (14026): LATCH primitive "segmentOutput:segment1|segments1[4]" is permanently enabled File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
-Warning (14026): LATCH primitive "segmentOutput:segment1|segments1[5]" is permanently enabled File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
-Warning (14026): LATCH primitive "segmentOutput:segment1|segments1[6]" is permanently enabled File: C:/Users/Gustavo/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
+    Info (12023): Found entity 1: lpm_abs_nn9 File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/db/lpm_abs_nn9.tdf Line: 23
+Warning (14026): LATCH primitive "segmentOutput:segment1|segments1[0]" is permanently enabled File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment1|segments1[1]" is permanently enabled File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment1|segments1[2]" is permanently enabled File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment1|segments1[3]" is permanently enabled File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment1|segments1[4]" is permanently enabled File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment1|segments1[5]" is permanently enabled File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment1|segments1[6]" is permanently enabled File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/4bits/segmentOutput.sv Line: 8
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -549,9 +549,9 @@ Info (21057): Implemented 335 device resources after synthesis - the final resou
     Info (21059): Implemented 21 output pins
     Info (21061): Implemented 303 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 26 warnings
-    Info: Peak virtual memory: 4847 megabytes
-    Info: Processing ended: Mon Mar 04 20:37:18 2024
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:15
+    Info: Peak virtual memory: 4805 megabytes
+    Info: Processing ended: Tue Mar 05 21:56:17 2024
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:31
 
 

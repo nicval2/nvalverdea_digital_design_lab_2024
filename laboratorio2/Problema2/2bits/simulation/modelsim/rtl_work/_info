@@ -8,292 +8,292 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/nicva/2_bit/simulation/modelsim
+Z0 dC:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/simulation/modelsim
 vadder_2bit
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1709683071
+Z2 !s110 1709698050
 !i10b 1
 !s100 6:8`RJ1edJcKFZegXeO;<1
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IiGoa4A@_HVbAX8b3X<Nb90
+I0OD9gIcQggEP7z6YFE9=E2
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-w1709682791
-8C:/Users/nicva/2_bit/adder_2bit.sv
-FC:/Users/nicva/2_bit/adder_2bit.sv
+Z5 w1709696746
+8C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/adder_2bit.sv
+FC:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/adder_2bit.sv
 !i122 1
 L0 1 27
-Z5 OV;L;2020.1;71
+Z6 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1709683071.000000
-!s107 C:/Users/nicva/2_bit/adder_2bit.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/2_bit|C:/Users/nicva/2_bit/adder_2bit.sv|
+Z7 !s108 1709698050.000000
+!s107 C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/adder_2bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits|C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/adder_2bit.sv|
 !i113 1
-Z7 o-sv -work work
-Z8 !s92 -sv -work work +incdir+C:/Users/nicva/2_bit
-Z9 tCvgOpt 0
+Z8 o-sv -work work
+Z9 !s92 -sv -work work +incdir+C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits
+Z10 tCvgOpt 0
 valu_2bit
 R1
 R2
 !i10b 1
 !s100 Ojg5Qk_6R`:m77HFH;68U0
 R3
-I@nga]=RHIoEjbbm9nSzW=2
+IZAH7@2VA^g4kHeHGR]f@N3
 R4
 S1
 R0
-w1709682556
-8C:/Users/nicva/2_bit/alu_2bit.sv
-FC:/Users/nicva/2_bit/alu_2bit.sv
+R5
+8C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/alu_2bit.sv
+FC:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/alu_2bit.sv
 !i122 0
 L0 1 44
-R5
+R6
 r1
 !s85 0
 31
-R6
-!s107 C:/Users/nicva/2_bit/alu_2bit.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/2_bit|C:/Users/nicva/2_bit/alu_2bit.sv|
-!i113 1
 R7
+!s107 C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/alu_2bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits|C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/alu_2bit.sv|
+!i113 1
 R8
 R9
+R10
 valu_2bit_tb
 R1
-Z10 !s110 1709683072
+Z11 !s110 1709698052
 !i10b 1
-!s100 2C8omY9d_8n00Z0KzBJ[M0
+!s100 Vcn>GDPh]F=dlNI<AgDRT1
 R3
-IDI0<F;H`eb;5lZ6<ZgOPo2
+I8Q[Ia`5SaH_]oVSS7WZhD1
 R4
 S1
 R0
-w1709682990
-8C:/Users/nicva/2_bit/alu_2bit_tb.sv
-FC:/Users/nicva/2_bit/alu_2bit_tb.sv
+R5
+8C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/alu_2bit_tb.sv
+FC:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/alu_2bit_tb.sv
 !i122 10
 L0 1 222
-R5
+R6
 r1
 !s85 0
 31
-Z11 !s108 1709683072.000000
-!s107 C:/Users/nicva/2_bit/alu_2bit_tb.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/2_bit|C:/Users/nicva/2_bit/alu_2bit_tb.sv|
+Z12 !s108 1709698052.000000
+!s107 C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/alu_2bit_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits|C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/alu_2bit_tb.sv|
 !i113 1
-R7
 R8
 R9
+R10
 vand_2bit
 R1
-R2
+Z13 !s110 1709698051
 !i10b 1
 !s100 ]ZQSTD;oMfhL?DLGY`lON2
 R3
-I6cORjQz5a3e:a;al5oTbi3
+IZ?4X6R6QkdO>ShH2C;Ogo0
 R4
 S1
 R0
-w1709644024
-8C:/Users/nicva/2_bit/and_2bit.sv
-FC:/Users/nicva/2_bit/and_2bit.sv
-!i122 2
-Z12 L0 1 15
 R5
+8C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/and_2bit.sv
+FC:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/and_2bit.sv
+!i122 2
+Z14 L0 1 15
+R6
 r1
 !s85 0
 31
-R6
-!s107 C:/Users/nicva/2_bit/and_2bit.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/2_bit|C:/Users/nicva/2_bit/and_2bit.sv|
+Z15 !s108 1709698051.000000
+!s107 C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/and_2bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits|C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/and_2bit.sv|
 !i113 1
-R7
 R8
 R9
+R10
 vdivider_2bit
 R1
-R2
+R13
 !i10b 1
 !s100 KOOb:V6W3^bllmi0bW5O42
 R3
-IG`TMd=N@[aQ:fWB7?ekz30
+I80i5MI4^dJckPFQnIQY?O3
 R4
 S1
 R0
-w1709682724
-8C:/Users/nicva/2_bit/divider_2bit.sv
-FC:/Users/nicva/2_bit/divider_2bit.sv
+R5
+8C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/divider_2bit.sv
+FC:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/divider_2bit.sv
 !i122 3
 L0 1 16
-R5
+R6
 r1
 !s85 0
 31
-R6
-!s107 C:/Users/nicva/2_bit/divider_2bit.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/2_bit|C:/Users/nicva/2_bit/divider_2bit.sv|
+R15
+!s107 C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/divider_2bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits|C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/divider_2bit.sv|
 !i113 1
-R7
 R8
 R9
+R10
 vmultiplier_2bit
 R1
-R10
+R13
 !i10b 1
 !s100 MZ_nG]<ZbL[kkL4Pi2Y9a0
 R3
-IM5G5hP8_heBKKEl9SNJKV2
+I0`nC47;]Cz1fB;0>Pk_TK3
 R4
 S1
 R0
-w1709682912
-8C:/Users/nicva/2_bit/multiplier_2bit.sv
-FC:/Users/nicva/2_bit/multiplier_2bit.sv
+R5
+8C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/multiplier_2bit.sv
+FC:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/multiplier_2bit.sv
 !i122 4
 L0 1 22
-R5
+R6
 r1
 !s85 0
 31
-R6
-!s107 C:/Users/nicva/2_bit/multiplier_2bit.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/2_bit|C:/Users/nicva/2_bit/multiplier_2bit.sv|
+R15
+!s107 C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/multiplier_2bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits|C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/multiplier_2bit.sv|
 !i113 1
-R7
 R8
 R9
+R10
 vor_2bit
 R1
-R10
+R13
 !i10b 1
 !s100 Ko^dSRiX9>0OcY_7Pcae[2
 R3
-I3>j27_e?zkXo9m54b?X742
+I>oP:CdbWlZnPK3d9n7Uk=3
 R4
 S1
 R0
-w1709644030
-8C:/Users/nicva/2_bit/or_2bit.sv
-FC:/Users/nicva/2_bit/or_2bit.sv
-!i122 5
-R12
 R5
+8C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/or_2bit.sv
+FC:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/or_2bit.sv
+!i122 5
+R14
+R6
 r1
 !s85 0
 31
-R11
-!s107 C:/Users/nicva/2_bit/or_2bit.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/2_bit|C:/Users/nicva/2_bit/or_2bit.sv|
+R15
+!s107 C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/or_2bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits|C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/or_2bit.sv|
 !i113 1
-R7
 R8
 R9
+R10
 vshiftLeft_2bit
 R1
-R10
+R13
 !i10b 1
 !s100 3<Jhk>m6h<;?OVge69iUY2
 R3
-IP7BORQEoaH7nEDMAeb7zO2
+IRJ4<84KA0ZITzY29ULO=Z0
 R4
 S1
 R0
-w1709644018
-8C:/Users/nicva/2_bit/shiftLeft_2bit.sv
-FC:/Users/nicva/2_bit/shiftLeft_2bit.sv
+R5
+8C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/shiftLeft_2bit.sv
+FC:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/shiftLeft_2bit.sv
 !i122 6
 L0 1 18
-R5
+R6
 r1
 !s85 0
 31
-R11
-!s107 C:/Users/nicva/2_bit/shiftLeft_2bit.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/2_bit|C:/Users/nicva/2_bit/shiftLeft_2bit.sv|
+R15
+!s107 C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/shiftLeft_2bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits|C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/shiftLeft_2bit.sv|
 !i113 1
-R7
 R8
 R9
+R10
 nshift@left_2bit
 vshiftRight_2bit
 R1
-R10
+R11
 !i10b 1
 !s100 Uo@9]_48bHJ@Wgc;Fkd980
 R3
-IlTC9ZhPVYjijdLNDZjnH;2
+IcgAT]K63Sh;ofj=IMG6kl3
 R4
 S1
 R0
-w1709644143
-8C:/Users/nicva/2_bit/shiftRight_2bit.sv
-FC:/Users/nicva/2_bit/shiftRight_2bit.sv
+R5
+8C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/shiftRight_2bit.sv
+FC:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/shiftRight_2bit.sv
 !i122 7
 L0 1 17
-R5
+R6
 r1
 !s85 0
 31
-R11
-!s107 C:/Users/nicva/2_bit/shiftRight_2bit.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/2_bit|C:/Users/nicva/2_bit/shiftRight_2bit.sv|
+R12
+!s107 C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/shiftRight_2bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits|C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/shiftRight_2bit.sv|
 !i113 1
-R7
 R8
 R9
+R10
 nshift@right_2bit
 vsubtractor_2bit
 R1
-R10
+R11
 !i10b 1
 !s100 ^YI1=XT[YoJ6QY9U<058Q0
 R3
-IOlF4W7h;1oUS1YOaXgnmd2
+IO?OIQAXR5;Cb[I7A0<3KZ3
 R4
 S1
 R0
-w1709647388
-8C:/Users/nicva/2_bit/subtractor_2bit.sv
-FC:/Users/nicva/2_bit/subtractor_2bit.sv
+Z16 w1709696748
+8C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/subtractor_2bit.sv
+FC:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/subtractor_2bit.sv
 !i122 8
 L0 1 32
-R5
+R6
 r1
 !s85 0
 31
-R11
-!s107 C:/Users/nicva/2_bit/subtractor_2bit.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/2_bit|C:/Users/nicva/2_bit/subtractor_2bit.sv|
+R12
+!s107 C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/subtractor_2bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits|C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/subtractor_2bit.sv|
 !i113 1
-R7
 R8
 R9
+R10
 vxor_2bit
 R1
-R10
+R11
 !i10b 1
 !s100 lafeDaC`RL12VMg42VR7L3
 R3
-Ii`>a3P779CCEO_91ClVLH3
+I1j;Uc>0KQz1cGZ9l`HL^O2
 R4
 S1
 R0
-w1709644138
-8C:/Users/nicva/2_bit/xor_2bit.sv
-FC:/Users/nicva/2_bit/xor_2bit.sv
+R16
+8C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/xor_2bit.sv
+FC:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/xor_2bit.sv
 !i122 9
-R12
-R5
+R14
+R6
 r1
 !s85 0
 31
-R11
-!s107 C:/Users/nicva/2_bit/xor_2bit.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/2_bit|C:/Users/nicva/2_bit/xor_2bit.sv|
+R12
+!s107 C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/xor_2bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits|C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/xor_2bit.sv|
 !i113 1
-R7
 R8
 R9
+R10
