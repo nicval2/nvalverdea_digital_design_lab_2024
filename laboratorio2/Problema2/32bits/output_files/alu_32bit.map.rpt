@@ -1,0 +1,346 @@
+Analysis & Elaboration report for alu_32bit
+Tue Mar 05 19:09:22 2024
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Analysis & Elaboration Settings
+  5. Port Connectivity Checks: "shiftRight_32bit:right"
+  6. Port Connectivity Checks: "shiftLeft_32bit:left"
+  7. Port Connectivity Checks: "xor_32bit:xorr"
+  8. Port Connectivity Checks: "or_32bit:orr"
+  9. Port Connectivity Checks: "and_32bit:andd"
+ 10. Port Connectivity Checks: "divider_32bit:divider"
+ 11. Port Connectivity Checks: "multiplier_32bit:multiplier"
+ 12. Port Connectivity Checks: "subtractor_32bit:subtractor"
+ 13. Port Connectivity Checks: "adder_32bit:adder"
+ 14. Analysis & Elaboration Messages
+ 15. Analysis & Elaboration Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-----------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                              ;
++-------------------------------+---------------------------------------------+
+; Analysis & Elaboration Status ; Successful - Tue Mar 05 19:09:22 2024       ;
+; Quartus Prime Version         ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name                 ; alu_32bit                                   ;
+; Top-level Entity Name         ; alu_32bit                                   ;
+; Family                        ; Cyclone V                                   ;
+; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
+; Total registers               ; N/A until Partition Merge                   ;
+; Total pins                    ; N/A until Partition Merge                   ;
+; Total virtual pins            ; N/A until Partition Merge                   ;
+; Total block memory bits       ; N/A until Partition Merge                   ;
+; Total PLLs                    ; N/A until Partition Merge                   ;
+; Total DLLs                    ; N/A until Partition Merge                   ;
++-------------------------------+---------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Elaboration Settings                                                                                           ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; alu_32bit          ; alu_32bit          ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "shiftRight_32bit:right"                                                                   ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; zero_flag  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; carry_flag ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "shiftLeft_32bit:left"                                                                     ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; zero_flag  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; carry_flag ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "xor_32bit:xorr"                                                                          ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; zero_flag ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "or_32bit:orr"                                                                            ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; zero_flag ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "and_32bit:andd"                                                                          ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; zero_flag ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divider_32bit:divider"                                                                  ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; overflow ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; zero     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "multiplier_32bit:multiplier"                                                        ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; V    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; Z    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "subtractor_32bit:subtractor"                                                               ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; diff[32..2] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; carry_out   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; overflow    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; zero        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; negative    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_32bit:adder"                                                                        ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; sum[32..3] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; carry_out  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; overflow   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; zero       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Elaboration
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Tue Mar 05 19:09:16 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off alu_32bit -c alu_32bit --analysis_and_elaboration
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file xor_32bit.sv
+    Info (12023): Found entity 1: xor_32bit File: C:/Users/nicva/32bits/xor_32bit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file subtractor_32bit.sv
+    Info (12023): Found entity 1: subtractor_32bit File: C:/Users/nicva/32bits/subtractor_32bit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file shiftright_32bit.sv
+    Info (12023): Found entity 1: shiftRight_32bit File: C:/Users/nicva/32bits/shiftRight_32bit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file shiftleft_32bit.sv
+    Info (12023): Found entity 1: shiftLeft_32bit File: C:/Users/nicva/32bits/shiftLeft_32bit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file segmentoutput.sv
+    Info (12023): Found entity 1: segmentOutput File: C:/Users/nicva/32bits/segmentOutput.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file or_32bit.sv
+    Info (12023): Found entity 1: or_32bit File: C:/Users/nicva/32bits/or_32bit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file multiplier_32bit.sv
+    Info (12023): Found entity 1: multiplier_32bit File: C:/Users/nicva/32bits/multiplier_32bit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file divider_32bit.sv
+    Info (12023): Found entity 1: divider_32bit File: C:/Users/nicva/32bits/divider_32bit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file and_32bit.sv
+    Info (12023): Found entity 1: and_32bit File: C:/Users/nicva/32bits/and_32bit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu_32bit_tb.sv
+    Info (12023): Found entity 1: alu_32bit_tb File: C:/Users/nicva/32bits/alu_32bit_tb.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu_32bit.sv
+    Info (12023): Found entity 1: alu_32bit File: C:/Users/nicva/32bits/alu_32bit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file adder_32bit.sv
+    Info (12023): Found entity 1: adder_32bit File: C:/Users/nicva/32bits/adder_32bit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file digitextractor.sv
+    Info (12023): Found entity 1: DigitExtractor File: C:/Users/nicva/32bits/DigitExtractor.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at alu_32bit.sv(13): created implicit net for "add_CFlag" File: C:/Users/nicva/32bits/alu_32bit.sv Line: 13
+Warning (10236): Verilog HDL Implicit Net warning at alu_32bit.sv(13): created implicit net for "add_VFlag" File: C:/Users/nicva/32bits/alu_32bit.sv Line: 13
+Warning (10236): Verilog HDL Implicit Net warning at alu_32bit.sv(13): created implicit net for "add_ZFlag" File: C:/Users/nicva/32bits/alu_32bit.sv Line: 13
+Warning (10236): Verilog HDL Implicit Net warning at alu_32bit.sv(14): created implicit net for "sub_CFlag" File: C:/Users/nicva/32bits/alu_32bit.sv Line: 14
+Warning (10236): Verilog HDL Implicit Net warning at alu_32bit.sv(14): created implicit net for "sub_VFlag" File: C:/Users/nicva/32bits/alu_32bit.sv Line: 14
+Warning (10236): Verilog HDL Implicit Net warning at alu_32bit.sv(14): created implicit net for "sub_ZFlag" File: C:/Users/nicva/32bits/alu_32bit.sv Line: 14
+Warning (10236): Verilog HDL Implicit Net warning at alu_32bit.sv(14): created implicit net for "sub_NFlag" File: C:/Users/nicva/32bits/alu_32bit.sv Line: 14
+Warning (10236): Verilog HDL Implicit Net warning at alu_32bit.sv(15): created implicit net for "mul_VFlag" File: C:/Users/nicva/32bits/alu_32bit.sv Line: 15
+Warning (10236): Verilog HDL Implicit Net warning at alu_32bit.sv(15): created implicit net for "mul_ZFlag" File: C:/Users/nicva/32bits/alu_32bit.sv Line: 15
+Warning (10236): Verilog HDL Implicit Net warning at alu_32bit.sv(16): created implicit net for "div_VFlag" File: C:/Users/nicva/32bits/alu_32bit.sv Line: 16
+Warning (10236): Verilog HDL Implicit Net warning at alu_32bit.sv(16): created implicit net for "div_ZFlag" File: C:/Users/nicva/32bits/alu_32bit.sv Line: 16
+Warning (10236): Verilog HDL Implicit Net warning at alu_32bit.sv(17): created implicit net for "and_ZFlag" File: C:/Users/nicva/32bits/alu_32bit.sv Line: 17
+Warning (10236): Verilog HDL Implicit Net warning at alu_32bit.sv(18): created implicit net for "or_ZFlag" File: C:/Users/nicva/32bits/alu_32bit.sv Line: 18
+Warning (10236): Verilog HDL Implicit Net warning at alu_32bit.sv(19): created implicit net for "xor_ZFlag" File: C:/Users/nicva/32bits/alu_32bit.sv Line: 19
+Warning (10236): Verilog HDL Implicit Net warning at alu_32bit.sv(20): created implicit net for "left_ZFlag" File: C:/Users/nicva/32bits/alu_32bit.sv Line: 20
+Warning (10236): Verilog HDL Implicit Net warning at alu_32bit.sv(20): created implicit net for "left_CFlag" File: C:/Users/nicva/32bits/alu_32bit.sv Line: 20
+Warning (10236): Verilog HDL Implicit Net warning at alu_32bit.sv(21): created implicit net for "right_ZFlag" File: C:/Users/nicva/32bits/alu_32bit.sv Line: 21
+Warning (10236): Verilog HDL Implicit Net warning at alu_32bit.sv(21): created implicit net for "right_CFlag" File: C:/Users/nicva/32bits/alu_32bit.sv Line: 21
+Info (12127): Elaborating entity "alu_32bit" for the top level hierarchy
+Warning (10762): Verilog HDL Case Statement warning at alu_32bit.sv(26): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/nicva/32bits/alu_32bit.sv Line: 26
+Info (12128): Elaborating entity "adder_32bit" for hierarchy "adder_32bit:adder" File: C:/Users/nicva/32bits/alu_32bit.sv Line: 13
+Info (12128): Elaborating entity "subtractor_32bit" for hierarchy "subtractor_32bit:subtractor" File: C:/Users/nicva/32bits/alu_32bit.sv Line: 14
+Warning (10034): Output port "diff[32]" at subtractor_32bit.sv(4) has no driver File: C:/Users/nicva/32bits/subtractor_32bit.sv Line: 4
+Info (12128): Elaborating entity "multiplier_32bit" for hierarchy "multiplier_32bit:multiplier" File: C:/Users/nicva/32bits/alu_32bit.sv Line: 15
+Warning (10230): Verilog HDL assignment warning at multiplier_32bit.sv(12): truncated value with size 63 to match size of target (8) File: C:/Users/nicva/32bits/multiplier_32bit.sv Line: 12
+Warning (10230): Verilog HDL assignment warning at multiplier_32bit.sv(17): truncated value with size 32 to match size of target (8) File: C:/Users/nicva/32bits/multiplier_32bit.sv Line: 17
+Warning (10034): Output port "out" at multiplier_32bit.sv(4) has no driver File: C:/Users/nicva/32bits/multiplier_32bit.sv Line: 4
+Warning (10034): Output port "V" at multiplier_32bit.sv(5) has no driver File: C:/Users/nicva/32bits/multiplier_32bit.sv Line: 5
+Warning (10034): Output port "Z" at multiplier_32bit.sv(7) has no driver File: C:/Users/nicva/32bits/multiplier_32bit.sv Line: 7
+Info (12128): Elaborating entity "divider_32bit" for hierarchy "divider_32bit:divider" File: C:/Users/nicva/32bits/alu_32bit.sv Line: 16
+Warning (10034): Output port "overflow" at divider_32bit.sv(5) has no driver File: C:/Users/nicva/32bits/divider_32bit.sv Line: 5
+Warning (10034): Output port "zero" at divider_32bit.sv(8) has no driver File: C:/Users/nicva/32bits/divider_32bit.sv Line: 8
+Info (12128): Elaborating entity "and_32bit" for hierarchy "and_32bit:andd" File: C:/Users/nicva/32bits/alu_32bit.sv Line: 17
+Info (12128): Elaborating entity "or_32bit" for hierarchy "or_32bit:orr" File: C:/Users/nicva/32bits/alu_32bit.sv Line: 18
+Info (12128): Elaborating entity "xor_32bit" for hierarchy "xor_32bit:xorr" File: C:/Users/nicva/32bits/alu_32bit.sv Line: 19
+Info (12128): Elaborating entity "shiftLeft_32bit" for hierarchy "shiftLeft_32bit:left" File: C:/Users/nicva/32bits/alu_32bit.sv Line: 20
+Info (12128): Elaborating entity "shiftRight_32bit" for hierarchy "shiftRight_32bit:right" File: C:/Users/nicva/32bits/alu_32bit.sv Line: 21
+Info (144001): Generated suppressed messages file C:/Users/nicva/32bits/output_files/alu_32bit.map.smsg
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 28 warnings
+    Info: Peak virtual memory: 4764 megabytes
+    Info: Processing ended: Tue Mar 05 19:09:22 2024
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:07
+
+
++--------------------------------------------+
+; Analysis & Elaboration Suppressed Messages ;
++--------------------------------------------+
+The suppressed messages can be found in C:/Users/nicva/32bits/output_files/alu_32bit.map.smsg.
+
+

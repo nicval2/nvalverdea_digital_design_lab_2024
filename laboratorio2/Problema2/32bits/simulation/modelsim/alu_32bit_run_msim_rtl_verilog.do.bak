@@ -1,0 +1,20 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -sv -work work +incdir+C:/Users/nicva/Desktop/Taller_de_Diseño_Digital/32_bit {C:/Users/nicva/Desktop/Taller_de_Diseño_Digital/32_bit/xor_32bit.sv}
+vlog -sv -work work +incdir+C:/Users/nicva/Desktop/Taller_de_Diseño_Digital/32_bit {C:/Users/nicva/Desktop/Taller_de_Diseño_Digital/32_bit/subtractor_32bit.sv}
+vlog -sv -work work +incdir+C:/Users/nicva/Desktop/Taller_de_Diseño_Digital/32_bit {C:/Users/nicva/Desktop/Taller_de_Diseño_Digital/32_bit/shiftRight_32bit.sv}
+vlog -sv -work work +incdir+C:/Users/nicva/Desktop/Taller_de_Diseño_Digital/32_bit {C:/Users/nicva/Desktop/Taller_de_Diseño_Digital/32_bit/shiftLeft_32bit.sv}
+vlog -sv -work work +incdir+C:/Users/nicva/Desktop/Taller_de_Diseño_Digital/32_bit {C:/Users/nicva/Desktop/Taller_de_Diseño_Digital/32_bit/segmentOutput.sv}
+vlog -sv -work work +incdir+C:/Users/nicva/Desktop/Taller_de_Diseño_Digital/32_bit {C:/Users/nicva/Desktop/Taller_de_Diseño_Digital/32_bit/or_32bit.sv}
+vlog -sv -work work +incdir+C:/Users/nicva/Desktop/Taller_de_Diseño_Digital/32_bit {C:/Users/nicva/Desktop/Taller_de_Diseño_Digital/32_bit/multiplier_32bit.sv}
+vlog -sv -work work +incdir+C:/Users/nicva/Desktop/Taller_de_Diseño_Digital/32_bit {C:/Users/nicva/Desktop/Taller_de_Diseño_Digital/32_bit/divider_32bit.sv}
+vlog -sv -work work +incdir+C:/Users/nicva/Desktop/Taller_de_Diseño_Digital/32_bit {C:/Users/nicva/Desktop/Taller_de_Diseño_Digital/32_bit/and_32bit.sv}
+vlog -sv -work work +incdir+C:/Users/nicva/Desktop/Taller_de_Diseño_Digital/32_bit {C:/Users/nicva/Desktop/Taller_de_Diseño_Digital/32_bit/alu_32bit.sv}
+vlog -sv -work work +incdir+C:/Users/nicva/Desktop/Taller_de_Diseño_Digital/32_bit {C:/Users/nicva/Desktop/Taller_de_Diseño_Digital/32_bit/adder_32bit.sv}
+vlog -sv -work work +incdir+C:/Users/nicva/Desktop/Taller_de_Diseño_Digital/32_bit {C:/Users/nicva/Desktop/Taller_de_Diseño_Digital/32_bit/DigitExtractor.sv}
+
