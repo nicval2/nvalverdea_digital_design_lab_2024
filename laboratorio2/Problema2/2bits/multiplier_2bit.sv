@@ -18,5 +18,11 @@ module multiplier_2bit(
             end
         end
 	end
+	  assign Z = (product == 4'b0);
+
+        // Check for Overflow
+		  assign V = (product[3:2] != 2'b0);
+				
+        assign out = product[1:0];
 				
 endmodule

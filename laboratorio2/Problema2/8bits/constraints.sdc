@@ -1,16 +1,16 @@
-#crea una señal del reloj
-create_clock -period 7 -name clk [get_ports {*}]
+# Especificación de la frecuencia de reloj
+create_clock -name clk -period 7 [get_ports {*}]
 
-#Limita el tiempo máximo de retardo desde cualquier entrada hasta cualquier salida a 5 unidades de tiempo
-set_max_delay -from [all_inputs] -to [all_outputs] 5
+# Establecer restricciones de tiempo
+set_input_delay -clock clk -max 3 [get_ports {a[*]}]
+set_input_delay -clock clk -max 3 [get_ports {b[*]}]
+set_input_delay -clock clk -max 3 [get_ports {op}]
+set_input_delay -clock clk -max 3 [get_ports {start}]
 
-create_clock -period 10 [get_ports {clk}]
 
-#establece el tiempo máximo de retardo de entrada a salida en 5 unidades de tiempo
-set_max_delay -from [all_inputs] -to [all_outputs] 5
-
-#establece un retardo mínimo para la señal de entrada "start" 
-set_input_delay -clock clk -min 2 [get_ports {start}]
-
-#establece un retardo máximo para la señal de entrada "start"
-set_input_delay -clock clk -max 2 [get_ports {start}]
+# Establecer restricciones de tiempo para la salida
+set_output_delay -clock clk -max 2 [get_ports result]
+set_output_delay -clock clk -max 2 [get_ports NFlag]
+set_output_delay -clock clk -max 2 [get_ports ZFlag]
+set_output_delay -clock clk -max 2 [get_ports CFlag]
+set_output_delay -clock clk -max 2 [get_ports VFlag]

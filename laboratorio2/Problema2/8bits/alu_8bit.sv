@@ -1,47 +1,115 @@
 module alu_8bit(
     input logic [7:0] a,
     input logic [7:0] b,
-    input logic [7:0] op,
+    input logic [3:0] op,
     input logic start,
-	 output logic [15:0] result
-
+	 output logic [7:0] result,
+	 output logic NFlag,
+    output logic ZFlag,
+    output logic CFlag,
+	 output logic VFlag
 );
-    wire [8:0] div_result, and_result, or_result, xor_result, left_result, right_result;
-	 wire [9:0] add_result;
-    wire [9:0] sub_result;
-	 wire [15:0] mul_result;
+    logic add_CFlag, add_VFlag, add_ZFlag;
+	 logic sub_CFlag, sub_VFlag, sub_ZFlag, sub_NFlag;
+	 logic mul_VFlag, mul_ZFlag;
+	 logic div_VFlag, div_ZFlag;
+	 logic and_ZFlag, or_ZFlag, xor_ZFlag;
+	 logic left_ZFlag, left_CFlag, right_ZFlag, right_CFlag;
+    wire [7:0] add_result, sub_result, mul_result, div_result, and_result, or_result, xor_result, left_result, right_result;
 
-    adder_8bit adder (a, b, add_result[9:0], add_CFlag, add_VFlag, add_ZFlag);
-    subtractor_8bit subtractor (a, b, sub_result[9:0], sub_CFlag, sub_VFlag, sub_ZFlag, sub_NFlag);
-    multiplier_8bit multiplier (a, b, mul_result[15:0], mul_VFlag, mul_ZFlag);
-	 divider_8bit divider (a, b, div_result[8:0], div_VFlag, div_ZFlag);
-	 and_8bit andd (a,b, and_result[8:0], and_ZFlag);
-	 or_8bit orr (a,b, or_result[8:0], or_ZFlag);
-	 xor_8bit xorr (a,b, xor_result[8:0], xor_ZFlag);
-	 shiftLeft_8bit left (a,left_result[8:0], left_ZFlag, left_CFlag);
-	 shiftRight_8bit right (a,right_result[8:0], right_ZFlag, right_CFlag);
+    adder_8bit adder (a, b, add_result[7:0], add_CFlag, add_VFlag, add_ZFlag);
+    subtractor_8bit subtractor (a, b, sub_result[7:0], sub_CFlag, sub_VFlag, sub_ZFlag, sub_NFlag);
+    multiplier_8bit multiplier (a, b, mul_result[7:0], mul_VFlag, mul_ZFlag);
+	 divider_8bit divider (a, b, div_result[7:0], div_VFlag, div_ZFlag);
+	 and_8bit andd (a,b, and_result[7:0], and_ZFlag);
+	 or_8bit orr (a,b, or_result[7:0], or_ZFlag);
+	 xor_8bit xorr (a,b, xor_result[7:0], xor_ZFlag);
+	 shiftLeft_8bit left (a,left_result[7:0], left_ZFlag, left_CFlag);
+	 shiftRight_8bit right (a,right_result[7:0], right_ZFlag, right_CFlag);
 	 
-	 DigitExtractor extractor(.input_number(result), .digit_1(digit_1), .digit_2(digit_2));
-    segmentOutput segment1(.digit(digit_1), .seg(s1));
-    segmentOutput segment2(.digit(digit_2), .seg(s2));
+	 
 
-always_comb begin
+always @(start) begin
     if (start) begin
         case (op)
-            4'b0001: result <= add_result[2] ? add_result[2:0] : {1'b0, add_result[1:0]}; // Zero-extend add_result to 8 bits only if it's 4 bits
-            4'b0010: result <= {2'b0, sub_result[1:0]}; 
-            4'b0011: result <= mul_result;
-				4'b0100: result <= div_result;
-            4'b0101: result <= and_result; 
-            4'b0111: result <= or_result;
-				4'b1000: result <= xor_result;
-            4'b1001: result <= left_result; 
-            4'b1011: result <= right_result;
-            default: result <= 4'b0000;
+            4'b0001: begin //Add
+                result = add_result;
+                NFlag = 1'b0;
+                ZFlag = add_ZFlag;
+                CFlag = add_CFlag;
+                VFlag = add_VFlag;
+            end
+            4'b0010: begin //Subtract
+                result = sub_result;
+                NFlag = sub_NFlag;
+                ZFlag = sub_ZFlag;
+                CFlag = sub_CFlag;
+                VFlag = sub_VFlag;
+            end
+            4'b0011: begin //Multiply
+                result = mul_result;
+                NFlag = 1'b0;
+                ZFlag = mul_ZFlag;
+                CFlag = 1'b0;
+                VFlag = mul_VFlag;
+            end
+				4'b0100: begin //Divide
+                result = div_result;
+                NFlag = 1'b0;
+                ZFlag = div_ZFlag;
+                CFlag = 1'b0;
+                VFlag = div_VFlag;
+            end
+				4'b0101: begin //AND
+                result = and_result;
+                NFlag = 1'b0;
+                ZFlag = and_ZFlag;
+                CFlag = 1'b0;
+                VFlag = 1'b0;
+            end
+				4'b0110: begin //OR
+                result = or_result;
+                NFlag = 1'b0;
+                ZFlag = or_ZFlag;
+                CFlag = 1'b0;
+                VFlag = 1'b0;
+            end
+				4'b0111: begin //XOR
+                result = xor_result;
+                NFlag = 1'b0;
+                ZFlag = xor_ZFlag;
+                CFlag = 1'b0;
+                VFlag = 1'b0;
+            end
+				4'b1000: begin //LEFTSHIFT
+                result = left_result;
+                NFlag = 1'b0;
+                ZFlag = left_ZFlag;
+                CFlag = left_CFlag;
+                VFlag = 1'b0;
+            end
+				4'b1001: begin //RIGHTSHIFT
+                result = right_result;
+                NFlag = 1'b0;
+                ZFlag = right_ZFlag;
+                CFlag = right_CFlag;
+                VFlag = 1'b0;
+            end
+            default: begin
+                result = 4'b0000;
+                NFlag = 1'b0;
+                ZFlag = 1'b0;
+                CFlag = 1'b0;
+                VFlag = 1'b0;
+            end
+				
         endcase
     end else begin
-        result = 16'b0000000000000000;
-
+        result = result;
+        NFlag = NFlag;
+        ZFlag = ZFlag;
+        CFlag = CFlag;
+        VFlag = VFlag;
     end
 end
 endmodule

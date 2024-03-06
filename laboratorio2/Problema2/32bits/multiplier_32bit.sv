@@ -1,11 +1,11 @@
 module multiplier_32bit(
     input logic [31:0] a,
     input logic [31:0] b,
-    output logic [63:0] out,
+    output logic [31:0] out,
     output logic V,
     output logic Z
 );
-	logic [7:0] product;
+	logic [63:0] product;
 
 
     always_comb begin
@@ -20,4 +20,11 @@ module multiplier_32bit(
 	end
 
 
+        // Set Zero flag
+		  assign Z = (product == 32'b0);
+
+        // Check for Overflow
+		  assign V = (product[63:32] != 32'b0);
+				
+        assign out = product[31:0];
 endmodule

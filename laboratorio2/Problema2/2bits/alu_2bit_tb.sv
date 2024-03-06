@@ -4,7 +4,9 @@ module alu_2bit_tb;
   logic [1:0] a, b;
   logic [3:0] op;
   logic start;
-  logic [3:0] result;
+  logic [1:0] result;
+  logic NFlag, ZFlag, CFlag, VFlag;
+
   
   // Instantiate the DUT
   alu_2bit dut (
@@ -12,7 +14,11 @@ module alu_2bit_tb;
     .b(b),
     .op(op),
     .start(start),
-    .result(result)
+    .result(result),
+	 .NFlag(NFlag),
+    .ZFlag(ZFlag),
+    .CFlag(CFlag),
+    .VFlag(VFlag)
   );
 
   // Test stimulus
@@ -20,7 +26,6 @@ module alu_2bit_tb;
 	 
     // Test case 1: Addition
 	 start = 1;
-	 #40;
     a = 2'b11; // 3
     b = 2'b10; // 2
     op = 4'b0001; // Add

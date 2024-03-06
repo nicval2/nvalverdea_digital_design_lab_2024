@@ -1,19 +1,29 @@
 module multiplier_4bit(
-  input logic [3:0] a,
-  input logic [3:0] b,
-  output logic [7:0] out
+    input logic [3:0] a,
+    input logic [3:0] b,
+    output logic [3:0] out,
+    output logic V,
+    output logic Z
 );
-  logic [7:0] product;
 
-  always_comb begin
-    product = 8'b0; 
+    logic [7:0] product;
 
-    
-    for (int i = 0; i < 4; i++) begin
-      if (b[i])
-        product = product + (a << i);
-    end
+    always_comb begin
+        product = 8'b0;
 
-    out = product;
-  end
+        for (int i = 0; i < 4; i++) begin
+            if (b[i]) begin
+                // Add the partial product directly to the main product
+                product = product + (a << i);
+            end
+        end
+	end
+
+        // Set Zero flag
+		  assign Z = (product == 8'b0);
+
+        // Check for Overflow
+		  assign V = (product[7:4] != 4'b0);
+				
+        assign out = product[3:0];
 endmodule

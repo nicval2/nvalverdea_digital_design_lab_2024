@@ -1,7 +1,7 @@
 module adder_32bit(
   input logic [31:0] a,
   input logic [31:0] b,
-  output logic [32:0] sum,
+  output logic [31:0] sum,
   output logic carry_out, // Carry-out flag
   output logic overflow, // Overflow flag
   output logic zero // Zero flag
@@ -75,7 +75,6 @@ module adder_32bit(
   assign sum[29] = a[29] ^ b[29] ^ carry[29];
   assign sum[30] = a[30] ^ b[30] ^ carry[30];
   assign sum[31] = a[31] ^ b[31] ^ carry[31];
-  assign sum[32] = carry[32];
 
 
 

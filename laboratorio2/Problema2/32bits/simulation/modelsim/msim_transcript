@@ -7,124 +7,125 @@
 # vmap work rtl_work
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap work rtl_work 
-# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Copying C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -sv -work work +incdir+C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/32bits {C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/32bits/xor_32bit.sv}
+# vlog -sv -work work +incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits {C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/xor_32bit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 00:46:27 on Mar 06,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/32bits" C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/32bits/xor_32bit.sv 
+# Start time: 08:24:06 on Mar 06,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits" C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/xor_32bit.sv 
 # -- Compiling module xor_32bit
 # 
 # Top level modules:
 # 	xor_32bit
-# End time: 00:46:28 on Mar 06,2024, Elapsed time: 0:00:01
+# End time: 08:24:06 on Mar 06,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/32bits {C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/32bits/subtractor_32bit.sv}
+# vlog -sv -work work +incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits {C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/subtractor_32bit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 00:46:28 on Mar 06,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/32bits" C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/32bits/subtractor_32bit.sv 
+# Start time: 08:24:06 on Mar 06,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits" C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/subtractor_32bit.sv 
 # -- Compiling module subtractor_32bit
 # 
 # Top level modules:
 # 	subtractor_32bit
-# End time: 00:46:28 on Mar 06,2024, Elapsed time: 0:00:00
+# End time: 08:24:07 on Mar 06,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/32bits {C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/32bits/shiftRight_32bit.sv}
+# vlog -sv -work work +incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits {C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/shiftRight_32bit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 00:46:28 on Mar 06,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/32bits" C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/32bits/shiftRight_32bit.sv 
+# Start time: 08:24:07 on Mar 06,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits" C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/shiftRight_32bit.sv 
 # -- Compiling module shiftRight_32bit
 # 
 # Top level modules:
 # 	shiftRight_32bit
-# End time: 00:46:28 on Mar 06,2024, Elapsed time: 0:00:00
+# End time: 08:24:07 on Mar 06,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/32bits {C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/32bits/shiftLeft_32bit.sv}
+# vlog -sv -work work +incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits {C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/shiftLeft_32bit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 00:46:28 on Mar 06,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/32bits" C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/32bits/shiftLeft_32bit.sv 
+# Start time: 08:24:07 on Mar 06,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits" C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/shiftLeft_32bit.sv 
 # -- Compiling module shiftLeft_32bit
 # 
 # Top level modules:
 # 	shiftLeft_32bit
-# End time: 00:46:28 on Mar 06,2024, Elapsed time: 0:00:00
+# End time: 08:24:07 on Mar 06,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/32bits {C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/32bits/or_32bit.sv}
+# vlog -sv -work work +incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits {C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/or_32bit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 00:46:28 on Mar 06,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/32bits" C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/32bits/or_32bit.sv 
+# Start time: 08:24:07 on Mar 06,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits" C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/or_32bit.sv 
 # -- Compiling module or_32bit
 # 
 # Top level modules:
 # 	or_32bit
-# End time: 00:46:29 on Mar 06,2024, Elapsed time: 0:00:01
+# End time: 08:24:07 on Mar 06,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/32bits {C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/32bits/multiplier_32bit.sv}
+# vlog -sv -work work +incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits {C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/multiplier_32bit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 00:46:29 on Mar 06,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/32bits" C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/32bits/multiplier_32bit.sv 
+# Start time: 08:24:07 on Mar 06,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits" C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/multiplier_32bit.sv 
 # -- Compiling module multiplier_32bit
 # 
 # Top level modules:
 # 	multiplier_32bit
-# End time: 00:46:29 on Mar 06,2024, Elapsed time: 0:00:00
+# End time: 08:24:07 on Mar 06,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/32bits {C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/32bits/divider_32bit.sv}
+# vlog -sv -work work +incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits {C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/divider_32bit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 00:46:29 on Mar 06,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/32bits" C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/32bits/divider_32bit.sv 
+# Start time: 08:24:07 on Mar 06,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits" C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/divider_32bit.sv 
 # -- Compiling module divider_32bit
+# ** Warning: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/divider_32bit.sv(17): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
 # 
 # Top level modules:
 # 	divider_32bit
-# End time: 00:46:29 on Mar 06,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/32bits {C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/32bits/and_32bit.sv}
+# End time: 08:24:07 on Mar 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# vlog -sv -work work +incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits {C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/and_32bit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 00:46:29 on Mar 06,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/32bits" C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/32bits/and_32bit.sv 
+# Start time: 08:24:07 on Mar 06,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits" C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/and_32bit.sv 
 # -- Compiling module and_32bit
 # 
 # Top level modules:
 # 	and_32bit
-# End time: 00:46:29 on Mar 06,2024, Elapsed time: 0:00:00
+# End time: 08:24:07 on Mar 06,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/32bits {C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/32bits/alu_32bit.sv}
+# vlog -sv -work work +incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits {C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/alu_32bit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 00:46:29 on Mar 06,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/32bits" C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/32bits/alu_32bit.sv 
+# Start time: 08:24:07 on Mar 06,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits" C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/alu_32bit.sv 
 # -- Compiling module alu_32bit
 # 
 # Top level modules:
 # 	alu_32bit
-# End time: 00:46:30 on Mar 06,2024, Elapsed time: 0:00:01
+# End time: 08:24:07 on Mar 06,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/32bits {C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/32bits/adder_32bit.sv}
+# vlog -sv -work work +incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits {C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/adder_32bit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 00:46:30 on Mar 06,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/32bits" C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/32bits/adder_32bit.sv 
+# Start time: 08:24:08 on Mar 06,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits" C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/adder_32bit.sv 
 # -- Compiling module adder_32bit
 # 
 # Top level modules:
 # 	adder_32bit
-# End time: 00:46:30 on Mar 06,2024, Elapsed time: 0:00:00
+# End time: 08:24:08 on Mar 06,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -sv -work work +incdir+C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/32bits {C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/32bits/alu_32bit_tb.sv}
+# vlog -sv -work work +incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits {C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/alu_32bit_tb.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 00:46:30 on Mar 06,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/32bits" C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/32bits/alu_32bit_tb.sv 
+# Start time: 08:24:08 on Mar 06,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits" C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/alu_32bit_tb.sv 
 # -- Compiling module alu_32bit_tb
 # 
 # Top level modules:
 # 	alu_32bit_tb
-# End time: 00:46:30 on Mar 06,2024, Elapsed time: 0:00:00
+# End time: 08:24:08 on Mar 06,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  alu_32bit_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" alu_32bit_tb 
-# Start time: 00:46:31 on Mar 06,2024
+# Start time: 08:24:08 on Mar 06,2024
 # Loading sv_std.std
 # Loading work.alu_32bit_tb
 # Loading work.alu_32bit
@@ -144,5 +145,5 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# End time: 00:46:40 on Mar 06,2024, Elapsed time: 0:00:09
+# End time: 08:24:14 on Mar 06,2024, Elapsed time: 0:00:06
 # Errors: 0, Warnings: 0

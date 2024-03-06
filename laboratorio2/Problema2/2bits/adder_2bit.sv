@@ -1,7 +1,7 @@
 module adder_2bit(
   input logic [1:0] a,
   input logic [1:0] b,
-  output logic [2:0] sum,
+  output logic [1:0] sum,
   output logic carry_out, // Carry-out flag
   output logic overflow, // Overflow flag
   output logic zero // Zero flag
@@ -14,7 +14,6 @@ module adder_2bit(
 
   assign sum[0] = a[0] ^ b[0] ^ carry[0];
   assign sum[1] = a[1] ^ b[1] ^ carry[1];
-  assign sum[2] = carry[2];
 
   // Calculate carry-out flag
   assign carry_out = (a[1] & b[1] & ~sum[1]) | (~a[1] & ~b[1] & sum[1]);

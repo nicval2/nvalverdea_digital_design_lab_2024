@@ -1,7 +1,7 @@
 module adder_16bit(
   input logic [15:0] a,
   input logic [15:0] b,
-  output logic [16:0] sum,
+  output logic [15:0] sum,
   output logic carry_out, // Carry-out flag
   output logic overflow, // Overflow flag
   output logic zero // Zero flag
@@ -41,7 +41,6 @@ module adder_16bit(
   assign sum[13] = a[13] ^ b[13] ^ carry[13];
   assign sum[14] = a[14] ^ b[14] ^ carry[14]; 
   assign sum[15] = a[15] ^ b[15] ^ carry[15];
-  assign sum[16] = carry[16];
 
   // Calculate carry-out flag
   assign carry_out = (a[15] & b[15] & ~sum[15]) | (~a[15] & ~b[15] & sum[15]);

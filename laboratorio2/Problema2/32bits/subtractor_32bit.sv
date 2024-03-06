@@ -1,7 +1,7 @@
 module subtractor_32bit(
   input logic [31:0] a,
   input logic [31:0] b,
-  output logic [32:0] diff,
+  output logic [31:0] diff,
   output logic carry_out, // Carry-out flag
   output logic overflow, // Overflow flag
   output logic zero, // Zero flag

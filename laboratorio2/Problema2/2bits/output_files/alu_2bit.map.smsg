@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at alu_2bit.sv(26): always construct contains both blocking and non-blocking assignments File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/2bits/alu_2bit.sv Line: 26
+Warning (10268): Verilog HDL information at alu_2bit.sv(34): always construct contains both blocking and non-blocking assignments File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/2bits/alu_2bit.sv Line: 34

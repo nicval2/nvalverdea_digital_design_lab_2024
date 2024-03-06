@@ -1,7 +1,7 @@
 module adder_8bit(
   input logic [7:0] a,
   input logic [7:0] b,
-  output logic [8:0] sum,
+  output logic [7:0] sum,
   output logic carry_out, // Carry-out flag
   output logic overflow, // Overflow flag
   output logic zero // Zero flag
@@ -27,7 +27,6 @@ module adder_8bit(
   assign sum[5] = a[5] ^ b[5] ^ carry[5];
   assign sum[6] = a[6] ^ b[6] ^ carry[6];
   assign sum[7] = a[7] ^ b[7] ^ carry[7];
-  assign sum[8] = a[7] ^ b[7] ^ carry[8];
   
 
   // Calculate carry-out flag

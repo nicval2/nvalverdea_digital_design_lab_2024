@@ -1,5 +1,5 @@
-Analysis & Synthesis report for alu_16bit
-Wed Mar 06 00:16:07 2024
+Analysis & Elaboration report for alu_16bit
+Wed Mar 06 08:23:51 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -7,28 +7,11 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Parameter Settings for Inferred Entity Instance: divider_16bit:divider|lpm_divide:Div0
- 11. Port Connectivity Checks: "shiftRight_16bit:right"
- 12. Port Connectivity Checks: "shiftLeft_16bit:left"
- 13. Port Connectivity Checks: "xor_16bit:xorr"
- 14. Port Connectivity Checks: "or_16bit:orr"
- 15. Port Connectivity Checks: "and_16bit:andd"
- 16. Port Connectivity Checks: "divider_16bit:divider"
- 17. Port Connectivity Checks: "multiplier_16bit:multiplier"
- 18. Port Connectivity Checks: "subtractor_16bit:subtractor"
- 19. Port Connectivity Checks: "adder_16bit:adder"
- 20. Post-Synthesis Netlist Statistics for Top Partition
- 21. Elapsed Time Per Partition
- 22. Analysis & Synthesis Messages
- 23. Analysis & Synthesis Suppressed Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Analysis & Elaboration Settings
+  5. Port Connectivity Checks: "subtractor_16bit:subtractor"
+  6. Analysis & Elaboration Messages
 
 
 
@@ -52,31 +35,42 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Mar 06 00:16:07 2024       ;
-; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
-; Revision Name                   ; alu_16bit                                   ;
-; Top-level Entity Name           ; alu_16bit                                   ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 0                                           ;
-; Total pins                      ; 69                                          ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 0                                           ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
++-----------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                              ;
++-------------------------------+---------------------------------------------+
+; Analysis & Elaboration Status ; Successful - Wed Mar 06 08:23:51 2024       ;
+; Quartus Prime Version         ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name                 ; alu_16bit                                   ;
+; Top-level Entity Name         ; alu_16bit                                   ;
+; Family                        ; Cyclone V                                   ;
+; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
+; Total registers               ; N/A until Partition Merge                   ;
+; Total pins                    ; N/A until Partition Merge                   ;
+; Total virtual pins            ; N/A until Partition Merge                   ;
+; Total block memory bits       ; N/A until Partition Merge                   ;
+; Total PLLs                    ; N/A until Partition Merge                   ;
+; Total DLLs                    ; N/A until Partition Merge                   ;
++-------------------------------+---------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                             ;
+; Analysis & Elaboration Settings                                                                                           ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
@@ -162,391 +156,128 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 2           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-+----------------------------+-------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "subtractor_16bit:subtractor"                                                                                                ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                     ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------+
+; diff ; Output ; Warning  ; Output or bidir port (17 bits) is wider than the port expression (16 bits) it drives; bit(s) "diff[16..16]" have no fanouts ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                    ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                                ; Library ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------+---------+
-; alu_16bit.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/alu_16bit.sv               ;         ;
-; adder_16bit.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/adder_16bit.sv             ;         ;
-; and_16bit.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/and_16bit.sv               ;         ;
-; divider_16bit.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/divider_16bit.sv           ;         ;
-; multiplier_16bit.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/multiplier_16bit.sv        ;         ;
-; or_16bit.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/or_16bit.sv                ;         ;
-; shiftLeft_16bit.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/shiftLeft_16bit.sv         ;         ;
-; shiftRight_16bit.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/shiftRight_16bit.sv        ;         ;
-; subtractor_16bit.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/subtractor_16bit.sv        ;         ;
-; xor_16bit.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/xor_16bit.sv               ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf                                                       ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc                                                      ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc                                                  ;         ;
-; aglobal201.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                                                       ;         ;
-; db/lpm_divide_7dm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/db/lpm_divide_7dm.tdf      ;         ;
-; db/sign_div_unsign_dnh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/db/sign_div_unsign_dnh.tdf ;         ;
-; db/alt_u_div_03f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/db/alt_u_div_03f.tdf       ;         ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------+---------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                                                                                                                  ;
-+---------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
-; Resource                                    ; Usage                                                                                                                          ;
-+---------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 197                                                                                                                            ;
-;                                             ;                                                                                                                                ;
-; Combinational ALUT usage for logic          ; 357                                                                                                                            ;
-;     -- 7 input functions                    ; 6                                                                                                                              ;
-;     -- 6 input functions                    ; 30                                                                                                                             ;
-;     -- 5 input functions                    ; 135                                                                                                                            ;
-;     -- 4 input functions                    ; 104                                                                                                                            ;
-;     -- <=3 input functions                  ; 82                                                                                                                             ;
-;                                             ;                                                                                                                                ;
-; Dedicated logic registers                   ; 0                                                                                                                              ;
-;                                             ;                                                                                                                                ;
-; I/O pins                                    ; 69                                                                                                                             ;
-;                                             ;                                                                                                                                ;
-; Total DSP Blocks                            ; 0                                                                                                                              ;
-;                                             ;                                                                                                                                ;
-; Maximum fan-out node                        ; divider_16bit:divider|lpm_divide:Div0|lpm_divide_7dm:auto_generated|sign_div_unsign_dnh:divider|alt_u_div_03f:divider|sel[221] ;
-; Maximum fan-out                             ; 31                                                                                                                             ;
-; Total fan-out                               ; 1675                                                                                                                           ;
-; Average fan-out                             ; 3.38                                                                                                                           ;
-+---------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                        ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                              ; Entity Name         ; Library Name ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |alu_16bit                                ; 357 (55)            ; 0 (0)                     ; 0                 ; 0          ; 69   ; 0            ; |alu_16bit                                                                                                                       ; alu_16bit           ; work         ;
-;    |adder_16bit:adder|                    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_16bit|adder_16bit:adder                                                                                                     ; adder_16bit         ; work         ;
-;    |divider_16bit:divider|                ; 298 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_16bit|divider_16bit:divider                                                                                                 ; divider_16bit       ; work         ;
-;       |lpm_divide:Div0|                   ; 298 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_16bit|divider_16bit:divider|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_7dm:auto_generated|  ; 298 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_16bit|divider_16bit:divider|lpm_divide:Div0|lpm_divide_7dm:auto_generated                                                   ; lpm_divide_7dm      ; work         ;
-;             |sign_div_unsign_dnh:divider| ; 298 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_16bit|divider_16bit:divider|lpm_divide:Div0|lpm_divide_7dm:auto_generated|sign_div_unsign_dnh:divider                       ; sign_div_unsign_dnh ; work         ;
-;                |alt_u_div_03f:divider|    ; 298 (298)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_16bit|divider_16bit:divider|lpm_divide:Div0|lpm_divide_7dm:auto_generated|sign_div_unsign_dnh:divider|alt_u_div_03f:divider ; alt_u_div_03f       ; work         ;
-;    |multiplier_16bit:multiplier|          ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_16bit|multiplier_16bit:multiplier                                                                                           ; multiplier_16bit    ; work         ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 13:1               ; 5 bits    ; 40 LEs        ; 35 LEs               ; 5 LEs                  ; No         ; |alu_16bit|result          ;
-; 13:1               ; 6 bits    ; 48 LEs        ; 42 LEs               ; 6 LEs                  ; No         ; |alu_16bit|result          ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-
-
-+----------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: divider_16bit:divider|lpm_divide:Div0 ;
-+------------------------+----------------+----------------------------------------------+
-; Parameter Name         ; Value          ; Type                                         ;
-+------------------------+----------------+----------------------------------------------+
-; LPM_WIDTHN             ; 16             ; Untyped                                      ;
-; LPM_WIDTHD             ; 16             ; Untyped                                      ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                      ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                      ;
-; LPM_PIPELINE           ; 0              ; Untyped                                      ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                      ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                      ;
-; CBXI_PARAMETER         ; lpm_divide_7dm ; Untyped                                      ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                      ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                      ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                   ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                 ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                 ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                               ;
-+------------------------+----------------+----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "shiftRight_16bit:right"                                                                   ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port       ; Type   ; Severity ; Details                                                                             ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-; zero_flag  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; carry_flag ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "shiftLeft_16bit:left"                                                                     ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port       ; Type   ; Severity ; Details                                                                             ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-; zero_flag  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; carry_flag ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "xor_16bit:xorr"                                                                          ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port      ; Type   ; Severity ; Details                                                                             ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; zero_flag ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "or_16bit:orr"                                                                            ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port      ; Type   ; Severity ; Details                                                                             ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; zero_flag ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "and_16bit:andd"                                                                          ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port      ; Type   ; Severity ; Details                                                                             ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; zero_flag ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "divider_16bit:divider"                                                                  ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; overflow ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; zero     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "multiplier_16bit:multiplier"                                                                                                                                             ;
-+------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                                                                                  ;
-+------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; out  ; Output ; Warning  ; Output or bidir port (16 bits) is smaller than the port expression (32 bits) it drives.  The 16 most-significant bit(s) in the port expression will be connected to GND. ;
-; V    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                      ;
-; Z    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                      ;
-+------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "subtractor_16bit:subtractor"                                                               ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                             ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-; diff[16..2] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; carry_out   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; overflow    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; zero        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; negative    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "adder_16bit:adder"                                                                        ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port       ; Type   ; Severity ; Details                                                                             ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-; sum[16..3] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; carry_out  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; overflow   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; zero       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 358                         ;
-;     arith             ; 156                         ;
-;         0 data inputs ; 26                          ;
-;         2 data inputs ; 13                          ;
-;         5 data inputs ; 117                         ;
-;     extend            ; 6                           ;
-;         7 data inputs ; 6                           ;
-;     normal            ; 187                         ;
-;         0 data inputs ; 1                           ;
-;         2 data inputs ; 15                          ;
-;         3 data inputs ; 22                          ;
-;         4 data inputs ; 101                         ;
-;         5 data inputs ; 18                          ;
-;         6 data inputs ; 30                          ;
-;     shared            ; 9                           ;
-;         0 data inputs ; 3                           ;
-;         2 data inputs ; 3                           ;
-;         4 data inputs ; 3                           ;
-; boundary_port         ; 69                          ;
-;                       ;                             ;
-; Max LUT depth         ; 35.00                       ;
-; Average LUT depth     ; 29.24                       ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:02     ;
-+----------------+--------------+
-
-
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
+Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Wed Mar 06 00:15:51 2024
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off alu_16bit -c alu_16bit
+    Info: Processing started: Wed Mar 06 08:23:45 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off alu_16bit -c alu_16bit --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file digitextractor.sv
-    Info (12023): Found entity 1: DigitExtractor File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/DigitExtractor.sv Line: 1
+    Info (12023): Found entity 1: DigitExtractor File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/DigitExtractor.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu_16bit.sv
-    Info (12023): Found entity 1: alu_16bit File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 1
+    Info (12023): Found entity 1: alu_16bit File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file adder_16bit.sv
-    Info (12023): Found entity 1: adder_16bit File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/adder_16bit.sv Line: 1
+    Info (12023): Found entity 1: adder_16bit File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/adder_16bit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu_16bit_tb.sv
-    Info (12023): Found entity 1: alu_16bit_tb File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/alu_16bit_tb.sv Line: 1
+    Info (12023): Found entity 1: alu_16bit_tb File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file and_16bit.sv
-    Info (12023): Found entity 1: and_16bit File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/and_16bit.sv Line: 1
+    Info (12023): Found entity 1: and_16bit File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/and_16bit.sv Line: 1
+Warning (10229): Verilog HDL Expression warning at divider_16bit.sv(17): truncated literal to match 8 bits File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/divider_16bit.sv Line: 17
 Info (12021): Found 1 design units, including 1 entities, in source file divider_16bit.sv
-    Info (12023): Found entity 1: divider_16bit File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/divider_16bit.sv Line: 1
+    Info (12023): Found entity 1: divider_16bit File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/divider_16bit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file multiplier_16bit.sv
-    Info (12023): Found entity 1: multiplier_16bit File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/multiplier_16bit.sv Line: 1
+    Info (12023): Found entity 1: multiplier_16bit File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/multiplier_16bit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file or_16bit.sv
-    Info (12023): Found entity 1: or_16bit File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/or_16bit.sv Line: 1
+    Info (12023): Found entity 1: or_16bit File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/or_16bit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file segmentoutput.sv
-    Info (12023): Found entity 1: segmentOutput File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/segmentOutput.sv Line: 1
+    Info (12023): Found entity 1: segmentOutput File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/segmentOutput.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file shiftleft_16bit.sv
-    Info (12023): Found entity 1: shiftLeft_16bit File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/shiftLeft_16bit.sv Line: 1
+    Info (12023): Found entity 1: shiftLeft_16bit File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/shiftLeft_16bit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file shiftright_16bit.sv
-    Info (12023): Found entity 1: shiftRight_16bit File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/shiftRight_16bit.sv Line: 1
+    Info (12023): Found entity 1: shiftRight_16bit File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/shiftRight_16bit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file subtractor_16bit.sv
-    Info (12023): Found entity 1: subtractor_16bit File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/subtractor_16bit.sv Line: 1
+    Info (12023): Found entity 1: subtractor_16bit File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/subtractor_16bit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file xor_16bit.sv
-    Info (12023): Found entity 1: xor_16bit File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/xor_16bit.sv Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at alu_16bit.sv(15): created implicit net for "add_CFlag" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 15
-Warning (10236): Verilog HDL Implicit Net warning at alu_16bit.sv(15): created implicit net for "add_VFlag" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 15
-Warning (10236): Verilog HDL Implicit Net warning at alu_16bit.sv(15): created implicit net for "add_ZFlag" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 15
-Warning (10236): Verilog HDL Implicit Net warning at alu_16bit.sv(16): created implicit net for "sub_CFlag" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 16
-Warning (10236): Verilog HDL Implicit Net warning at alu_16bit.sv(16): created implicit net for "sub_VFlag" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 16
-Warning (10236): Verilog HDL Implicit Net warning at alu_16bit.sv(16): created implicit net for "sub_ZFlag" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 16
-Warning (10236): Verilog HDL Implicit Net warning at alu_16bit.sv(16): created implicit net for "sub_NFlag" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 16
-Warning (10236): Verilog HDL Implicit Net warning at alu_16bit.sv(17): created implicit net for "mul_VFlag" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 17
-Warning (10236): Verilog HDL Implicit Net warning at alu_16bit.sv(17): created implicit net for "mul_ZFlag" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 17
-Warning (10236): Verilog HDL Implicit Net warning at alu_16bit.sv(18): created implicit net for "div_VFlag" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 18
-Warning (10236): Verilog HDL Implicit Net warning at alu_16bit.sv(18): created implicit net for "div_ZFlag" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 18
-Warning (10236): Verilog HDL Implicit Net warning at alu_16bit.sv(19): created implicit net for "and_ZFlag" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 19
-Warning (10236): Verilog HDL Implicit Net warning at alu_16bit.sv(20): created implicit net for "or_ZFlag" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 20
-Warning (10236): Verilog HDL Implicit Net warning at alu_16bit.sv(21): created implicit net for "xor_ZFlag" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 21
-Warning (10236): Verilog HDL Implicit Net warning at alu_16bit.sv(22): created implicit net for "left_ZFlag" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 22
-Warning (10236): Verilog HDL Implicit Net warning at alu_16bit.sv(22): created implicit net for "left_CFlag" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 22
-Warning (10236): Verilog HDL Implicit Net warning at alu_16bit.sv(23): created implicit net for "right_ZFlag" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 23
-Warning (10236): Verilog HDL Implicit Net warning at alu_16bit.sv(23): created implicit net for "right_CFlag" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 23
+    Info (12023): Found entity 1: xor_16bit File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/xor_16bit.sv Line: 1
 Info (12127): Elaborating entity "alu_16bit" for the top level hierarchy
-Info (12128): Elaborating entity "adder_16bit" for hierarchy "adder_16bit:adder" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 15
-Warning (10030): Net "sum[4]" at adder_16bit.sv(4) has no driver or initial value, using a default initial value '0' File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/adder_16bit.sv Line: 4
-Info (12128): Elaborating entity "subtractor_16bit" for hierarchy "subtractor_16bit:subtractor" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 16
-Warning (10034): Output port "diff[16]" at subtractor_16bit.sv(4) has no driver File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/subtractor_16bit.sv Line: 4
-Info (12128): Elaborating entity "multiplier_16bit" for hierarchy "multiplier_16bit:multiplier" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 17
-Warning (10230): Verilog HDL assignment warning at multiplier_16bit.sv(17): truncated value with size 16 to match size of target (8) File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/multiplier_16bit.sv Line: 17
-Info (12128): Elaborating entity "divider_16bit" for hierarchy "divider_16bit:divider" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 18
-Warning (10034): Output port "overflow" at divider_16bit.sv(5) has no driver File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/divider_16bit.sv Line: 5
-Warning (10034): Output port "zero" at divider_16bit.sv(8) has no driver File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/divider_16bit.sv Line: 8
-Info (12128): Elaborating entity "and_16bit" for hierarchy "and_16bit:andd" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 19
-Info (12128): Elaborating entity "or_16bit" for hierarchy "or_16bit:orr" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 20
-Info (12128): Elaborating entity "xor_16bit" for hierarchy "xor_16bit:xorr" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 21
-Info (12128): Elaborating entity "shiftLeft_16bit" for hierarchy "shiftLeft_16bit:left" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 22
-Info (12128): Elaborating entity "shiftRight_16bit" for hierarchy "shiftRight_16bit:right" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 23
-Info (278001): Inferred 1 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "divider_16bit:divider|Div0" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/divider_16bit.sv Line: 12
-Info (12130): Elaborated megafunction instantiation "divider_16bit:divider|lpm_divide:Div0" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/divider_16bit.sv Line: 12
-Info (12133): Instantiated megafunction "divider_16bit:divider|lpm_divide:Div0" with the following parameter: File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/divider_16bit.sv Line: 12
-    Info (12134): Parameter "LPM_WIDTHN" = "16"
-    Info (12134): Parameter "LPM_WIDTHD" = "16"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_7dm.tdf
-    Info (12023): Found entity 1: lpm_divide_7dm File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/db/lpm_divide_7dm.tdf Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_dnh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_dnh File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/db/sign_div_unsign_dnh.tdf Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_03f.tdf
-    Info (12023): Found entity 1: alt_u_div_03f File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/db/alt_u_div_03f.tdf Line: 23
+Warning (10235): Verilog HDL Always Construct warning at alu_16bit.sv(35): variable "op" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 35
+Warning (10235): Verilog HDL Always Construct warning at alu_16bit.sv(37): variable "add_result" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 37
+Warning (10235): Verilog HDL Always Construct warning at alu_16bit.sv(39): variable "add_ZFlag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 39
+Warning (10235): Verilog HDL Always Construct warning at alu_16bit.sv(40): variable "add_CFlag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 40
+Warning (10235): Verilog HDL Always Construct warning at alu_16bit.sv(41): variable "add_VFlag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 41
+Warning (10235): Verilog HDL Always Construct warning at alu_16bit.sv(44): variable "sub_result" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 44
+Warning (10235): Verilog HDL Always Construct warning at alu_16bit.sv(45): variable "sub_NFlag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 45
+Warning (10235): Verilog HDL Always Construct warning at alu_16bit.sv(46): variable "sub_ZFlag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 46
+Warning (10235): Verilog HDL Always Construct warning at alu_16bit.sv(47): variable "sub_CFlag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 47
+Warning (10235): Verilog HDL Always Construct warning at alu_16bit.sv(48): variable "sub_VFlag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 48
+Warning (10235): Verilog HDL Always Construct warning at alu_16bit.sv(51): variable "mul_result" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 51
+Warning (10235): Verilog HDL Always Construct warning at alu_16bit.sv(53): variable "mul_ZFlag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 53
+Warning (10235): Verilog HDL Always Construct warning at alu_16bit.sv(55): variable "mul_VFlag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 55
+Warning (10235): Verilog HDL Always Construct warning at alu_16bit.sv(58): variable "div_result" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 58
+Warning (10235): Verilog HDL Always Construct warning at alu_16bit.sv(60): variable "div_ZFlag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 60
+Warning (10235): Verilog HDL Always Construct warning at alu_16bit.sv(62): variable "div_VFlag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 62
+Warning (10235): Verilog HDL Always Construct warning at alu_16bit.sv(65): variable "and_result" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 65
+Warning (10235): Verilog HDL Always Construct warning at alu_16bit.sv(67): variable "and_ZFlag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 67
+Warning (10235): Verilog HDL Always Construct warning at alu_16bit.sv(72): variable "or_result" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 72
+Warning (10235): Verilog HDL Always Construct warning at alu_16bit.sv(74): variable "or_ZFlag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 74
+Warning (10235): Verilog HDL Always Construct warning at alu_16bit.sv(79): variable "xor_result" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 79
+Warning (10235): Verilog HDL Always Construct warning at alu_16bit.sv(81): variable "xor_ZFlag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 81
+Warning (10235): Verilog HDL Always Construct warning at alu_16bit.sv(86): variable "left_result" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 86
+Warning (10235): Verilog HDL Always Construct warning at alu_16bit.sv(88): variable "left_ZFlag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 88
+Warning (10235): Verilog HDL Always Construct warning at alu_16bit.sv(89): variable "left_CFlag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 89
+Warning (10235): Verilog HDL Always Construct warning at alu_16bit.sv(93): variable "right_result" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 93
+Warning (10235): Verilog HDL Always Construct warning at alu_16bit.sv(95): variable "right_ZFlag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 95
+Warning (10235): Verilog HDL Always Construct warning at alu_16bit.sv(96): variable "right_CFlag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 96
+Warning (10235): Verilog HDL Always Construct warning at alu_16bit.sv(109): variable "result" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 109
+Warning (10235): Verilog HDL Always Construct warning at alu_16bit.sv(110): variable "NFlag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 110
+Warning (10235): Verilog HDL Always Construct warning at alu_16bit.sv(111): variable "ZFlag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 111
+Warning (10235): Verilog HDL Always Construct warning at alu_16bit.sv(112): variable "CFlag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 112
+Warning (10235): Verilog HDL Always Construct warning at alu_16bit.sv(113): variable "VFlag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 113
+Warning (10240): Verilog HDL Always Construct warning at alu_16bit.sv(33): inferring latch(es) for variable "result", which holds its previous value in one or more paths through the always construct File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 33
+Warning (10240): Verilog HDL Always Construct warning at alu_16bit.sv(33): inferring latch(es) for variable "NFlag", which holds its previous value in one or more paths through the always construct File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 33
+Warning (10240): Verilog HDL Always Construct warning at alu_16bit.sv(33): inferring latch(es) for variable "ZFlag", which holds its previous value in one or more paths through the always construct File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 33
+Warning (10240): Verilog HDL Always Construct warning at alu_16bit.sv(33): inferring latch(es) for variable "CFlag", which holds its previous value in one or more paths through the always construct File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 33
+Warning (10240): Verilog HDL Always Construct warning at alu_16bit.sv(33): inferring latch(es) for variable "VFlag", which holds its previous value in one or more paths through the always construct File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 33
+Info (10041): Inferred latch for "VFlag" at alu_16bit.sv(109) File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 109
+Info (10041): Inferred latch for "CFlag" at alu_16bit.sv(109) File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 109
+Info (10041): Inferred latch for "ZFlag" at alu_16bit.sv(109) File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 109
+Info (10041): Inferred latch for "NFlag" at alu_16bit.sv(109) File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 109
+Info (10041): Inferred latch for "result[0]" at alu_16bit.sv(109) File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 109
+Info (10041): Inferred latch for "result[1]" at alu_16bit.sv(109) File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 109
+Info (10041): Inferred latch for "result[2]" at alu_16bit.sv(109) File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 109
+Info (10041): Inferred latch for "result[3]" at alu_16bit.sv(109) File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 109
+Info (10041): Inferred latch for "result[4]" at alu_16bit.sv(109) File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 109
+Info (10041): Inferred latch for "result[5]" at alu_16bit.sv(109) File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 109
+Info (10041): Inferred latch for "result[6]" at alu_16bit.sv(109) File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 109
+Info (10041): Inferred latch for "result[7]" at alu_16bit.sv(109) File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 109
+Info (10041): Inferred latch for "result[8]" at alu_16bit.sv(109) File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 109
+Info (10041): Inferred latch for "result[9]" at alu_16bit.sv(109) File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 109
+Info (10041): Inferred latch for "result[10]" at alu_16bit.sv(109) File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 109
+Info (10041): Inferred latch for "result[11]" at alu_16bit.sv(109) File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 109
+Info (10041): Inferred latch for "result[12]" at alu_16bit.sv(109) File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 109
+Info (10041): Inferred latch for "result[13]" at alu_16bit.sv(109) File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 109
+Info (10041): Inferred latch for "result[14]" at alu_16bit.sv(109) File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 109
+Info (10041): Inferred latch for "result[15]" at alu_16bit.sv(109) File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 109
+Info (12128): Elaborating entity "adder_16bit" for hierarchy "adder_16bit:adder" File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 23
+Warning (10030): Net "sum[4]" at adder_16bit.sv(4) has no driver or initial value, using a default initial value '0' File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/adder_16bit.sv Line: 4
+Info (12128): Elaborating entity "subtractor_16bit" for hierarchy "subtractor_16bit:subtractor" File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 24
+Warning (10034): Output port "diff[16]" at subtractor_16bit.sv(4) has no driver File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/subtractor_16bit.sv Line: 4
+Info (12128): Elaborating entity "multiplier_16bit" for hierarchy "multiplier_16bit:multiplier" File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 25
+Warning (10230): Verilog HDL assignment warning at multiplier_16bit.sv(17): truncated value with size 16 to match size of target (8) File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/multiplier_16bit.sv Line: 17
+Info (12128): Elaborating entity "divider_16bit" for hierarchy "divider_16bit:divider" File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 26
+Info (12128): Elaborating entity "and_16bit" for hierarchy "and_16bit:andd" File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 27
+Info (12128): Elaborating entity "or_16bit" for hierarchy "or_16bit:orr" File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 28
+Info (12128): Elaborating entity "xor_16bit" for hierarchy "xor_16bit:xorr" File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 29
+Info (12128): Elaborating entity "shiftLeft_16bit" for hierarchy "shiftLeft_16bit:left" File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 30
+Info (12128): Elaborating entity "shiftRight_16bit" for hierarchy "shiftRight_16bit:right" File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 31
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "result[16]" is stuck at GND File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 9
-    Warning (13410): Pin "result[17]" is stuck at GND File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 9
-    Warning (13410): Pin "result[18]" is stuck at GND File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 9
-    Warning (13410): Pin "result[19]" is stuck at GND File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 9
-    Warning (13410): Pin "result[20]" is stuck at GND File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 9
-    Warning (13410): Pin "result[21]" is stuck at GND File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 9
-    Warning (13410): Pin "result[22]" is stuck at GND File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 9
-    Warning (13410): Pin "result[23]" is stuck at GND File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 9
-    Warning (13410): Pin "result[24]" is stuck at GND File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 9
-    Warning (13410): Pin "result[25]" is stuck at GND File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 9
-    Warning (13410): Pin "result[26]" is stuck at GND File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 9
-    Warning (13410): Pin "result[27]" is stuck at GND File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 9
-    Warning (13410): Pin "result[28]" is stuck at GND File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 9
-    Warning (13410): Pin "result[29]" is stuck at GND File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 9
-    Warning (13410): Pin "result[30]" is stuck at GND File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 9
-    Warning (13410): Pin "result[31]" is stuck at GND File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 9
-Info (286030): Timing-Driven Synthesis is running
-Info (144001): Generated suppressed messages file C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/output_files/alu_16bit.map.smsg
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 426 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 37 input pins
-    Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 357 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 42 warnings
-    Info: Peak virtual memory: 4810 megabytes
-    Info: Processing ended: Wed Mar 06 00:16:07 2024
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:32
-
-
-+------------------------------------------+
-; Analysis & Synthesis Suppressed Messages ;
-+------------------------------------------+
-The suppressed messages can be found in C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/16bits/output_files/alu_16bit.map.smsg.
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 44 warnings
+    Info: Peak virtual memory: 4774 megabytes
+    Info: Processing ended: Wed Mar 06 08:23:51 2024
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:07
 
 
