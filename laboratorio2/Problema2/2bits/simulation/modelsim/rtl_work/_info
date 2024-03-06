@@ -8,188 +8,292 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/simulation/modelsim
-vadder_4bit
+Z0 dC:/Users/nicva/2_bit/simulation/modelsim
+vadder_2bit
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1708908339
+Z2 !s110 1709683071
 !i10b 1
-!s100 WkXk[l?`R03TMczmLGh4j3
+!s100 6:8`RJ1edJcKFZegXeO;<1
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IGfmH]_NCEWmCZEb[=:C_k0
+IiGoa4A@_HVbAX8b3X<Nb90
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-w1708822932
-8C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/adder_4bit.sv
-FC:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/adder_4bit.sv
-!i122 0
-Z5 L0 1 19
-Z6 OV;L;2020.1;71
+w1709682791
+8C:/Users/nicva/2_bit/adder_2bit.sv
+FC:/Users/nicva/2_bit/adder_2bit.sv
+!i122 1
+L0 1 27
+Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z7 !s108 1708908339.000000
-!s107 C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/adder_4bit.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/adder_4bit.sv|
+Z6 !s108 1709683071.000000
+!s107 C:/Users/nicva/2_bit/adder_2bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/2_bit|C:/Users/nicva/2_bit/adder_2bit.sv|
 !i113 1
-Z8 o-sv -work work
-Z9 !s92 -sv -work work +incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1
-Z10 tCvgOpt 0
-valu_4bit
-R1
-Z11 !s110 1708908340
-!i10b 1
-!s100 BiCP25ok3aU]S4[VWlz4a1
-R3
-IG_Woa>@7PZDl0]NYiU0;c0
-R4
-S1
-R0
-w1708885271
-8C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv
-FC:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv
-!i122 2
-L0 1 39
-R6
-r1
-!s85 0
-31
-Z12 !s108 1708908340.000000
-!s107 C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv|
-!i113 1
-R8
-R9
-R10
-valu_4bit_tb
-R1
-Z13 !s110 1708908341
-!i10b 1
-!s100 6GL:DgYA`bY0O<no`kG7e2
-R3
-Ii29mGZ[EN=_o_RZ3`ZR030
-R4
-S1
-R0
-w1708908253
-8C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit_tb.sv
-FC:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit_tb.sv
-!i122 6
-L0 1 88
-R6
-r1
-!s85 0
-31
-!s108 1708908341.000000
-!s107 C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit_tb.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit_tb.sv|
-!i113 1
-R8
-R9
-R10
-vDigitExtractor
-R1
-R11
-!i10b 1
-!s100 mSBTX5ofZBF^<^W>A>?7Q0
-R3
-IVhDc__iFGCAII<0TnQlMe0
-R4
-S1
-R0
-w1708831083
-8C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/DigitExtractor.sv
-FC:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/DigitExtractor.sv
-!i122 4
-L0 1 50
-R6
-r1
-!s85 0
-31
-R12
-!s107 C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/DigitExtractor.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/DigitExtractor.sv|
-!i113 1
-R8
-R9
-R10
-n@digit@extractor
-vmultiplier_4bit
-R1
-R11
-!i10b 1
-!s100 ijkZ7ldOiP[dMg]nn8YOd1
-R3
-I:XVBZj9_`Bb5M<[h1=JV^3
-R4
-S1
-R0
-w1708822933
-8C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/multiplier_4bit.sv
-FC:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/multiplier_4bit.sv
-!i122 3
-R5
-R6
-r1
-!s85 0
-31
-R12
-!s107 C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/multiplier_4bit.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/multiplier_4bit.sv|
-!i113 1
-R8
-R9
-R10
-vsegmentOutput
-R1
-R13
-!i10b 1
-!s100 H3:LVdl2Hn`VmgkR>iV@h1
-R3
-IDH1KLN@;6l33_E?<=R7jA1
-R4
-S1
-R0
-w1708833173
-8C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv
-FC:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv
-!i122 5
-L0 1 43
-R6
-r1
-!s85 0
-31
-R12
-!s107 C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv|
-!i113 1
-R8
-R9
-R10
-nsegment@output
-vsubtractor_4bit
+Z7 o-sv -work work
+Z8 !s92 -sv -work work +incdir+C:/Users/nicva/2_bit
+Z9 tCvgOpt 0
+valu_2bit
 R1
 R2
 !i10b 1
-!s100 Vz>VRnL_c@^Pdk[9ZUzo10
+!s100 Ojg5Qk_6R`:m77HFH;68U0
 R3
-I=bhRXRV`g;6;5?[EkbniZ2
+I@nga]=RHIoEjbbm9nSzW=2
 R4
 S1
 R0
-w1708803400
-8C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/subtractor_4bit.sv
-FC:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/subtractor_4bit.sv
-!i122 1
+w1709682556
+8C:/Users/nicva/2_bit/alu_2bit.sv
+FC:/Users/nicva/2_bit/alu_2bit.sv
+!i122 0
+L0 1 44
 R5
-R6
 r1
 !s85 0
 31
-R7
-!s107 C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/subtractor_4bit.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1|C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/subtractor_4bit.sv|
+R6
+!s107 C:/Users/nicva/2_bit/alu_2bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/2_bit|C:/Users/nicva/2_bit/alu_2bit.sv|
 !i113 1
+R7
 R8
 R9
+valu_2bit_tb
+R1
+Z10 !s110 1709683072
+!i10b 1
+!s100 2C8omY9d_8n00Z0KzBJ[M0
+R3
+IDI0<F;H`eb;5lZ6<ZgOPo2
+R4
+S1
+R0
+w1709682990
+8C:/Users/nicva/2_bit/alu_2bit_tb.sv
+FC:/Users/nicva/2_bit/alu_2bit_tb.sv
+!i122 10
+L0 1 222
+R5
+r1
+!s85 0
+31
+Z11 !s108 1709683072.000000
+!s107 C:/Users/nicva/2_bit/alu_2bit_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/2_bit|C:/Users/nicva/2_bit/alu_2bit_tb.sv|
+!i113 1
+R7
+R8
+R9
+vand_2bit
+R1
+R2
+!i10b 1
+!s100 ]ZQSTD;oMfhL?DLGY`lON2
+R3
+I6cORjQz5a3e:a;al5oTbi3
+R4
+S1
+R0
+w1709644024
+8C:/Users/nicva/2_bit/and_2bit.sv
+FC:/Users/nicva/2_bit/and_2bit.sv
+!i122 2
+Z12 L0 1 15
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/nicva/2_bit/and_2bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/2_bit|C:/Users/nicva/2_bit/and_2bit.sv|
+!i113 1
+R7
+R8
+R9
+vdivider_2bit
+R1
+R2
+!i10b 1
+!s100 KOOb:V6W3^bllmi0bW5O42
+R3
+IG`TMd=N@[aQ:fWB7?ekz30
+R4
+S1
+R0
+w1709682724
+8C:/Users/nicva/2_bit/divider_2bit.sv
+FC:/Users/nicva/2_bit/divider_2bit.sv
+!i122 3
+L0 1 16
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/nicva/2_bit/divider_2bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/2_bit|C:/Users/nicva/2_bit/divider_2bit.sv|
+!i113 1
+R7
+R8
+R9
+vmultiplier_2bit
+R1
 R10
+!i10b 1
+!s100 MZ_nG]<ZbL[kkL4Pi2Y9a0
+R3
+IM5G5hP8_heBKKEl9SNJKV2
+R4
+S1
+R0
+w1709682912
+8C:/Users/nicva/2_bit/multiplier_2bit.sv
+FC:/Users/nicva/2_bit/multiplier_2bit.sv
+!i122 4
+L0 1 22
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/nicva/2_bit/multiplier_2bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/2_bit|C:/Users/nicva/2_bit/multiplier_2bit.sv|
+!i113 1
+R7
+R8
+R9
+vor_2bit
+R1
+R10
+!i10b 1
+!s100 Ko^dSRiX9>0OcY_7Pcae[2
+R3
+I3>j27_e?zkXo9m54b?X742
+R4
+S1
+R0
+w1709644030
+8C:/Users/nicva/2_bit/or_2bit.sv
+FC:/Users/nicva/2_bit/or_2bit.sv
+!i122 5
+R12
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/nicva/2_bit/or_2bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/2_bit|C:/Users/nicva/2_bit/or_2bit.sv|
+!i113 1
+R7
+R8
+R9
+vshiftLeft_2bit
+R1
+R10
+!i10b 1
+!s100 3<Jhk>m6h<;?OVge69iUY2
+R3
+IP7BORQEoaH7nEDMAeb7zO2
+R4
+S1
+R0
+w1709644018
+8C:/Users/nicva/2_bit/shiftLeft_2bit.sv
+FC:/Users/nicva/2_bit/shiftLeft_2bit.sv
+!i122 6
+L0 1 18
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/nicva/2_bit/shiftLeft_2bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/2_bit|C:/Users/nicva/2_bit/shiftLeft_2bit.sv|
+!i113 1
+R7
+R8
+R9
+nshift@left_2bit
+vshiftRight_2bit
+R1
+R10
+!i10b 1
+!s100 Uo@9]_48bHJ@Wgc;Fkd980
+R3
+IlTC9ZhPVYjijdLNDZjnH;2
+R4
+S1
+R0
+w1709644143
+8C:/Users/nicva/2_bit/shiftRight_2bit.sv
+FC:/Users/nicva/2_bit/shiftRight_2bit.sv
+!i122 7
+L0 1 17
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/nicva/2_bit/shiftRight_2bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/2_bit|C:/Users/nicva/2_bit/shiftRight_2bit.sv|
+!i113 1
+R7
+R8
+R9
+nshift@right_2bit
+vsubtractor_2bit
+R1
+R10
+!i10b 1
+!s100 ^YI1=XT[YoJ6QY9U<058Q0
+R3
+IOlF4W7h;1oUS1YOaXgnmd2
+R4
+S1
+R0
+w1709647388
+8C:/Users/nicva/2_bit/subtractor_2bit.sv
+FC:/Users/nicva/2_bit/subtractor_2bit.sv
+!i122 8
+L0 1 32
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/nicva/2_bit/subtractor_2bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/2_bit|C:/Users/nicva/2_bit/subtractor_2bit.sv|
+!i113 1
+R7
+R8
+R9
+vxor_2bit
+R1
+R10
+!i10b 1
+!s100 lafeDaC`RL12VMg42VR7L3
+R3
+Ii`>a3P779CCEO_91ClVLH3
+R4
+S1
+R0
+w1709644138
+8C:/Users/nicva/2_bit/xor_2bit.sv
+FC:/Users/nicva/2_bit/xor_2bit.sv
+!i122 9
+R12
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/nicva/2_bit/xor_2bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/2_bit|C:/Users/nicva/2_bit/xor_2bit.sv|
+!i113 1
+R7
+R8
+R9

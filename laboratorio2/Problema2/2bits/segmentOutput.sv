@@ -1,4 +1,4 @@
-module segmentOutput(input [1:0] digit,
+module segmentOutput(input [3:0] digit,
     output [6:0] seg);
 
 	reg[6:0] segments1;
