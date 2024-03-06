@@ -1,5 +1,5 @@
 Fitter report for alu_8bit
-Tue Mar 05 23:57:18 2024
+Wed Mar 06 00:24:41 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -58,7 +58,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Tue Mar 05 23:57:18 2024       ;
+; Fitter Status                   ; Successful - Wed Mar 06 00:24:41 2024       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; alu_8bit                                    ;
 ; Top-level Entity Name           ; alu_8bit                                    ;
@@ -1941,8 +1941,6 @@ Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
 Info (11798): Fitter preparation operations ending: elapsed time is 00:00:14
 Info (332104): Reading SDC File: 'constraints.sdc'
-Warning (332049): Ignored set_max_delay at constraints.sdc(4): Delay value "<max_delay_value>" is not valid  File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/8bits/constraints.sdc Line: 4
-    Info (332050): set_max_delay -from [all_inputs] -to [all_outputs] <max_delay_value> File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/8bits/constraints.sdc Line: 4
 Warning (332174): Ignored filter at constraints.sdc(7): clk could not be matched with a port File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/8bits/constraints.sdc Line: 7
 Warning (332049): Ignored create_clock at constraints.sdc(7): Argument <targets> is an empty collection File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/8bits/constraints.sdc Line: 7
     Info (332050): create_clock -period 10 [get_ports {clk}] File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/8bits/constraints.sdc Line: 7
@@ -2069,11 +2067,11 @@ Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:05
 Info (144001): Generated suppressed messages file C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio2/Problema2/8bits/output_files/alu_8bit.fit.smsg
-Info: Quartus Prime Fitter was successful. 0 errors, 23 warnings
-    Info: Peak virtual memory: 6206 megabytes
-    Info: Processing ended: Tue Mar 05 23:57:18 2024
+Info: Quartus Prime Fitter was successful. 0 errors, 22 warnings
+    Info: Peak virtual memory: 6196 megabytes
+    Info: Processing ended: Wed Mar 06 00:24:41 2024
     Info: Elapsed time: 00:01:04
-    Info: Total CPU time (on all processors): 00:02:00
+    Info: Total CPU time (on all processors): 00:01:59
 
 
 +----------------------------+
