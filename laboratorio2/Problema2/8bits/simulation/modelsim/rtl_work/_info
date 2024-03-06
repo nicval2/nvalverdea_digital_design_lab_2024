@@ -1,0 +1,353 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/nicva/8_bits/simulation/modelsim
+vadder_8bit
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1709684556
+!i10b 1
+!s100 UBJ>W7@og?F_QfYL0NFgC1
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I_^6z_b7NC8<P<Z5emP3ga3
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1709683943
+8C:/Users/nicva/8_bits/adder_8bit.sv
+FC:/Users/nicva/8_bits/adder_8bit.sv
+!i122 1
+L0 1 41
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1709684556.000000
+!s107 C:/Users/nicva/8_bits/adder_8bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/8_bits|C:/Users/nicva/8_bits/adder_8bit.sv|
+!i113 1
+Z7 o-sv -work work
+Z8 !s92 -sv -work work +incdir+C:/Users/nicva/8_bits
+Z9 tCvgOpt 0
+valu_8bit
+R1
+R2
+!i10b 1
+!s100 H<BD0[AWi8:W]D3Qjh@`Z2
+R3
+IRjLc];OGO1;l71;zC7RC?3
+R4
+S1
+R0
+w1709683584
+8C:/Users/nicva/8_bits/alu_8bit.sv
+FC:/Users/nicva/8_bits/alu_8bit.sv
+!i122 2
+L0 1 47
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/nicva/8_bits/alu_8bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/8_bits|C:/Users/nicva/8_bits/alu_8bit.sv|
+!i113 1
+R7
+R8
+R9
+valu_8bit_tb
+R1
+Z10 !s110 1709684557
+!i10b 1
+!s100 9OXnTJJN;RT]79na:c@RS2
+R3
+IDDE>WUC4hGK:6V0dgN2f82
+R4
+S1
+R0
+w1709684541
+8C:/Users/nicva/8_bits/alu_8bit_tb.sv
+FC:/Users/nicva/8_bits/alu_8bit_tb.sv
+!i122 12
+L0 1 222
+R5
+r1
+!s85 0
+31
+Z11 !s108 1709684557.000000
+!s107 C:/Users/nicva/8_bits/alu_8bit_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/8_bits|C:/Users/nicva/8_bits/alu_8bit_tb.sv|
+!i113 1
+R7
+R8
+R9
+vand_8bit
+R1
+R2
+!i10b 1
+!s100 dEMS6KzhM?e=l435EH3mX1
+R3
+Ie?YWY0j[;Q`6`H@CJD00P2
+R4
+S1
+R0
+w1709642925
+8C:/Users/nicva/8_bits/and_8bit.sv
+FC:/Users/nicva/8_bits/and_8bit.sv
+!i122 3
+Z12 L0 1 21
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/nicva/8_bits/and_8bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/8_bits|C:/Users/nicva/8_bits/and_8bit.sv|
+!i113 1
+R7
+R8
+R9
+vDigitExtractor
+R1
+R2
+!i10b 1
+!s100 QCOLIFU4AF4504nGhlGo41
+R3
+IU@8b[=ZD>FTKmUjjQIYIh2
+R4
+S1
+R0
+w1709631043
+8C:/Users/nicva/8_bits/DigitExtractor.sv
+FC:/Users/nicva/8_bits/DigitExtractor.sv
+!i122 0
+L0 1 46
+R5
+r1
+!s85 0
+31
+!s108 1709684555.000000
+!s107 C:/Users/nicva/8_bits/DigitExtractor.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/8_bits|C:/Users/nicva/8_bits/DigitExtractor.sv|
+!i113 1
+R7
+R8
+R9
+n@digit@extractor
+vdivider_8bit
+R1
+R2
+!i10b 1
+!s100 4_=O8k;iHaeV^@e5fDj0:2
+R3
+IRNjffPzT]l<fm<7[8Oi:60
+R4
+S1
+R0
+w1709643484
+8C:/Users/nicva/8_bits/divider_8bit.sv
+FC:/Users/nicva/8_bits/divider_8bit.sv
+!i122 4
+L0 1 12
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/nicva/8_bits/divider_8bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/8_bits|C:/Users/nicva/8_bits/divider_8bit.sv|
+!i113 1
+R7
+R8
+R9
+vmultiplier_8bit
+R1
+R2
+!i10b 1
+!s100 Mg>nZHU9TPQ4iV4jaW:f=0
+R3
+Icz1WNZBU=cN8M>[V`J2e70
+R4
+S1
+R0
+w1709643045
+8C:/Users/nicva/8_bits/multiplier_8bit.sv
+FC:/Users/nicva/8_bits/multiplier_8bit.sv
+!i122 5
+L0 1 29
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/nicva/8_bits/multiplier_8bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/8_bits|C:/Users/nicva/8_bits/multiplier_8bit.sv|
+!i113 1
+R7
+R8
+R9
+vor_8bit
+R1
+R2
+!i10b 1
+!s100 ]18S;:n4e`8gNI0E1MX1U2
+R3
+I?MANDZIUAA3^BbP0kM[lz1
+R4
+S1
+R0
+w1709643043
+8C:/Users/nicva/8_bits/or_8bit.sv
+FC:/Users/nicva/8_bits/or_8bit.sv
+!i122 6
+R12
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/nicva/8_bits/or_8bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/8_bits|C:/Users/nicva/8_bits/or_8bit.sv|
+!i113 1
+R7
+R8
+R9
+vsegmentOutput
+R1
+R2
+!i10b 1
+!s100 H3:LVdl2Hn`VmgkR>iV@h1
+R3
+IMVUkLgia>dkoRWQG@GVzm2
+R4
+S1
+R0
+w1709631312
+8C:/Users/nicva/8_bits/segmentOutput.sv
+FC:/Users/nicva/8_bits/segmentOutput.sv
+!i122 7
+L0 1 43
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/nicva/8_bits/segmentOutput.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/8_bits|C:/Users/nicva/8_bits/segmentOutput.sv|
+!i113 1
+R7
+R8
+R9
+nsegment@output
+vshiftLeft_8bit
+R1
+R10
+!i10b 1
+!s100 j`MLK8fc8?Bm_A_:m@A?52
+R3
+INgZ2NP7VM2dK0_e<1<?bW3
+R4
+S1
+R0
+w1709643140
+8C:/Users/nicva/8_bits/shiftLeft_8bit.sv
+FC:/Users/nicva/8_bits/shiftLeft_8bit.sv
+!i122 8
+Z13 L0 1 23
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/nicva/8_bits/shiftLeft_8bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/8_bits|C:/Users/nicva/8_bits/shiftLeft_8bit.sv|
+!i113 1
+R7
+R8
+R9
+nshift@left_8bit
+vshiftRight_8bit
+R1
+R10
+!i10b 1
+!s100 0IcnZ4^j:BF<BQ9A_Z<JK2
+R3
+Ia8J:=Q1J4VNi?dAW9dM932
+R4
+S1
+R0
+w1709684442
+8C:/Users/nicva/8_bits/shiftRight_8bit.sv
+FC:/Users/nicva/8_bits/shiftRight_8bit.sv
+!i122 9
+R13
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/nicva/8_bits/shiftRight_8bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/8_bits|C:/Users/nicva/8_bits/shiftRight_8bit.sv|
+!i113 1
+R7
+R8
+R9
+nshift@right_8bit
+vsubtractor_8bit
+R1
+R10
+!i10b 1
+!s100 C;kM9A<ZQ=58QS7df=PI50
+R3
+Ih]XFbBJ4?dm@Lkh]Gjh=L3
+R4
+S1
+R0
+w1709683911
+8C:/Users/nicva/8_bits/subtractor_8bit.sv
+FC:/Users/nicva/8_bits/subtractor_8bit.sv
+!i122 10
+L0 1 44
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/nicva/8_bits/subtractor_8bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/8_bits|C:/Users/nicva/8_bits/subtractor_8bit.sv|
+!i113 1
+R7
+R8
+R9
+vxor_8bit
+R1
+R10
+!i10b 1
+!s100 JXeDA:=OlPiaQdWo]K7^d0
+R3
+I9<EOQCOkUPO5JGUj<34LA3
+R4
+S1
+R0
+w1709684409
+8C:/Users/nicva/8_bits/xor_8bit.sv
+FC:/Users/nicva/8_bits/xor_8bit.sv
+!i122 11
+L0 1 22
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/nicva/8_bits/xor_8bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/8_bits|C:/Users/nicva/8_bits/xor_8bit.sv|
+!i113 1
+R7
+R8
+R9
