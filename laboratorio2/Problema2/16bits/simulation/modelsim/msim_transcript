@@ -1,0 +1,153 @@
+# Reading pref.tcl
+# do alu_16bit_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits {C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 08:23:55 on Mar 06,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits" C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv 
+# -- Compiling module alu_16bit
+# 
+# Top level modules:
+# 	alu_16bit
+# End time: 08:23:55 on Mar 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits {C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/adder_16bit.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 08:23:55 on Mar 06,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits" C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/adder_16bit.sv 
+# -- Compiling module adder_16bit
+# 
+# Top level modules:
+# 	adder_16bit
+# End time: 08:23:55 on Mar 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits {C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/and_16bit.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 08:23:55 on Mar 06,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits" C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/and_16bit.sv 
+# -- Compiling module and_16bit
+# 
+# Top level modules:
+# 	and_16bit
+# End time: 08:23:55 on Mar 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits {C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/divider_16bit.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 08:23:55 on Mar 06,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits" C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/divider_16bit.sv 
+# -- Compiling module divider_16bit
+# ** Warning: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/divider_16bit.sv(17): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# Top level modules:
+# 	divider_16bit
+# End time: 08:23:55 on Mar 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# vlog -sv -work work +incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits {C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/multiplier_16bit.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 08:23:55 on Mar 06,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits" C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/multiplier_16bit.sv 
+# -- Compiling module multiplier_16bit
+# 
+# Top level modules:
+# 	multiplier_16bit
+# End time: 08:23:56 on Mar 06,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits {C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/or_16bit.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 08:23:56 on Mar 06,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits" C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/or_16bit.sv 
+# -- Compiling module or_16bit
+# 
+# Top level modules:
+# 	or_16bit
+# End time: 08:23:56 on Mar 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits {C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/shiftLeft_16bit.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 08:23:56 on Mar 06,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits" C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/shiftLeft_16bit.sv 
+# -- Compiling module shiftLeft_16bit
+# 
+# Top level modules:
+# 	shiftLeft_16bit
+# End time: 08:23:56 on Mar 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits {C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/shiftRight_16bit.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 08:23:56 on Mar 06,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits" C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/shiftRight_16bit.sv 
+# -- Compiling module shiftRight_16bit
+# 
+# Top level modules:
+# 	shiftRight_16bit
+# End time: 08:23:56 on Mar 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits {C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/subtractor_16bit.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 08:23:56 on Mar 06,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits" C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/subtractor_16bit.sv 
+# -- Compiling module subtractor_16bit
+# 
+# Top level modules:
+# 	subtractor_16bit
+# End time: 08:23:56 on Mar 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits {C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/xor_16bit.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 08:23:56 on Mar 06,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits" C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/xor_16bit.sv 
+# -- Compiling module xor_16bit
+# 
+# Top level modules:
+# 	xor_16bit
+# End time: 08:23:56 on Mar 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits {C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 08:23:56 on Mar 06,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits" C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit_tb.sv 
+# -- Compiling module alu_16bit_tb
+# 
+# Top level modules:
+# 	alu_16bit_tb
+# End time: 08:23:56 on Mar 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  alu_16bit_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" alu_16bit_tb 
+# Start time: 08:23:56 on Mar 06,2024
+# Loading sv_std.std
+# Loading work.alu_16bit_tb
+# Loading work.alu_16bit
+# Loading work.adder_16bit
+# Loading work.subtractor_16bit
+# Loading work.multiplier_16bit
+# Loading work.divider_16bit
+# Loading work.and_16bit
+# Loading work.or_16bit
+# Loading work.xor_16bit
+# Loading work.shiftLeft_16bit
+# Loading work.shiftRight_16bit
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (16) for port 'op'. The port definition is at: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /alu_16bit_tb/dut File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit_tb.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (17) does not match connection size (16) for port 'diff'. The port definition is at: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/subtractor_16bit.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /alu_16bit_tb/dut/subtractor File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 24
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# End time: 08:24:08 on Mar 06,2024, Elapsed time: 0:00:12
+# Errors: 0, Warnings: 2
