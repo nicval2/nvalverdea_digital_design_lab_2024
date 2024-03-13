@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at alu_16bit.sv(26): always construct contains both blocking and non-blocking assignments File: C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/16bits/alu_16bit.sv Line: 26

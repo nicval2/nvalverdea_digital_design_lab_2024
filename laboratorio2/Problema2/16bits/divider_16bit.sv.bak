@@ -1,0 +1,12 @@
+module divider_16bit(
+  input logic [3:0] dividend,
+  input logic [3:0] divisor,
+  output logic [3:0] quotient,
+  output logic overflow,
+  output logic zero
+  
+);
+
+  
+
+endmodule

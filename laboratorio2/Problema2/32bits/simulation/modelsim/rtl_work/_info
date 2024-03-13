@@ -1,0 +1,299 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/simulation/modelsim
+vadder_32bit
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1709735048
+!i10b 1
+!s100 =?R[lb65OkGE26i0`RX[U3
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+ID;P6gP5Sl=B]fPQ53lNW<3
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1709732531
+8C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/adder_32bit.sv
+FC:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/adder_32bit.sv
+!i122 9
+L0 1 89
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1709735048.000000
+!s107 C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/adder_32bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits|C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/adder_32bit.sv|
+!i113 1
+Z7 o-sv -work work
+Z8 !s92 -sv -work work +incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits
+Z9 tCvgOpt 0
+valu_32bit
+R1
+Z10 !s110 1709735047
+!i10b 1
+!s100 5hL>Oak7jd0KknOOK_l;;1
+R3
+IlJC;CBk[Wo37c@1So[A=I2
+R4
+S1
+R0
+w1709732541
+8C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/alu_32bit.sv
+FC:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/alu_32bit.sv
+!i122 8
+L0 1 117
+R5
+r1
+!s85 0
+31
+Z11 !s108 1709735047.000000
+!s107 C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/alu_32bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits|C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/alu_32bit.sv|
+!i113 1
+R7
+R8
+R9
+valu_32bit_tb
+R1
+R2
+!i10b 1
+!s100 oz0HbQFa5d0mk3PJd:DgR3
+R3
+I5zZK[ILZXb5f;cK:n_2^c0
+R4
+S1
+R0
+w1709733317
+8C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/alu_32bit_tb.sv
+FC:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/alu_32bit_tb.sv
+!i122 10
+L0 1 227
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/alu_32bit_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits|C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/alu_32bit_tb.sv|
+!i113 1
+R7
+R8
+R9
+vand_32bit
+R1
+R10
+!i10b 1
+!s100 =mKW:0VD=_0KGDgg9Hl5W1
+R3
+IV6:^oDD@K]C=OfaM=8cPG0
+R4
+S1
+R0
+w1709645624
+8C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/and_32bit.sv
+FC:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/and_32bit.sv
+!i122 7
+L0 1 43
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/and_32bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits|C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/and_32bit.sv|
+!i113 1
+R7
+R8
+R9
+vdivider_32bit
+R1
+R10
+!i10b 1
+!s100 zVY5V6bYF:Toh:QeE;TQ`3
+R3
+IZ31Sh;2S]FSn0=dZT]cJU2
+R4
+S1
+R0
+w1709733242
+8C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/divider_32bit.sv
+FC:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/divider_32bit.sv
+!i122 6
+L0 1 24
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/divider_32bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits|C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/divider_32bit.sv|
+!i113 1
+R7
+R8
+R9
+vmultiplier_32bit
+R1
+R10
+!i10b 1
+!s100 `^XAbILWezTXilR9k?D=70
+R3
+I0C87nULil<6edk@I[:fzF0
+R4
+S1
+R0
+w1709732573
+8C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/multiplier_32bit.sv
+FC:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/multiplier_32bit.sv
+!i122 5
+L0 1 30
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/multiplier_32bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits|C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/multiplier_32bit.sv|
+!i113 1
+R7
+R8
+R9
+vor_32bit
+R1
+R10
+!i10b 1
+!s100 6``2[4E@`^[0h2zB>^m=K0
+R3
+IW<D9^f2eB0N>c;2NmMj7^2
+R4
+S1
+R0
+w1709686411
+8C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/or_32bit.sv
+FC:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/or_32bit.sv
+!i122 4
+Z12 L0 1 44
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/or_32bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits|C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/or_32bit.sv|
+!i113 1
+R7
+R8
+R9
+vshiftLeft_32bit
+R1
+R10
+!i10b 1
+!s100 [`WV8A<@WlaXUBQQ?:=Ic3
+R3
+I?S8QdiVVQh<O9Xk>iG6QG3
+R4
+S1
+R0
+w1709686404
+8C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/shiftLeft_32bit.sv
+FC:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/shiftLeft_32bit.sv
+!i122 3
+L0 1 48
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/shiftLeft_32bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits|C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/shiftLeft_32bit.sv|
+!i113 1
+R7
+R8
+R9
+nshift@left_32bit
+vshiftRight_32bit
+R1
+R10
+!i10b 1
+!s100 cRB]Tkl]b[iT:PRL5c`E;2
+R3
+I=]^28R1j3o_Kl278;<lH50
+R4
+S1
+R0
+w1709646968
+8C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/shiftRight_32bit.sv
+FC:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/shiftRight_32bit.sv
+!i122 2
+L0 1 47
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/shiftRight_32bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits|C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/shiftRight_32bit.sv|
+!i113 1
+R7
+R8
+R9
+nshift@right_32bit
+vsubtractor_32bit
+R1
+R10
+!i10b 1
+!s100 8JJ8_]:A@Io@@nNo4TEJC1
+R3
+I?KC9EoVJL_MHW:G1;<RKJ3
+R4
+S1
+R0
+w1709732542
+8C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/subtractor_32bit.sv
+FC:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/subtractor_32bit.sv
+!i122 1
+L0 1 90
+R5
+r1
+!s85 0
+31
+Z13 !s108 1709735046.000000
+!s107 C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/subtractor_32bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits|C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/subtractor_32bit.sv|
+!i113 1
+R7
+R8
+R9
+vxor_32bit
+R1
+!s110 1709735046
+!i10b 1
+!s100 6Ggb?2EFg<zJR;5M^cR`B1
+R3
+Ia8GL9f:NYhhLN72k@Mg7V3
+R4
+S1
+R0
+w1709732870
+8C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/xor_32bit.sv
+FC:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/xor_32bit.sv
+!i122 0
+R12
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/xor_32bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits|C:/Users/nicva/PycharmProjects/nvalverdea_digital_design_lab_20242222/laboratorio2/Problema2/32bits/xor_32bit.sv|
+!i113 1
+R7
+R8
+R9
