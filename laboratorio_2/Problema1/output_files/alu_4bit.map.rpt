@@ -1,0 +1,627 @@
+Analysis & Synthesis report for alu_4bit
+Wed Mar  6 01:43:57 2024
+Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for Inferred Entity Instance: DigitExtractor:extractor|lpm_divide:Div0
+ 12. Parameter Settings for Inferred Entity Instance: DigitExtractor:extractor|lpm_divide:Mod0
+ 13. Parameter Settings for Inferred Entity Instance: DigitExtractor:extractor|lpm_divide:Mod1
+ 14. Parameter Settings for Inferred Entity Instance: divider_4bit:divider|lpm_divide:Div0
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2023  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++---------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Wed Mar  6 01:43:57 2024          ;
+; Quartus Prime Version           ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
+; Revision Name                   ; alu_4bit                                       ;
+; Top-level Entity Name           ; alu_4bit                                       ;
+; Family                          ; Cyclone V                                      ;
+; Logic utilization (in ALMs)     ; N/A                                            ;
+; Total registers                 ; 0                                              ;
+; Total pins                      ; 31                                             ;
+; Total virtual pins              ; 0                                              ;
+; Total block memory bits         ; 0                                              ;
+; Total DSP Blocks                ; 0                                              ;
+; Total HSSI RX PCSs              ; 0                                              ;
+; Total HSSI PMA RX Deserializers ; 0                                              ;
+; Total HSSI TX PCSs              ; 0                                              ;
+; Total HSSI PMA TX Serializers   ; 0                                              ;
+; Total PLLs                      ; 0                                              ;
+; Total DLLs                      ; 0                                              ;
++---------------------------------+------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; alu_4bit           ; alu_4bit           ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 10          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                       ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                                   ; Library ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------------------------------+---------+
+; adder_4bit.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/adder_4bit.sv              ;         ;
+; subtractor_4bit.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/subtractor_4bit.sv         ;         ;
+; alu_4bit.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv                ;         ;
+; multiplier_4bit.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/multiplier_4bit.sv         ;         ;
+; DigitExtractor.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/DigitExtractor.sv          ;         ;
+; segmentOutput.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv           ;         ;
+; divider_4bit.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/divider_4bit.sv            ;         ;
+; and_4bit.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/and_4bit.sv                ;         ;
+; or_4bit.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/or_4bit.sv                 ;         ;
+; xor_4bit.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/xor_4bit.sv                ;         ;
+; shiftLeft_4bit.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/shiftLeft_4bit.sv          ;         ;
+; shiftRight_4bit.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/shiftRight_4bit.sv         ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_divide.tdf                                                       ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/abs_divider.inc                                                      ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sign_div_unsign.inc                                                  ;         ;
+; aglobal221.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/aglobal221.inc                                                       ;         ;
+; db/lpm_divide_rno.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/db/lpm_divide_rno.tdf      ;         ;
+; db/abs_divider_4ag.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/db/abs_divider_4ag.tdf     ;         ;
+; db/alt_u_div_ose.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/db/alt_u_div_ose.tdf       ;         ;
+; db/lpm_abs_kn9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/db/lpm_abs_kn9.tdf         ;         ;
+; db/lpm_divide_ufo.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/db/lpm_divide_ufo.tdf      ;         ;
+; db/lpm_divide_1am.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/db/lpm_divide_1am.tdf      ;         ;
+; db/sign_div_unsign_7kh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/db/sign_div_unsign_7kh.tdf ;         ;
+; db/alt_u_div_kse.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/db/alt_u_div_kse.tdf       ;         ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary              ;
++---------------------------------------------+------------+
+; Resource                                    ; Usage      ;
++---------------------------------------------+------------+
+; Estimate of Logic utilization (ALMs needed) ; 103        ;
+;                                             ;            ;
+; Combinational ALUT usage for logic          ; 177        ;
+;     -- 7 input functions                    ; 4          ;
+;     -- 6 input functions                    ; 25         ;
+;     -- 5 input functions                    ; 36         ;
+;     -- 4 input functions                    ; 33         ;
+;     -- <=3 input functions                  ; 79         ;
+;                                             ;            ;
+; Dedicated logic registers                   ; 0          ;
+;                                             ;            ;
+; I/O pins                                    ; 31         ;
+;                                             ;            ;
+; Total DSP Blocks                            ; 0          ;
+;                                             ;            ;
+; Maximum fan-out node                        ; b[1]~input ;
+; Maximum fan-out                             ; 32         ;
+; Total fan-out                               ; 725        ;
+; Average fan-out                             ; 3.03       ;
++---------------------------------------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                      ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                            ; Entity Name         ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |alu_4bit                                 ; 177 (51)            ; 0 (0)                     ; 0                 ; 0          ; 31   ; 0            ; |alu_4bit                                                                                                                      ; alu_4bit            ; work         ;
+;    |DigitExtractor:extractor|             ; 47 (8)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_4bit|DigitExtractor:extractor                                                                                             ; DigitExtractor      ; work         ;
+;       |lpm_divide:Div0|                   ; 14 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_4bit|DigitExtractor:extractor|lpm_divide:Div0                                                                             ; lpm_divide          ; work         ;
+;          |lpm_divide_rno:auto_generated|  ; 14 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_4bit|DigitExtractor:extractor|lpm_divide:Div0|lpm_divide_rno:auto_generated                                               ; lpm_divide_rno      ; work         ;
+;             |abs_divider_4ag:divider|     ; 14 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_4bit|DigitExtractor:extractor|lpm_divide:Div0|lpm_divide_rno:auto_generated|abs_divider_4ag:divider                       ; abs_divider_4ag     ; work         ;
+;                |alt_u_div_ose:divider|    ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_4bit|DigitExtractor:extractor|lpm_divide:Div0|lpm_divide_rno:auto_generated|abs_divider_4ag:divider|alt_u_div_ose:divider ; alt_u_div_ose       ; work         ;
+;       |lpm_divide:Mod0|                   ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_4bit|DigitExtractor:extractor|lpm_divide:Mod0                                                                             ; lpm_divide          ; work         ;
+;          |lpm_divide_ufo:auto_generated|  ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_4bit|DigitExtractor:extractor|lpm_divide:Mod0|lpm_divide_ufo:auto_generated                                               ; lpm_divide_ufo      ; work         ;
+;             |abs_divider_4ag:divider|     ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_4bit|DigitExtractor:extractor|lpm_divide:Mod0|lpm_divide_ufo:auto_generated|abs_divider_4ag:divider                       ; abs_divider_4ag     ; work         ;
+;                |alt_u_div_ose:divider|    ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_4bit|DigitExtractor:extractor|lpm_divide:Mod0|lpm_divide_ufo:auto_generated|abs_divider_4ag:divider|alt_u_div_ose:divider ; alt_u_div_ose       ; work         ;
+;       |lpm_divide:Mod1|                   ; 19 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_4bit|DigitExtractor:extractor|lpm_divide:Mod1                                                                             ; lpm_divide          ; work         ;
+;          |lpm_divide_ufo:auto_generated|  ; 19 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_4bit|DigitExtractor:extractor|lpm_divide:Mod1|lpm_divide_ufo:auto_generated                                               ; lpm_divide_ufo      ; work         ;
+;             |abs_divider_4ag:divider|     ; 19 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_4bit|DigitExtractor:extractor|lpm_divide:Mod1|lpm_divide_ufo:auto_generated|abs_divider_4ag:divider                       ; abs_divider_4ag     ; work         ;
+;                |alt_u_div_ose:divider|    ; 19 (19)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_4bit|DigitExtractor:extractor|lpm_divide:Mod1|lpm_divide_ufo:auto_generated|abs_divider_4ag:divider|alt_u_div_ose:divider ; alt_u_div_ose       ; work         ;
+;    |adder_4bit:adder|                     ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_4bit|adder_4bit:adder                                                                                                     ; adder_4bit          ; work         ;
+;    |and_4bit:andd|                        ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_4bit|and_4bit:andd                                                                                                        ; and_4bit            ; work         ;
+;    |divider_4bit:divider|                 ; 24 (2)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_4bit|divider_4bit:divider                                                                                                 ; divider_4bit        ; work         ;
+;       |lpm_divide:Div0|                   ; 22 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_4bit|divider_4bit:divider|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_1am:auto_generated|  ; 22 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_4bit|divider_4bit:divider|lpm_divide:Div0|lpm_divide_1am:auto_generated                                                   ; lpm_divide_1am      ; work         ;
+;             |sign_div_unsign_7kh:divider| ; 22 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_4bit|divider_4bit:divider|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider                       ; sign_div_unsign_7kh ; work         ;
+;                |alt_u_div_kse:divider|    ; 22 (22)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_4bit|divider_4bit:divider|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider ; alt_u_div_kse       ; work         ;
+;    |multiplier_4bit:multiplier|           ; 21 (21)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_4bit|multiplier_4bit:multiplier                                                                                           ; multiplier_4bit     ; work         ;
+;    |or_4bit:orr|                          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_4bit|or_4bit:orr                                                                                                          ; or_4bit             ; work         ;
+;    |segmentOutput:segment1|               ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_4bit|segmentOutput:segment1                                                                                               ; segmentOutput       ; work         ;
+;    |segmentOutput:segment2|               ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_4bit|segmentOutput:segment2                                                                                               ; segmentOutput       ; work         ;
+;    |subtractor_4bit:subtractor|           ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_4bit|subtractor_4bit:subtractor                                                                                           ; subtractor_4bit     ; work         ;
+;    |xor_4bit:xorr|                        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |alu_4bit|xor_4bit:xorr                                                                                                        ; xor_4bit            ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; result[2]                                          ; start               ; yes                    ;
+; result[1]                                          ; start               ; yes                    ;
+; result[3]                                          ; start               ; yes                    ;
+; result[0]                                          ; start               ; yes                    ;
+; NFlag$latch                                        ; start               ; yes                    ;
+; ZFlag$latch                                        ; start               ; yes                    ;
+; CFlag$latch                                        ; start               ; yes                    ;
+; VFlag$latch                                        ; start               ; yes                    ;
+; Number of user-specified and inferred latches = 8  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |alu_4bit|Mux0             ;
+; 11:1               ; 2 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |alu_4bit|Mux2             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: DigitExtractor:extractor|lpm_divide:Div0 ;
++------------------------+----------------+-------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                            ;
++------------------------+----------------+-------------------------------------------------+
+; LPM_WIDTHN             ; 5              ; Untyped                                         ;
+; LPM_WIDTHD             ; 5              ; Untyped                                         ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                         ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                         ;
+; LPM_PIPELINE           ; 0              ; Untyped                                         ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                         ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                         ;
+; CBXI_PARAMETER         ; lpm_divide_rno ; Untyped                                         ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                         ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                         ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                    ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                  ;
++------------------------+----------------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: DigitExtractor:extractor|lpm_divide:Mod0 ;
++------------------------+----------------+-------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                            ;
++------------------------+----------------+-------------------------------------------------+
+; LPM_WIDTHN             ; 5              ; Untyped                                         ;
+; LPM_WIDTHD             ; 5              ; Untyped                                         ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                         ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                         ;
+; LPM_PIPELINE           ; 0              ; Untyped                                         ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                         ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                         ;
+; CBXI_PARAMETER         ; lpm_divide_ufo ; Untyped                                         ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                         ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                         ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                    ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                  ;
++------------------------+----------------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: DigitExtractor:extractor|lpm_divide:Mod1 ;
++------------------------+----------------+-------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                            ;
++------------------------+----------------+-------------------------------------------------+
+; LPM_WIDTHN             ; 5              ; Untyped                                         ;
+; LPM_WIDTHD             ; 5              ; Untyped                                         ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                         ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                         ;
+; LPM_PIPELINE           ; 0              ; Untyped                                         ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                         ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                         ;
+; CBXI_PARAMETER         ; lpm_divide_ufo ; Untyped                                         ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                         ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                         ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                    ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                  ;
++------------------------+----------------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: divider_4bit:divider|lpm_divide:Div0 ;
++------------------------+----------------+---------------------------------------------+
+; Parameter Name         ; Value          ; Type                                        ;
++------------------------+----------------+---------------------------------------------+
+; LPM_WIDTHN             ; 4              ; Untyped                                     ;
+; LPM_WIDTHD             ; 4              ; Untyped                                     ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
+; LPM_PIPELINE           ; 0              ; Untyped                                     ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                     ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                     ;
+; CBXI_PARAMETER         ; lpm_divide_1am ; Untyped                                     ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                     ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                     ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                              ;
++------------------------+----------------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_lcell_comb     ; 179                         ;
+;     arith             ; 35                          ;
+;         0 data inputs ; 9                           ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 5                           ;
+;         3 data inputs ; 10                          ;
+;         4 data inputs ; 1                           ;
+;         5 data inputs ; 7                           ;
+;     extend            ; 4                           ;
+;         7 data inputs ; 4                           ;
+;     normal            ; 115                         ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 9                           ;
+;         3 data inputs ; 21                          ;
+;         4 data inputs ; 29                          ;
+;         5 data inputs ; 29                          ;
+;         6 data inputs ; 25                          ;
+;     shared            ; 25                          ;
+;         0 data inputs ; 11                          ;
+;         1 data inputs ; 8                           ;
+;         2 data inputs ; 3                           ;
+;         4 data inputs ; 3                           ;
+; boundary_port         ; 31                          ;
+;                       ;                             ;
+; Max LUT depth         ; 9.50                        ;
+; Average LUT depth     ; 6.93                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+    Info: Processing started: Wed Mar  6 01:43:31 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off alu_4bit -c alu_4bit
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file adder_4bit.sv
+    Info (12023): Found entity 1: adder_4bit File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/adder_4bit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file subtractor_4bit.sv
+    Info (12023): Found entity 1: subtractor_4bit File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/subtractor_4bit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu_4bit.sv
+    Info (12023): Found entity 1: alu_4bit File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu_4bit_tb.sv
+    Info (12023): Found entity 1: alu_4bit_tb File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit_tb.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file multiplier_4bit.sv
+    Info (12023): Found entity 1: multiplier_4bit File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/multiplier_4bit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file digitextractor.sv
+    Info (12023): Found entity 1: DigitExtractor File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/DigitExtractor.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file segmentoutput.sv
+    Info (12023): Found entity 1: segmentOutput File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file divider_4bit.sv
+    Info (12023): Found entity 1: divider_4bit File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/divider_4bit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file and_4bit.sv
+    Info (12023): Found entity 1: and_4bit File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/and_4bit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file or_4bit.sv
+    Info (12023): Found entity 1: or_4bit File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/or_4bit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file xor_4bit.sv
+    Info (12023): Found entity 1: xor_4bit File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/xor_4bit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file shiftleft_4bit.sv
+    Info (12023): Found entity 1: shiftLeft_4bit File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/shiftLeft_4bit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file shiftright_4bit.sv
+    Info (12023): Found entity 1: shiftRight_4bit File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/shiftRight_4bit.sv Line: 1
+Info (12127): Elaborating entity "alu_4bit" for the top level hierarchy
+Warning (10235): Verilog HDL Always Construct warning at alu_4bit.sv(40): variable "op" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 40
+Warning (10235): Verilog HDL Always Construct warning at alu_4bit.sv(42): variable "add_result" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 42
+Warning (10235): Verilog HDL Always Construct warning at alu_4bit.sv(44): variable "add_ZFlag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 44
+Warning (10235): Verilog HDL Always Construct warning at alu_4bit.sv(45): variable "add_CFlag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 45
+Warning (10235): Verilog HDL Always Construct warning at alu_4bit.sv(46): variable "add_VFlag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 46
+Warning (10235): Verilog HDL Always Construct warning at alu_4bit.sv(49): variable "sub_result" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 49
+Warning (10235): Verilog HDL Always Construct warning at alu_4bit.sv(50): variable "sub_NFlag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 50
+Warning (10235): Verilog HDL Always Construct warning at alu_4bit.sv(51): variable "sub_ZFlag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 51
+Warning (10235): Verilog HDL Always Construct warning at alu_4bit.sv(52): variable "sub_CFlag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 52
+Warning (10235): Verilog HDL Always Construct warning at alu_4bit.sv(53): variable "sub_VFlag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 53
+Warning (10235): Verilog HDL Always Construct warning at alu_4bit.sv(56): variable "mul_result" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 56
+Warning (10235): Verilog HDL Always Construct warning at alu_4bit.sv(58): variable "mul_ZFlag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 58
+Warning (10235): Verilog HDL Always Construct warning at alu_4bit.sv(60): variable "mul_VFlag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 60
+Warning (10235): Verilog HDL Always Construct warning at alu_4bit.sv(63): variable "div_result" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 63
+Warning (10235): Verilog HDL Always Construct warning at alu_4bit.sv(65): variable "div_ZFlag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 65
+Warning (10235): Verilog HDL Always Construct warning at alu_4bit.sv(67): variable "div_VFlag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 67
+Warning (10235): Verilog HDL Always Construct warning at alu_4bit.sv(70): variable "and_result" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 70
+Warning (10235): Verilog HDL Always Construct warning at alu_4bit.sv(72): variable "and_ZFlag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 72
+Warning (10235): Verilog HDL Always Construct warning at alu_4bit.sv(77): variable "or_result" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 77
+Warning (10235): Verilog HDL Always Construct warning at alu_4bit.sv(79): variable "or_ZFlag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 79
+Warning (10235): Verilog HDL Always Construct warning at alu_4bit.sv(84): variable "xor_result" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 84
+Warning (10235): Verilog HDL Always Construct warning at alu_4bit.sv(86): variable "xor_ZFlag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 86
+Warning (10235): Verilog HDL Always Construct warning at alu_4bit.sv(91): variable "left_result" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 91
+Warning (10235): Verilog HDL Always Construct warning at alu_4bit.sv(93): variable "left_ZFlag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 93
+Warning (10235): Verilog HDL Always Construct warning at alu_4bit.sv(94): variable "left_CFlag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 94
+Warning (10235): Verilog HDL Always Construct warning at alu_4bit.sv(98): variable "right_result" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 98
+Warning (10235): Verilog HDL Always Construct warning at alu_4bit.sv(100): variable "right_ZFlag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 100
+Warning (10235): Verilog HDL Always Construct warning at alu_4bit.sv(101): variable "right_CFlag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 101
+Warning (10235): Verilog HDL Always Construct warning at alu_4bit.sv(114): variable "result" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 114
+Warning (10235): Verilog HDL Always Construct warning at alu_4bit.sv(115): variable "NFlag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 115
+Warning (10235): Verilog HDL Always Construct warning at alu_4bit.sv(116): variable "ZFlag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 116
+Warning (10235): Verilog HDL Always Construct warning at alu_4bit.sv(117): variable "CFlag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 117
+Warning (10235): Verilog HDL Always Construct warning at alu_4bit.sv(118): variable "VFlag" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 118
+Warning (10240): Verilog HDL Always Construct warning at alu_4bit.sv(38): inferring latch(es) for variable "result", which holds its previous value in one or more paths through the always construct File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 38
+Warning (10240): Verilog HDL Always Construct warning at alu_4bit.sv(38): inferring latch(es) for variable "NFlag", which holds its previous value in one or more paths through the always construct File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 38
+Warning (10240): Verilog HDL Always Construct warning at alu_4bit.sv(38): inferring latch(es) for variable "ZFlag", which holds its previous value in one or more paths through the always construct File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 38
+Warning (10240): Verilog HDL Always Construct warning at alu_4bit.sv(38): inferring latch(es) for variable "CFlag", which holds its previous value in one or more paths through the always construct File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 38
+Warning (10240): Verilog HDL Always Construct warning at alu_4bit.sv(38): inferring latch(es) for variable "VFlag", which holds its previous value in one or more paths through the always construct File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 38
+Info (10041): Inferred latch for "VFlag" at alu_4bit.sv(114) File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 114
+Info (10041): Inferred latch for "CFlag" at alu_4bit.sv(114) File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 114
+Info (10041): Inferred latch for "ZFlag" at alu_4bit.sv(114) File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 114
+Info (10041): Inferred latch for "NFlag" at alu_4bit.sv(114) File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 114
+Info (10041): Inferred latch for "result[0]" at alu_4bit.sv(114) File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 114
+Info (10041): Inferred latch for "result[1]" at alu_4bit.sv(114) File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 114
+Info (10041): Inferred latch for "result[2]" at alu_4bit.sv(114) File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 114
+Info (10041): Inferred latch for "result[3]" at alu_4bit.sv(114) File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 114
+Info (12128): Elaborating entity "adder_4bit" for hierarchy "adder_4bit:adder" File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 24
+Info (12128): Elaborating entity "subtractor_4bit" for hierarchy "subtractor_4bit:subtractor" File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 25
+Info (12128): Elaborating entity "multiplier_4bit" for hierarchy "multiplier_4bit:multiplier" File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 26
+Info (12128): Elaborating entity "divider_4bit" for hierarchy "divider_4bit:divider" File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 27
+Info (12128): Elaborating entity "and_4bit" for hierarchy "and_4bit:andd" File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 28
+Info (12128): Elaborating entity "or_4bit" for hierarchy "or_4bit:orr" File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 29
+Info (12128): Elaborating entity "xor_4bit" for hierarchy "xor_4bit:xorr" File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 30
+Info (12128): Elaborating entity "shiftLeft_4bit" for hierarchy "shiftLeft_4bit:left" File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 31
+Info (12128): Elaborating entity "shiftRight_4bit" for hierarchy "shiftRight_4bit:right" File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 32
+Info (12128): Elaborating entity "DigitExtractor" for hierarchy "DigitExtractor:extractor" File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 34
+Warning (10762): Verilog HDL Case Statement warning at DigitExtractor.sv(14): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/DigitExtractor.sv Line: 14
+Info (12128): Elaborating entity "segmentOutput" for hierarchy "segmentOutput:segment1" File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/alu_4bit.sv Line: 35
+Warning (10270): Verilog HDL Case Statement warning at segmentOutput.sv(10): incomplete case statement has no default case item File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 10
+Warning (10240): Verilog HDL Always Construct warning at segmentOutput.sv(8): inferring latch(es) for variable "segments1", which holds its previous value in one or more paths through the always construct File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
+Info (10041): Inferred latch for "segments1[0]" at segmentOutput.sv(8) File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
+Info (10041): Inferred latch for "segments1[1]" at segmentOutput.sv(8) File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
+Info (10041): Inferred latch for "segments1[2]" at segmentOutput.sv(8) File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
+Info (10041): Inferred latch for "segments1[3]" at segmentOutput.sv(8) File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
+Info (10041): Inferred latch for "segments1[4]" at segmentOutput.sv(8) File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
+Info (10041): Inferred latch for "segments1[5]" at segmentOutput.sv(8) File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
+Info (10041): Inferred latch for "segments1[6]" at segmentOutput.sv(8) File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment1|segments1[0]" is permanently enabled File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment1|segments1[1]" is permanently enabled File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment1|segments1[2]" is permanently enabled File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment1|segments1[3]" is permanently enabled File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment1|segments1[4]" is permanently enabled File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment1|segments1[5]" is permanently enabled File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment1|segments1[6]" is permanently enabled File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment2|segments1[0]" is permanently enabled File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment2|segments1[1]" is permanently enabled File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment2|segments1[2]" is permanently enabled File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment2|segments1[3]" is permanently enabled File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment2|segments1[4]" is permanently enabled File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment2|segments1[5]" is permanently enabled File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment2|segments1[6]" is permanently enabled File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/segmentOutput.sv Line: 8
+Info (278001): Inferred 4 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DigitExtractor:extractor|Div0" File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/DigitExtractor.sv Line: 37
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DigitExtractor:extractor|Mod0" File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/DigitExtractor.sv Line: 37
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DigitExtractor:extractor|Mod1" File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/DigitExtractor.sv Line: 38
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "divider_4bit:divider|Div0" File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/divider_4bit.sv Line: 16
+Info (12130): Elaborated megafunction instantiation "DigitExtractor:extractor|lpm_divide:Div0" File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/DigitExtractor.sv Line: 37
+Info (12133): Instantiated megafunction "DigitExtractor:extractor|lpm_divide:Div0" with the following parameter: File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/DigitExtractor.sv Line: 37
+    Info (12134): Parameter "LPM_WIDTHN" = "5"
+    Info (12134): Parameter "LPM_WIDTHD" = "5"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_rno.tdf
+    Info (12023): Found entity 1: lpm_divide_rno File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/db/lpm_divide_rno.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_4ag.tdf
+    Info (12023): Found entity 1: abs_divider_4ag File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/db/abs_divider_4ag.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_ose.tdf
+    Info (12023): Found entity 1: alt_u_div_ose File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/db/alt_u_div_ose.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_kn9.tdf
+    Info (12023): Found entity 1: lpm_abs_kn9 File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/db/lpm_abs_kn9.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "DigitExtractor:extractor|lpm_divide:Mod0" File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/DigitExtractor.sv Line: 37
+Info (12133): Instantiated megafunction "DigitExtractor:extractor|lpm_divide:Mod0" with the following parameter: File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/DigitExtractor.sv Line: 37
+    Info (12134): Parameter "LPM_WIDTHN" = "5"
+    Info (12134): Parameter "LPM_WIDTHD" = "5"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_ufo.tdf
+    Info (12023): Found entity 1: lpm_divide_ufo File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/db/lpm_divide_ufo.tdf Line: 25
+Info (12130): Elaborated megafunction instantiation "DigitExtractor:extractor|lpm_divide:Mod1" File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/DigitExtractor.sv Line: 38
+Info (12133): Instantiated megafunction "DigitExtractor:extractor|lpm_divide:Mod1" with the following parameter: File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/DigitExtractor.sv Line: 38
+    Info (12134): Parameter "LPM_WIDTHN" = "5"
+    Info (12134): Parameter "LPM_WIDTHD" = "5"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12130): Elaborated megafunction instantiation "divider_4bit:divider|lpm_divide:Div0" File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/divider_4bit.sv Line: 16
+Info (12133): Instantiated megafunction "divider_4bit:divider|lpm_divide:Div0" with the following parameter: File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/divider_4bit.sv Line: 16
+    Info (12134): Parameter "LPM_WIDTHN" = "4"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_1am.tdf
+    Info (12023): Found entity 1: lpm_divide_1am File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/db/lpm_divide_1am.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_7kh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_7kh File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/db/sign_div_unsign_7kh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_kse.tdf
+    Info (12023): Found entity 1: alt_u_div_kse File: C:/Users/ale-r/OneDrive/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_2/Problema1/db/alt_u_div_kse.tdf Line: 23
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 208 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 13 input pins
+    Info (21059): Implemented 18 output pins
+    Info (21061): Implemented 177 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 56 warnings
+    Info: Peak virtual memory: 4860 megabytes
+    Info: Processing ended: Wed Mar  6 01:43:57 2024
+    Info: Elapsed time: 00:00:26
+    Info: Total CPU time (on all processors): 00:00:27
+
+
