@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at vga_controller.sv(12): object "red" differs only in case from object "RED" in the same scope File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/vga_controller.sv Line: 12
+Info (10281): Verilog HDL Declaration information at vga_controller.sv(13): object "green" differs only in case from object "GREEN" in the same scope File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/vga_controller.sv Line: 13
