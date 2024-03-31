@@ -1,0 +1,13 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/vga.sv
+source_file = 1, C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/vgaController.sv
+source_file = 1, C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv
+source_file = 1, C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/chargenrom.sv
+source_file = 1, C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/rectgen.sv
+source_file = 1, C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/charrom.txt
+source_file = 1, C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/pll.sv
+source_file = 1, C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv
+source_file = 1, C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/db/Battleship.cbx.xml
+design_name = Battleship
+instance = comp, \clk~input , clk~input, Battleship, 1
+instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, Battleship, 1
