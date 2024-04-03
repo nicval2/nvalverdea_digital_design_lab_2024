@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Battleship
-Sun Mar 31 17:32:12 2024
+Wed Apr  3 11:07:39 2024
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -14,11 +14,15 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: videoGen:videoGen_inst
- 10. Port Connectivity Checks: "videoGen:videoGen_inst"
- 11. Post-Synthesis Netlist Statistics for Top Partition
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: vga:vga_inst|vgaController:vgaCont
+ 11. Parameter Settings for User Entity Instance: vga:vga_inst|videoGen:videoGen_inst
+ 12. Parameter Settings for Inferred Entity Instance: vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Div0
+ 13. Parameter Settings for Inferred Entity Instance: vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Mod0
+ 14. Port Connectivity Checks: "vga:vga_inst"
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
 
 
 
@@ -45,14 +49,14 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Mar 31 17:32:12 2024          ;
+; Analysis & Synthesis Status     ; Successful - Wed Apr  3 11:07:39 2024          ;
 ; Quartus Prime Version           ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                   ; Battleship                                     ;
 ; Top-level Entity Name           ; Battleship                                     ;
 ; Family                          ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)     ; N/A                                            ;
-; Total registers                 ; 0                                              ;
-; Total pins                      ; 1                                              ;
+; Total registers                 ; 21                                             ;
+; Total pins                      ; 30                                             ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 0                                              ;
 ; Total DSP Blocks                ; 0                                              ;
@@ -161,57 +165,81 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 10          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 10          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-10        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                       ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                   ; Library ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------+---------+
-; videoGen.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv   ;         ;
-; Battleship.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv ;         ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                    ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                ; Library ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------+---------+
+; vga.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/vga.sv                     ;         ;
+; vgaController.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/vgaController.sv           ;         ;
+; videoGen.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv                ;         ;
+; pll.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/pll.sv                     ;         ;
+; Battleship.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv              ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/misappsinstaladas/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_divide.tdf                  ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/misappsinstaladas/intelfpga_lite/22.1std/quartus/libraries/megafunctions/abs_divider.inc                 ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/misappsinstaladas/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sign_div_unsign.inc             ;         ;
+; aglobal221.inc                   ; yes             ; Megafunction                 ; c:/misappsinstaladas/intelfpga_lite/22.1std/quartus/libraries/megafunctions/aglobal221.inc                  ;         ;
+; db/lpm_divide_hbm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/db/lpm_divide_hbm.tdf      ;         ;
+; db/sign_div_unsign_nlh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/db/sign_div_unsign_nlh.tdf ;         ;
+; db/alt_u_div_kve.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/db/alt_u_div_kve.tdf       ;         ;
+; db/lpm_divide_k3m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/db/lpm_divide_k3m.tdf      ;         ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Estimate of Logic utilization (ALMs needed) ; 0     ;
-;                                             ;       ;
-; Combinational ALUT usage for logic          ; 0     ;
-;     -- 7 input functions                    ; 0     ;
-;     -- 6 input functions                    ; 0     ;
-;     -- 5 input functions                    ; 0     ;
-;     -- 4 input functions                    ; 0     ;
-;     -- <=3 input functions                  ; 0     ;
-;                                             ;       ;
-; Dedicated logic registers                   ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 1     ;
-;                                             ;       ;
-; Total DSP Blocks                            ; 0     ;
-;                                             ;       ;
-; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 1     ;
-; Average fan-out                             ; 0.50  ;
-+---------------------------------------------+-------+
++------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                  ;
++---------------------------------------------+--------------------------------+
+; Resource                                    ; Usage                          ;
++---------------------------------------------+--------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 92                             ;
+;                                             ;                                ;
+; Combinational ALUT usage for logic          ; 173                            ;
+;     -- 7 input functions                    ; 1                              ;
+;     -- 6 input functions                    ; 9                              ;
+;     -- 5 input functions                    ; 13                             ;
+;     -- 4 input functions                    ; 17                             ;
+;     -- <=3 input functions                  ; 133                            ;
+;                                             ;                                ;
+; Dedicated logic registers                   ; 21                             ;
+;                                             ;                                ;
+; I/O pins                                    ; 30                             ;
+;                                             ;                                ;
+; Total DSP Blocks                            ; 0                              ;
+;                                             ;                                ;
+; Maximum fan-out node                        ; vga:vga_inst|pll:vgapll|toggle ;
+; Maximum fan-out                             ; 22                             ;
+; Total fan-out                               ; 631                            ;
+; Average fan-out                             ; 2.48                           ;
++---------------------------------------------+--------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |Battleship                ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 1    ; 0            ; |Battleship         ; Battleship  ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                          ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                             ; Entity Name         ; Library Name ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |Battleship                                  ; 173 (0)             ; 21 (0)                    ; 0                 ; 0          ; 30   ; 0            ; |Battleship                                                                                                                                     ; Battleship          ; work         ;
+;    |vga:vga_inst|                            ; 173 (0)             ; 21 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst                                                                                                                        ; vga                 ; work         ;
+;       |pll:vgapll|                           ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|pll:vgapll                                                                                                             ; pll                 ; work         ;
+;       |vgaController:vgaCont|                ; 30 (30)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|vgaController:vgaCont                                                                                                  ; vgaController       ; work         ;
+;       |videoGen:videoGen_inst|               ; 142 (15)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst                                                                                                 ; videoGen            ; work         ;
+;          |lpm_divide:Div0|                   ; 60 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
+;             |lpm_divide_hbm:auto_generated|  ; 60 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Div0|lpm_divide_hbm:auto_generated                                                   ; lpm_divide_hbm      ; work         ;
+;                |sign_div_unsign_nlh:divider| ; 60 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Div0|lpm_divide_hbm:auto_generated|sign_div_unsign_nlh:divider                       ; sign_div_unsign_nlh ; work         ;
+;                   |alt_u_div_kve:divider|    ; 60 (60)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Div0|lpm_divide_hbm:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_kve:divider ; alt_u_div_kve       ; work         ;
+;          |lpm_divide:Mod0|                   ; 67 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
+;             |lpm_divide_k3m:auto_generated|  ; 67 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Mod0|lpm_divide_k3m:auto_generated                                                   ; lpm_divide_k3m      ; work         ;
+;                |sign_div_unsign_nlh:divider| ; 67 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Mod0|lpm_divide_k3m:auto_generated|sign_div_unsign_nlh:divider                       ; sign_div_unsign_nlh ; work         ;
+;                   |alt_u_div_kve:divider|    ; 67 (67)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Mod0|lpm_divide_k3m:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_kve:divider ; alt_u_div_kve       ; work         ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -220,87 +248,181 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 21    ;
+; Number of registers using Synchronous Clear  ; 20    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 10    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: videoGen:videoGen_inst ;
-+----------------+----------+-----------------------------------------+
-; Parameter Name ; Value    ; Type                                    ;
-+----------------+----------+-----------------------------------------+
-; GREY           ; 10010010 ; Unsigned Binary                         ;
-; GREEN          ; 00001100 ; Unsigned Binary                         ;
-; YELLOW         ; 11111000 ; Unsigned Binary                         ;
-; RED            ; 11100000 ; Unsigned Binary                         ;
-; WHITE          ; 11111111 ; Unsigned Binary                         ;
-; BLACK          ; 00000000 ; Unsigned Binary                         ;
-; SKYBLUE        ; 01010111 ; Unsigned Binary                         ;
-; SQUARE_WIDTH   ; 64       ; Signed Integer                          ;
-; SQUARE_HEIGHT  ; 96       ; Signed Integer                          ;
-+----------------+----------+-----------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|b[0] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|b[3] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: vga:vga_inst|vgaController:vgaCont ;
++----------------+------------+---------------------------------------------------+
+; Parameter Name ; Value      ; Type                                              ;
++----------------+------------+---------------------------------------------------+
+; HACTIVE        ; 1010000000 ; Unsigned Binary                                   ;
+; HFP            ; 0000010000 ; Unsigned Binary                                   ;
+; HSYN           ; 0001100000 ; Unsigned Binary                                   ;
+; HBP            ; 0000110000 ; Unsigned Binary                                   ;
+; HMAX           ; 1100100000 ; Unsigned Binary                                   ;
+; VBP            ; 0000100000 ; Unsigned Binary                                   ;
+; VACTIVE        ; 0111100000 ; Unsigned Binary                                   ;
+; VFP            ; 0000001011 ; Unsigned Binary                                   ;
+; VSYN           ; 0000000010 ; Unsigned Binary                                   ;
+; VMAX           ; 1000001101 ; Unsigned Binary                                   ;
++----------------+------------+---------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "videoGen:videoGen_inst"                                                                                 ;
-+--------------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port                     ; Type   ; Severity ; Details                                                                             ;
-+--------------------------+--------+----------+-------------------------------------------------------------------------------------+
-; x                        ; Input  ; Info     ; Stuck at GND                                                                        ;
-; y                        ; Input  ; Info     ; Stuck at GND                                                                        ;
-; matriz_barcos[4]         ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; matriz_barcos[3][3..1]   ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; matriz_barcos[3][4]      ; Input  ; Info     ; Stuck at GND                                                                        ;
-; matriz_barcos[3][0]      ; Input  ; Info     ; Stuck at GND                                                                        ;
-; matriz_barcos[2][4..1]   ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; matriz_barcos[2][0]      ; Input  ; Info     ; Stuck at GND                                                                        ;
-; matriz_barcos[1][3..2]   ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; matriz_barcos[1][1..0]   ; Input  ; Info     ; Stuck at GND                                                                        ;
-; matriz_barcos[1][4]      ; Input  ; Info     ; Stuck at GND                                                                        ;
-; matriz_barcos[0][3..0]   ; Input  ; Info     ; Stuck at GND                                                                        ;
-; matriz_barcos[0][4]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; matriz_golpes[4]         ; Input  ; Info     ; Stuck at GND                                                                        ;
-; matriz_golpes[3][3..1]   ; Input  ; Info     ; Stuck at GND                                                                        ;
-; matriz_golpes[3][4]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; matriz_golpes[3][0]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; matriz_golpes[2]         ; Input  ; Info     ; Stuck at GND                                                                        ;
-; matriz_golpes[1][4..2]   ; Input  ; Info     ; Stuck at GND                                                                        ;
-; matriz_golpes[1][1]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; matriz_golpes[1][0]      ; Input  ; Info     ; Stuck at GND                                                                        ;
-; matriz_golpes[0]         ; Input  ; Info     ; Stuck at GND                                                                        ;
-; matriz_disparos[4][4..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; matriz_disparos[4][0]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; matriz_disparos[3]       ; Input  ; Info     ; Stuck at GND                                                                        ;
-; matriz_disparos[2][3..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; matriz_disparos[2][4]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; matriz_disparos[2][0]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; matriz_disparos[1][4..2] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; matriz_disparos[1][1]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; matriz_disparos[1][0]    ; Input  ; Info     ; Stuck at GND                                                                        ;
-; matriz_disparos[0]       ; Input  ; Info     ; Stuck at GND                                                                        ;
-; r                        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; g                        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; b                        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------------------------+--------+----------+-------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: vga:vga_inst|videoGen:videoGen_inst ;
++----------------+----------+------------------------------------------------------+
+; Parameter Name ; Value    ; Type                                                 ;
++----------------+----------+------------------------------------------------------+
+; GREY           ; 10010010 ; Unsigned Binary                                      ;
+; GREEN          ; 00001100 ; Unsigned Binary                                      ;
+; YELLOW         ; 11111000 ; Unsigned Binary                                      ;
+; RED            ; 11100000 ; Unsigned Binary                                      ;
+; WHITE          ; 11111111 ; Unsigned Binary                                      ;
+; BLACK          ; 00000000 ; Unsigned Binary                                      ;
+; SKYBLUE        ; 01010111 ; Unsigned Binary                                      ;
+; SQUARE_WIDTH   ; 64       ; Signed Integer                                       ;
+; SQUARE_HEIGHT  ; 96       ; Signed Integer                                       ;
++----------------+----------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Div0 ;
++------------------------+----------------+------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                       ;
++------------------------+----------------+------------------------------------------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                                                    ;
+; LPM_WIDTHD             ; 7              ; Untyped                                                    ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                    ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                    ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                    ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                    ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                    ;
+; CBXI_PARAMETER         ; lpm_divide_hbm ; Untyped                                                    ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                    ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                    ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                               ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                             ;
++------------------------+----------------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Mod0 ;
++------------------------+----------------+------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                       ;
++------------------------+----------------+------------------------------------------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                                                    ;
+; LPM_WIDTHD             ; 7              ; Untyped                                                    ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                    ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                    ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                    ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                    ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                    ;
+; CBXI_PARAMETER         ; lpm_divide_k3m ; Untyped                                                    ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                    ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                    ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                               ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                             ;
++------------------------+----------------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "vga:vga_inst"                   ;
++--------------------------+-------+----------+--------------+
+; Port                     ; Type  ; Severity ; Details      ;
++--------------------------+-------+----------+--------------+
+; matriz_barcos[4]         ; Input ; Info     ; Stuck at VCC ;
+; matriz_barcos[3][3..1]   ; Input ; Info     ; Stuck at VCC ;
+; matriz_barcos[3][4]      ; Input ; Info     ; Stuck at GND ;
+; matriz_barcos[3][0]      ; Input ; Info     ; Stuck at GND ;
+; matriz_barcos[2][4..1]   ; Input ; Info     ; Stuck at VCC ;
+; matriz_barcos[2][0]      ; Input ; Info     ; Stuck at GND ;
+; matriz_barcos[1][3..2]   ; Input ; Info     ; Stuck at VCC ;
+; matriz_barcos[1][1..0]   ; Input ; Info     ; Stuck at GND ;
+; matriz_barcos[1][4]      ; Input ; Info     ; Stuck at GND ;
+; matriz_barcos[0][3..0]   ; Input ; Info     ; Stuck at GND ;
+; matriz_barcos[0][4]      ; Input ; Info     ; Stuck at VCC ;
+; matriz_golpes[4]         ; Input ; Info     ; Stuck at GND ;
+; matriz_golpes[3][3..1]   ; Input ; Info     ; Stuck at GND ;
+; matriz_golpes[3][4]      ; Input ; Info     ; Stuck at VCC ;
+; matriz_golpes[3][0]      ; Input ; Info     ; Stuck at VCC ;
+; matriz_golpes[2]         ; Input ; Info     ; Stuck at GND ;
+; matriz_golpes[1][4..2]   ; Input ; Info     ; Stuck at GND ;
+; matriz_golpes[1][1]      ; Input ; Info     ; Stuck at VCC ;
+; matriz_golpes[1][0]      ; Input ; Info     ; Stuck at GND ;
+; matriz_golpes[0]         ; Input ; Info     ; Stuck at GND ;
+; matriz_disparos[4][4..1] ; Input ; Info     ; Stuck at GND ;
+; matriz_disparos[4][0]    ; Input ; Info     ; Stuck at VCC ;
+; matriz_disparos[3]       ; Input ; Info     ; Stuck at GND ;
+; matriz_disparos[2][3..1] ; Input ; Info     ; Stuck at GND ;
+; matriz_disparos[2][4]    ; Input ; Info     ; Stuck at VCC ;
+; matriz_disparos[2][0]    ; Input ; Info     ; Stuck at VCC ;
+; matriz_disparos[1][4..2] ; Input ; Info     ; Stuck at GND ;
+; matriz_disparos[1][1]    ; Input ; Info     ; Stuck at VCC ;
+; matriz_disparos[1][0]    ; Input ; Info     ; Stuck at GND ;
+; matriz_disparos[0]       ; Input ; Info     ; Stuck at GND ;
++--------------------------+-------+----------+--------------+
 
 
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
-+-------------------+---------------------------------+
-; Type              ; Count                           ;
-+-------------------+---------------------------------+
-; boundary_port     ; 1                               ;
-;                   ;                                 ;
-; Max LUT depth     ; 0.00                            ;
-; Average LUT depth ; 0.00                            ;
-+-------------------+---------------------------------+
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 21                          ;
+;     ENA SCLR          ; 10                          ;
+;     SCLR              ; 10                          ;
+;     plain             ; 1                           ;
+; arriav_lcell_comb     ; 175                         ;
+;     arith             ; 80                          ;
+;         0 data inputs ; 12                          ;
+;         1 data inputs ; 26                          ;
+;         2 data inputs ; 6                           ;
+;         3 data inputs ; 24                          ;
+;         4 data inputs ; 12                          ;
+;     extend            ; 1                           ;
+;         7 data inputs ; 1                           ;
+;     normal            ; 78                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 33                          ;
+;         3 data inputs ; 15                          ;
+;         4 data inputs ; 5                           ;
+;         5 data inputs ; 13                          ;
+;         6 data inputs ; 9                           ;
+;     shared            ; 16                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 14                          ;
+; boundary_port         ; 30                          ;
+;                       ;                             ;
+; Max LUT depth         ; 10.70                       ;
+; Average LUT depth     ; 7.89                        ;
++-----------------------+-----------------------------+
 
 
 +-------------------------------+
@@ -308,7 +430,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -318,7 +440,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Sun Mar 31 17:31:50 2024
+    Info: Processing started: Wed Apr  3 11:07:16 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Battleship -c Battleship
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
@@ -337,22 +459,65 @@ Info (12021): Found 1 design units, including 1 entities, in source file pll.sv
 Info (12021): Found 1 design units, including 1 entities, in source file battleship.sv
     Info (12023): Found entity 1: Battleship File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 1
 Info (12127): Elaborating entity "Battleship" for the top level hierarchy
-Info (12128): Elaborating entity "videoGen" for hierarchy "videoGen:videoGen_inst" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 40
+Info (12128): Elaborating entity "vga" for hierarchy "vga:vga_inst" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 48
+Info (12128): Elaborating entity "pll" for hierarchy "vga:vga_inst|pll:vgapll" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/vga.sv Line: 19
+Info (12128): Elaborating entity "vgaController" for hierarchy "vga:vga_inst|vgaController:vgaCont" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/vga.sv Line: 21
+Info (12128): Elaborating entity "videoGen" for hierarchy "vga:vga_inst|videoGen:videoGen_inst" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/vga.sv Line: 33
 Warning (10230): Verilog HDL assignment warning at videoGen.sv(29): truncated value with size 32 to match size of target (4) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv Line: 29
 Warning (10230): Verilog HDL assignment warning at videoGen.sv(30): truncated value with size 32 to match size of target (4) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv Line: 30
 Info (10264): Verilog HDL Case Statement information at videoGen.sv(44): all case item expressions in this case statement are onehot File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv Line: 44
 Warning (10199): Verilog HDL Case Statement warning at videoGen.sv(57): case item expression never matches the case expression File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv Line: 57
+Info (278001): Inferred 2 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "vga:vga_inst|videoGen:videoGen_inst|Div0" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv Line: 30
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "vga:vga_inst|videoGen:videoGen_inst|Mod0" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv Line: 36
+Info (12130): Elaborated megafunction instantiation "vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Div0" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv Line: 30
+Info (12133): Instantiated megafunction "vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Div0" with the following parameter: File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv Line: 30
+    Info (12134): Parameter "LPM_WIDTHN" = "10"
+    Info (12134): Parameter "LPM_WIDTHD" = "7"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_hbm.tdf
+    Info (12023): Found entity 1: lpm_divide_hbm File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/db/lpm_divide_hbm.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_nlh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_nlh File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/db/sign_div_unsign_nlh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_kve.tdf
+    Info (12023): Found entity 1: alt_u_div_kve File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/db/alt_u_div_kve.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Mod0" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv Line: 36
+Info (12133): Instantiated megafunction "vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Mod0" with the following parameter: File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv Line: 36
+    Info (12134): Parameter "LPM_WIDTHN" = "10"
+    Info (12134): Parameter "LPM_WIDTHD" = "7"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_k3m.tdf
+    Info (12023): Found entity 1: lpm_divide_k3m File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/db/lpm_divide_k3m.tdf Line: 25
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "r[0]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 6
+    Warning (13410): Pin "r[1]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 6
+    Warning (13410): Pin "r[2]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 6
+    Warning (13410): Pin "r[3]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 6
+    Warning (13410): Pin "r[4]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 6
+    Warning (13410): Pin "r[5]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 6
+    Warning (13410): Pin "r[6]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 6
+    Warning (13410): Pin "r[7]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 6
+    Warning (13410): Pin "g[0]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 6
+    Warning (13410): Pin "g[1]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 6
+    Warning (13410): Pin "g[2]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 6
+    Warning (13410): Pin "g[3]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 6
+    Warning (13410): Pin "g[4]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 6
+    Warning (13410): Pin "g[5]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 6
+    Warning (13410): Pin "g[6]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 6
+    Warning (13410): Pin "g[7]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 6
+Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clk" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 3
-Info (21057): Implemented 1 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 223 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
-    Info (21059): Implemented 0 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4814 megabytes
-    Info: Processing ended: Sun Mar 31 17:32:12 2024
-    Info: Elapsed time: 00:00:22
+    Info (21059): Implemented 29 output pins
+    Info (21061): Implemented 193 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 21 warnings
+    Info: Peak virtual memory: 4872 megabytes
+    Info: Processing ended: Wed Apr  3 11:07:39 2024
+    Info: Elapsed time: 00:00:23
     Info: Total CPU time (on all processors): 00:00:34
 
 
