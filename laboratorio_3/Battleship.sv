@@ -29,8 +29,6 @@ module Battleship(
         '{0, 0, 0, 0, 0}    
     };
 
-
-    // Instantiate videoGen module
     // Instantiate the vga module
 	vga vga_inst (
     .clk(clk),
