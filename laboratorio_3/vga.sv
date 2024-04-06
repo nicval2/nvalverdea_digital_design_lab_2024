@@ -1,8 +1,8 @@
 module vga(
     input logic clk,
-    input logic [4:0][4:0] matriz_barcos,
-    input logic [4:0][4:0] matriz_golpes,
-    input logic [4:0][4:0] matriz_disparos,
+    input logic [1:0] matriz_barcos [4:0][4:0],
+    input logic [1:0] matriz_golpes [4:0][4:0],
+    input logic [1:0] matriz_disparos [4:0][4:0],
     output logic vgaclk, // 25.175 MHz VGA clock
     output logic hsync, vsync,
     output logic sync_b, blank_b, // To monitor & DAC
