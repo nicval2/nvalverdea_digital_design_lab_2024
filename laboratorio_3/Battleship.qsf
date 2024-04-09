@@ -42,7 +42,7 @@ set_global_assignment -name DEVICE 5CSEMA5F31C6
 set_global_assignment -name TOP_LEVEL_ENTITY Battleship
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 22.1STD.2
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "20:57:56  MARCH 29, 2024"
-set_global_assignment -name LAST_QUARTUS_VERSION "22.1std.2 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.0 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name BOARD "DE1-SoC Board"
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim (SystemVerilog)"
@@ -93,4 +93,48 @@ set_location_assignment PIN_F10 -to blank_b
 set_location_assignment PIN_B11 -to hsync
 set_location_assignment PIN_D11 -to vsync
 set_location_assignment PIN_C10 -to sync_b
+set_global_assignment -name SYSTEMVERILOG_FILE segmentOutput.sv
+set_global_assignment -name SYSTEMVERILOG_FILE temporizador.sv
+set_global_assignment -name SYSTEMVERILOG_FILE contador.sv
+set_location_assignment PIN_AB12 -to disparo
+set_location_assignment PIN_Y16 -to down
+set_location_assignment PIN_W15 -to left
+set_location_assignment PIN_V16 -to pc
+set_location_assignment PIN_Y21 -to player
+set_location_assignment PIN_AA15 -to right
+set_location_assignment PIN_AA14 -to up
+set_location_assignment PIN_AH28 -to s1[6]
+set_location_assignment PIN_AG28 -to s1[5]
+set_location_assignment PIN_AF28 -to s1[4]
+set_location_assignment PIN_AG27 -to s1[3]
+set_location_assignment PIN_AE28 -to s1[2]
+set_location_assignment PIN_AE26 -to s1[0]
+set_location_assignment PIN_AE27 -to s1[1]
+set_location_assignment PIN_AA25 -to s2[6]
+set_location_assignment PIN_AA26 -to s2[5]
+set_location_assignment PIN_AB26 -to s2[4]
+set_location_assignment PIN_AB27 -to s2[3]
+set_location_assignment PIN_Y27 -to s2[2]
+set_location_assignment PIN_AA28 -to s2[1]
+set_location_assignment PIN_V25 -to s2[0]
+set_location_assignment PIN_AE12 -to ships[0]
+set_location_assignment PIN_AD10 -to ships[1]
+set_location_assignment PIN_AC9 -to ships[2]
+set_location_assignment PIN_AE11 -to ships[3]
+set_location_assignment PIN_AD12 -to ships[4]
+set_location_assignment PIN_AD26 -to t2[0]
+set_location_assignment PIN_AC27 -to t2[1]
+set_location_assignment PIN_AD25 -to t2[2]
+set_location_assignment PIN_AC25 -to t2[3]
+set_location_assignment PIN_AB28 -to t2[4]
+set_location_assignment PIN_AB25 -to t2[5]
+set_location_assignment PIN_AB22 -to t2[6]
+set_location_assignment PIN_AB23 -to t1[0]
+set_location_assignment PIN_AE29 -to t1[1]
+set_location_assignment PIN_AD29 -to t1[2]
+set_location_assignment PIN_AC28 -to t1[3]
+set_location_assignment PIN_AD30 -to t1[4]
+set_location_assignment PIN_AC29 -to t1[5]
+set_location_assignment PIN_AC30 -to t1[6]
+set_global_assignment -name SYSTEMVERILOG_FILE FSM.sv
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
