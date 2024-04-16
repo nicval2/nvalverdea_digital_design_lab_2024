@@ -1,104 +1,90 @@
 module FSM(
-    input rst,          // Reset de la FSM
-    input logic clk,    // Clock de la FSM
-    input logic M,      // Botón de mantenimiento (presionado = 1, no presionado = 0)
-    output logic [7:0] estado_reg // Registro de estado
+    input clk,              // Clock
+    input rst,              // Reset
+    input start_game,       // Señal para iniciar el juego
+    input [4:0] row_in,     // Entrada de fila seleccionada
+    input [4:0] col_in,     // Entrada de columna seleccionada
+    input hit,              // Señal de impacto en una casilla
+
+    output reg [4:0] row_out,    // Salida de fila a iluminar en el tablero
+    output reg [4:0] col_out,    // Salida de columna a iluminar en el tablero
+    output reg hit_feedback,     // verificar de si hubo un golpe
+    output reg game_over        // Señal de fin de juego
 );
 
-// Declaración de parámetros
-localparam ESTADO_INICIO = 2'b00;
-localparam ESTADO_MANTENIMIENTO = 2'b01;
-localparam ESTADO_CONT_CICLOS = 2'b10;
-localparam ESTADO_ERROR = 2'b11;
+// Parámetros de estado
+parameter START = 2'b00;
+parameter SELECT_CELL = 2'b01;
+parameter CHECK_HIT = 2'b10;
+parameter GAME_OVER = 2'b11;
 
-// Declaración de variables
-logic [7:0] contador_ciclos = 8'h0;
-logic [7:0] contador_mantenimiento = 8'h0;
-logic [7:0] mux_salida;
-logic [1:0] estado_actual, estado_siguiente;
+// Definición de registros de estado
+reg [1:0] state, next_state;
 
-// Comparador con valor de 200
-logic reached_200;
+// Definición de los barcos restantes
+reg [4:0] ships_remaining;
 
-// FSM de control
-always_ff @(posedge clk or posedge rst)
-begin
-    if (rst) begin
-        estado_actual <= ESTADO_INICIO;
-    end
-    else begin
-        estado_actual <= estado_siguiente;
-    end
+// Definición de la tablero
+reg [4:0] board[0:4];
+
+// Definición de contadores y temporizadores
+reg [7:0] timer;
+
+// Inicialización de variables
+initial begin
+    state = START;
+    next_state = START;
+    ships_remaining = 5; // 5 barcos
+    // Inicializar tablero
+    // Cada bit indica si hay un barco en esa posición
+    // Aquí puedes inicializar aleatoriamente los barcos en el tablero
 end
 
-// State machine logic
-always_comb
-begin
-    case (estado_actual)
-        ESTADO_INICIO:
-            if (M) // Button pressed
-                estado_siguiente = ESTADO_MANTENIMIENTO;
-            else
-                estado_siguiente = ESTADO_CONT_CICLOS;
-        
-        ESTADO_MANTENIMIENTO:
-            estado_siguiente = ESTADO_INICIO;
-        
-        ESTADO_CONT_CICLOS:
-            if (reached_200)
-                estado_siguiente = ESTADO_ERROR;
-            else
-                estado_siguiente = ESTADO_INICIO;
-        
-        ESTADO_ERROR:
-            if (rst)
-                estado_siguiente = ESTADO_INICIO;
-            else
-                estado_siguiente = ESTADO_ERROR;
-					 
-			default: 
-				estado_siguiente = ESTADO_INICIO;
-    endcase
-end
-
-// Contador de ciclos
-always_ff @(posedge clk or posedge rst)
-begin
+// Lógica de la FSM
+always @(posedge clk or posedge rst) begin
     if (rst) begin
-        contador_ciclos <= 8'h0;
-    end
-    else begin
-        case (estado_actual)
-            ESTADO_MANTENIMIENTO:
-                contador_ciclos <= 8'h0; // Reset to 0
-            ESTADO_CONT_CICLOS:
-                contador_ciclos <= contador_ciclos + 1;
-            default:
-                contador_ciclos <= contador_ciclos;
+        state <= START;
+        next_state <= START;
+    end 
+	 else begin
+        state <= next_state;
+        // Solo asignar next_state en condiciones específicas
+        case(state)
+            START: begin
+                if (start_game) begin
+                    next_state = SELECT_CELL;
+                end
+            end
+            SELECT_CELL: begin
+                // Lógica para seleccionar una celda
+                if (row_in < 5 && col_in < 5) begin
+                    next_state = CHECK_HIT;
+                end
+            end
+            CHECK_HIT: begin
+                // Lógica para verificar si hubo un acierto
+                if (hit) begin
+                    hit_feedback = 1;
+                    // Lógica para comprobar si el juego ha terminado (todos los barcos han sido hundidos)
+						  
+                    if (ships_remaining == 0) begin
+                        game_over = 1;
+                        next_state = GAME_OVER;
+                    end
+                end else begin
+                    hit_feedback = 0;
+                    next_state = START; // Moverse de vuelta a inicio
+                end
+            end
+            GAME_OVER: begin
+                // Lógica para el estado de fin de juego
+            end
         endcase
     end
 end
 
-// Comparador con valor de 200
-assign reached_200 = (contador_ciclos == 8'hC8);
 
-// Contador de mantenimiento
-always_ff @(posedge clk)
-begin
-    if(estado_actual == ESTADO_MANTENIMIENTO)
-        contador_mantenimiento <= contador_mantenimiento + 1;
-end
 
-// Mux con valor OxFF truncado
-always_comb
-begin
-    if (estado_actual == ESTADO_ERROR)
-        mux_salida = 8'hFF;
-    else
-        mux_salida = contador_mantenimiento;
-end
-
-// Regulador de estado
-assign estado_reg = mux_salida;
 
 endmodule
+

@@ -19,8 +19,8 @@ module videoGen(
     parameter SQUARE_WIDTH = 640 / 11; //All squares plus 1 for the margin
     parameter SQUARE_HEIGHT = (480-189) / 5; //Para cuadricular
 	 
-	 logic [3:0] square_x;
-	 logic [3:0] square_y;
+	 logic [5:0] square_x;
+	 logic [5:0] square_y;
 	 logic is_left_half;
 	 logic on_border;
 	 logic [23:0] square_color;
@@ -30,7 +30,7 @@ module videoGen(
 
 	// Calculate square position within the grid
 	assign square_x = is_left_half ? (x / SQUARE_WIDTH) : ((x - (320 - (SQUARE_WIDTH/2))) / SQUARE_WIDTH);
-	assign square_y = (480 - y) / SQUARE_HEIGHT;
+	assign square_y = y / SQUARE_HEIGHT;
 
 
 
