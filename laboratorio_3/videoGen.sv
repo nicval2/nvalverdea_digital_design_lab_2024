@@ -11,7 +11,7 @@ module videoGen(
     parameter GREEN = 24'b000000001010011001000001;  // Green for successful shot
     parameter YELLOW = 24'b111000111101010000000000; // Yellow for missed shot
     parameter RED = 24'b110100000011000100101101;    // Red for successful hit
-    parameter WHITE = 24'b1;  // White for missed hit
+    parameter WHITE = 24'b111000111101101011001001;  // White for missed hit
     parameter BLACK = 24'b0;  // Black for borders
     parameter OCEANBLUE = 24'b000000000111011110111110; // Skyblue for default background
 
@@ -19,18 +19,19 @@ module videoGen(
     parameter SQUARE_WIDTH = 640 / 11; //All squares plus 1 for the margin
     parameter SQUARE_HEIGHT = (480-189) / 5; //Para cuadricular
 	 
-	 logic [3:0] square_x;
-	 logic [3:0] square_y;
+	 int square_x;
+	 int square_y;
 	 logic is_left_half;
 	 logic on_border;
 	 logic [23:0] square_color;
 		
     // Determine which half of the screen we are in
-	assign is_left_half = (x < (320 - (SQUARE_WIDTH/2))); // removing the margin
+	 //      Probar sin el Square_width/2
+	assign is_left_half = (x < (320-(SQUARE_WIDTH/2))); // removing the margin
 
 	// Calculate square position within the grid
-	assign square_x = is_left_half ? (x / SQUARE_WIDTH) : ((x - (320 - (SQUARE_WIDTH/2))) / SQUARE_WIDTH);
-	assign square_y = (480 - y) / SQUARE_HEIGHT;
+	assign square_x = is_left_half ? (x / SQUARE_WIDTH) : (x / SQUARE_WIDTH)-6;
+	assign square_y = y / SQUARE_HEIGHT;
 
 
 
@@ -44,15 +45,16 @@ module videoGen(
             square_color = BLACK;
         else if (is_left_half) begin
             // Left half: ships and hits
-            case ({matriz_barcos[square_y][square_x], matriz_golpes[square_y][square_x]})
+				case ({matriz_barcos[4 - square_y][4 - square_x], matriz_golpes[4 - square_y][4 - square_x]})
                  4'b0100: square_color = GREY;   // Ship
-                 4'bxx01: square_color = YELLOW; // Missed hit
-					  4'bxx10: square_color = RED; // Succesfull hit
+                 4'b0001: square_color = YELLOW; // Missed hit
+					  4'b0110: square_color = RED; // Succesfull hit
                  default: square_color = OCEANBLUE; // Default background
             endcase
+				
         end else begin
             // Right half: shots
-            case (matriz_disparos[square_y][square_x])
+            case (matriz_disparos[4 - square_y][4 - square_x])
                 2'b01: square_color = WHITE;  // Missed shot
                 2'b10: square_color = GREEN;  // Successful shot
                 default: square_color = OCEANBLUE; // Default background
