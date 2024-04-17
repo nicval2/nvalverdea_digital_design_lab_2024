@@ -1,0 +1,3 @@
+module contar_unos_operador(input logic [31:0] numero, output logic [5:0] cantidad_unos);
+    assign cantidad_unos = +numero;
+endmodule
