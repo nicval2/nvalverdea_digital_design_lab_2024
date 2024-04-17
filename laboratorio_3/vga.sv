@@ -16,7 +16,7 @@ module vga(
     // Screen is 800 clocks wide by 525 tall, but only 640 x 480 used
     // HSync = 1/(39.772 ns *800) = 31.470 kHz
     // Vsync = 31.474 kHz / 525 = 59.94 Hz (~60 Hz refresh rate)
-    pll vgapll(.inclk0(clk), .c0(vgaclk));
+    pll vgapll(clk, vgaclk);
     // Generate monitor timing signals
     vgaController vgaCont(vgaclk, hsync, vsync, sync_b, blank_b, x, y);
 

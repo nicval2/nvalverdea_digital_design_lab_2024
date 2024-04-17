@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Battleship
-Wed Apr 17 10:44:47 2024
+Wed Apr 17 14:01:50 2024
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -13,18 +13,19 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
  10. Parameter Settings for User Entity Instance: vga:vga_inst|vgaController:vgaCont
  11. Parameter Settings for User Entity Instance: vga:vga_inst|videoGen:videoGen_inst
- 12. Parameter Settings for Inferred Entity Instance: vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Mod0
- 13. Parameter Settings for Inferred Entity Instance: vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Mod1
- 14. Parameter Settings for Inferred Entity Instance: vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Div1
- 15. Parameter Settings for Inferred Entity Instance: vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Div0
+ 12. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
+ 13. Parameter Settings for Inferred Entity Instance: lpm_divide:Div0
+ 14. Port Connectivity Checks: "vga:vga_inst|vgaController:vgaCont"
+ 15. Port Connectivity Checks: "vga:vga_inst|pll:vgapll"
  16. Port Connectivity Checks: "vga:vga_inst"
  17. Post-Synthesis Netlist Statistics for Top Partition
  18. Elapsed Time Per Partition
  19. Analysis & Synthesis Messages
+ 20. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -51,14 +52,14 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Apr 17 10:44:47 2024          ;
+; Analysis & Synthesis Status     ; Successful - Wed Apr 17 14:01:50 2024          ;
 ; Quartus Prime Version           ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                   ; Battleship                                     ;
 ; Top-level Entity Name           ; Battleship                                     ;
 ; Family                          ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)     ; N/A                                            ;
-; Total registers                 ; 21                                             ;
-; Total pins                      ; 30                                             ;
+; Total registers                 ; 49                                             ;
+; Total pins                      ; 76                                             ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 0                                              ;
 ; Total DSP Blocks                ; 0                                              ;
@@ -185,72 +186,100 @@ https://fpgasoftware.intel.com/eula.
 ; videoGen.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv                ;         ;
 ; pll.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/pll.sv                     ;         ;
 ; Battleship.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv              ;         ;
+; segmentOutput.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv           ;         ;
+; contar_unos_operador.sv          ; yes             ; User SystemVerilog HDL File  ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/contar_unos_operador.sv    ;         ;
+; seven_segment_display.sv         ; yes             ; User SystemVerilog HDL File  ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/seven_segment_display.sv   ;         ;
+; time_counter.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/time_counter.sv            ;         ;
+; clock_divider.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/clock_divider.sv           ;         ;
 ; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/misappsinstaladas/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_divide.tdf                  ;         ;
 ; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/misappsinstaladas/intelfpga_lite/22.1std/quartus/libraries/megafunctions/abs_divider.inc                 ;         ;
 ; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/misappsinstaladas/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sign_div_unsign.inc             ;         ;
 ; aglobal221.inc                   ; yes             ; Megafunction                 ; c:/misappsinstaladas/intelfpga_lite/22.1std/quartus/libraries/megafunctions/aglobal221.inc                  ;         ;
-; db/lpm_divide_j3m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/db/lpm_divide_j3m.tdf      ;         ;
-; db/sign_div_unsign_mlh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/db/sign_div_unsign_mlh.tdf ;         ;
-; db/alt_u_div_ive.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/db/alt_u_div_ive.tdf       ;         ;
-; db/lpm_divide_gbm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/db/lpm_divide_gbm.tdf      ;         ;
+; db/lpm_divide_62m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/db/lpm_divide_62m.tdf      ;         ;
+; db/sign_div_unsign_9kh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/db/sign_div_unsign_9kh.tdf ;         ;
+; db/alt_u_div_ose.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/db/alt_u_div_ose.tdf       ;         ;
+; db/lpm_divide_3am.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/db/lpm_divide_3am.tdf      ;         ;
 +----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                                   ;
-+---------------------------------------------+-------------------------------------------------+
-; Resource                                    ; Usage                                           ;
-+---------------------------------------------+-------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 208                                             ;
-;                                             ;                                                 ;
-; Combinational ALUT usage for logic          ; 386                                             ;
-;     -- 7 input functions                    ; 1                                               ;
-;     -- 6 input functions                    ; 29                                              ;
-;     -- 5 input functions                    ; 22                                              ;
-;     -- 4 input functions                    ; 46                                              ;
-;     -- <=3 input functions                  ; 288                                             ;
-;                                             ;                                                 ;
-; Dedicated logic registers                   ; 21                                              ;
-;                                             ;                                                 ;
-; I/O pins                                    ; 30                                              ;
-;                                             ;                                                 ;
-; Total DSP Blocks                            ; 0                                               ;
-;                                             ;                                                 ;
-; Maximum fan-out node                        ; vga:vga_inst|videoGen:videoGen_inst|LessThan0~0 ;
-; Maximum fan-out                             ; 28                                              ;
-; Total fan-out                               ; 1317                                            ;
-; Average fan-out                             ; 2.82                                            ;
-+---------------------------------------------+-------------------------------------------------+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimate of Logic utilization (ALMs needed) ; 103         ;
+;                                             ;             ;
+; Combinational ALUT usage for logic          ; 193         ;
+;     -- 7 input functions                    ; 0           ;
+;     -- 6 input functions                    ; 12          ;
+;     -- 5 input functions                    ; 25          ;
+;     -- 4 input functions                    ; 32          ;
+;     -- <=3 input functions                  ; 124         ;
+;                                             ;             ;
+; Dedicated logic registers                   ; 49          ;
+;                                             ;             ;
+; I/O pins                                    ; 76          ;
+;                                             ;             ;
+; Total DSP Blocks                            ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; reset~input ;
+; Maximum fan-out                             ; 62          ;
+; Total fan-out                               ; 902         ;
+; Average fan-out                             ; 2.29        ;
++---------------------------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                          ;
-+----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                             ; Entity Name         ; Library Name ;
-+----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |Battleship                                  ; 386 (0)             ; 21 (0)                    ; 0                 ; 0          ; 30   ; 0            ; |Battleship                                                                                                                                     ; Battleship          ; work         ;
-;    |vga:vga_inst|                            ; 386 (0)             ; 21 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst                                                                                                                        ; vga                 ; work         ;
-;       |pll:vgapll|                           ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|pll:vgapll                                                                                                             ; pll                 ; work         ;
-;       |vgaController:vgaCont|                ; 30 (30)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|vgaController:vgaCont                                                                                                  ; vgaController       ; work         ;
-;       |videoGen:videoGen_inst|               ; 355 (65)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst                                                                                                 ; videoGen            ; work         ;
-;          |lpm_divide:Div0|                   ; 70 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
-;             |lpm_divide_gbm:auto_generated|  ; 70 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Div0|lpm_divide_gbm:auto_generated                                                   ; lpm_divide_gbm      ; work         ;
-;                |sign_div_unsign_mlh:divider| ; 70 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Div0|lpm_divide_gbm:auto_generated|sign_div_unsign_mlh:divider                       ; sign_div_unsign_mlh ; work         ;
-;                   |alt_u_div_ive:divider|    ; 70 (70)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Div0|lpm_divide_gbm:auto_generated|sign_div_unsign_mlh:divider|alt_u_div_ive:divider ; alt_u_div_ive       ; work         ;
-;          |lpm_divide:Div1|                   ; 70 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Div1                                                                                 ; lpm_divide          ; work         ;
-;             |lpm_divide_gbm:auto_generated|  ; 70 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Div1|lpm_divide_gbm:auto_generated                                                   ; lpm_divide_gbm      ; work         ;
-;                |sign_div_unsign_mlh:divider| ; 70 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Div1|lpm_divide_gbm:auto_generated|sign_div_unsign_mlh:divider                       ; sign_div_unsign_mlh ; work         ;
-;                   |alt_u_div_ive:divider|    ; 70 (70)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Div1|lpm_divide_gbm:auto_generated|sign_div_unsign_mlh:divider|alt_u_div_ive:divider ; alt_u_div_ive       ; work         ;
-;          |lpm_divide:Mod0|                   ; 75 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
-;             |lpm_divide_j3m:auto_generated|  ; 75 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Mod0|lpm_divide_j3m:auto_generated                                                   ; lpm_divide_j3m      ; work         ;
-;                |sign_div_unsign_mlh:divider| ; 75 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Mod0|lpm_divide_j3m:auto_generated|sign_div_unsign_mlh:divider                       ; sign_div_unsign_mlh ; work         ;
-;                   |alt_u_div_ive:divider|    ; 75 (75)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Mod0|lpm_divide_j3m:auto_generated|sign_div_unsign_mlh:divider|alt_u_div_ive:divider ; alt_u_div_ive       ; work         ;
-;          |lpm_divide:Mod1|                   ; 75 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Mod1                                                                                 ; lpm_divide          ; work         ;
-;             |lpm_divide_j3m:auto_generated|  ; 75 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Mod1|lpm_divide_j3m:auto_generated                                                   ; lpm_divide_j3m      ; work         ;
-;                |sign_div_unsign_mlh:divider| ; 75 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Mod1|lpm_divide_j3m:auto_generated|sign_div_unsign_mlh:divider                       ; sign_div_unsign_mlh ; work         ;
-;                   |alt_u_div_ive:divider|    ; 75 (75)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Mod1|lpm_divide_j3m:auto_generated|sign_div_unsign_mlh:divider|alt_u_div_ive:divider ; alt_u_div_ive       ; work         ;
-+----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                         ;
++-----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
+; Compilation Hierarchy Node                    ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                         ; Entity Name           ; Library Name ;
++-----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
+; |Battleship                                   ; 193 (51)            ; 49 (0)                    ; 0                 ; 0          ; 76   ; 0            ; |Battleship                                                                                                 ; Battleship            ; work         ;
+;    |clock_divider:divider|                    ; 40 (40)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |Battleship|clock_divider:divider                                                                           ; clock_divider         ; work         ;
+;    |contar_unos_operador:unos1|               ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|contar_unos_operador:unos1                                                                      ; contar_unos_operador  ; work         ;
+;    |lpm_divide:Div0|                          ; 27 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|lpm_divide:Div0                                                                                 ; lpm_divide            ; work         ;
+;       |lpm_divide_3am:auto_generated|         ; 27 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|lpm_divide:Div0|lpm_divide_3am:auto_generated                                                   ; lpm_divide_3am        ; work         ;
+;          |sign_div_unsign_9kh:divider|        ; 27 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|lpm_divide:Div0|lpm_divide_3am:auto_generated|sign_div_unsign_9kh:divider                       ; sign_div_unsign_9kh   ; work         ;
+;             |alt_u_div_ose:divider|           ; 27 (27)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|lpm_divide:Div0|lpm_divide_3am:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_ose:divider ; alt_u_div_ose         ; work         ;
+;    |lpm_divide:Mod0|                          ; 31 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|lpm_divide:Mod0                                                                                 ; lpm_divide            ; work         ;
+;       |lpm_divide_62m:auto_generated|         ; 31 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|lpm_divide:Mod0|lpm_divide_62m:auto_generated                                                   ; lpm_divide_62m        ; work         ;
+;          |sign_div_unsign_9kh:divider|        ; 31 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|lpm_divide:Mod0|lpm_divide_62m:auto_generated|sign_div_unsign_9kh:divider                       ; sign_div_unsign_9kh   ; work         ;
+;             |alt_u_div_ose:divider|           ; 31 (31)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|lpm_divide:Mod0|lpm_divide_62m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_ose:divider ; alt_u_div_ose         ; work         ;
+;    |segmentOutput:segment1|                   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|segmentOutput:segment1                                                                          ; segmentOutput         ; work         ;
+;    |seven_segment_display:disp_seconds_tens|  ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|seven_segment_display:disp_seconds_tens                                                         ; seven_segment_display ; work         ;
+;    |seven_segment_display:disp_seconds_units| ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|seven_segment_display:disp_seconds_units                                                        ; seven_segment_display ; work         ;
+;    |time_counter:counter|                     ; 7 (7)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|time_counter:counter                                                                            ; time_counter          ; work         ;
+;    |vga:vga_inst|                             ; 13 (0)              ; 10 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst                                                                                    ; vga                   ; work         ;
+;       |pll:vgapll|                            ; 13 (13)             ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|pll:vgapll                                                                         ; pll                   ; work         ;
++-----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; matriz[0]$latch                                     ; matriz[0]           ; yes                    ;
+; matriz[1]$latch                                     ; matriz[1]           ; yes                    ;
+; matriz[2]$latch                                     ; matriz[2]           ; yes                    ;
+; matriz[3]$latch                                     ; matriz[3]           ; yes                    ;
+; matriz[4]$latch                                     ; matriz[4]           ; yes                    ;
+; NUM_SHIPS_PC[1]                                     ; reset               ; yes                    ;
+; NUM_SHIPS_PC[2]                                     ; reset               ; yes                    ;
+; NUM_SHIPS_PC[0]                                     ; reset               ; yes                    ;
+; NUM_SHIPS_PLAYER[1]                                 ; reset               ; yes                    ;
+; NUM_SHIPS_PLAYER[2]                                 ; reset               ; yes                    ;
+; NUM_SHIPS_PLAYER[0]                                 ; reset               ; yes                    ;
+; y[0]                                                ; y[0]                ; yes                    ;
+; y[1]                                                ; y[0]                ; yes                    ;
+; y[2]                                                ; y[0]                ; yes                    ;
+; x[0]                                                ; x[0]                ; yes                    ;
+; x[1]                                                ; x[0]                ; yes                    ;
+; x[2]                                                ; x[0]                ; yes                    ;
+; Number of user-specified and inferred latches = 17  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -258,26 +287,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 21    ;
-; Number of registers using Synchronous Clear  ; 20    ;
+; Total registers                              ; 49    ;
+; Number of registers using Synchronous Clear  ; 42    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 39    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 10    ;
+; Number of registers using Clock Enable       ; 2     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|r[3]  ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|b[6]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|b[7]  ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|Mux34 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------+
@@ -317,96 +334,79 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Mod0 ;
-+------------------------+----------------+------------------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                                       ;
-+------------------------+----------------+------------------------------------------------------------+
-; LPM_WIDTHN             ; 10             ; Untyped                                                    ;
-; LPM_WIDTHD             ; 6              ; Untyped                                                    ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                    ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                    ;
-; LPM_PIPELINE           ; 0              ; Untyped                                                    ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                    ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                                    ;
-; CBXI_PARAMETER         ; lpm_divide_j3m ; Untyped                                                    ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                                    ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                    ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                 ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                               ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                               ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                             ;
-+------------------------+----------------+------------------------------------------------------------+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 6              ; Untyped                ;
+; LPM_WIDTHD             ; 4              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_62m ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Mod1 ;
-+------------------------+----------------+------------------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                                       ;
-+------------------------+----------------+------------------------------------------------------------+
-; LPM_WIDTHN             ; 10             ; Untyped                                                    ;
-; LPM_WIDTHD             ; 6              ; Untyped                                                    ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                    ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                    ;
-; LPM_PIPELINE           ; 0              ; Untyped                                                    ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                    ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                                    ;
-; CBXI_PARAMETER         ; lpm_divide_j3m ; Untyped                                                    ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                                    ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                    ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                 ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                               ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                               ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                             ;
-+------------------------+----------------+------------------------------------------------------------+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Div0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 6              ; Untyped                ;
+; LPM_WIDTHD             ; 4              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_3am ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Div1 ;
-+------------------------+----------------+------------------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                                       ;
-+------------------------+----------------+------------------------------------------------------------+
-; LPM_WIDTHN             ; 10             ; Untyped                                                    ;
-; LPM_WIDTHD             ; 6              ; Untyped                                                    ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                    ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                    ;
-; LPM_PIPELINE           ; 0              ; Untyped                                                    ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                    ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                                    ;
-; CBXI_PARAMETER         ; lpm_divide_gbm ; Untyped                                                    ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                                    ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                    ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                 ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                               ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                               ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                             ;
-+------------------------+----------------+------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "vga:vga_inst|vgaController:vgaCont"                                                                                                                                                       ;
++-----------------+--------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity         ; Details                                                                                                                                                                ;
++-----------------+--------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; x               ; Input  ; Warning          ; Input port expression (1 bits) is smaller than the input port (10 bits) it drives.  Extra input bit(s) "x[9..1]" will be connected to GND.                             ;
+; y               ; Input  ; Warning          ; Input port expression (1 bits) is smaller than the input port (10 bits) it drives.  Extra input bit(s) "y[9..1]" will be connected to GND.                             ;
+; matriz_barcos   ; Input  ; Critical Warning ; Types are incompatible                                                                                                                                                 ;
+; matriz_golpes   ; Input  ; Critical Warning ; Types are incompatible                                                                                                                                                 ;
+; matriz_disparos ; Input  ; Critical Warning ; Types are incompatible                                                                                                                                                 ;
+; r               ; Output ; Warning          ; Output or bidir port (8 bits) is smaller than the port expression (10 bits) it drives.  The 2 most-significant bit(s) in the port expression will be connected to GND. ;
+; g               ; Output ; Warning          ; Output or bidir port (8 bits) is smaller than the port expression (10 bits) it drives.  The 2 most-significant bit(s) in the port expression will be connected to GND. ;
+; b               ; Output ; Warning          ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                               ;
++-----------------+--------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Div0 ;
-+------------------------+----------------+------------------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                                       ;
-+------------------------+----------------+------------------------------------------------------------+
-; LPM_WIDTHN             ; 10             ; Untyped                                                    ;
-; LPM_WIDTHD             ; 6              ; Untyped                                                    ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                    ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                    ;
-; LPM_PIPELINE           ; 0              ; Untyped                                                    ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                    ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                                    ;
-; CBXI_PARAMETER         ; lpm_divide_gbm ; Untyped                                                    ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                                    ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                    ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                 ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                               ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                               ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                             ;
-+------------------------+----------------+------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "vga:vga_inst|pll:vgapll"                                                                                    ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                  ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; vsync   ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; sync_b  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; blank_b ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; x       ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; y       ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------+
@@ -424,14 +424,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; matriz_barcos[4][1][0]   ; Input ; Info     ; Stuck at VCC ;
 ; matriz_barcos[4][0][1]   ; Input ; Info     ; Stuck at GND ;
 ; matriz_barcos[4][0][0]   ; Input ; Info     ; Stuck at VCC ;
-; matriz_barcos[3][4]      ; Input ; Info     ; Stuck at GND ;
+; matriz_barcos[3][4][1]   ; Input ; Info     ; Stuck at GND ;
+; matriz_barcos[3][4][0]   ; Input ; Info     ; Stuck at VCC ;
 ; matriz_barcos[3][3][1]   ; Input ; Info     ; Stuck at GND ;
 ; matriz_barcos[3][3][0]   ; Input ; Info     ; Stuck at VCC ;
 ; matriz_barcos[3][2][1]   ; Input ; Info     ; Stuck at GND ;
 ; matriz_barcos[3][2][0]   ; Input ; Info     ; Stuck at VCC ;
 ; matriz_barcos[3][1][1]   ; Input ; Info     ; Stuck at GND ;
 ; matriz_barcos[3][1][0]   ; Input ; Info     ; Stuck at VCC ;
-; matriz_barcos[3][0]      ; Input ; Info     ; Stuck at GND ;
+; matriz_barcos[3][0][1]   ; Input ; Info     ; Stuck at GND ;
+; matriz_barcos[3][0][0]   ; Input ; Info     ; Stuck at VCC ;
 ; matriz_barcos[2][4][1]   ; Input ; Info     ; Stuck at GND ;
 ; matriz_barcos[2][4][0]   ; Input ; Info     ; Stuck at VCC ;
 ; matriz_barcos[2][3][1]   ; Input ; Info     ; Stuck at GND ;
@@ -440,16 +442,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; matriz_barcos[2][2][0]   ; Input ; Info     ; Stuck at VCC ;
 ; matriz_barcos[2][1][1]   ; Input ; Info     ; Stuck at GND ;
 ; matriz_barcos[2][1][0]   ; Input ; Info     ; Stuck at VCC ;
-; matriz_barcos[2][0]      ; Input ; Info     ; Stuck at GND ;
-; matriz_barcos[1][1..0]   ; Input ; Info     ; Stuck at GND ;
-; matriz_barcos[1][4]      ; Input ; Info     ; Stuck at GND ;
+; matriz_barcos[2][0][1]   ; Input ; Info     ; Stuck at GND ;
+; matriz_barcos[2][0][0]   ; Input ; Info     ; Stuck at VCC ;
+; matriz_barcos[1][4][1]   ; Input ; Info     ; Stuck at GND ;
+; matriz_barcos[1][4][0]   ; Input ; Info     ; Stuck at VCC ;
 ; matriz_barcos[1][3][1]   ; Input ; Info     ; Stuck at GND ;
 ; matriz_barcos[1][3][0]   ; Input ; Info     ; Stuck at VCC ;
 ; matriz_barcos[1][2][1]   ; Input ; Info     ; Stuck at GND ;
 ; matriz_barcos[1][2][0]   ; Input ; Info     ; Stuck at VCC ;
-; matriz_barcos[0][3..0]   ; Input ; Info     ; Stuck at GND ;
+; matriz_barcos[1][1][1]   ; Input ; Info     ; Stuck at GND ;
+; matriz_barcos[1][1][0]   ; Input ; Info     ; Stuck at VCC ;
+; matriz_barcos[1][0][1]   ; Input ; Info     ; Stuck at GND ;
+; matriz_barcos[1][0][0]   ; Input ; Info     ; Stuck at VCC ;
 ; matriz_barcos[0][4][1]   ; Input ; Info     ; Stuck at GND ;
 ; matriz_barcos[0][4][0]   ; Input ; Info     ; Stuck at VCC ;
+; matriz_barcos[0][3][1]   ; Input ; Info     ; Stuck at GND ;
+; matriz_barcos[0][3][0]   ; Input ; Info     ; Stuck at VCC ;
+; matriz_barcos[0][2][1]   ; Input ; Info     ; Stuck at GND ;
+; matriz_barcos[0][2][0]   ; Input ; Info     ; Stuck at VCC ;
+; matriz_barcos[0][1][1]   ; Input ; Info     ; Stuck at GND ;
+; matriz_barcos[0][1][0]   ; Input ; Info     ; Stuck at VCC ;
+; matriz_barcos[0][0][1]   ; Input ; Info     ; Stuck at GND ;
+; matriz_barcos[0][0][0]   ; Input ; Info     ; Stuck at VCC ;
 ; matriz_golpes[4][4..3]   ; Input ; Info     ; Stuck at GND ;
 ; matriz_golpes[4][1..0]   ; Input ; Info     ; Stuck at GND ;
 ; matriz_golpes[4][2][1]   ; Input ; Info     ; Stuck at VCC ;
@@ -469,9 +483,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; matriz_golpes[1][1][0]   ; Input ; Info     ; Stuck at VCC ;
 ; matriz_golpes[1][0]      ; Input ; Info     ; Stuck at GND ;
 ; matriz_golpes[0]         ; Input ; Info     ; Stuck at GND ;
-; matriz_disparos[4][4][1] ; Input ; Info     ; Stuck at VCC ;
-; matriz_disparos[4][4][0] ; Input ; Info     ; Stuck at GND ;
-; matriz_disparos[4][3]    ; Input ; Info     ; Stuck at GND ;
+; matriz_disparos[4][4..3] ; Input ; Info     ; Stuck at GND ;
 ; matriz_disparos[4][2][1] ; Input ; Info     ; Stuck at VCC ;
 ; matriz_disparos[4][2][0] ; Input ; Info     ; Stuck at GND ;
 ; matriz_disparos[4][1]    ; Input ; Info     ; Stuck at GND ;
@@ -501,34 +513,33 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 21                          ;
-;     ENA SCLR          ; 10                          ;
+; arriav_ff             ; 49                          ;
+;     CLR               ; 5                           ;
+;     CLR SCLR          ; 32                          ;
+;     ENA CLR           ; 2                           ;
 ;     SCLR              ; 10                          ;
-;     plain             ; 1                           ;
-; arriav_lcell_comb     ; 392                         ;
-;     arith             ; 164                         ;
-;         0 data inputs ; 32                          ;
-;         1 data inputs ; 36                          ;
-;         2 data inputs ; 12                          ;
-;         3 data inputs ; 60                          ;
-;         4 data inputs ; 24                          ;
-;     extend            ; 1                           ;
-;         7 data inputs ; 1                           ;
-;     normal            ; 199                         ;
+; arriav_lcell_comb     ; 196                         ;
+;     arith             ; 70                          ;
+;         0 data inputs ; 8                           ;
+;         1 data inputs ; 46                          ;
+;         2 data inputs ; 4                           ;
+;         3 data inputs ; 10                          ;
+;         4 data inputs ; 2                           ;
+;     normal            ; 116                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 6                           ;
-;         2 data inputs ; 80                          ;
-;         3 data inputs ; 39                          ;
-;         4 data inputs ; 22                          ;
-;         5 data inputs ; 22                          ;
-;         6 data inputs ; 29                          ;
-;     shared            ; 28                          ;
-;         0 data inputs ; 4                           ;
-;         1 data inputs ; 24                          ;
-; boundary_port         ; 30                          ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 14                          ;
+;         3 data inputs ; 31                          ;
+;         4 data inputs ; 30                          ;
+;         5 data inputs ; 25                          ;
+;         6 data inputs ; 12                          ;
+;     shared            ; 10                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 8                           ;
+; boundary_port         ; 76                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 13.90                       ;
-; Average LUT depth     ; 11.90                       ;
+; Max LUT depth         ; 8.10                        ;
+; Average LUT depth     ; 4.08                        ;
 +-----------------------+-----------------------------+
 
 
@@ -537,7 +548,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -547,7 +558,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Wed Apr 17 10:44:22 2024
+    Info: Processing started: Wed Apr 17 14:01:28 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Battleship -c Battleship
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
@@ -565,11 +576,158 @@ Info (12021): Found 1 design units, including 1 entities, in source file pll.sv
     Info (12023): Found entity 1: pll File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/pll.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file battleship.sv
     Info (12023): Found entity 1: Battleship File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file segmentoutput.sv
+    Info (12023): Found entity 1: segmentOutput File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file temporizador.sv
+    Info (12023): Found entity 1: temporizador File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/temporizador.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file contador.sv
+    Info (12023): Found entity 1: contador File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/contador.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file fsm.sv
+    Info (12023): Found entity 1: FSM File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/FSM.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file contar_unos_operador.sv
+    Info (12023): Found entity 1: contar_unos_operador File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/contar_unos_operador.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file movement.sv
+    Info (12023): Found entity 1: movement File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/movement.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file output_files/tb_contador.sv
+    Info (12023): Found entity 1: tb_contador File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/output_files/tb_contador.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file seven_segment_display.sv
+    Info (12023): Found entity 1: seven_segment_display File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/seven_segment_display.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file time_counter.sv
+    Info (12023): Found entity 1: time_counter File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/time_counter.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file clock_divider.sv
+    Info (12023): Found entity 1: clock_divider File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/clock_divider.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at Battleship.sv(148): created implicit net for "position" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 148
 Info (12127): Elaborating entity "Battleship" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at Battleship.sv(148): object "position" assigned a value but never read File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 148
+Warning (10036): Verilog HDL or VHDL warning at Battleship.sv(51): object "start" assigned a value but never read File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 51
+Warning (10230): Verilog HDL assignment warning at Battleship.sv(43): truncated value with size 32 to match size of target (4) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 43
+Warning (10230): Verilog HDL assignment warning at Battleship.sv(44): truncated value with size 32 to match size of target (4) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 44
+Warning (10230): Verilog HDL assignment warning at Battleship.sv(101): truncated value with size 2 to match size of target (1) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 101
+Warning (10235): Verilog HDL Always Construct warning at Battleship.sv(101): variable "y" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 101
+Warning (10235): Verilog HDL Always Construct warning at Battleship.sv(102): variable "x" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 102
+Warning (10235): Verilog HDL Always Construct warning at Battleship.sv(102): variable "y" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 102
+Warning (10235): Verilog HDL Always Construct warning at Battleship.sv(103): variable "NUM_SHIPS" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 103
+Warning (10235): Verilog HDL Always Construct warning at Battleship.sv(104): variable "NUM_SHIPS" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 104
+Warning (10235): Verilog HDL Always Construct warning at Battleship.sv(108): variable "NUM_SHIPS_PC" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Warning (10235): Verilog HDL Always Construct warning at Battleship.sv(109): variable "NUM_SHIPS_PLAYER" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 109
+Warning (10235): Verilog HDL Always Construct warning at Battleship.sv(113): variable "y" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 113
+Warning (10235): Verilog HDL Always Construct warning at Battleship.sv(113): variable "down" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 113
+Warning (10235): Verilog HDL Always Construct warning at Battleship.sv(114): variable "y" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 114
+Warning (10235): Verilog HDL Always Construct warning at Battleship.sv(114): variable "up" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 114
+Warning (10235): Verilog HDL Always Construct warning at Battleship.sv(115): variable "x" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 115
+Warning (10235): Verilog HDL Always Construct warning at Battleship.sv(115): variable "right" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 115
+Warning (10235): Verilog HDL Always Construct warning at Battleship.sv(116): variable "x" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 116
+Warning (10235): Verilog HDL Always Construct warning at Battleship.sv(116): variable "left" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 116
+Warning (10235): Verilog HDL Always Construct warning at Battleship.sv(118): variable "up" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 118
+Warning (10235): Verilog HDL Always Construct warning at Battleship.sv(119): variable "y" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 119
+Warning (10230): Verilog HDL assignment warning at Battleship.sv(119): truncated value with size 32 to match size of target (3) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 119
+Warning (10230): Verilog HDL assignment warning at Battleship.sv(120): truncated value with size 2 to match size of target (1) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 120
+Warning (10230): Verilog HDL assignment warning at Battleship.sv(121): truncated value with size 2 to match size of target (1) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 121
+Warning (10235): Verilog HDL Always Construct warning at Battleship.sv(123): variable "down" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 123
+Warning (10230): Verilog HDL assignment warning at Battleship.sv(124): truncated value with size 32 to match size of target (3) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 124
+Warning (10230): Verilog HDL assignment warning at Battleship.sv(125): truncated value with size 2 to match size of target (1) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 125
+Warning (10230): Verilog HDL assignment warning at Battleship.sv(126): truncated value with size 2 to match size of target (1) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 126
+Warning (10235): Verilog HDL Always Construct warning at Battleship.sv(127): variable "right" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 127
+Warning (10235): Verilog HDL Always Construct warning at Battleship.sv(127): variable "x" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 127
+Warning (10230): Verilog HDL assignment warning at Battleship.sv(127): truncated value with size 32 to match size of target (3) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 127
+Warning (10235): Verilog HDL Always Construct warning at Battleship.sv(128): variable "left" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 128
+Warning (10230): Verilog HDL assignment warning at Battleship.sv(128): truncated value with size 32 to match size of target (3) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 128
+Warning (10240): Verilog HDL Always Construct warning at Battleship.sv(97): inferring latch(es) for variable "x", which holds its previous value in one or more paths through the always construct File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 97
+Warning (10240): Verilog HDL Always Construct warning at Battleship.sv(97): inferring latch(es) for variable "y", which holds its previous value in one or more paths through the always construct File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 97
+Warning (10240): Verilog HDL Always Construct warning at Battleship.sv(97): inferring latch(es) for variable "NUM_SHIPS_PC", which holds its previous value in one or more paths through the always construct File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 97
+Warning (10240): Verilog HDL Always Construct warning at Battleship.sv(97): inferring latch(es) for variable "NUM_SHIPS_PLAYER", which holds its previous value in one or more paths through the always construct File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 97
+Warning (10230): Verilog HDL assignment warning at Battleship.sv(148): truncated value with size 64 to match size of target (1) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 148
+Warning (10034): Output port "player" at Battleship.sv(11) has no driver File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 11
+Warning (10034): Output port "pc" at Battleship.sv(12) has no driver File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 12
+Info (10041): Inferred latch for "NUM_SHIPS_PLAYER[0]" at Battleship.sv(97) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 97
+Info (10041): Inferred latch for "NUM_SHIPS_PLAYER[1]" at Battleship.sv(97) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 97
+Info (10041): Inferred latch for "NUM_SHIPS_PLAYER[2]" at Battleship.sv(97) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 97
+Info (10041): Inferred latch for "NUM_SHIPS_PLAYER[3]" at Battleship.sv(97) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 97
+Info (10041): Inferred latch for "NUM_SHIPS_PC[0]" at Battleship.sv(97) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 97
+Info (10041): Inferred latch for "NUM_SHIPS_PC[1]" at Battleship.sv(97) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 97
+Info (10041): Inferred latch for "NUM_SHIPS_PC[2]" at Battleship.sv(97) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 97
+Info (10041): Inferred latch for "NUM_SHIPS_PC[3]" at Battleship.sv(97) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 97
+Info (10041): Inferred latch for "matriz_barcos[0][0][0]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_barcos[0][0][1]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_barcos[0][1][0]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_barcos[0][1][1]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_barcos[0][2][0]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_barcos[0][2][1]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_barcos[0][3][0]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_barcos[0][3][1]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_barcos[0][4][0]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_barcos[0][4][1]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_barcos[1][0][0]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_barcos[1][0][1]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_barcos[1][1][0]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_barcos[1][1][1]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_barcos[1][2][0]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_barcos[1][2][1]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_barcos[1][3][0]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_barcos[1][3][1]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_barcos[1][4][0]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_barcos[1][4][1]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_barcos[2][0][0]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_barcos[2][0][1]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_barcos[2][1][0]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_barcos[2][1][1]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_barcos[2][2][0]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_barcos[2][2][1]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_barcos[2][3][0]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_barcos[2][3][1]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_barcos[2][4][0]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_barcos[2][4][1]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_barcos[3][0][0]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_barcos[3][0][1]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_barcos[3][1][0]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_barcos[3][1][1]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_barcos[3][2][0]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_barcos[3][2][1]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_barcos[3][3][0]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_barcos[3][3][1]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_barcos[3][4][0]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_barcos[3][4][1]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_barcos[4][0][0]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_barcos[4][0][1]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_barcos[4][1][0]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_barcos[4][1][1]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_barcos[4][2][0]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_barcos[4][2][1]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_barcos[4][3][0]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_barcos[4][3][1]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_barcos[4][4][0]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_barcos[4][4][1]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz[0]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz[1]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz[2]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz[3]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz[4]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "y[0]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "y[1]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "y[2]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "x[0]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "x[1]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "x[2]" at Battleship.sv(108) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_barcos" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_golpes" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_disparos" into its bus
-Info (12128): Elaborating entity "vga" for hierarchy "vga:vga_inst" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 47
+Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:divider" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 37
+Info (12128): Elaborating entity "time_counter" for hierarchy "time_counter:counter" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 40
+Warning (10230): Verilog HDL assignment warning at time_counter.sv(14): truncated value with size 32 to match size of target (6) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/time_counter.sv Line: 14
+Info (12128): Elaborating entity "seven_segment_display" for hierarchy "seven_segment_display:disp_seconds_units" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 47
+Info (12128): Elaborating entity "contar_unos_operador" for hierarchy "contar_unos_operador:unos1" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 53
+Warning (10230): Verilog HDL assignment warning at contar_unos_operador.sv(4): truncated value with size 5 to match size of target (4) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/contar_unos_operador.sv Line: 4
+Info (12128): Elaborating entity "segmentOutput" for hierarchy "segmentOutput:segment1" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 54
+Warning (10270): Verilog HDL Case Statement warning at segmentOutput.sv(10): incomplete case statement has no default case item File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 10
+Warning (10240): Verilog HDL Always Construct warning at segmentOutput.sv(8): inferring latch(es) for variable "segments1", which holds its previous value in one or more paths through the always construct File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
+Info (10041): Inferred latch for "segments1[0]" at segmentOutput.sv(8) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
+Info (10041): Inferred latch for "segments1[1]" at segmentOutput.sv(8) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
+Info (10041): Inferred latch for "segments1[2]" at segmentOutput.sv(8) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
+Info (10041): Inferred latch for "segments1[3]" at segmentOutput.sv(8) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
+Info (10041): Inferred latch for "segments1[4]" at segmentOutput.sv(8) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
+Info (10041): Inferred latch for "segments1[5]" at segmentOutput.sv(8) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
+Info (10041): Inferred latch for "segments1[6]" at segmentOutput.sv(8) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
+Info (12128): Elaborating entity "vga" for hierarchy "vga:vga_inst" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 164
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_barcos" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_golpes" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_disparos" into its bus
@@ -578,6 +736,17 @@ Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_disparos" into its bus
 Info (12128): Elaborating entity "pll" for hierarchy "vga:vga_inst|pll:vgapll" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/vga.sv Line: 19
 Info (12128): Elaborating entity "vgaController" for hierarchy "vga:vga_inst|vgaController:vgaCont" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/vga.sv Line: 21
+Warning (10230): Verilog HDL assignment warning at videoGen.sv(32): truncated value with size 32 to match size of target (6) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv Line: 32
+Warning (10230): Verilog HDL assignment warning at videoGen.sv(33): truncated value with size 32 to match size of target (6) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv Line: 33
+Warning (10059): Verilog HDL Case Statement warning at videoGen.sv(49): case item expression never matches the case expression because it contains an 'x' or 'z' value File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv Line: 49
+Warning (10059): Verilog HDL Case Statement warning at videoGen.sv(50): case item expression never matches the case expression because it contains an 'x' or 'z' value File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv Line: 50
+Info (10264): Verilog HDL Case Statement information at videoGen.sv(55): all case item expressions in this case statement are onehot File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv Line: 55
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_barcos" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_golpes" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_disparos" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_barcos" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_golpes" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_disparos" into its bus
 Info (12128): Elaborating entity "videoGen" for hierarchy "vga:vga_inst|videoGen:videoGen_inst" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/vga.sv Line: 33
 Info (10264): Verilog HDL Case Statement information at videoGen.sv(57): all case item expressions in this case statement are onehot File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv Line: 57
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_barcos" into its bus
@@ -586,44 +755,121 @@ Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_barcos" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_golpes" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_disparos" into its bus
-Info (278001): Inferred 4 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "vga:vga_inst|videoGen:videoGen_inst|Mod0" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv Line: 39
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "vga:vga_inst|videoGen:videoGen_inst|Mod1" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv Line: 39
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "vga:vga_inst|videoGen:videoGen_inst|Div1" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv Line: 34
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "vga:vga_inst|videoGen:videoGen_inst|Div0" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv Line: 33
-Info (12130): Elaborated megafunction instantiation "vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Mod0" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv Line: 39
-Info (12133): Instantiated megafunction "vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Mod0" with the following parameter: File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv Line: 39
-    Info (12134): Parameter "LPM_WIDTHN" = "10"
-    Info (12134): Parameter "LPM_WIDTHD" = "6"
+Warning (14026): LATCH primitive "segmentOutput:segment2|segments1[0]" is permanently enabled File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment2|segments1[1]" is permanently enabled File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment2|segments1[2]" is permanently enabled File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment2|segments1[3]" is permanently enabled File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment2|segments1[4]" is permanently enabled File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment2|segments1[5]" is permanently enabled File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment2|segments1[6]" is permanently enabled File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment1|segments1[0]" is permanently enabled File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment1|segments1[1]" is permanently enabled File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment1|segments1[2]" is permanently enabled File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment1|segments1[3]" is permanently enabled File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment1|segments1[4]" is permanently enabled File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment1|segments1[5]" is permanently enabled File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment1|segments1[6]" is permanently enabled File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
+Info (278001): Inferred 2 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 43
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 44
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 43
+Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 43
+    Info (12134): Parameter "LPM_WIDTHN" = "6"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_j3m.tdf
-    Info (12023): Found entity 1: lpm_divide_j3m File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/db/lpm_divide_j3m.tdf Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_mlh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_mlh File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/db/sign_div_unsign_mlh.tdf Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_ive.tdf
-    Info (12023): Found entity 1: alt_u_div_ive File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/db/alt_u_div_ive.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Div1" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv Line: 34
-Info (12133): Instantiated megafunction "vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Div1" with the following parameter: File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv Line: 34
-    Info (12134): Parameter "LPM_WIDTHN" = "10"
-    Info (12134): Parameter "LPM_WIDTHD" = "6"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_62m.tdf
+    Info (12023): Found entity 1: lpm_divide_62m File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/db/lpm_divide_62m.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_9kh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_9kh File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/db/sign_div_unsign_9kh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_ose.tdf
+    Info (12023): Found entity 1: alt_u_div_ose File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/db/alt_u_div_ose.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 44
+Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 44
+    Info (12134): Parameter "LPM_WIDTHN" = "6"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_gbm.tdf
-    Info (12023): Found entity 1: lpm_divide_gbm File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/db/lpm_divide_gbm.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_3am.tdf
+    Info (12023): Found entity 1: lpm_divide_3am File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/db/lpm_divide_3am.tdf Line: 25
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "NUM_SHIPS_PLAYER[1]" merged with LATCH primitive "NUM_SHIPS_PC[1]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 97
+    Info (13026): Duplicate LATCH primitive "NUM_SHIPS_PLAYER[2]" merged with LATCH primitive "NUM_SHIPS_PC[2]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 97
+    Info (13026): Duplicate LATCH primitive "NUM_SHIPS_PLAYER[0]" merged with LATCH primitive "NUM_SHIPS_PC[0]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 97
+Warning (13012): Latch matriz[0]$latch has unsafe behavior File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reset File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 3
+Warning (13012): Latch matriz[1]$latch has unsafe behavior File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reset File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 3
+Warning (13012): Latch matriz[2]$latch has unsafe behavior File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reset File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 3
+Warning (13012): Latch matriz[3]$latch has unsafe behavior File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reset File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 3
+Warning (13012): Latch matriz[4]$latch has unsafe behavior File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reset File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 3
+Warning (13012): Latch y[0] has unsafe behavior File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal y[0] File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Warning (13012): Latch y[1] has unsafe behavior File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal down File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 9
+Warning (13012): Latch y[2] has unsafe behavior File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal down File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 9
+Warning (13012): Latch x[0] has unsafe behavior File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal x[0] File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Warning (13012): Latch x[1] has unsafe behavior File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal left File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 7
+Warning (13012): Latch x[2] has unsafe behavior File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal left File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 7
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "r[2]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 6
+    Warning (13410): Pin "player" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 11
+    Warning (13410): Pin "pc" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 12
+    Warning (13410): Pin "hsync" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 18
+    Warning (13410): Pin "vsync" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 18
+    Warning (13410): Pin "sync_b" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 19
+    Warning (13410): Pin "blank_b" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 19
+    Warning (13410): Pin "r[0]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 20
+    Warning (13410): Pin "r[1]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 20
+    Warning (13410): Pin "r[2]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 20
+    Warning (13410): Pin "r[3]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 20
+    Warning (13410): Pin "r[4]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 20
+    Warning (13410): Pin "r[5]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 20
+    Warning (13410): Pin "r[6]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 20
+    Warning (13410): Pin "r[7]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 20
+    Warning (13410): Pin "g[0]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 20
+    Warning (13410): Pin "g[1]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 20
+    Warning (13410): Pin "g[2]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 20
+    Warning (13410): Pin "g[3]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 20
+    Warning (13410): Pin "g[4]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 20
+    Warning (13410): Pin "g[5]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 20
+    Warning (13410): Pin "g[6]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 20
+    Warning (13410): Pin "g[7]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 20
+    Warning (13410): Pin "b[0]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 21
+    Warning (13410): Pin "b[1]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 21
+    Warning (13410): Pin "b[2]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 21
+    Warning (13410): Pin "b[3]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 21
+    Warning (13410): Pin "b[4]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 21
+    Warning (13410): Pin "b[5]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 21
+    Warning (13410): Pin "b[6]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 21
+    Warning (13410): Pin "b[7]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 21
 Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/output_files/Battleship.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 436 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 1 input pins
-    Info (21059): Implemented 29 output pins
-    Info (21061): Implemented 406 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4884 megabytes
-    Info: Processing ended: Wed Apr 17 10:44:47 2024
-    Info: Elapsed time: 00:00:25
-    Info: Total CPU time (on all processors): 00:00:34
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "disparo" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 5
+Info (21057): Implemented 280 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 12 input pins
+    Info (21059): Implemented 64 output pins
+    Info (21061): Implemented 204 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 121 warnings
+    Info: Peak virtual memory: 4895 megabytes
+    Info: Processing ended: Wed Apr 17 14:01:50 2024
+    Info: Elapsed time: 00:00:22
+    Info: Total CPU time (on all processors): 00:00:35
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/output_files/Battleship.map.smsg.
 
 
