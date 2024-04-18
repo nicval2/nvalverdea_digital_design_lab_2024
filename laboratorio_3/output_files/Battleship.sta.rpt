@@ -1,5 +1,5 @@
 Timing Analyzer report for Battleship
-Thu Apr 18 09:00:21 2024
+Thu Apr 18 10:37:48 2024
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -102,20 +102,20 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 10          ;
 ;                            ;             ;
-; Average used               ; 1.62        ;
+; Average used               ; 1.57        ;
 ; Maximum used               ; 10          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   7.6%      ;
-;     Processor 3            ;   7.4%      ;
-;     Processor 4            ;   7.2%      ;
-;     Processor 5            ;   6.8%      ;
-;     Processor 6            ;   6.8%      ;
-;     Processor 7            ;   6.7%      ;
-;     Processor 8            ;   6.6%      ;
-;     Processor 9            ;   6.6%      ;
-;     Processor 10           ;   6.6%      ;
+;     Processor 2            ;   6.9%      ;
+;     Processor 3            ;   6.7%      ;
+;     Processor 4            ;   6.6%      ;
+;     Processor 5            ;   6.5%      ;
+;     Processor 6            ;   6.3%      ;
+;     Processor 7            ;   6.1%      ;
+;     Processor 8            ;   6.1%      ;
+;     Processor 9            ;   6.1%      ;
+;     Processor 10           ;   6.1%      ;
 +----------------------------+-------------+
 
 
@@ -1077,7 +1077,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Thu Apr 18 09:00:06 2024
+    Info: Processing started: Thu Apr 18 10:37:33 2024
 Info: Command: quartus_sta Battleship -c Battleship
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -1269,9 +1269,9 @@ Info (332146): Worst-case minimum pulse width slack is -0.733
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 5226 megabytes
-    Info: Processing ended: Thu Apr 18 09:00:21 2024
+    Info: Peak virtual memory: 5227 megabytes
+    Info: Processing ended: Thu Apr 18 10:37:48 2024
     Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:10
+    Info: Total CPU time (on all processors): 00:00:09
 
 

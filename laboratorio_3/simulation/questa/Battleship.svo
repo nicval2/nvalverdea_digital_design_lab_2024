@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition"
 
-// DATE "04/18/2024 09:00:25"
+// DATE "04/18/2024 10:37:53"
 
 // 
 // Device: Altera 5CSEMA5F31C6 Package FBGA896
@@ -53,29 +53,29 @@ module Battleship (
 	r,
 	g,
 	b);
-input 	logic clk ;
-input 	reg reset ;
-input 	logic [4:0] ships ;
-input 	logic disparo ;
-input 	logic right ;
-input 	logic left ;
-input 	logic up ;
-input 	logic down ;
-output 	logic matriz [4:0];
-output 	logic player ;
-output 	logic pc ;
-output 	logic [6:0] s1 ;
-output 	logic [6:0] s2 ;
-output 	logic [6:0] t1 ;
-output 	logic [6:0] t2 ;
-output 	logic vgaclk ;
-output 	logic hsync ;
-output 	logic vsync ;
-output 	logic sync_b ;
-output 	logic blank_b ;
-output 	logic [7:0] r ;
-output 	logic [7:0] g ;
-output 	logic [7:0] b ;
+input 	clk;
+input 	reset;
+input 	[4:0] ships;
+input 	disparo;
+input 	right;
+input 	left;
+input 	up;
+input 	down;
+output 	[4:0] matriz;
+output 	player;
+output 	pc;
+output 	[6:0] s1;
+output 	[6:0] s2;
+output 	[6:0] t1;
+output 	[6:0] t2;
+output 	vgaclk;
+output 	hsync;
+output 	vsync;
+output 	sync_b;
+output 	blank_b;
+output 	[7:0] r;
+output 	[7:0] g;
+output 	[7:0] b;
 
 // Design Ports Information
 // disparo	=>  Location: PIN_AB12,	 I/O Standard: 2.5 V,	 Current Strength: Default
