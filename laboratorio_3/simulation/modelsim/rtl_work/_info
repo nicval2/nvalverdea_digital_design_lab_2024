@@ -8,215 +8,56 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/nicva/nvalverdea_digital_design_lab_2024/laboratorio_3/simulation/modelsim
-vBattleship
+Z0 dC:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio_3/simulation/modelsim
+vrandom
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1713223103
+Z2 !s110 1713483569
 !i10b 1
-!s100 1j]T<fJ24DWY[8mFP9@Sz0
+!s100 TC092SnTbaR2I?^d`TAn13
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-I]9Y21FO0SfJ:O_B[H=0nT0
+ICa0b^=MMJ639kbM7AjKdD0
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-w1713222284
-8C:/Users/nicva/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv
-FC:/Users/nicva/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv
-!i122 4
-L0 1 114
+w1713483328
+8C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio_3/random.sv
+FC:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio_3/random.sv
+!i122 0
+L0 1 20
 Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1713223103.000000
-!s107 C:/Users/nicva/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/nvalverdea_digital_design_lab_2024/laboratorio_3|C:/Users/nicva/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv|
+Z6 !s108 1713483569.000000
+!s107 C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio_3/random.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio_3|C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio_3/random.sv|
 !i113 1
 Z7 o-sv -work work
-Z8 !s92 -sv -work work +incdir+C:/Users/nicva/nvalverdea_digital_design_lab_2024/laboratorio_3
+Z8 !s92 -sv -work work +incdir+C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio_3
 Z9 tCvgOpt 0
-n@battleship
-vcontar_unos_operador
+vrandom_tb
 R1
 R2
 !i10b 1
-!s100 OHhomXBzIa@EC>TPC1dj91
+!s100 fkfB<S6^Zg>bjP`cGGnb^0
 R3
-IXURno`HFA3JMg^<@SfIzR0
+IHUm9:XYIh]7mXXCVKg>dZ3
 R4
 S1
 R0
-w1712795372
-8C:/Users/nicva/nvalverdea_digital_design_lab_2024/laboratorio_3/contar_unos_operador.sv
-FC:/Users/nicva/nvalverdea_digital_design_lab_2024/laboratorio_3/contar_unos_operador.sv
-!i122 5
-L0 1 3
-R5
-r1
-!s85 0
-31
-R6
-!s107 C:/Users/nicva/nvalverdea_digital_design_lab_2024/laboratorio_3/contar_unos_operador.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/nvalverdea_digital_design_lab_2024/laboratorio_3|C:/Users/nicva/nvalverdea_digital_design_lab_2024/laboratorio_3/contar_unos_operador.sv|
-!i113 1
-R7
-R8
-R9
-vmovement
-R1
-R2
-!i10b 1
-!s100 5^STJkelNLSnGL<YE8J7o3
-R3
-I93lWPQP[MOB:NPlEnh`c>1
-R4
-S1
-R0
-w1713222276
-8C:/Users/nicva/nvalverdea_digital_design_lab_2024/laboratorio_3/movement.sv
-FC:/Users/nicva/nvalverdea_digital_design_lab_2024/laboratorio_3/movement.sv
-!i122 6
-L0 1 27
-R5
-r1
-!s85 0
-31
-R6
-!s107 C:/Users/nicva/nvalverdea_digital_design_lab_2024/laboratorio_3/movement.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/nvalverdea_digital_design_lab_2024/laboratorio_3|C:/Users/nicva/nvalverdea_digital_design_lab_2024/laboratorio_3/movement.sv|
-!i113 1
-R7
-R8
-R9
-vpll
-R1
-R2
-!i10b 1
-!s100 >9fZUH_Fo_SFSCg9EM=433
-R3
-I`G`a@aXS8f@1BVo[91k_@1
-R4
-S1
-R0
-Z10 w1712698442
-8C:/Users/nicva/nvalverdea_digital_design_lab_2024/laboratorio_3/pll.sv
-FC:/Users/nicva/nvalverdea_digital_design_lab_2024/laboratorio_3/pll.sv
-!i122 3
-L0 1 21
-R5
-r1
-!s85 0
-31
-R6
-!s107 C:/Users/nicva/nvalverdea_digital_design_lab_2024/laboratorio_3/pll.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/nvalverdea_digital_design_lab_2024/laboratorio_3|C:/Users/nicva/nvalverdea_digital_design_lab_2024/laboratorio_3/pll.sv|
-!i113 1
-R7
-R8
-R9
-vtb_contador
-R1
-R2
-!i10b 1
-!s100 I_>o26NTSg]X8P>IR2<933
-R3
-IK1:n4@hLTABH3acSIC?bd2
-R4
-S1
-R0
-w1713223038
-8C:/Users/nicva/nvalverdea_digital_design_lab_2024/laboratorio_3/output_files/tb_contador.sv
-FC:/Users/nicva/nvalverdea_digital_design_lab_2024/laboratorio_3/output_files/tb_contador.sv
-!i122 7
-L0 3 53
-R5
-r1
-!s85 0
-31
-R6
-!s107 C:/Users/nicva/nvalverdea_digital_design_lab_2024/laboratorio_3/output_files/tb_contador.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/nvalverdea_digital_design_lab_2024/laboratorio_3/output_files|C:/Users/nicva/nvalverdea_digital_design_lab_2024/laboratorio_3/output_files/tb_contador.sv|
-!i113 1
-R7
-!s92 -sv -work work +incdir+C:/Users/nicva/nvalverdea_digital_design_lab_2024/laboratorio_3/output_files
-R9
-vvga
-R1
-R2
-!i10b 1
-!s100 6Y5ALXD?Vl:@?9WK[L^zb3
-R3
-I^BCc8bT`P;;jAn<9XXj>k2
-R4
-S1
-R0
-R10
-8C:/Users/nicva/nvalverdea_digital_design_lab_2024/laboratorio_3/vga.sv
-FC:/Users/nicva/nvalverdea_digital_design_lab_2024/laboratorio_3/vga.sv
-!i122 0
-L0 1 36
-R5
-r1
-!s85 0
-31
-R6
-!s107 C:/Users/nicva/nvalverdea_digital_design_lab_2024/laboratorio_3/vga.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/nvalverdea_digital_design_lab_2024/laboratorio_3|C:/Users/nicva/nvalverdea_digital_design_lab_2024/laboratorio_3/vga.sv|
-!i113 1
-R7
-R8
-R9
-vvgaController
-R1
-R2
-!i10b 1
-!s100 534KCF3lFlkljQXg:6I8W2
-R3
-IlHz4]i_3]L`:6Thd^jO7a0
-R4
-S1
-R0
-R10
-8C:/Users/nicva/nvalverdea_digital_design_lab_2024/laboratorio_3/vgaController.sv
-FC:/Users/nicva/nvalverdea_digital_design_lab_2024/laboratorio_3/vgaController.sv
+w1713483360
+8C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio_3/random_tb.sv
+FC:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio_3/random_tb.sv
 !i122 1
-L0 1 34
+L0 1 39
 R5
 r1
 !s85 0
 31
 R6
-!s107 C:/Users/nicva/nvalverdea_digital_design_lab_2024/laboratorio_3/vgaController.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/nvalverdea_digital_design_lab_2024/laboratorio_3|C:/Users/nicva/nvalverdea_digital_design_lab_2024/laboratorio_3/vgaController.sv|
+!s107 C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio_3/random_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio_3|C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio_3/random_tb.sv|
 !i113 1
 R7
 R8
 R9
-nvga@controller
-vvideoGen
-R1
-R2
-!i10b 1
-!s100 9LciCGAa[EA>nUUdRdn>f0
-R3
-ILEUnQW17l_3ZK3iioIgMP2
-R4
-S1
-R0
-w1712767141
-8C:/Users/nicva/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv
-FC:/Users/nicva/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv
-!i122 2
-L0 1 68
-R5
-r1
-!s85 0
-31
-R6
-!s107 C:/Users/nicva/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/nicva/nvalverdea_digital_design_lab_2024/laboratorio_3|C:/Users/nicva/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv|
-!i113 1
-R7
-R8
-R9
-nvideo@gen
