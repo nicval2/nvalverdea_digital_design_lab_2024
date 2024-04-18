@@ -3,6 +3,7 @@ module vga(
     input logic [1:0] matriz_barcos [4:0][4:0],
     input logic [1:0] matriz_golpes [4:0][4:0],
     input logic [1:0] matriz_disparos [4:0][4:0],
+	 input logic display_lose,
     output logic vgaclk, // 25.175 MHz VGA clock
     output logic hsync, vsync,
     output logic sync_b, blank_b, // To monitor & DAC
@@ -16,7 +17,7 @@ module vga(
     // Screen is 800 clocks wide by 525 tall, but only 640 x 480 used
     // HSync = 1/(39.772 ns *800) = 31.470 kHz
     // Vsync = 31.474 kHz / 525 = 59.94 Hz (~60 Hz refresh rate)
-    pll vgapll(clk, vgaclk);
+    pll vgapll(.inclk0(clk), .c0(vgaclk));
     // Generate monitor timing signals
     vgaController vgaCont(vgaclk, hsync, vsync, sync_b, blank_b, x, y);
 
@@ -27,6 +28,7 @@ module vga(
         .matriz_barcos(matriz_barcos),
         .matriz_golpes(matriz_golpes),
         .matriz_disparos(matriz_disparos),
+		  .display_lose(display_lose),
         .r(r),
         .g(g),
         .b(b)

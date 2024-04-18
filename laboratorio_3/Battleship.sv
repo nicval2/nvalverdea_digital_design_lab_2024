@@ -153,6 +153,7 @@ end
     .matriz_barcos(matriz_barcos),
     .matriz_golpes(matriz_golpes),
     .matriz_disparos(matriz_disparos),
+	 .display_lose(1),
     .vgaclk(vgaclk),
     .hsync(hsync),
     .vsync(vsync),
