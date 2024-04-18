@@ -4,6 +4,7 @@ module videoGen(
     input logic [1:0] matriz_golpes [4:0][4:0],
     input logic [1:0] matriz_disparos [4:0][4:0],
 	 input logic display_lose,
+	 input logic display_win,
     output logic [7:0] r, g, b
 );
 
@@ -48,20 +49,33 @@ module videoGen(
 	 || ((x > (SQUARE_WIDTH*5)) && (x < (SQUARE_WIDTH*6))) || (y > (SQUARE_HEIGHT*5));
 
 	 // Module instance for displaying "YOU LOSE" message
-	logic pixel;
+	logic pixel_lose;
 	you_lose lose_message(
 	  .hpos(x),
 	  .vpos(y),
-	  .pixel(pixel)
+	  .pixel(pixel_lose)
+	);
+	
+	logic pixel_win;
+	you_win win_message(
+	  .hpos(x),
+	  .vpos(y),
+	  .pixel(pixel_win)
 	);
 	 
     // Assign colors based on combinational logic
 	always_comb begin
 	  if (display_lose) begin
-		if (pixel)
+		if (pixel_lose)
 			square_color = BLACK;
 		else
 			square_color = RED;
+	  end
+	  else if (display_win) begin
+		if (pixel_win)
+			square_color = BLACK;
+		else
+			square_color = GREEN;
 	  end
 	  else begin
 		 if (on_border)

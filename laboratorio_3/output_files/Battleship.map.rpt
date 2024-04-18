@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Battleship
-Wed Apr 17 18:02:52 2024
+Thu Apr 18 08:54:38 2024
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -15,21 +15,22 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. User-Specified and Inferred Latches
   9. General Register Statistics
- 10. Parameter Settings for User Entity Instance: vga:vga_inst|vgaController:vgaCont
- 11. Parameter Settings for User Entity Instance: vga:vga_inst|videoGen:videoGen_inst
- 12. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
- 13. Parameter Settings for Inferred Entity Instance: lpm_divide:Div0
- 14. Parameter Settings for Inferred Entity Instance: vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message|lpm_divide:Mod0
- 15. Parameter Settings for Inferred Entity Instance: vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message|lpm_divide:Div0
- 16. Parameter Settings for Inferred Entity Instance: vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message|lpm_divide:Div2
- 17. Parameter Settings for Inferred Entity Instance: vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message|lpm_divide:Mod1
- 18. Parameter Settings for Inferred Entity Instance: vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message|lpm_divide:Div1
- 19. Port Connectivity Checks: "vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message|chargenrom:char_gen_rom"
- 20. Port Connectivity Checks: "vga:vga_inst"
- 21. Post-Synthesis Netlist Statistics for Top Partition
- 22. Elapsed Time Per Partition
- 23. Analysis & Synthesis Messages
- 24. Analysis & Synthesis Suppressed Messages
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: vga:vga_inst|vgaController:vgaCont
+ 12. Parameter Settings for User Entity Instance: vga:vga_inst|videoGen:videoGen_inst
+ 13. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
+ 14. Parameter Settings for Inferred Entity Instance: lpm_divide:Div0
+ 15. Parameter Settings for Inferred Entity Instance: vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Mod0
+ 16. Parameter Settings for Inferred Entity Instance: vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Mod1
+ 17. Parameter Settings for Inferred Entity Instance: vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Div1
+ 18. Parameter Settings for Inferred Entity Instance: vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Div0
+ 19. Port Connectivity Checks: "vga:vga_inst|videoGen:videoGen_inst|you_win:win_message|chargenrom:char_gen_rom"
+ 20. Port Connectivity Checks: "vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message|chargenrom:char_gen_rom"
+ 21. Port Connectivity Checks: "vga:vga_inst"
+ 22. Post-Synthesis Netlist Statistics for Top Partition
+ 23. Elapsed Time Per Partition
+ 24. Analysis & Synthesis Messages
+ 25. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -56,7 +57,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Apr 17 18:02:52 2024          ;
+; Analysis & Synthesis Status     ; Successful - Thu Apr 18 08:54:37 2024          ;
 ; Quartus Prime Version           ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                   ; Battleship                                     ;
 ; Top-level Entity Name           ; Battleship                                     ;
@@ -176,7 +177,8 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-10        ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-10        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -198,6 +200,7 @@ https://fpgasoftware.intel.com/eula.
 ; time_counter.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/time_counter.sv            ;         ;
 ; clock_divider.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/clock_divider.sv           ;         ;
 ; you_lose.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/you_lose.sv                ;         ;
+; you_win.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/you_win.sv                 ;         ;
 ; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/misappsinstaladas/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_divide.tdf                  ;         ;
 ; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/misappsinstaladas/intelfpga_lite/22.1std/quartus/libraries/megafunctions/abs_divider.inc                 ;         ;
 ; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/misappsinstaladas/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sign_div_unsign.inc             ;         ;
@@ -209,9 +212,7 @@ https://fpgasoftware.intel.com/eula.
 ; db/lpm_divide_j3m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/db/lpm_divide_j3m.tdf      ;         ;
 ; db/sign_div_unsign_mlh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/db/sign_div_unsign_mlh.tdf ;         ;
 ; db/alt_u_div_ive.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/db/alt_u_div_ive.tdf       ;         ;
-; db/lpm_divide_kbm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/db/lpm_divide_kbm.tdf      ;         ;
-; db/sign_div_unsign_qlh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/db/sign_div_unsign_qlh.tdf ;         ;
-; db/alt_u_div_qve.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/db/alt_u_div_qve.tdf       ;         ;
+; db/lpm_divide_gbm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/db/lpm_divide_gbm.tdf      ;         ;
 +----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -220,14 +221,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 328         ;
+; Estimate of Logic utilization (ALMs needed) ; 300         ;
 ;                                             ;             ;
-; Combinational ALUT usage for logic          ; 618         ;
+; Combinational ALUT usage for logic          ; 571         ;
 ;     -- 7 input functions                    ; 0           ;
-;     -- 6 input functions                    ; 38          ;
-;     -- 5 input functions                    ; 40          ;
-;     -- 4 input functions                    ; 107         ;
-;     -- <=3 input functions                  ; 433         ;
+;     -- 6 input functions                    ; 28          ;
+;     -- 5 input functions                    ; 46          ;
+;     -- 4 input functions                    ; 86          ;
+;     -- <=3 input functions                  ; 411         ;
 ;                                             ;             ;
 ; Dedicated logic registers                   ; 60          ;
 ;                                             ;             ;
@@ -237,58 +238,52 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;             ;
 ; Maximum fan-out node                        ; reset~input ;
 ; Maximum fan-out                             ; 62          ;
-; Total fan-out                               ; 2261        ;
-; Average fan-out                             ; 2.72        ;
+; Total fan-out                               ; 2108        ;
+; Average fan-out                             ; 2.69        ;
 +---------------------------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                     ;
-+-------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
-; Compilation Hierarchy Node                      ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                   ; Entity Name           ; Library Name ;
-+-------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
-; |Battleship                                     ; 618 (51)            ; 60 (0)                    ; 0                 ; 0          ; 76   ; 0            ; |Battleship                                                                                                                                                           ; Battleship            ; work         ;
-;    |clock_divider:divider|                      ; 40 (40)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |Battleship|clock_divider:divider                                                                                                                                     ; clock_divider         ; work         ;
-;    |contar_unos_operador:unos1|                 ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|contar_unos_operador:unos1                                                                                                                                ; contar_unos_operador  ; work         ;
-;    |lpm_divide:Div0|                            ; 27 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|lpm_divide:Div0                                                                                                                                           ; lpm_divide            ; work         ;
-;       |lpm_divide_3am:auto_generated|           ; 27 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|lpm_divide:Div0|lpm_divide_3am:auto_generated                                                                                                             ; lpm_divide_3am        ; work         ;
-;          |sign_div_unsign_9kh:divider|          ; 27 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|lpm_divide:Div0|lpm_divide_3am:auto_generated|sign_div_unsign_9kh:divider                                                                                 ; sign_div_unsign_9kh   ; work         ;
-;             |alt_u_div_ose:divider|             ; 27 (27)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|lpm_divide:Div0|lpm_divide_3am:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_ose:divider                                                           ; alt_u_div_ose         ; work         ;
-;    |lpm_divide:Mod0|                            ; 31 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|lpm_divide:Mod0                                                                                                                                           ; lpm_divide            ; work         ;
-;       |lpm_divide_62m:auto_generated|           ; 31 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|lpm_divide:Mod0|lpm_divide_62m:auto_generated                                                                                                             ; lpm_divide_62m        ; work         ;
-;          |sign_div_unsign_9kh:divider|          ; 31 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|lpm_divide:Mod0|lpm_divide_62m:auto_generated|sign_div_unsign_9kh:divider                                                                                 ; sign_div_unsign_9kh   ; work         ;
-;             |alt_u_div_ose:divider|             ; 31 (31)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|lpm_divide:Mod0|lpm_divide_62m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_ose:divider                                                           ; alt_u_div_ose         ; work         ;
-;    |segmentOutput:segment1|                     ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|segmentOutput:segment1                                                                                                                                    ; segmentOutput         ; work         ;
-;    |seven_segment_display:disp_seconds_tens|    ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|seven_segment_display:disp_seconds_tens                                                                                                                   ; seven_segment_display ; work         ;
-;    |seven_segment_display:disp_seconds_units|   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|seven_segment_display:disp_seconds_units                                                                                                                  ; seven_segment_display ; work         ;
-;    |time_counter:counter|                       ; 7 (7)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|time_counter:counter                                                                                                                                      ; time_counter          ; work         ;
-;    |vga:vga_inst|                               ; 438 (0)             ; 21 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst                                                                                                                                              ; vga                   ; work         ;
-;       |pll:vgapll|                              ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|pll:vgapll                                                                                                                                   ; pll                   ; work         ;
-;       |vgaController:vgaCont|                   ; 31 (31)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|vgaController:vgaCont                                                                                                                        ; vgaController         ; work         ;
-;       |videoGen:videoGen_inst|                  ; 406 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst                                                                                                                       ; videoGen              ; work         ;
-;          |you_lose:lose_message|                ; 406 (17)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message                                                                                                 ; you_lose              ; work         ;
-;             |chargenrom:char_gen_rom|           ; 42 (42)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message|chargenrom:char_gen_rom                                                                         ; chargenrom            ; work         ;
-;             |lpm_divide:Div0|                   ; 25 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message|lpm_divide:Div0                                                                                 ; lpm_divide            ; work         ;
-;                |lpm_divide_3am:auto_generated|  ; 25 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message|lpm_divide:Div0|lpm_divide_3am:auto_generated                                                   ; lpm_divide_3am        ; work         ;
-;                   |sign_div_unsign_9kh:divider| ; 25 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message|lpm_divide:Div0|lpm_divide_3am:auto_generated|sign_div_unsign_9kh:divider                       ; sign_div_unsign_9kh   ; work         ;
-;                      |alt_u_div_ose:divider|    ; 25 (25)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message|lpm_divide:Div0|lpm_divide_3am:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_ose:divider ; alt_u_div_ose         ; work         ;
-;             |lpm_divide:Div1|                   ; 25 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message|lpm_divide:Div1                                                                                 ; lpm_divide            ; work         ;
-;                |lpm_divide_3am:auto_generated|  ; 25 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message|lpm_divide:Div1|lpm_divide_3am:auto_generated                                                   ; lpm_divide_3am        ; work         ;
-;                   |sign_div_unsign_9kh:divider| ; 25 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message|lpm_divide:Div1|lpm_divide_3am:auto_generated|sign_div_unsign_9kh:divider                       ; sign_div_unsign_9kh   ; work         ;
-;                      |alt_u_div_ose:divider|    ; 25 (25)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message|lpm_divide:Div1|lpm_divide_3am:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_ose:divider ; alt_u_div_ose         ; work         ;
-;             |lpm_divide:Div2|                   ; 127 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message|lpm_divide:Div2                                                                                 ; lpm_divide            ; work         ;
-;                |lpm_divide_kbm:auto_generated|  ; 127 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message|lpm_divide:Div2|lpm_divide_kbm:auto_generated                                                   ; lpm_divide_kbm        ; work         ;
-;                   |sign_div_unsign_qlh:divider| ; 127 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message|lpm_divide:Div2|lpm_divide_kbm:auto_generated|sign_div_unsign_qlh:divider                       ; sign_div_unsign_qlh   ; work         ;
-;                      |alt_u_div_qve:divider|    ; 127 (127)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message|lpm_divide:Div2|lpm_divide_kbm:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_qve:divider ; alt_u_div_qve         ; work         ;
-;             |lpm_divide:Mod0|                   ; 85 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message|lpm_divide:Mod0                                                                                 ; lpm_divide            ; work         ;
-;                |lpm_divide_j3m:auto_generated|  ; 85 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message|lpm_divide:Mod0|lpm_divide_j3m:auto_generated                                                   ; lpm_divide_j3m        ; work         ;
-;                   |sign_div_unsign_mlh:divider| ; 85 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message|lpm_divide:Mod0|lpm_divide_j3m:auto_generated|sign_div_unsign_mlh:divider                       ; sign_div_unsign_mlh   ; work         ;
-;                      |alt_u_div_ive:divider|    ; 85 (85)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message|lpm_divide:Mod0|lpm_divide_j3m:auto_generated|sign_div_unsign_mlh:divider|alt_u_div_ive:divider ; alt_u_div_ive         ; work         ;
-;             |lpm_divide:Mod1|                   ; 85 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message|lpm_divide:Mod1                                                                                 ; lpm_divide            ; work         ;
-;                |lpm_divide_j3m:auto_generated|  ; 85 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message|lpm_divide:Mod1|lpm_divide_j3m:auto_generated                                                   ; lpm_divide_j3m        ; work         ;
-;                   |sign_div_unsign_mlh:divider| ; 85 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message|lpm_divide:Mod1|lpm_divide_j3m:auto_generated|sign_div_unsign_mlh:divider                       ; sign_div_unsign_mlh   ; work         ;
-;                      |alt_u_div_ive:divider|    ; 85 (85)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message|lpm_divide:Mod1|lpm_divide_j3m:auto_generated|sign_div_unsign_mlh:divider|alt_u_div_ive:divider ; alt_u_div_ive         ; work         ;
-+-------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                             ;
++-----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
+; Compilation Hierarchy Node                    ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                             ; Entity Name           ; Library Name ;
++-----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
+; |Battleship                                   ; 571 (51)            ; 60 (0)                    ; 0                 ; 0          ; 76   ; 0            ; |Battleship                                                                                                                                     ; Battleship            ; work         ;
+;    |clock_divider:divider|                    ; 40 (40)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |Battleship|clock_divider:divider                                                                                                               ; clock_divider         ; work         ;
+;    |contar_unos_operador:unos1|               ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|contar_unos_operador:unos1                                                                                                          ; contar_unos_operador  ; work         ;
+;    |lpm_divide:Div0|                          ; 27 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|lpm_divide:Div0                                                                                                                     ; lpm_divide            ; work         ;
+;       |lpm_divide_3am:auto_generated|         ; 27 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|lpm_divide:Div0|lpm_divide_3am:auto_generated                                                                                       ; lpm_divide_3am        ; work         ;
+;          |sign_div_unsign_9kh:divider|        ; 27 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|lpm_divide:Div0|lpm_divide_3am:auto_generated|sign_div_unsign_9kh:divider                                                           ; sign_div_unsign_9kh   ; work         ;
+;             |alt_u_div_ose:divider|           ; 27 (27)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|lpm_divide:Div0|lpm_divide_3am:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_ose:divider                                     ; alt_u_div_ose         ; work         ;
+;    |lpm_divide:Mod0|                          ; 31 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|lpm_divide:Mod0                                                                                                                     ; lpm_divide            ; work         ;
+;       |lpm_divide_62m:auto_generated|         ; 31 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|lpm_divide:Mod0|lpm_divide_62m:auto_generated                                                                                       ; lpm_divide_62m        ; work         ;
+;          |sign_div_unsign_9kh:divider|        ; 31 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|lpm_divide:Mod0|lpm_divide_62m:auto_generated|sign_div_unsign_9kh:divider                                                           ; sign_div_unsign_9kh   ; work         ;
+;             |alt_u_div_ose:divider|           ; 31 (31)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|lpm_divide:Mod0|lpm_divide_62m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_ose:divider                                     ; alt_u_div_ose         ; work         ;
+;    |segmentOutput:segment1|                   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|segmentOutput:segment1                                                                                                              ; segmentOutput         ; work         ;
+;    |seven_segment_display:disp_seconds_tens|  ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|seven_segment_display:disp_seconds_tens                                                                                             ; seven_segment_display ; work         ;
+;    |seven_segment_display:disp_seconds_units| ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|seven_segment_display:disp_seconds_units                                                                                            ; seven_segment_display ; work         ;
+;    |time_counter:counter|                     ; 7 (7)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|time_counter:counter                                                                                                                ; time_counter          ; work         ;
+;    |vga:vga_inst|                             ; 391 (0)             ; 21 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst                                                                                                                        ; vga                   ; work         ;
+;       |pll:vgapll|                            ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|pll:vgapll                                                                                                             ; pll                   ; work         ;
+;       |vgaController:vgaCont|                 ; 30 (30)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|vgaController:vgaCont                                                                                                  ; vgaController         ; work         ;
+;       |videoGen:videoGen_inst|                ; 360 (68)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst                                                                                                 ; videoGen              ; work         ;
+;          |lpm_divide:Div0|                    ; 70 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Div0                                                                                 ; lpm_divide            ; work         ;
+;             |lpm_divide_gbm:auto_generated|   ; 70 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Div0|lpm_divide_gbm:auto_generated                                                   ; lpm_divide_gbm        ; work         ;
+;                |sign_div_unsign_mlh:divider|  ; 70 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Div0|lpm_divide_gbm:auto_generated|sign_div_unsign_mlh:divider                       ; sign_div_unsign_mlh   ; work         ;
+;                   |alt_u_div_ive:divider|     ; 70 (70)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Div0|lpm_divide_gbm:auto_generated|sign_div_unsign_mlh:divider|alt_u_div_ive:divider ; alt_u_div_ive         ; work         ;
+;          |lpm_divide:Div1|                    ; 70 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Div1                                                                                 ; lpm_divide            ; work         ;
+;             |lpm_divide_gbm:auto_generated|   ; 70 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Div1|lpm_divide_gbm:auto_generated                                                   ; lpm_divide_gbm        ; work         ;
+;                |sign_div_unsign_mlh:divider|  ; 70 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Div1|lpm_divide_gbm:auto_generated|sign_div_unsign_mlh:divider                       ; sign_div_unsign_mlh   ; work         ;
+;                   |alt_u_div_ive:divider|     ; 70 (70)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Div1|lpm_divide_gbm:auto_generated|sign_div_unsign_mlh:divider|alt_u_div_ive:divider ; alt_u_div_ive         ; work         ;
+;          |lpm_divide:Mod0|                    ; 76 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Mod0                                                                                 ; lpm_divide            ; work         ;
+;             |lpm_divide_j3m:auto_generated|   ; 76 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Mod0|lpm_divide_j3m:auto_generated                                                   ; lpm_divide_j3m        ; work         ;
+;                |sign_div_unsign_mlh:divider|  ; 76 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Mod0|lpm_divide_j3m:auto_generated|sign_div_unsign_mlh:divider                       ; sign_div_unsign_mlh   ; work         ;
+;                   |alt_u_div_ive:divider|     ; 76 (76)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Mod0|lpm_divide_j3m:auto_generated|sign_div_unsign_mlh:divider|alt_u_div_ive:divider ; alt_u_div_ive         ; work         ;
+;          |lpm_divide:Mod1|                    ; 76 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Mod1                                                                                 ; lpm_divide            ; work         ;
+;             |lpm_divide_j3m:auto_generated|   ; 76 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Mod1|lpm_divide_j3m:auto_generated                                                   ; lpm_divide_j3m        ; work         ;
+;                |sign_div_unsign_mlh:divider|  ; 76 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Mod1|lpm_divide_j3m:auto_generated|sign_div_unsign_mlh:divider                       ; sign_div_unsign_mlh   ; work         ;
+;                   |alt_u_div_ive:divider|     ; 76 (76)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Mod1|lpm_divide_j3m:auto_generated|sign_div_unsign_mlh:divider|alt_u_div_ive:divider ; alt_u_div_ive         ; work         ;
++-----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -332,6 +327,18 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Number of registers using Clock Enable       ; 12    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|square_color ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|square_color ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|square_color ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|Mux22        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------+
@@ -420,129 +427,114 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message|lpm_divide:Mod0 ;
-+------------------------+----------------+----------------------------------------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                                                             ;
-+------------------------+----------------+----------------------------------------------------------------------------------+
-; LPM_WIDTHN             ; 10             ; Untyped                                                                          ;
-; LPM_WIDTHD             ; 6              ; Untyped                                                                          ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                          ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                          ;
-; LPM_PIPELINE           ; 0              ; Untyped                                                                          ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                          ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                          ;
-; CBXI_PARAMETER         ; lpm_divide_j3m ; Untyped                                                                          ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                          ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                          ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                       ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                     ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                     ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                   ;
-+------------------------+----------------+----------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Mod0 ;
++------------------------+----------------+------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                       ;
++------------------------+----------------+------------------------------------------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                                                    ;
+; LPM_WIDTHD             ; 6              ; Untyped                                                    ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                    ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                    ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                    ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                    ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                    ;
+; CBXI_PARAMETER         ; lpm_divide_j3m ; Untyped                                                    ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                    ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                    ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                               ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                             ;
++------------------------+----------------+------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message|lpm_divide:Div0 ;
-+------------------------+----------------+----------------------------------------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                                                             ;
-+------------------------+----------------+----------------------------------------------------------------------------------+
-; LPM_WIDTHN             ; 6              ; Untyped                                                                          ;
-; LPM_WIDTHD             ; 4              ; Untyped                                                                          ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                          ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                          ;
-; LPM_PIPELINE           ; 0              ; Untyped                                                                          ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                          ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                          ;
-; CBXI_PARAMETER         ; lpm_divide_3am ; Untyped                                                                          ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                          ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                          ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                       ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                     ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                     ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                   ;
-+------------------------+----------------+----------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Mod1 ;
++------------------------+----------------+------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                       ;
++------------------------+----------------+------------------------------------------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                                                    ;
+; LPM_WIDTHD             ; 6              ; Untyped                                                    ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                    ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                    ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                    ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                    ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                    ;
+; CBXI_PARAMETER         ; lpm_divide_j3m ; Untyped                                                    ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                    ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                    ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                               ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                             ;
++------------------------+----------------+------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message|lpm_divide:Div2 ;
-+------------------------+----------------+----------------------------------------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                                                             ;
-+------------------------+----------------+----------------------------------------------------------------------------------+
-; LPM_WIDTHN             ; 32             ; Untyped                                                                          ;
-; LPM_WIDTHD             ; 6              ; Untyped                                                                          ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                          ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                          ;
-; LPM_PIPELINE           ; 0              ; Untyped                                                                          ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                          ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                          ;
-; CBXI_PARAMETER         ; lpm_divide_kbm ; Untyped                                                                          ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                          ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                          ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                       ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                     ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                     ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                   ;
-+------------------------+----------------+----------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Div1 ;
++------------------------+----------------+------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                       ;
++------------------------+----------------+------------------------------------------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                                                    ;
+; LPM_WIDTHD             ; 6              ; Untyped                                                    ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                    ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                    ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                    ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                    ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                    ;
+; CBXI_PARAMETER         ; lpm_divide_gbm ; Untyped                                                    ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                    ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                    ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                               ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                             ;
++------------------------+----------------+------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message|lpm_divide:Mod1 ;
-+------------------------+----------------+----------------------------------------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                                                             ;
-+------------------------+----------------+----------------------------------------------------------------------------------+
-; LPM_WIDTHN             ; 10             ; Untyped                                                                          ;
-; LPM_WIDTHD             ; 6              ; Untyped                                                                          ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                          ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                          ;
-; LPM_PIPELINE           ; 0              ; Untyped                                                                          ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                          ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                          ;
-; CBXI_PARAMETER         ; lpm_divide_j3m ; Untyped                                                                          ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                          ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                          ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                       ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                     ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                     ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                   ;
-+------------------------+----------------+----------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Div0 ;
++------------------------+----------------+------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                       ;
++------------------------+----------------+------------------------------------------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                                                    ;
+; LPM_WIDTHD             ; 6              ; Untyped                                                    ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                    ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                    ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                    ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                    ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                    ;
+; CBXI_PARAMETER         ; lpm_divide_gbm ; Untyped                                                    ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                    ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                    ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                               ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                             ;
++------------------------+----------------+------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message|lpm_divide:Div1 ;
-+------------------------+----------------+----------------------------------------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                                                             ;
-+------------------------+----------------+----------------------------------------------------------------------------------+
-; LPM_WIDTHN             ; 6              ; Untyped                                                                          ;
-; LPM_WIDTHD             ; 4              ; Untyped                                                                          ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                          ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                          ;
-; LPM_PIPELINE           ; 0              ; Untyped                                                                          ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                          ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                          ;
-; CBXI_PARAMETER         ; lpm_divide_3am ; Untyped                                                                          ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                          ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                          ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                       ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                     ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                     ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                   ;
-+------------------------+----------------+----------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
++-------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "vga:vga_inst|videoGen:videoGen_inst|you_win:win_message|chargenrom:char_gen_rom" ;
++-------+-------+----------+----------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                          ;
++-------+-------+----------+----------------------------------------------------------------------------------+
+; ch[7] ; Input ; Info     ; Stuck at GND                                                                     ;
++-------+-------+----------+----------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message|chargenrom:char_gen_rom" ;
-+----------+-------+----------+---------------------------------------------------------------------------------+
-; Port     ; Type  ; Severity ; Details                                                                         ;
-+----------+-------+----------+---------------------------------------------------------------------------------+
-; ch[4..2] ; Input ; Info     ; Stuck at GND                                                                    ;
-; ch[7]    ; Input ; Info     ; Stuck at GND                                                                    ;
-+----------+-------+----------+---------------------------------------------------------------------------------+
++-------+-------+----------+------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                            ;
++-------+-------+----------+------------------------------------------------------------------------------------+
+; ch[7] ; Input ; Info     ; Stuck at GND                                                                       ;
++-------+-------+----------+------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------+
@@ -641,7 +633,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; matriz_disparos[1][1][0] ; Input ; Info     ; Stuck at VCC ;
 ; matriz_disparos[1][0]    ; Input ; Info     ; Stuck at GND ;
 ; matriz_disparos[0]       ; Input ; Info     ; Stuck at GND ;
-; display_lose             ; Input ; Info     ; Stuck at VCC ;
+; display_lose             ; Input ; Info     ; Stuck at GND ;
+; display_win              ; Input ; Info     ; Stuck at GND ;
 +--------------------------+-------+----------+--------------+
 
 
@@ -657,28 +650,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA SCLR          ; 10                          ;
 ;     SCLR              ; 10                          ;
 ;     plain             ; 1                           ;
-; arriav_lcell_comb     ; 623                         ;
-;     arith             ; 279                         ;
-;         0 data inputs ; 57                          ;
-;         1 data inputs ; 79                          ;
+; arriav_lcell_comb     ; 579                         ;
+;     arith             ; 224                         ;
+;         0 data inputs ; 40                          ;
+;         1 data inputs ; 72                          ;
 ;         2 data inputs ; 16                          ;
-;         3 data inputs ; 78                          ;
-;         4 data inputs ; 49                          ;
-;     normal            ; 320                         ;
+;         3 data inputs ; 70                          ;
+;         4 data inputs ; 26                          ;
+;     normal            ; 317                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 6                           ;
-;         2 data inputs ; 108                         ;
-;         3 data inputs ; 69                          ;
-;         4 data inputs ; 58                          ;
-;         5 data inputs ; 40                          ;
-;         6 data inputs ; 38                          ;
-;     shared            ; 24                          ;
-;         0 data inputs ; 4                           ;
-;         1 data inputs ; 20                          ;
+;         1 data inputs ; 9                           ;
+;         2 data inputs ; 94                          ;
+;         3 data inputs ; 79                          ;
+;         4 data inputs ; 60                          ;
+;         5 data inputs ; 46                          ;
+;         6 data inputs ; 28                          ;
+;     shared            ; 38                          ;
+;         0 data inputs ; 6                           ;
+;         1 data inputs ; 32                          ;
 ; boundary_port         ; 76                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 23.90                       ;
-; Average LUT depth     ; 13.46                       ;
+; Max LUT depth         ; 13.90                       ;
+; Average LUT depth     ; 9.22                        ;
 +-----------------------+-----------------------------+
 
 
@@ -687,7 +680,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:06     ;
 +----------------+--------------+
 
 
@@ -697,7 +690,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Wed Apr 17 18:02:28 2024
+    Info: Processing started: Thu Apr 18 08:54:01 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Battleship -c Battleship
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
@@ -737,6 +730,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file clock_d
     Info (12023): Found entity 1: clock_divider File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/clock_divider.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file you_lose.sv
     Info (12023): Found entity 1: you_lose File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/you_lose.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file you_win.sv
+    Info (12023): Found entity 1: you_win File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/you_win.sv Line: 1
 Warning (10236): Verilog HDL Implicit Net warning at Battleship.sv(148): created implicit net for "position" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 148
 Info (12127): Elaborating entity "Battleship" for the top level hierarchy
 Warning (10036): Verilog HDL or VHDL warning at Battleship.sv(148): object "position" assigned a value but never read File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 148
@@ -868,24 +863,24 @@ Info (10041): Inferred latch for "segments1[3]" at segmentOutput.sv(8) File: C:/
 Info (10041): Inferred latch for "segments1[4]" at segmentOutput.sv(8) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
 Info (10041): Inferred latch for "segments1[5]" at segmentOutput.sv(8) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
 Info (10041): Inferred latch for "segments1[6]" at segmentOutput.sv(8) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
-Info (12128): Elaborating entity "vga" for hierarchy "vga:vga_inst" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 165
+Info (12128): Elaborating entity "vga" for hierarchy "vga:vga_inst" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 166
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_barcos" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_golpes" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_disparos" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_barcos" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_golpes" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_disparos" into its bus
-Info (12128): Elaborating entity "pll" for hierarchy "vga:vga_inst|pll:vgapll" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/vga.sv Line: 20
-Info (12128): Elaborating entity "vgaController" for hierarchy "vga:vga_inst|vgaController:vgaCont" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/vga.sv Line: 22
-Info (12128): Elaborating entity "videoGen" for hierarchy "vga:vga_inst|videoGen:videoGen_inst" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/vga.sv Line: 35
-Info (10264): Verilog HDL Case Statement information at videoGen.sv(79): all case item expressions in this case statement are onehot File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv Line: 79
+Info (12128): Elaborating entity "pll" for hierarchy "vga:vga_inst|pll:vgapll" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/vga.sv Line: 21
+Info (12128): Elaborating entity "vgaController" for hierarchy "vga:vga_inst|vgaController:vgaCont" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/vga.sv Line: 23
+Info (12128): Elaborating entity "videoGen" for hierarchy "vga:vga_inst|videoGen:videoGen_inst" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/vga.sv Line: 37
+Info (10264): Verilog HDL Case Statement information at videoGen.sv(93): all case item expressions in this case statement are onehot File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv Line: 93
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_barcos" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_golpes" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_disparos" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_barcos" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_golpes" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_disparos" into its bus
-Info (12128): Elaborating entity "you_lose" for hierarchy "vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv Line: 56
+Info (12128): Elaborating entity "you_lose" for hierarchy "vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv Line: 57
 Warning (10230): Verilog HDL assignment warning at you_lose.sv(26): truncated value with size 32 to match size of target (3) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/you_lose.sv Line: 26
 Warning (10230): Verilog HDL assignment warning at you_lose.sv(27): truncated value with size 32 to match size of target (3) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/you_lose.sv Line: 27
 Warning (10762): Verilog HDL Case Statement warning at you_lose.sv(30): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/you_lose.sv Line: 30
@@ -895,6 +890,11 @@ Warning (10230): Verilog HDL assignment warning at chargenrom.sv(32): truncated 
 Warning (10030): Net "charrom.data_a" at chargenrom.sv(7) has no driver or initial value, using a default initial value '0' File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/chargenrom.sv Line: 7
 Warning (10030): Net "charrom.waddr_a" at chargenrom.sv(7) has no driver or initial value, using a default initial value '0' File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/chargenrom.sv Line: 7
 Warning (10030): Net "charrom.we_a" at chargenrom.sv(7) has no driver or initial value, using a default initial value '0' File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/chargenrom.sv Line: 7
+Info (12128): Elaborating entity "you_win" for hierarchy "vga:vga_inst|videoGen:videoGen_inst|you_win:win_message" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv Line: 64
+Warning (10230): Verilog HDL assignment warning at you_win.sv(26): truncated value with size 32 to match size of target (3) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/you_win.sv Line: 26
+Warning (10230): Verilog HDL assignment warning at you_win.sv(27): truncated value with size 32 to match size of target (3) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/you_win.sv Line: 27
+Warning (10762): Verilog HDL Case Statement warning at you_win.sv(30): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/you_win.sv Line: 30
+Warning (10230): Verilog HDL assignment warning at you_win.sv(54): truncated value with size 32 to match size of target (1) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/you_win.sv Line: 54
 Warning (14026): LATCH primitive "segmentOutput:segment2|segments1[0]" is permanently enabled File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
 Warning (14026): LATCH primitive "segmentOutput:segment2|segments1[1]" is permanently enabled File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
 Warning (14026): LATCH primitive "segmentOutput:segment2|segments1[2]" is permanently enabled File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
@@ -909,17 +909,13 @@ Warning (14026): LATCH primitive "segmentOutput:segment1|segments1[3]" is perman
 Warning (14026): LATCH primitive "segmentOutput:segment1|segments1[4]" is permanently enabled File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
 Warning (14026): LATCH primitive "segmentOutput:segment1|segments1[5]" is permanently enabled File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
 Warning (14026): LATCH primitive "segmentOutput:segment1|segments1[6]" is permanently enabled File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
-Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276007): RAM logic "vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message|chargenrom:char_gen_rom|charrom" is uninferred due to asynchronous read logic File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/chargenrom.sv Line: 7
-Critical Warning (127005): Memory depth (256) in the design file differs from memory depth (162) in the Memory Initialization File "C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/db/Battleship.ram0_chargenrom_5dff6772.hdl.mif" -- setting initial value for remaining addresses to 0
-Info (278001): Inferred 7 megafunctions from design logic
+Info (278001): Inferred 6 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 43
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 44
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message|Mod0" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/you_lose.sv Line: 26
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message|Div0" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/you_lose.sv Line: 26
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message|Div2" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/you_lose.sv Line: 30
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message|Mod1" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/you_lose.sv Line: 27
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message|Div1" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/you_lose.sv Line: 27
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "vga:vga_inst|videoGen:videoGen_inst|Mod0" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv Line: 48
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "vga:vga_inst|videoGen:videoGen_inst|Mod1" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv Line: 48
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "vga:vga_inst|videoGen:videoGen_inst|Div1" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv Line: 43
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "vga:vga_inst|videoGen:videoGen_inst|Div0" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv Line: 42
 Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 43
 Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 43
     Info (12134): Parameter "LPM_WIDTHN" = "6"
@@ -940,8 +936,8 @@ Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following par
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_3am.tdf
     Info (12023): Found entity 1: lpm_divide_3am File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/db/lpm_divide_3am.tdf Line: 25
-Info (12130): Elaborated megafunction instantiation "vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message|lpm_divide:Mod0" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/you_lose.sv Line: 26
-Info (12133): Instantiated megafunction "vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message|lpm_divide:Mod0" with the following parameter: File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/you_lose.sv Line: 26
+Info (12130): Elaborated megafunction instantiation "vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Mod0" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv Line: 48
+Info (12133): Instantiated megafunction "vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Mod0" with the following parameter: File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv Line: 48
     Info (12134): Parameter "LPM_WIDTHN" = "10"
     Info (12134): Parameter "LPM_WIDTHD" = "6"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -952,24 +948,14 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_mlh File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/db/sign_div_unsign_mlh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_ive.tdf
     Info (12023): Found entity 1: alt_u_div_ive File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/db/alt_u_div_ive.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message|lpm_divide:Div0" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/you_lose.sv Line: 26
-Info (12133): Instantiated megafunction "vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message|lpm_divide:Div0" with the following parameter: File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/you_lose.sv Line: 26
-    Info (12134): Parameter "LPM_WIDTHN" = "6"
-    Info (12134): Parameter "LPM_WIDTHD" = "4"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12130): Elaborated megafunction instantiation "vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message|lpm_divide:Div2" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/you_lose.sv Line: 30
-Info (12133): Instantiated megafunction "vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message|lpm_divide:Div2" with the following parameter: File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/you_lose.sv Line: 30
-    Info (12134): Parameter "LPM_WIDTHN" = "32"
+Info (12130): Elaborated megafunction instantiation "vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Div1" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv Line: 43
+Info (12133): Instantiated megafunction "vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Div1" with the following parameter: File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv Line: 43
+    Info (12134): Parameter "LPM_WIDTHN" = "10"
     Info (12134): Parameter "LPM_WIDTHD" = "6"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_kbm.tdf
-    Info (12023): Found entity 1: lpm_divide_kbm File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/db/lpm_divide_kbm.tdf Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_qlh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_qlh File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/db/sign_div_unsign_qlh.tdf Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_qve.tdf
-    Info (12023): Found entity 1: alt_u_div_qve File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/db/alt_u_div_qve.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_gbm.tdf
+    Info (12023): Found entity 1: lpm_divide_gbm File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/db/lpm_divide_gbm.tdf Line: 25
 Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
     Info (13026): Duplicate LATCH primitive "NUM_SHIPS_PLAYER[1]" merged with LATCH primitive "NUM_SHIPS_PC[1]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 97
     Info (13026): Duplicate LATCH primitive "NUM_SHIPS_PLAYER[2]" merged with LATCH primitive "NUM_SHIPS_PC[2]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 97
@@ -999,35 +985,22 @@ Warning (13012): Latch x[2] has unsafe behavior File: C:/Users/alero/Documents/G
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "player" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 11
     Warning (13410): Pin "pc" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 12
-    Warning (13410): Pin "r[0]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 20
-    Warning (13410): Pin "r[1]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 20
     Warning (13410): Pin "r[2]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 20
-    Warning (13410): Pin "r[3]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 20
-    Warning (13410): Pin "r[5]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 20
-    Warning (13410): Pin "g[1]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 20
-    Warning (13410): Pin "g[2]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 20
-    Warning (13410): Pin "g[3]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 20
-    Warning (13410): Pin "g[6]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 20
-    Warning (13410): Pin "g[7]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 20
-    Warning (13410): Pin "b[1]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 21
-    Warning (13410): Pin "b[4]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 21
-    Warning (13410): Pin "b[6]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 21
-    Warning (13410): Pin "b[7]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 21
 Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/output_files/Battleship.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "disparo" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 5
-Info (21057): Implemented 715 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 668 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 12 input pins
     Info (21059): Implemented 64 output pins
-    Info (21061): Implemented 639 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 111 warnings
-    Info: Peak virtual memory: 4900 megabytes
-    Info: Processing ended: Wed Apr 17 18:02:52 2024
-    Info: Elapsed time: 00:00:24
-    Info: Total CPU time (on all processors): 00:00:36
+    Info (21061): Implemented 592 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 101 warnings
+    Info: Peak virtual memory: 4925 megabytes
+    Info: Processing ended: Thu Apr 18 08:54:38 2024
+    Info: Elapsed time: 00:00:37
+    Info: Total CPU time (on all processors): 00:00:35
 
 
 +------------------------------------------+

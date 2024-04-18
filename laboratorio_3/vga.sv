@@ -4,6 +4,7 @@ module vga(
     input logic [1:0] matriz_golpes [4:0][4:0],
     input logic [1:0] matriz_disparos [4:0][4:0],
 	 input logic display_lose,
+	 input logic display_win,
     output logic vgaclk, // 25.175 MHz VGA clock
     output logic hsync, vsync,
     output logic sync_b, blank_b, // To monitor & DAC
@@ -29,6 +30,7 @@ module vga(
         .matriz_golpes(matriz_golpes),
         .matriz_disparos(matriz_disparos),
 		  .display_lose(display_lose),
+		  .display_win(display_win),
         .r(r),
         .g(g),
         .b(b)
