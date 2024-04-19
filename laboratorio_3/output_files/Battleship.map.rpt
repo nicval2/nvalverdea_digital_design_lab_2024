@@ -1,5 +1,5 @@
-Analysis & Elaboration report for Battleship
-Thu Apr 18 20:44:40 2024
+Analysis & Synthesis report for Battleship
+Thu Apr 18 22:16:22 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -7,11 +7,17 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Analysis & Elaboration Settings
-  5. Analysis & Elaboration Messages
-  6. Analysis & Elaboration Suppressed Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Inverted Register Statistics
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -35,42 +41,31 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-----------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                              ;
-+-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Thu Apr 18 20:44:40 2024       ;
-; Quartus Prime Version         ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
-; Revision Name                 ; Battleship                                  ;
-; Top-level Entity Name         ; shot_PC                                     ;
-; Family                        ; Cyclone V                                   ;
-; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
-; Total registers               ; N/A until Partition Merge                   ;
-; Total pins                    ; N/A until Partition Merge                   ;
-; Total virtual pins            ; N/A until Partition Merge                   ;
-; Total block memory bits       ; N/A until Partition Merge                   ;
-; Total PLLs                    ; N/A until Partition Merge                   ;
-; Total DLLs                    ; N/A until Partition Merge                   ;
-+-------------------------------+---------------------------------------------+
-
-
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Thu Apr 18 22:16:22 2024       ;
+; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name                   ; Battleship                                  ;
+; Top-level Entity Name           ; shot_PC                                     ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 18                                          ;
+; Total pins                      ; 8                                           ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                                           ;
+; Analysis & Synthesis Settings                                                                                             ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
@@ -156,80 +151,218 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 6           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-6         ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                            ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                        ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------+---------+
+; random.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/random.sv  ;         ;
+; shot_PC.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/shot_PC.sv ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 11        ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 19        ;
+;     -- 7 input functions                    ; 0         ;
+;     -- 6 input functions                    ; 0         ;
+;     -- 5 input functions                    ; 0         ;
+;     -- 4 input functions                    ; 6         ;
+;     -- <=3 input functions                  ; 13        ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 18        ;
+;                                             ;           ;
+; I/O pins                                    ; 8         ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; rst~input ;
+; Maximum fan-out                             ; 30        ;
+; Total fan-out                               ; 125       ;
+; Average fan-out                             ; 2.36      ;
++---------------------------------------------+-----------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name      ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------+-------------+--------------+
+; |shot_PC                   ; 19 (1)              ; 18 (12)                   ; 0                 ; 0          ; 8    ; 0            ; |shot_PC                 ; shot_PC     ; work         ;
+;    |random:random_i|       ; 9 (9)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |shot_PC|random:random_i ; random      ; work         ;
+;    |random:random_j|       ; 9 (9)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |shot_PC|random:random_j ; random      ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 18    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 12    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 6     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; seed_j[0]                              ; 2       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 18                          ;
+;     CLR               ; 12                          ;
+;     ENA               ; 6                           ;
+; arriav_lcell_comb     ; 19                          ;
+;     normal            ; 19                          ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 4                           ;
+;         3 data inputs ; 8                           ;
+;         4 data inputs ; 6                           ;
+; boundary_port         ; 8                           ;
+;                       ;                             ;
+; Max LUT depth         ; 2.00                        ;
+; Average LUT depth     ; 1.56                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Thu Apr 18 20:44:27 2024
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Battleship -c Battleship --analysis_and_elaboration
+    Info: Processing started: Thu Apr 18 22:16:15 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Battleship -c Battleship
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file vga.sv
-    Info (12023): Found entity 1: vga File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio_3/vga.sv Line: 1
+    Info (12023): Found entity 1: vga File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/vga.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file vgacontroller.sv
-    Info (12023): Found entity 1: vgaController File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio_3/vgaController.sv Line: 1
+    Info (12023): Found entity 1: vgaController File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/vgaController.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file videogen.sv
-    Info (12023): Found entity 1: videoGen File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv Line: 1
+    Info (12023): Found entity 1: videoGen File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file chargenrom.sv
-    Info (12023): Found entity 1: chargenrom File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio_3/chargenrom.sv Line: 1
+    Info (12023): Found entity 1: chargenrom File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/chargenrom.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file rectgen.sv
-    Info (12023): Found entity 1: rectgen File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio_3/rectgen.sv Line: 1
+    Info (12023): Found entity 1: rectgen File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/rectgen.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pll.sv
-    Info (12023): Found entity 1: pll File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio_3/pll.sv Line: 1
+    Info (12023): Found entity 1: pll File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/pll.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file battleship.sv
-    Info (12023): Found entity 1: Battleship File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 1
+    Info (12023): Found entity 1: Battleship File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file segmentoutput.sv
-    Info (12023): Found entity 1: segmentOutput File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 1
+    Info (12023): Found entity 1: segmentOutput File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file temporizador.sv
-    Info (12023): Found entity 1: temporizador File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio_3/temporizador.sv Line: 1
+    Info (12023): Found entity 1: temporizador File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/temporizador.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file contador.sv
-    Info (12023): Found entity 1: contador File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio_3/contador.sv Line: 1
+    Info (12023): Found entity 1: contador File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/contador.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file fsm.sv
-    Info (12023): Found entity 1: FSM File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio_3/FSM.sv Line: 1
+    Info (12023): Found entity 1: FSM File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/FSM.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file contar_unos_operador.sv
-    Info (12023): Found entity 1: contar_unos_operador File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio_3/contar_unos_operador.sv Line: 1
+    Info (12023): Found entity 1: contar_unos_operador File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/contar_unos_operador.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file movement.sv
-    Info (12023): Found entity 1: movement File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio_3/movement.sv Line: 1
+    Info (12023): Found entity 1: movement File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/movement.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file output_files/tb_contador.sv
-    Info (12023): Found entity 1: tb_contador File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio_3/output_files/tb_contador.sv Line: 3
+    Info (12023): Found entity 1: tb_contador File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/output_files/tb_contador.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file seven_segment_display.sv
-    Info (12023): Found entity 1: seven_segment_display File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio_3/seven_segment_display.sv Line: 1
+    Info (12023): Found entity 1: seven_segment_display File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/seven_segment_display.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file time_counter.sv
-    Info (12023): Found entity 1: time_counter File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio_3/time_counter.sv Line: 1
+    Info (12023): Found entity 1: time_counter File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/time_counter.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file clock_divider.sv
-    Info (12023): Found entity 1: clock_divider File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio_3/clock_divider.sv Line: 1
+    Info (12023): Found entity 1: clock_divider File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/clock_divider.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file you_lose.sv
-    Info (12023): Found entity 1: you_lose File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio_3/you_lose.sv Line: 1
+    Info (12023): Found entity 1: you_lose File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/you_lose.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file you_win.sv
-    Info (12023): Found entity 1: you_win File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio_3/you_win.sv Line: 1
+    Info (12023): Found entity 1: you_win File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/you_win.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file verify_shots.sv
-    Info (12023): Found entity 1: verify_shots File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio_3/verify_shots.sv Line: 1
+    Info (12023): Found entity 1: verify_shots File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/verify_shots.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file count_ships_left.sv
-    Info (12023): Found entity 1: count_ships_left File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio_3/count_ships_left.sv Line: 1
+    Info (12023): Found entity 1: count_ships_left File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/count_ships_left.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file random.sv
-    Info (12023): Found entity 1: random File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio_3/random.sv Line: 1
+    Info (12023): Found entity 1: random File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/random.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file random_tb.sv
-    Info (12023): Found entity 1: random_tb File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio_3/random_tb.sv Line: 1
+    Info (12023): Found entity 1: random_tb File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/random_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file shot_pc.sv
-    Info (12023): Found entity 1: shot_PC File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio_3/shot_PC.sv Line: 1
+    Info (12023): Found entity 1: shot_PC File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/shot_PC.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file shot_pc_tb.sv
-    Info (12023): Found entity 1: shot_PC_tb File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio_3/shot_PC_tb.sv Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at Battleship.sv(148): created implicit net for "position" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 148
+    Info (12023): Found entity 1: shot_PC_tb File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/shot_PC_tb.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file cambiarindices.sv
+    Info (12023): Found entity 1: cambiarIndices File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/cambiarIndices.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file colocar_barcos.sv
+    Info (12023): Found entity 1: colocar_barcos File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/colocar_barcos.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file gestion_turnos.sv
+    Info (12023): Found entity 1: gestion_turnos File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/gestion_turnos.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file manejo_matrices_seleccionar.sv
+    Info (12023): Found entity 1: manejo_matrices_seleccionar File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/manejo_matrices_seleccionar.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at Battleship.sv(62): created implicit net for "clk_ms" File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 62
+Warning (10236): Verilog HDL Implicit Net warning at Battleship.sv(62): created implicit net for "rst" File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 62
+Warning (10236): Verilog HDL Implicit Net warning at Battleship.sv(121): created implicit net for "position" File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 121
 Info (12127): Elaborating entity "shot_PC" for the top level hierarchy
-Info (12128): Elaborating entity "random" for hierarchy "random:random_i" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio_3/shot_PC.sv Line: 15
-Info (144001): Generated suppressed messages file C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio_3/output_files/Battleship.map.smsg
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4764 megabytes
-    Info: Processing ended: Thu Apr 18 20:44:40 2024
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:27
-
-
-+--------------------------------------------+
-; Analysis & Elaboration Suppressed Messages ;
-+--------------------------------------------+
-The suppressed messages can be found in C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio_3/output_files/Battleship.map.smsg.
+Info (12128): Elaborating entity "random" for hierarchy "random:random_i" File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/shot_PC.sv Line: 15
+Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "random:random_i|data[0]" is converted into an equivalent circuit using register "random:random_i|data[0]~_emulated" and latch "random:random_i|data[0]~1" File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/random.sv Line: 15
+    Warning (13310): Register "random:random_i|data[1]" is converted into an equivalent circuit using register "random:random_i|data[1]~_emulated" and latch "random:random_i|data[1]~5" File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/random.sv Line: 15
+    Warning (13310): Register "random:random_i|data[2]" is converted into an equivalent circuit using register "random:random_i|data[2]~_emulated" and latch "random:random_i|data[2]~9" File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/random.sv Line: 15
+    Warning (13310): Register "random:random_j|data[0]" is converted into an equivalent circuit using register "random:random_j|data[0]~_emulated" and latch "random:random_j|data[0]~1" File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/random.sv Line: 15
+    Warning (13310): Register "random:random_j|data[1]" is converted into an equivalent circuit using register "random:random_j|data[1]~_emulated" and latch "random:random_j|data[1]~5" File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/random.sv Line: 15
+    Warning (13310): Register "random:random_j|data[2]" is converted into an equivalent circuit using register "random:random_j|data[2]~_emulated" and latch "random:random_j|data[2]~9" File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/random.sv Line: 15
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 38 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 6 output pins
+    Info (21061): Implemented 30 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 4847 megabytes
+    Info: Processing ended: Thu Apr 18 22:16:22 2024
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:09
 
 

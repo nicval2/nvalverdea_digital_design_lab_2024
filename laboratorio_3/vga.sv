@@ -3,6 +3,8 @@ module vga(
     input logic [1:0] matriz_barcos [4:0][4:0],
     input logic [1:0] matriz_golpes [4:0][4:0],
     input logic [1:0] matriz_disparos [4:0][4:0],
+	 input logic [1:0] matriz_posicion_jugador_colocar [4:0][4:0],
+	 input logic [1:0] matriz_posicion_jugador_atacar [4:0][4:0],
 	 input logic display_lose,
 	 input logic display_win,
     output logic vgaclk, // 25.175 MHz VGA clock
@@ -29,6 +31,8 @@ module vga(
         .matriz_barcos(matriz_barcos),
         .matriz_golpes(matriz_golpes),
         .matriz_disparos(matriz_disparos),
+		  .matriz_posicion_jugador_colocar(matriz_posicion_jugador_colocar),
+	     .matriz_posicion_jugador_atacar(matriz_posicion_jugador_atacar),
 		  .display_lose(display_lose),
 		  .display_win(display_win),
         .r(r),

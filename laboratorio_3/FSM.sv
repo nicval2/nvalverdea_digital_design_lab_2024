@@ -2,7 +2,7 @@ module FSM(
     input rst,          // Reset de la FSM
     input logic clk,    // Clock de la FSM
     input logic btn,      // Botón de select (presionado = 0, no presionado = 1)
-	output logic [1:0] matriz_barcos [4:0][4:0],
+	 output logic [1:0] matriz_barcos [4:0][4:0],
     output logic [1:0] matriz_golpes [4:0][4:0],
     output logic [1:0] matriz_disparos [4:0][4:0],
 	 output logic displayLose,
@@ -32,6 +32,8 @@ logic [1:0] matriz_disparos_a_pc_sin_verf [4:0][4:0];
 logic [1:0] matriz_disparos_a_pc_verf [4:0][4:0];
 logic [1:0] matriz_disparos_a_jugador_sin_verf [4:0][4:0];
 logic [1:0] matriz_disparos_a_jugador_verf [4:0][4:0];
+logic [1:0] matriz_posicion_jugador_atacar [4:0][4:0];
+logic [1:0] matriz_posicion_jugador_colocar [4:0][4:0];
 logic player_wins;
 logic player_lose;
 int pc_ships_left;

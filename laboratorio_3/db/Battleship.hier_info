@@ -27,12 +27,12 @@ rst => seed_i[1].ENA
 rst => seed_i[0].ENA
 rst => seed_j[2].ENA
 rst => seed_j[1].ENA
-i[0] <= i[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-i[1] <= i[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-i[2] <= i[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-j[0] <= j[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-j[1] <= j[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-j[2] <= j[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+i[0] << i[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+i[1] << i[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+i[2] << i[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+j[0] << j[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+j[1] << j[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+j[2] << j[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |shot_PC|random:random_i

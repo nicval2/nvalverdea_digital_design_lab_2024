@@ -3,6 +3,8 @@ module videoGen(
     input logic [1:0] matriz_barcos [4:0][4:0],
     input logic [1:0] matriz_golpes [4:0][4:0],
     input logic [1:0] matriz_disparos [4:0][4:0],
+	 input logic [1:0] matriz_posicion_jugador_colocar [4:0][4:0],
+	 input logic [1:0] matriz_posicion_jugador_atacar [4:0][4:0],
 	 input logic display_lose,
 	 input logic display_win,
     output logic [7:0] r, g, b
@@ -23,7 +25,6 @@ module videoGen(
 	parameter SPACE = 8'b00000000; // Space character
 	parameter LOSE = 8'b01111100; // Character "L"
 
-	 
     // Calculate square width and height
     parameter SQUARE_WIDTH = 640 / 11; //All squares plus 1 for the margin
     parameter SQUARE_HEIGHT = (480-189) / 5; //Para cuadricular
@@ -81,18 +82,23 @@ module videoGen(
 		 if (on_border)
 			square_color = BLACK;
 		 else if (is_left_half) begin
-			// Left half: ships and hits
-			case ({matriz_barcos[4 - square_y][4 - square_x], matriz_golpes[4 - square_y][4 - square_x]})
-			  4'b0100: square_color = GREY; // Ship
-			  4'b0001: square_color = YELLOW; // Missed hit
-			  4'b0110: square_color = RED; // Successful hit
+			// Left half: ships and hits matriz_seleccion
+			case ({matriz_posicion_jugador_colocar[4 - square_y][4 - square_x],matriz_barcos[4 - square_y][4 - square_x], matriz_golpes[4 - square_y][4 - square_x]})
+			  6'b000100: square_color = GREY; // Ship
+			  6'b000001: square_color = YELLOW; // Missed hit
+			  6'b000110: square_color = RED; // Successful hit
+			  6'b010100: square_color = WHITE; // Ship
+			  6'b010001: square_color = WHITE; // Missed hit
+			  6'b010110: square_color = WHITE; // Successful hit
 			  default: square_color = OCEANBLUE; // Default background
 			endcase
 		 end else begin
 			// Right half: shots
-			case (matriz_disparos[4 - square_y][4 - square_x])
-			  2'b01: square_color = WHITE; // Missed shot
-			  2'b10: square_color = GREEN; // Successful shot
+			case ({matriz_posicion_jugador_atacar[4 - square_y][4 - square_x], matriz_disparos[4 - square_y][4 - square_x]})
+			  4'b0001: square_color = WHITE; // Missed shot
+			  4'b0010: square_color = GREEN; // Successful shot
+			  4'b0101: square_color = YELLOW; // Missed shot
+			  4'b0110: square_color = YELLOW; // Successful shot
 			  default: square_color = OCEANBLUE; // Default background
 			endcase
 		 end
