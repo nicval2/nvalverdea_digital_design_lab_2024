@@ -8,7 +8,7 @@ module Battleship(
     input logic up,
     input logic down,
 	 input logic colocar,
-	 output logic matriz [4:0],
+	 input logic select,
 	 output logic player,
 	 output logic pc,
 	 output logic [6:0] s1,
@@ -24,10 +24,11 @@ module Battleship(
     // Definición de los barcos
     logic [4:0] player_ships;
     logic [4:0] computer_ships;
-	 logic [3:0] NUM_SHIPS_PC;
-    logic [3:0] NUM_SHIPS_PLAYER;
+	 logic [3:0] NUM_SHIPS_PC, NUM_SHIPS_PC_2, cantidad_barcos;
+    logic [3:0] NUM_SHIPS_PLAYER, NUM_SHIPS_PLAYER_2;
     logic [3:0] NUM_SHIPS, NUM_SHIPS_2;
 	 reg [2:0] i_actual, j_actual, i_next, j_next;
+	 reg [2:0] i_actual_2, j_actual_2, i_next_2, j_next_2;
 	 logic tableroGenerado, esVictoria, movimientoValido, bomba, posicion_barco;
 	 logic enable_mov = 1'b1;
 	 initial begin
@@ -61,8 +62,10 @@ module Battleship(
 	 segmentOutput segment2(.digit(NUM_SHIPS_PLAYER), .seg(s2));
 	 movement m(i_actual, j_actual, up, right, left, down, clk_ms, rst, i_next, j_next, movimientoValido);
 	 cambiarIndices ci(i_next, j_next, movimientoValido, clk_ms, rst, i_actual, j_actual);
-	 colocar_barcos cb(i_next, j_next, NUM_SHIPS_2, disparo, clk_ms, rst, matriz_barcos,posicion_barco);
+	 colocar_barcos cb(i_next, j_next, NUM_SHIPS_2, select, clk_ms, rst, i_next_2, j_next_2, cantidad_barcos, posicion_barco);
 	 manejo_matrices_seleccionar m1(colocar,clk_ms, rst, matriz_posicion, matriz_posicion_jugador_colocar, matriz_posicion_jugador_atacar);
+	 
+	 
 	 
 	reg [2:0] x;
 	reg [2:0] y;
@@ -71,12 +74,13 @@ module Battleship(
 	integer initial_col = 0;
 	 // Matrices de prueba, cambiar a inputs despues de probar
 	logic [1:0] matriz_barcos [4:0][4:0];
-	
 	logic [1:0] matriz_posicion [4:0][4:0];
 	logic [1:0] matriz_posicion_jugador_atacar [4:0][4:0];
 	logic [1:0] matriz_posicion_jugador_colocar [4:0][4:0];
+	logic [1:0] matriz_golpes [4:0][4:0];
+	logic [1:0] matriz_disparos [4:0][4:0];
 
-
+/*
 	logic [1:0] matriz_golpes [4:0][4:0]= '{
 		 '{2'b00, 2'b00, 2'b10, 2'b00, 2'b00},   
 		 '{2'b00, 2'b10, 2'b00, 2'b00, 2'b01},   
@@ -90,30 +94,39 @@ module Battleship(
 		 '{2'b01, 2'b00, 2'b00, 2'b10, 2'b01},   
 		 '{2'b00, 2'b00, 2'b00, 2'b01, 2'b00},   
 		 '{2'b00, 2'b00, 2'b00, 2'b00, 2'b00}};
-
-			 
-	always_comb begin
-		for (int i = 0; i < 5; i++) begin
-            for (int j = 0; j < 5; j++) begin
-					if (i_actual ==i && j_actual==j) begin
-						matriz_posicion[4-j_actual][4-i_actual] = 2'b01;
-                end else begin
-						matriz_posicion[4-i][4-j] = 2'b00;
-					end
-            end
-        end
-
-    end
+*/
 	
+
+	 
+always_comb begin
+	for (int i = 0; i < 5; i++) begin
+			for (int j = 0; j < 5; j++) begin
+				if (i_actual ==i && j_actual==j) begin
+					matriz_posicion[4-j_actual][4-i_actual] = 2'b01;
+					matriz_barcos[4-j_next_2][4-i_next_2] <= 2'b01;	
+				 end else begin
+					matriz_posicion[4-i][4-j] = 2'b00;
+					matriz_barcos[4-i][4-j] <= 2'b00;	
+
+				end
+			end
+	  end
+	
+ end
+
 // Inicialización de la matriz y colocación del cursor en la posición inicial
 always @(reset) begin
 	 if (reset) begin
 		  NUM_SHIPS_PC <= NUM_SHIPS;
-		  NUM_SHIPS_PLAYER <= NUM_SHIPS;	 
+		  NUM_SHIPS_PLAYER <= NUM_SHIPS;
+		  NUM_SHIPS_PC_2 <= NUM_SHIPS;
+		  NUM_SHIPS_PLAYER_2 <= NUM_SHIPS;  
 		  NUM_SHIPS_2 <= NUM_SHIPS; 
 	 end else begin
 		  NUM_SHIPS_PC <= NUM_SHIPS_PC;
 		  NUM_SHIPS_PLAYER <= NUM_SHIPS_PLAYER;
+		  NUM_SHIPS_PC_2 <= NUM_SHIPS_PC_2;
+		  NUM_SHIPS_PLAYER_2 <= NUM_SHIPS_PLAYER_2;
 		  NUM_SHIPS_2 <= NUM_SHIPS_2; 
 	end 
 end	

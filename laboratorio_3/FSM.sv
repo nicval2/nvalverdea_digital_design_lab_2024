@@ -2,6 +2,7 @@ module FSM(
     input rst,          // Reset de la FSM
     input logic clk,    // Clock de la FSM
     input logic btn,      // Botón de select (presionado = 0, no presionado = 1)
+	 input logic num_barcos,
 	 output logic [1:0] matriz_barcos [4:0][4:0],
     output logic [1:0] matriz_golpes [4:0][4:0],
     output logic [1:0] matriz_disparos [4:0][4:0],
@@ -11,6 +12,7 @@ module FSM(
 
 // Declaración de parámetros
 localparam STATE_INTIIAL = 4'b0000;
+localparam STATE_MOVE_SHIPS = 4'b1010;
 localparam STATE_SET_SHIPS = 4'b0001;
 localparam STATE_PLAYER_TURN = 4'b0010;
 localparam STATE_VERIFY_SHOTS = 4'b0011;
@@ -20,6 +22,13 @@ localparam STATE_PC_TURN = 4'b0110;
 localparam STATE_VERIFY_HITS= 4'b0111;
 localparam STATE_VERIFY_LOSE= 4'b1000;
 localparam STATE_LOSE_SCREEN = 4'b1001;
+
+logic [1:0] matriz_pc [4:0][4:0] = '{
+		 '{2'b00, 2'b00, 2'b10, 2'b00, 2'b01},   
+		 '{2'b00, 2'b10, 2'b00, 2'b00, 2'b00},   
+		 '{2'b01, 2'b00, 2'b00, 2'b10, 2'b01},   
+		 '{2'b00, 2'b00, 2'b00, 2'b01, 2'b00},   
+		 '{2'b00, 2'b00, 2'b00, 2'b00, 2'b00}};
 
 //Declaracion variables
 logic [3:0] estado_actual, estado_siguiente;

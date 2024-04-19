@@ -5,21 +5,23 @@ module colocar_barcos (
     input logic aceptar,  // Señal para confirmar la colocación del barco
     input logic clk,  // Reloj para sincronizar la operación
     input logic rst,  // Reset para inicializar/reiniciar el módulo
-	 output logic [1:0] matriz [4:0][4:0],  // Matriz para colocar posiciones
+	 output reg [2:0] i_next_2,  // Entrada para la fila (0 a 4)
+    output reg [2:0] j_next_2,  // Entrada para la columna (0 a 4)
+	 output logic [2:0] barcos_restantes,
     output logic completo  // Indica si ya se colocaron todos los barcos
 );
 
-    // Registros internos para manejar la lógica
-    logic [2:0] barcos_restantes;
-
     // Inicializar la matriz y el contador de barcos en el reset
     always @(aceptar) begin  
-        if (aceptar && barcos_restantes > 0 && !matriz[fila][columna]) begin
-            matriz[fila][columna] = 1;  // Coloca un barco en la posición especificada
-            barcos_restantes = barcos_restantes - 1;  // Decrementa el contador de barcos restantes
-            if (barcos_restantes == 0) begin
-                completo = 1;  // Todos los barcos han sido colocados
-            end
-        end
+        if (!aceptar) begin
+            if (cantidad_barcos < 5) begin
+					i_next_2 = columna;
+					j_next_2 = fila;
+					barcos_restantes = cantidad_barcos - 1;
+               if (cantidad_barcos == 0) begin 
+						completo = 1;
+					end
+				end
+			end
     end
 endmodule

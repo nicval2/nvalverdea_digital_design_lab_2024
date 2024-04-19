@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSEMA5F31C6
-set_global_assignment -name TOP_LEVEL_ENTITY shot_PC
+set_global_assignment -name TOP_LEVEL_ENTITY Battleship
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 22.1STD.2
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "20:57:56  MARCH 29, 2024"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.0 Lite Edition"
@@ -96,8 +96,6 @@ set_location_assignment PIN_Y16 -to down
 set_location_assignment PIN_W15 -to left
 set_location_assignment PIN_V16 -to pc
 set_location_assignment PIN_Y21 -to player
-set_location_assignment PIN_AA15 -to right
-set_location_assignment PIN_AA14 -to up
 set_location_assignment PIN_AH28 -to s1[6]
 set_location_assignment PIN_AG28 -to s1[5]
 set_location_assignment PIN_AF28 -to s1[4]
@@ -166,9 +164,6 @@ set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id random_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME random_tb -section_id random_tb
 set_global_assignment -name SYSTEMVERILOG_FILE shot_PC.sv
 set_global_assignment -name SYSTEMVERILOG_FILE shot_PC_tb.sv
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name EDA_TEST_BENCH_FILE random_tb.sv -section_id random_tb
 set_global_assignment -name EDA_TEST_BENCH_NAME shot_PC_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id shot_PC_tb
@@ -178,4 +173,9 @@ set_global_assignment -name SYSTEMVERILOG_FILE cambiarIndices.sv
 set_global_assignment -name SYSTEMVERILOG_FILE colocar_barcos.sv
 set_global_assignment -name SYSTEMVERILOG_FILE gestion_turnos.sv
 set_global_assignment -name SYSTEMVERILOG_FILE manejo_matrices_seleccionar.sv
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_AA15 -to colocar
+set_location_assignment PIN_AA14 -to select
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

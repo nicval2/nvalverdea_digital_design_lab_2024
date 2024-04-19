@@ -90,6 +90,7 @@ module videoGen(
 			  6'b010100: square_color = WHITE; // Ship
 			  6'b010001: square_color = WHITE; // Missed hit
 			  6'b010110: square_color = WHITE; // Successful hit
+			  6'b010000: square_color = WHITE; // Select
 			  default: square_color = OCEANBLUE; // Default background
 			endcase
 		 end else begin

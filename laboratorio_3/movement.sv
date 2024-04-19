@@ -4,16 +4,18 @@ module movement(
 	output reg [2:0]i_next, j_next, output logic movimientoValido
 );
 
-always @(down or right or left or up) begin
-	 if(i_actual==3'b111 && down==0) i_next = i_actual;
-	 else if(i_actual==3'b000 && up==0) i_next = i_actual;
-	 else if(j_actual==3'b111 && right==0) j_next = j_actual;
-	 else if(j_actual==3'b000 && left==0) j_next = j_actual;
-	 else begin
-		if(!up) i_next=i_actual - 1;
-		if(!down) i_next=i_actual + 1;
-		if(!right) j_next=j_actual + 1;
-		if(!left) j_next=j_actual - 1;
+
+always @(down) begin
+	if(!down) begin
+		/*j_next = j_actual-1;
+		i_next = i_actual;*/
+		j_next = 1;
+		i_next = 1;
+		movimientoValido = 1'b1;
+	end else begin
+		j_next = 0;
+		i_next = 0;
+		movimientoValido = 1'b1;
 	end 
 end
 				
