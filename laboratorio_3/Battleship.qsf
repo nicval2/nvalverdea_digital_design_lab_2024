@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSEMA5F31C6
-set_global_assignment -name TOP_LEVEL_ENTITY random
+set_global_assignment -name TOP_LEVEL_ENTITY shot_PC
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 22.1STD.2
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "20:57:56  MARCH 29, 2024"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.0 Lite Edition"
@@ -157,15 +157,21 @@ set_global_assignment -name SYSTEMVERILOG_FILE verify_shots.sv
 set_global_assignment -name SYSTEMVERILOG_FILE count_ships_left.sv
 set_global_assignment -name SYSTEMVERILOG_FILE random.sv
 set_global_assignment -name SYSTEMVERILOG_FILE random_tb.sv
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
 set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
-set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH random_tb -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH shot_PC_tb -section_id eda_simulation
 set_global_assignment -name EDA_TEST_BENCH_NAME random_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id random_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME random_tb -section_id random_tb
+set_global_assignment -name SYSTEMVERILOG_FILE shot_PC.sv
+set_global_assignment -name SYSTEMVERILOG_FILE shot_PC_tb.sv
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name EDA_TEST_BENCH_FILE random_tb.sv -section_id random_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME shot_PC_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id shot_PC_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME shot_PC_tb -section_id shot_PC_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE shot_PC_tb.sv -section_id shot_PC_tb
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

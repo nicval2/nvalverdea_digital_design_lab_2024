@@ -1,5 +1,5 @@
 Analysis & Elaboration report for Battleship
-Thu Apr 18 17:38:55 2024
+Thu Apr 18 20:44:40 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -38,10 +38,10 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Thu Apr 18 17:38:55 2024       ;
+; Analysis & Elaboration Status ; Successful - Thu Apr 18 20:44:40 2024       ;
 ; Quartus Prime Version         ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                 ; Battleship                                  ;
-; Top-level Entity Name         ; random                                      ;
+; Top-level Entity Name         ; shot_PC                                     ;
 ; Family                        ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
 ; Total registers               ; N/A until Partition Merge                   ;
@@ -75,7 +75,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; random             ; Battleship         ;
+; Top-level entity name                                                           ; shot_PC            ; Battleship         ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -162,7 +162,7 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Thu Apr 18 17:38:42 2024
+    Info: Processing started: Thu Apr 18 20:44:27 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Battleship -c Battleship --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -212,14 +212,19 @@ Info (12021): Found 1 design units, including 1 entities, in source file random.
     Info (12023): Found entity 1: random File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio_3/random.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file random_tb.sv
     Info (12023): Found entity 1: random_tb File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio_3/random_tb.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file shot_pc.sv
+    Info (12023): Found entity 1: shot_PC File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio_3/shot_PC.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file shot_pc_tb.sv
+    Info (12023): Found entity 1: shot_PC_tb File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio_3/shot_PC_tb.sv Line: 1
 Warning (10236): Verilog HDL Implicit Net warning at Battleship.sv(148): created implicit net for "position" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 148
-Info (12127): Elaborating entity "random" for the top level hierarchy
+Info (12127): Elaborating entity "shot_PC" for the top level hierarchy
+Info (12128): Elaborating entity "random" for hierarchy "random:random_i" File: C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio_3/shot_PC.sv Line: 15
 Info (144001): Generated suppressed messages file C:/Users/Admin/OneDrive/Desktop/nvalverdea_digital_design_lab_2024/laboratorio_3/output_files/Battleship.map.smsg
 Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4754 megabytes
-    Info: Processing ended: Thu Apr 18 17:38:55 2024
+    Info: Peak virtual memory: 4764 megabytes
+    Info: Processing ended: Thu Apr 18 20:44:40 2024
     Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:29
+    Info: Total CPU time (on all processors): 00:00:27
 
 
 +--------------------------------------------+

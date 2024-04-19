@@ -1,7 +1,7 @@
-Analysis & Elaboration Status : Successful - Thu Apr 18 17:38:55 2024
+Analysis & Elaboration Status : Successful - Thu Apr 18 20:44:40 2024
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : Battleship
-Top-level Entity Name : random
+Top-level Entity Name : shot_PC
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A until Partition Merge
 Total registers : N/A until Partition Merge
