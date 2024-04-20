@@ -1,0 +1,273 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "s1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "s1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "s1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "s1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "s1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "s1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "s1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "s2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "s2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "s2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "s2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "s2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "s2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "s2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "t1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "t1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "t1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "t1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "t1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "t1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "t1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "t2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "t2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "t2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "t2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "t2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "t2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "t2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "vgaclk",
+					"strict" : false
+				},
+				{
+					"name" : "hsync",
+					"strict" : false
+				},
+				{
+					"name" : "vsync",
+					"strict" : false
+				},
+				{
+					"name" : "sync_b",
+					"strict" : false
+				},
+				{
+					"name" : "blank_b",
+					"strict" : false
+				},
+				{
+					"name" : "r[0]",
+					"strict" : false
+				},
+				{
+					"name" : "r[1]",
+					"strict" : false
+				},
+				{
+					"name" : "r[3]",
+					"strict" : false
+				},
+				{
+					"name" : "r[4]",
+					"strict" : false
+				},
+				{
+					"name" : "r[5]",
+					"strict" : false
+				},
+				{
+					"name" : "r[6]",
+					"strict" : false
+				},
+				{
+					"name" : "r[7]",
+					"strict" : false
+				},
+				{
+					"name" : "g[0]",
+					"strict" : false
+				},
+				{
+					"name" : "g[1]",
+					"strict" : false
+				},
+				{
+					"name" : "g[2]",
+					"strict" : false
+				},
+				{
+					"name" : "g[3]",
+					"strict" : false
+				},
+				{
+					"name" : "g[4]",
+					"strict" : false
+				},
+				{
+					"name" : "g[5]",
+					"strict" : false
+				},
+				{
+					"name" : "g[6]",
+					"strict" : false
+				},
+				{
+					"name" : "g[7]",
+					"strict" : false
+				},
+				{
+					"name" : "b[0]",
+					"strict" : false
+				},
+				{
+					"name" : "b[1]",
+					"strict" : false
+				},
+				{
+					"name" : "b[2]",
+					"strict" : false
+				},
+				{
+					"name" : "b[3]",
+					"strict" : false
+				},
+				{
+					"name" : "b[4]",
+					"strict" : false
+				},
+				{
+					"name" : "b[5]",
+					"strict" : false
+				},
+				{
+					"name" : "b[6]",
+					"strict" : false
+				},
+				{
+					"name" : "b[7]",
+					"strict" : false
+				},
+				{
+					"name" : "colocar",
+					"strict" : false
+				},
+				{
+					"name" : "down",
+					"strict" : false
+				},
+				{
+					"name" : "ships[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ships[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ships[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ships[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ships[2]",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "select",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

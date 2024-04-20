@@ -1,0 +1,27 @@
+module Battleship();
+	//Matrices de prueba, cambiar a inputs despues de probar
+	logic [4:0][4:0] matriz_barcos = '{
+        '{1, 1, 1, 1, 1},   
+        '{0, 1, 1, 1, 0},   
+        '{1, 1, 1, 1, 0},   
+        '{0, 1, 1, 0, 0},   
+        '{1, 0, 0, 0, 0}    
+    };
+		logic [4:0][4:0] matriz_golpes = '{
+        '{0, 0, 2, 0, 0},   
+        '{1, 2, 0, 0, 1},   
+        '{2, 0, 0, 0, 0},   
+        '{0, 0, 0, 1, 0},   
+        '{0, 0, 0, 0, 0}    
+    };
+	 
+	 	logic [4:0][4:0] matriz_disparos = '{
+        '{2, 0, 2, 0, 1},   
+        '{0, 2, 0, 0, 0},   
+        '{1, 0, 0, 2, 1},   
+        '{0, 0, 0, 1, 0},   
+        '{0, 0, 0, 0, 0}    
+    };
+	 
+	 	videoGen videoGen(0, 0, matriz_barcos, matriz_golpes, matriz_disparos, r, g, b);
+endmodule

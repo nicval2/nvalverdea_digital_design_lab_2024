@@ -1,0 +1,93 @@
+module you_lose(
+    input logic [9:0] x, y,
+    output logic [7:0] r, g, b
+);
+
+// Define offsets for each letter
+logic [2:0] xoff;
+logic [2:0] yoff;
+
+// Determine offsets based on x and y coordinates
+always_comb begin
+    case (y)
+        0: yoff = 0;
+        1: yoff = 1;
+        2: yoff = 2;
+        3: yoff = 3;
+        4: yoff = 4;
+        default: yoff = 0;
+    endcase
+    
+    case (x)
+        0: xoff = 0;
+        1: xoff = 1;
+        2: xoff = 2;
+        3: xoff = 3;
+        4: xoff = 4;
+        5: xoff = 5;
+        6: xoff = 6;
+        7: xoff = 7;
+        8: xoff = 8;
+        9: xoff = 9;
+        default: xoff = 0;
+    endcase
+end
+
+// Module instances to display each letter
+chargenrom Y(
+    .ch(89), // ASCII code for 'Y'
+    .xoff(xoff),
+    .yoff(yoff),
+    .pixel(r[7]), // Use the pixel value for the red component
+);
+
+chargenrom O(
+    .ch(79), // ASCII code for 'O'
+    .xoff(xoff + 6),
+    .yoff(yoff),
+    .pixel(g[7]), // Use the pixel value for the green component
+);
+
+chargenrom U(
+    .ch(85), // ASCII code for 'U'
+    .xoff(xoff + 12),
+    .yoff(yoff),
+    .pixel(b[7]), // Use the pixel value for the blue component
+);
+
+chargenrom L1(
+    .ch(76), // ASCII code for 'L'
+    .xoff(xoff + 18),
+    .yoff(yoff),
+    .pixel(r[6]), // Use the pixel value for the red component
+);
+
+chargenrom L2(
+    .ch(76), // ASCII code for 'L'
+    .xoff(xoff + 24),
+    .yoff(yoff),
+    .pixel(g[6]), // Use the pixel value for the green component
+);
+
+chargenrom O2(
+    .ch(79), // ASCII code for 'O'
+    .xoff(xoff + 30),
+    .yoff(yoff),
+    .pixel(b[6]), // Use the pixel value for the blue component
+);
+
+chargenrom S(
+    .ch(83), // ASCII code for 'S'
+    .xoff(xoff + 36),
+    .yoff(yoff),
+    .pixel(r[5]), // Use the pixel value for the red component
+);
+
+chargenrom E(
+    .ch(69), // ASCII code for 'E'
+    .xoff(xoff + 42),
+    .yoff(yoff),
+    .pixel(g[5]), // Use the pixel value for the green component
+);
+
+endmodule
