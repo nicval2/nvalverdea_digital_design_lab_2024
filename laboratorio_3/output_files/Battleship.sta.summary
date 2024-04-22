@@ -1,0 +1,245 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'clk'
+Slack : -4.474
+TNS   : -138.946
+
+Type  : Slow 1100mV 85C Model Setup 'select'
+Slack : -3.154
+TNS   : -3.154
+
+Type  : Slow 1100mV 85C Model Setup 'down'
+Slack : -2.996
+TNS   : -5.489
+
+Type  : Slow 1100mV 85C Model Setup 'vga:vga_inst|pll:vgapll|toggle'
+Slack : -2.941
+TNS   : -62.575
+
+Type  : Slow 1100mV 85C Model Hold 'clk'
+Slack : 0.359
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'vga:vga_inst|pll:vgapll|toggle'
+Slack : 0.674
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'select'
+Slack : 0.728
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'down'
+Slack : 1.005
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'clk'
+Slack : -2.115
+TNS   : -116.236
+
+Type  : Slow 1100mV 85C Model Removal 'clk'
+Slack : 0.725
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.877
+TNS   : -31.723
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'vga:vga_inst|pll:vgapll|toggle'
+Slack : -0.394
+TNS   : -11.489
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'down'
+Slack : 0.006
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'select'
+Slack : 0.086
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'reset'
+Slack : 0.093
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'clk'
+Slack : -4.350
+TNS   : -136.421
+
+Type  : Slow 1100mV 0C Model Setup 'select'
+Slack : -3.079
+TNS   : -3.079
+
+Type  : Slow 1100mV 0C Model Setup 'vga:vga_inst|pll:vgapll|toggle'
+Slack : -3.002
+TNS   : -64.188
+
+Type  : Slow 1100mV 0C Model Setup 'down'
+Slack : -2.978
+TNS   : -5.392
+
+Type  : Slow 1100mV 0C Model Hold 'clk'
+Slack : 0.377
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'select'
+Slack : 0.594
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'vga:vga_inst|pll:vgapll|toggle'
+Slack : 0.665
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'down'
+Slack : 0.925
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'clk'
+Slack : -1.877
+TNS   : -102.101
+
+Type  : Slow 1100mV 0C Model Removal 'clk'
+Slack : 0.423
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.871
+TNS   : -34.768
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'vga:vga_inst|pll:vgapll|toggle'
+Slack : -0.394
+TNS   : -11.295
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'down'
+Slack : -0.008
+TNS   : -0.008
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'reset'
+Slack : 0.079
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'select'
+Slack : 0.082
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'clk'
+Slack : -3.418
+TNS   : -58.548
+
+Type  : Fast 1100mV 85C Model Setup 'select'
+Slack : -2.199
+TNS   : -2.199
+
+Type  : Fast 1100mV 85C Model Setup 'down'
+Slack : -1.968
+TNS   : -3.290
+
+Type  : Fast 1100mV 85C Model Setup 'vga:vga_inst|pll:vgapll|toggle'
+Slack : -1.295
+TNS   : -27.893
+
+Type  : Fast 1100mV 85C Model Hold 'clk'
+Slack : 0.177
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'vga:vga_inst|pll:vgapll|toggle'
+Slack : 0.346
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'select'
+Slack : 0.463
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'down'
+Slack : 0.601
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'clk'
+Slack : -1.666
+TNS   : -90.713
+
+Type  : Fast 1100mV 85C Model Removal 'clk'
+Slack : 0.346
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.764
+TNS   : -6.169
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'reset'
+Slack : -0.168
+TNS   : -0.903
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'select'
+Slack : -0.098
+TNS   : -0.304
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'down'
+Slack : -0.080
+TNS   : -0.323
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'vga:vga_inst|pll:vgapll|toggle'
+Slack : 0.117
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'clk'
+Slack : -2.983
+TNS   : -49.808
+
+Type  : Fast 1100mV 0C Model Setup 'select'
+Slack : -1.960
+TNS   : -1.960
+
+Type  : Fast 1100mV 0C Model Setup 'down'
+Slack : -1.814
+TNS   : -2.892
+
+Type  : Fast 1100mV 0C Model Setup 'vga:vga_inst|pll:vgapll|toggle'
+Slack : -1.169
+TNS   : -25.481
+
+Type  : Fast 1100mV 0C Model Hold 'clk'
+Slack : 0.169
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'select'
+Slack : 0.314
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'vga:vga_inst|pll:vgapll|toggle'
+Slack : 0.315
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'down'
+Slack : 0.515
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'clk'
+Slack : -1.468
+TNS   : -79.312
+
+Type  : Fast 1100mV 0C Model Removal 'clk'
+Slack : 0.156
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.730
+TNS   : -6.011
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'reset'
+Slack : -0.145
+TNS   : -0.780
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'down'
+Slack : -0.085
+TNS   : -0.361
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'select'
+Slack : -0.084
+TNS   : -0.251
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'vga:vga_inst|pll:vgapll|toggle'
+Slack : 0.130
+TNS   : 0.000
+
+------------------------------------------------------------

@@ -1,0 +1,1105 @@
+Analysis & Synthesis report for Battleship
+Fri Apr 19 10:44:13 2024
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: vga:vga_inst|vgaController:vgaCont
+ 12. Parameter Settings for User Entity Instance: vga:vga_inst|videoGen:videoGen_inst
+ 13. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
+ 14. Parameter Settings for Inferred Entity Instance: lpm_divide:Div0
+ 15. Parameter Settings for Inferred Entity Instance: vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Mod0
+ 16. Parameter Settings for Inferred Entity Instance: vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Mod1
+ 17. Parameter Settings for Inferred Entity Instance: vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Div1
+ 18. Parameter Settings for Inferred Entity Instance: vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Div0
+ 19. Port Connectivity Checks: "vga:vga_inst|videoGen:videoGen_inst|you_win:win_message|chargenrom:char_gen_rom"
+ 20. Port Connectivity Checks: "vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message|chargenrom:char_gen_rom"
+ 21. Port Connectivity Checks: "vga:vga_inst"
+ 22. Port Connectivity Checks: "manejo_matrices_seleccionar:m1"
+ 23. Port Connectivity Checks: "colocar_barcos:cb"
+ 24. Post-Synthesis Netlist Statistics for Top Partition
+ 25. Elapsed Time Per Partition
+ 26. Analysis & Synthesis Messages
+ 27. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Fri Apr 19 10:44:13 2024       ;
+; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name                   ; Battleship                                  ;
+; Top-level Entity Name           ; Battleship                                  ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 60                                          ;
+; Total pins                      ; 73                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; Battleship         ; Battleship         ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 6           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-6         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                            ; Library ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------+
+; vga.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/vga.sv                         ;         ;
+; vgaController.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/vgaController.sv               ;         ;
+; videoGen.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv                    ;         ;
+; chargenrom.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/chargenrom.sv                  ;         ;
+; charrom.txt                      ; yes             ; User File                    ; C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/charrom.txt                    ;         ;
+; pll.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/pll.sv                         ;         ;
+; Battleship.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv                  ;         ;
+; segmentOutput.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv               ;         ;
+; contar_unos_operador.sv          ; yes             ; User SystemVerilog HDL File  ; C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/contar_unos_operador.sv        ;         ;
+; movement.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/movement.sv                    ;         ;
+; seven_segment_display.sv         ; yes             ; User SystemVerilog HDL File  ; C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/seven_segment_display.sv       ;         ;
+; time_counter.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/time_counter.sv                ;         ;
+; clock_divider.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/clock_divider.sv               ;         ;
+; you_lose.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/you_lose.sv                    ;         ;
+; you_win.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/you_win.sv                     ;         ;
+; cambiarIndices.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/cambiarIndices.sv              ;         ;
+; colocar_barcos.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/colocar_barcos.sv              ;         ;
+; manejo_matrices_seleccionar.sv   ; yes             ; User SystemVerilog HDL File  ; C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/manejo_matrices_seleccionar.sv ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf                                                   ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc                                                  ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc                                              ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                                                   ;         ;
+; db/lpm_divide_62m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/db/lpm_divide_62m.tdf          ;         ;
+; db/sign_div_unsign_9kh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/db/sign_div_unsign_9kh.tdf     ;         ;
+; db/alt_u_div_ose.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/db/alt_u_div_ose.tdf           ;         ;
+; db/lpm_divide_3am.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/db/lpm_divide_3am.tdf          ;         ;
+; db/lpm_divide_j3m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/db/lpm_divide_j3m.tdf          ;         ;
+; db/sign_div_unsign_mlh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/db/sign_div_unsign_mlh.tdf     ;         ;
+; db/alt_u_div_ive.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/db/alt_u_div_ive.tdf           ;         ;
+; db/lpm_divide_gbm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/db/lpm_divide_gbm.tdf          ;         ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimate of Logic utilization (ALMs needed) ; 254         ;
+;                                             ;             ;
+; Combinational ALUT usage for logic          ; 491         ;
+;     -- 7 input functions                    ; 0           ;
+;     -- 6 input functions                    ; 16          ;
+;     -- 5 input functions                    ; 30          ;
+;     -- 4 input functions                    ; 51          ;
+;     -- <=3 input functions                  ; 394         ;
+;                                             ;             ;
+; Dedicated logic registers                   ; 60          ;
+;                                             ;             ;
+; I/O pins                                    ; 73          ;
+;                                             ;             ;
+; Total DSP Blocks                            ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; reset~input ;
+; Maximum fan-out                             ; 42          ;
+; Total fan-out                               ; 1760        ;
+; Average fan-out                             ; 2.53        ;
++---------------------------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                             ;
++-----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
+; Compilation Hierarchy Node                    ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                             ; Entity Name           ; Library Name ;
++-----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
+; |Battleship                                   ; 491 (8)             ; 60 (0)                    ; 0                 ; 0          ; 73   ; 0            ; |Battleship                                                                                                                                     ; Battleship            ; work         ;
+;    |clock_divider:divider|                    ; 40 (40)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |Battleship|clock_divider:divider                                                                                                               ; clock_divider         ; work         ;
+;    |colocar_barcos:cb|                        ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|colocar_barcos:cb                                                                                                                   ; colocar_barcos        ; work         ;
+;    |contar_unos_operador:unos1|               ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|contar_unos_operador:unos1                                                                                                          ; contar_unos_operador  ; work         ;
+;    |lpm_divide:Div0|                          ; 27 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|lpm_divide:Div0                                                                                                                     ; lpm_divide            ; work         ;
+;       |lpm_divide_3am:auto_generated|         ; 27 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|lpm_divide:Div0|lpm_divide_3am:auto_generated                                                                                       ; lpm_divide_3am        ; work         ;
+;          |sign_div_unsign_9kh:divider|        ; 27 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|lpm_divide:Div0|lpm_divide_3am:auto_generated|sign_div_unsign_9kh:divider                                                           ; sign_div_unsign_9kh   ; work         ;
+;             |alt_u_div_ose:divider|           ; 27 (27)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|lpm_divide:Div0|lpm_divide_3am:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_ose:divider                                     ; alt_u_div_ose         ; work         ;
+;    |lpm_divide:Mod0|                          ; 31 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|lpm_divide:Mod0                                                                                                                     ; lpm_divide            ; work         ;
+;       |lpm_divide_62m:auto_generated|         ; 31 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|lpm_divide:Mod0|lpm_divide_62m:auto_generated                                                                                       ; lpm_divide_62m        ; work         ;
+;          |sign_div_unsign_9kh:divider|        ; 31 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|lpm_divide:Mod0|lpm_divide_62m:auto_generated|sign_div_unsign_9kh:divider                                                           ; sign_div_unsign_9kh   ; work         ;
+;             |alt_u_div_ose:divider|           ; 31 (31)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|lpm_divide:Mod0|lpm_divide_62m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_ose:divider                                     ; alt_u_div_ose         ; work         ;
+;    |segmentOutput:segment1|                   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|segmentOutput:segment1                                                                                                              ; segmentOutput         ; work         ;
+;    |seven_segment_display:disp_seconds_tens|  ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|seven_segment_display:disp_seconds_tens                                                                                             ; seven_segment_display ; work         ;
+;    |seven_segment_display:disp_seconds_units| ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|seven_segment_display:disp_seconds_units                                                                                            ; seven_segment_display ; work         ;
+;    |time_counter:counter|                     ; 7 (7)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|time_counter:counter                                                                                                                ; time_counter          ; work         ;
+;    |vga:vga_inst|                             ; 352 (0)             ; 21 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst                                                                                                                        ; vga                   ; work         ;
+;       |pll:vgapll|                            ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|pll:vgapll                                                                                                             ; pll                   ; work         ;
+;       |vgaController:vgaCont|                 ; 30 (30)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|vgaController:vgaCont                                                                                                  ; vgaController         ; work         ;
+;       |videoGen:videoGen_inst|                ; 321 (29)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst                                                                                                 ; videoGen              ; work         ;
+;          |lpm_divide:Div0|                    ; 70 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Div0                                                                                 ; lpm_divide            ; work         ;
+;             |lpm_divide_gbm:auto_generated|   ; 70 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Div0|lpm_divide_gbm:auto_generated                                                   ; lpm_divide_gbm        ; work         ;
+;                |sign_div_unsign_mlh:divider|  ; 70 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Div0|lpm_divide_gbm:auto_generated|sign_div_unsign_mlh:divider                       ; sign_div_unsign_mlh   ; work         ;
+;                   |alt_u_div_ive:divider|     ; 70 (70)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Div0|lpm_divide_gbm:auto_generated|sign_div_unsign_mlh:divider|alt_u_div_ive:divider ; alt_u_div_ive         ; work         ;
+;          |lpm_divide:Div1|                    ; 70 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Div1                                                                                 ; lpm_divide            ; work         ;
+;             |lpm_divide_gbm:auto_generated|   ; 70 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Div1|lpm_divide_gbm:auto_generated                                                   ; lpm_divide_gbm        ; work         ;
+;                |sign_div_unsign_mlh:divider|  ; 70 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Div1|lpm_divide_gbm:auto_generated|sign_div_unsign_mlh:divider                       ; sign_div_unsign_mlh   ; work         ;
+;                   |alt_u_div_ive:divider|     ; 70 (70)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Div1|lpm_divide_gbm:auto_generated|sign_div_unsign_mlh:divider|alt_u_div_ive:divider ; alt_u_div_ive         ; work         ;
+;          |lpm_divide:Mod0|                    ; 76 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Mod0                                                                                 ; lpm_divide            ; work         ;
+;             |lpm_divide_j3m:auto_generated|   ; 76 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Mod0|lpm_divide_j3m:auto_generated                                                   ; lpm_divide_j3m        ; work         ;
+;                |sign_div_unsign_mlh:divider|  ; 76 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Mod0|lpm_divide_j3m:auto_generated|sign_div_unsign_mlh:divider                       ; sign_div_unsign_mlh   ; work         ;
+;                   |alt_u_div_ive:divider|     ; 76 (76)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Mod0|lpm_divide_j3m:auto_generated|sign_div_unsign_mlh:divider|alt_u_div_ive:divider ; alt_u_div_ive         ; work         ;
+;          |lpm_divide:Mod1|                    ; 76 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Mod1                                                                                 ; lpm_divide            ; work         ;
+;             |lpm_divide_j3m:auto_generated|   ; 76 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Mod1|lpm_divide_j3m:auto_generated                                                   ; lpm_divide_j3m        ; work         ;
+;                |sign_div_unsign_mlh:divider|  ; 76 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Mod1|lpm_divide_j3m:auto_generated|sign_div_unsign_mlh:divider                       ; sign_div_unsign_mlh   ; work         ;
+;                   |alt_u_div_ive:divider|     ; 76 (76)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Mod1|lpm_divide_j3m:auto_generated|sign_div_unsign_mlh:divider|alt_u_div_ive:divider ; alt_u_div_ive         ; work         ;
++-----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                          ;
++-----------------------------------------------------+-------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal           ; Free of Timing Hazards ;
++-----------------------------------------------------+-------------------------------+------------------------+
+; NUM_SHIPS_PC[1]                                     ; reset                         ; yes                    ;
+; NUM_SHIPS_PC[2]                                     ; reset                         ; yes                    ;
+; NUM_SHIPS_PC[0]                                     ; reset                         ; yes                    ;
+; NUM_SHIPS_PLAYER[1]                                 ; reset                         ; yes                    ;
+; NUM_SHIPS_PLAYER[2]                                 ; reset                         ; yes                    ;
+; NUM_SHIPS_PLAYER[0]                                 ; reset                         ; yes                    ;
+; matriz_barcos[4][4][0]                              ; matriz_barcos[4][4][0]        ; yes                    ;
+; colocar_barcos:cb|j_next_2[0]                       ; colocar_barcos:cb|i_next_2[2] ; yes                    ;
+; colocar_barcos:cb|i_next_2[0]                       ; colocar_barcos:cb|i_next_2[2] ; yes                    ;
+; matriz_barcos[3][3][0]                              ; matriz_barcos[3][3][0]        ; yes                    ;
+; NUM_SHIPS_2[2]                                      ; reset                         ; yes                    ;
+; NUM_SHIPS_2[1]                                      ; reset                         ; yes                    ;
+; NUM_SHIPS_2[0]                                      ; reset                         ; yes                    ;
+; Number of user-specified and inferred latches = 13  ;                               ;                        ;
++-----------------------------------------------------+-------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 60    ;
+; Number of registers using Synchronous Clear  ; 52    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 39    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 12    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |Battleship|vga:vga_inst|videoGen:videoGen_inst|square_color ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: vga:vga_inst|vgaController:vgaCont ;
++----------------+------------+---------------------------------------------------+
+; Parameter Name ; Value      ; Type                                              ;
++----------------+------------+---------------------------------------------------+
+; HACTIVE        ; 1010000000 ; Unsigned Binary                                   ;
+; HFP            ; 0000010000 ; Unsigned Binary                                   ;
+; HSYN           ; 0001100000 ; Unsigned Binary                                   ;
+; HBP            ; 0000110000 ; Unsigned Binary                                   ;
+; HMAX           ; 1100100000 ; Unsigned Binary                                   ;
+; VBP            ; 0000100000 ; Unsigned Binary                                   ;
+; VACTIVE        ; 0111100000 ; Unsigned Binary                                   ;
+; VFP            ; 0000001011 ; Unsigned Binary                                   ;
+; VSYN           ; 0000000010 ; Unsigned Binary                                   ;
+; VMAX           ; 1000001101 ; Unsigned Binary                                   ;
++----------------+------------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: vga:vga_inst|videoGen:videoGen_inst ;
++----------------+--------------------------+--------------------------------------+
+; Parameter Name ; Value                    ; Type                                 ;
++----------------+--------------------------+--------------------------------------+
+; GREY           ; 100110011001100110011001 ; Unsigned Binary                      ;
+; GREEN          ; 000000001010011001000001 ; Unsigned Binary                      ;
+; YELLOW         ; 111000111101010000000000 ; Unsigned Binary                      ;
+; RED            ; 110100000011000100101101 ; Unsigned Binary                      ;
+; WHITE          ; 111000111101101011001001 ; Unsigned Binary                      ;
+; BLACK          ; 000000000000000000000000 ; Unsigned Binary                      ;
+; OCEANBLUE      ; 000000000111011110111110 ; Unsigned Binary                      ;
+; YOU            ; 01111001                 ; Unsigned Binary                      ;
+; SPACE          ; 00000000                 ; Unsigned Binary                      ;
+; LOSE           ; 01111100                 ; Unsigned Binary                      ;
+; SQUARE_WIDTH   ; 58                       ; Signed Integer                       ;
+; SQUARE_HEIGHT  ; 58                       ; Signed Integer                       ;
++----------------+--------------------------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 6              ; Untyped                ;
+; LPM_WIDTHD             ; 4              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_62m ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Div0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 6              ; Untyped                ;
+; LPM_WIDTHD             ; 4              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_3am ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Mod0 ;
++------------------------+----------------+------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                       ;
++------------------------+----------------+------------------------------------------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                                                    ;
+; LPM_WIDTHD             ; 6              ; Untyped                                                    ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                    ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                    ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                    ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                    ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                    ;
+; CBXI_PARAMETER         ; lpm_divide_j3m ; Untyped                                                    ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                    ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                    ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                               ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                             ;
++------------------------+----------------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Mod1 ;
++------------------------+----------------+------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                       ;
++------------------------+----------------+------------------------------------------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                                                    ;
+; LPM_WIDTHD             ; 6              ; Untyped                                                    ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                    ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                    ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                    ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                    ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                    ;
+; CBXI_PARAMETER         ; lpm_divide_j3m ; Untyped                                                    ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                    ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                    ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                               ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                             ;
++------------------------+----------------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Div1 ;
++------------------------+----------------+------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                       ;
++------------------------+----------------+------------------------------------------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                                                    ;
+; LPM_WIDTHD             ; 6              ; Untyped                                                    ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                    ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                    ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                    ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                    ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                    ;
+; CBXI_PARAMETER         ; lpm_divide_gbm ; Untyped                                                    ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                    ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                    ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                               ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                             ;
++------------------------+----------------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Div0 ;
++------------------------+----------------+------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                       ;
++------------------------+----------------+------------------------------------------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                                                    ;
+; LPM_WIDTHD             ; 6              ; Untyped                                                    ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                    ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                    ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                    ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                    ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                    ;
+; CBXI_PARAMETER         ; lpm_divide_gbm ; Untyped                                                    ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                    ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                    ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                               ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                             ;
++------------------------+----------------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "vga:vga_inst|videoGen:videoGen_inst|you_win:win_message|chargenrom:char_gen_rom" ;
++-------+-------+----------+----------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                          ;
++-------+-------+----------+----------------------------------------------------------------------------------+
+; ch[7] ; Input ; Info     ; Stuck at GND                                                                     ;
++-------+-------+----------+----------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message|chargenrom:char_gen_rom" ;
++-------+-------+----------+------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                            ;
++-------+-------+----------+------------------------------------------------------------------------------------+
+; ch[7] ; Input ; Info     ; Stuck at GND                                                                       ;
++-------+-------+----------+------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "vga:vga_inst"                 ;
++------------------------+-------+----------+--------------+
+; Port                   ; Type  ; Severity ; Details      ;
++------------------------+-------+----------+--------------+
+; matriz_barcos[4][4][1] ; Input ; Info     ; Stuck at GND ;
+; matriz_barcos[4][3][1] ; Input ; Info     ; Stuck at GND ;
+; matriz_barcos[4][2][1] ; Input ; Info     ; Stuck at GND ;
+; matriz_barcos[4][1][1] ; Input ; Info     ; Stuck at GND ;
+; matriz_barcos[4][0][1] ; Input ; Info     ; Stuck at GND ;
+; matriz_barcos[3][4][1] ; Input ; Info     ; Stuck at GND ;
+; matriz_barcos[3][3][1] ; Input ; Info     ; Stuck at GND ;
+; matriz_barcos[3][2][1] ; Input ; Info     ; Stuck at GND ;
+; matriz_barcos[3][1][1] ; Input ; Info     ; Stuck at GND ;
+; matriz_barcos[3][0][1] ; Input ; Info     ; Stuck at GND ;
+; matriz_barcos[2][4][1] ; Input ; Info     ; Stuck at GND ;
+; matriz_barcos[2][3][1] ; Input ; Info     ; Stuck at GND ;
+; matriz_barcos[2][2][1] ; Input ; Info     ; Stuck at GND ;
+; matriz_barcos[2][1][1] ; Input ; Info     ; Stuck at GND ;
+; matriz_barcos[2][0][1] ; Input ; Info     ; Stuck at GND ;
+; matriz_barcos[1][4][1] ; Input ; Info     ; Stuck at GND ;
+; matriz_barcos[1][3][1] ; Input ; Info     ; Stuck at GND ;
+; matriz_barcos[1][2][1] ; Input ; Info     ; Stuck at GND ;
+; matriz_barcos[1][1][1] ; Input ; Info     ; Stuck at GND ;
+; matriz_barcos[1][0][1] ; Input ; Info     ; Stuck at GND ;
+; matriz_barcos[0][4][1] ; Input ; Info     ; Stuck at GND ;
+; matriz_barcos[0][3][1] ; Input ; Info     ; Stuck at GND ;
+; matriz_barcos[0][2][1] ; Input ; Info     ; Stuck at GND ;
+; matriz_barcos[0][1][1] ; Input ; Info     ; Stuck at GND ;
+; matriz_barcos[0][0][1] ; Input ; Info     ; Stuck at GND ;
+; matriz_golpes          ; Input ; Info     ; Stuck at GND ;
+; matriz_disparos        ; Input ; Info     ; Stuck at GND ;
+; display_lose           ; Input ; Info     ; Stuck at GND ;
+; display_win            ; Input ; Info     ; Stuck at GND ;
++------------------------+-------+----------+--------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "manejo_matrices_seleccionar:m1" ;
++--------------------------+-------+----------+--------------+
+; Port                     ; Type  ; Severity ; Details      ;
++--------------------------+-------+----------+--------------+
+; matriz_posicion[4][4][1] ; Input ; Info     ; Stuck at GND ;
+; matriz_posicion[4][3][1] ; Input ; Info     ; Stuck at GND ;
+; matriz_posicion[4][2][1] ; Input ; Info     ; Stuck at GND ;
+; matriz_posicion[4][1][1] ; Input ; Info     ; Stuck at GND ;
+; matriz_posicion[4][0][1] ; Input ; Info     ; Stuck at GND ;
+; matriz_posicion[3][4][1] ; Input ; Info     ; Stuck at GND ;
+; matriz_posicion[3][3][1] ; Input ; Info     ; Stuck at GND ;
+; matriz_posicion[3][2][1] ; Input ; Info     ; Stuck at GND ;
+; matriz_posicion[3][1][1] ; Input ; Info     ; Stuck at GND ;
+; matriz_posicion[3][0][1] ; Input ; Info     ; Stuck at GND ;
+; matriz_posicion[2][4][1] ; Input ; Info     ; Stuck at GND ;
+; matriz_posicion[2][3][1] ; Input ; Info     ; Stuck at GND ;
+; matriz_posicion[2][2][1] ; Input ; Info     ; Stuck at GND ;
+; matriz_posicion[2][1][1] ; Input ; Info     ; Stuck at GND ;
+; matriz_posicion[2][0][1] ; Input ; Info     ; Stuck at GND ;
+; matriz_posicion[1][4][1] ; Input ; Info     ; Stuck at GND ;
+; matriz_posicion[1][3][1] ; Input ; Info     ; Stuck at GND ;
+; matriz_posicion[1][2][1] ; Input ; Info     ; Stuck at GND ;
+; matriz_posicion[1][1][1] ; Input ; Info     ; Stuck at GND ;
+; matriz_posicion[1][0][1] ; Input ; Info     ; Stuck at GND ;
+; matriz_posicion[0][4][1] ; Input ; Info     ; Stuck at GND ;
+; matriz_posicion[0][3][1] ; Input ; Info     ; Stuck at GND ;
+; matriz_posicion[0][2][1] ; Input ; Info     ; Stuck at GND ;
+; matriz_posicion[0][1][1] ; Input ; Info     ; Stuck at GND ;
+; matriz_posicion[0][0][1] ; Input ; Info     ; Stuck at GND ;
++--------------------------+-------+----------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "colocar_barcos:cb"                                                                                                                                                                                 ;
++------------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                   ; Type   ; Severity ; Details                                                                                                                                                                          ;
++------------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; cantidad_barcos        ; Input  ; Warning  ; Input port expression (4 bits) is wider than the input port (3 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; barcos_restantes       ; Output ; Warning  ; Output or bidir port (3 bits) is smaller than the port expression (4 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND.            ;
+; barcos_restantes[2..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                              ;
+; completo               ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                              ;
++------------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 60                          ;
+;     CLR               ; 5                           ;
+;     CLR SCLR          ; 32                          ;
+;     ENA CLR           ; 2                           ;
+;     ENA SCLR          ; 10                          ;
+;     SCLR              ; 10                          ;
+;     plain             ; 1                           ;
+; arriav_lcell_comb     ; 498                         ;
+;     arith             ; 224                         ;
+;         0 data inputs ; 40                          ;
+;         1 data inputs ; 72                          ;
+;         2 data inputs ; 16                          ;
+;         3 data inputs ; 70                          ;
+;         4 data inputs ; 26                          ;
+;     normal            ; 236                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 8                           ;
+;         2 data inputs ; 91                          ;
+;         3 data inputs ; 65                          ;
+;         4 data inputs ; 25                          ;
+;         5 data inputs ; 30                          ;
+;         6 data inputs ; 16                          ;
+;     shared            ; 38                          ;
+;         0 data inputs ; 6                           ;
+;         1 data inputs ; 32                          ;
+; boundary_port         ; 73                          ;
+;                       ;                             ;
+; Max LUT depth         ; 12.90                       ;
+; Average LUT depth     ; 8.85                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Fri Apr 19 10:44:04 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Battleship -c Battleship
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file vga.sv
+    Info (12023): Found entity 1: vga File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/vga.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file vgacontroller.sv
+    Info (12023): Found entity 1: vgaController File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/vgaController.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file videogen.sv
+    Info (12023): Found entity 1: videoGen File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file chargenrom.sv
+    Info (12023): Found entity 1: chargenrom File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/chargenrom.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file rectgen.sv
+    Info (12023): Found entity 1: rectgen File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/rectgen.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file pll.sv
+    Info (12023): Found entity 1: pll File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/pll.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file battleship.sv
+    Info (12023): Found entity 1: Battleship File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file segmentoutput.sv
+    Info (12023): Found entity 1: segmentOutput File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file temporizador.sv
+    Info (12023): Found entity 1: temporizador File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/temporizador.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file contador.sv
+    Info (12023): Found entity 1: contador File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/contador.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file fsm.sv
+    Info (12023): Found entity 1: FSM File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/FSM.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file contar_unos_operador.sv
+    Info (12023): Found entity 1: contar_unos_operador File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/contar_unos_operador.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file movement.sv
+    Info (12023): Found entity 1: movement File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/movement.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file output_files/tb_contador.sv
+    Info (12023): Found entity 1: tb_contador File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/output_files/tb_contador.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file seven_segment_display.sv
+    Info (12023): Found entity 1: seven_segment_display File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/seven_segment_display.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file time_counter.sv
+    Info (12023): Found entity 1: time_counter File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/time_counter.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file clock_divider.sv
+    Info (12023): Found entity 1: clock_divider File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/clock_divider.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file you_lose.sv
+    Info (12023): Found entity 1: you_lose File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/you_lose.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file you_win.sv
+    Info (12023): Found entity 1: you_win File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/you_win.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file verify_shots.sv
+    Info (12023): Found entity 1: verify_shots File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/verify_shots.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file count_ships_left.sv
+    Info (12023): Found entity 1: count_ships_left File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/count_ships_left.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file random.sv
+    Info (12023): Found entity 1: random File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/random.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file random_tb.sv
+    Info (12023): Found entity 1: random_tb File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/random_tb.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file shot_pc.sv
+    Info (12023): Found entity 1: shot_PC File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/shot_PC.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file shot_pc_tb.sv
+    Info (12023): Found entity 1: shot_PC_tb File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/shot_PC_tb.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file cambiarindices.sv
+    Info (12023): Found entity 1: cambiarIndices File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/cambiarIndices.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file colocar_barcos.sv
+    Info (12023): Found entity 1: colocar_barcos File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/colocar_barcos.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file gestion_turnos.sv
+    Info (12023): Found entity 1: gestion_turnos File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/gestion_turnos.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file manejo_matrices_seleccionar.sv
+    Info (12023): Found entity 1: manejo_matrices_seleccionar File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/manejo_matrices_seleccionar.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at Battleship.sv(63): created implicit net for "clk_ms" File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 63
+Warning (10236): Verilog HDL Implicit Net warning at Battleship.sv(63): created implicit net for "rst" File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 63
+Warning (10236): Verilog HDL Implicit Net warning at Battleship.sv(134): created implicit net for "position" File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 134
+Info (12127): Elaborating entity "Battleship" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at Battleship.sv(134): object "position" assigned a value but never read File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 134
+Warning (10036): Verilog HDL or VHDL warning at Battleship.sv(33): object "enable_mov" assigned a value but never read File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 33
+Warning (10858): Verilog HDL warning at Battleship.sv(80): object matriz_golpes used but never assigned File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 80
+Warning (10858): Verilog HDL warning at Battleship.sv(81): object matriz_disparos used but never assigned File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 81
+Warning (10230): Verilog HDL assignment warning at Battleship.sv(53): truncated value with size 32 to match size of target (4) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 53
+Warning (10230): Verilog HDL assignment warning at Battleship.sv(54): truncated value with size 32 to match size of target (4) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 54
+Warning (10235): Verilog HDL Always Construct warning at Battleship.sv(120): variable "NUM_SHIPS" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 120
+Warning (10235): Verilog HDL Always Construct warning at Battleship.sv(121): variable "NUM_SHIPS" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 121
+Warning (10235): Verilog HDL Always Construct warning at Battleship.sv(122): variable "NUM_SHIPS" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 122
+Warning (10235): Verilog HDL Always Construct warning at Battleship.sv(123): variable "NUM_SHIPS" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 123
+Warning (10235): Verilog HDL Always Construct warning at Battleship.sv(124): variable "NUM_SHIPS" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 124
+Warning (10235): Verilog HDL Always Construct warning at Battleship.sv(126): variable "NUM_SHIPS_PC" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 126
+Warning (10235): Verilog HDL Always Construct warning at Battleship.sv(127): variable "NUM_SHIPS_PLAYER" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 127
+Warning (10235): Verilog HDL Always Construct warning at Battleship.sv(128): variable "NUM_SHIPS_PC_2" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 128
+Warning (10235): Verilog HDL Always Construct warning at Battleship.sv(129): variable "NUM_SHIPS_PLAYER_2" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 129
+Warning (10235): Verilog HDL Always Construct warning at Battleship.sv(130): variable "NUM_SHIPS_2" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 130
+Warning (10240): Verilog HDL Always Construct warning at Battleship.sv(118): inferring latch(es) for variable "NUM_SHIPS_PC", which holds its previous value in one or more paths through the always construct File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 118
+Warning (10240): Verilog HDL Always Construct warning at Battleship.sv(118): inferring latch(es) for variable "NUM_SHIPS_PLAYER", which holds its previous value in one or more paths through the always construct File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 118
+Warning (10240): Verilog HDL Always Construct warning at Battleship.sv(118): inferring latch(es) for variable "NUM_SHIPS_PC_2", which holds its previous value in one or more paths through the always construct File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 118
+Warning (10240): Verilog HDL Always Construct warning at Battleship.sv(118): inferring latch(es) for variable "NUM_SHIPS_PLAYER_2", which holds its previous value in one or more paths through the always construct File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 118
+Warning (10240): Verilog HDL Always Construct warning at Battleship.sv(118): inferring latch(es) for variable "NUM_SHIPS_2", which holds its previous value in one or more paths through the always construct File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 118
+Warning (10230): Verilog HDL assignment warning at Battleship.sv(134): truncated value with size 64 to match size of target (1) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 134
+Warning (10030): Net "matriz_golpes" at Battleship.sv(80) has no driver or initial value, using a default initial value '0' File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 80
+Warning (10030): Net "matriz_disparos" at Battleship.sv(81) has no driver or initial value, using a default initial value '0' File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 81
+Warning (10034): Output port "player" at Battleship.sv(12) has no driver File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 12
+Warning (10034): Output port "pc" at Battleship.sv(13) has no driver File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 13
+Info (10041): Inferred latch for "NUM_SHIPS_2[0]" at Battleship.sv(118) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 118
+Info (10041): Inferred latch for "NUM_SHIPS_2[1]" at Battleship.sv(118) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 118
+Info (10041): Inferred latch for "NUM_SHIPS_2[2]" at Battleship.sv(118) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 118
+Info (10041): Inferred latch for "NUM_SHIPS_2[3]" at Battleship.sv(118) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 118
+Info (10041): Inferred latch for "NUM_SHIPS_PLAYER[0]" at Battleship.sv(118) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 118
+Info (10041): Inferred latch for "NUM_SHIPS_PLAYER[1]" at Battleship.sv(118) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 118
+Info (10041): Inferred latch for "NUM_SHIPS_PLAYER[2]" at Battleship.sv(118) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 118
+Info (10041): Inferred latch for "NUM_SHIPS_PLAYER[3]" at Battleship.sv(118) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 118
+Info (10041): Inferred latch for "NUM_SHIPS_PC[0]" at Battleship.sv(118) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 118
+Info (10041): Inferred latch for "NUM_SHIPS_PC[1]" at Battleship.sv(118) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 118
+Info (10041): Inferred latch for "NUM_SHIPS_PC[2]" at Battleship.sv(118) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 118
+Info (10041): Inferred latch for "NUM_SHIPS_PC[3]" at Battleship.sv(118) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 118
+Info (10041): Inferred latch for "matriz_barcos[0][0][0]" at Battleship.sv(102) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 102
+Info (10041): Inferred latch for "matriz_barcos[0][0][1]" at Battleship.sv(102) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 102
+Info (10041): Inferred latch for "matriz_barcos[0][1][0]" at Battleship.sv(102) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 102
+Info (10041): Inferred latch for "matriz_barcos[0][1][1]" at Battleship.sv(102) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 102
+Info (10041): Inferred latch for "matriz_barcos[0][2][0]" at Battleship.sv(102) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 102
+Info (10041): Inferred latch for "matriz_barcos[0][2][1]" at Battleship.sv(102) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 102
+Info (10041): Inferred latch for "matriz_barcos[0][3][0]" at Battleship.sv(102) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 102
+Info (10041): Inferred latch for "matriz_barcos[0][3][1]" at Battleship.sv(102) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 102
+Info (10041): Inferred latch for "matriz_barcos[0][4][0]" at Battleship.sv(102) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 102
+Info (10041): Inferred latch for "matriz_barcos[0][4][1]" at Battleship.sv(102) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 102
+Info (10041): Inferred latch for "matriz_barcos[1][0][0]" at Battleship.sv(102) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 102
+Info (10041): Inferred latch for "matriz_barcos[1][0][1]" at Battleship.sv(102) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 102
+Info (10041): Inferred latch for "matriz_barcos[1][1][0]" at Battleship.sv(102) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 102
+Info (10041): Inferred latch for "matriz_barcos[1][1][1]" at Battleship.sv(102) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 102
+Info (10041): Inferred latch for "matriz_barcos[1][2][0]" at Battleship.sv(102) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 102
+Info (10041): Inferred latch for "matriz_barcos[1][2][1]" at Battleship.sv(102) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 102
+Info (10041): Inferred latch for "matriz_barcos[1][3][0]" at Battleship.sv(102) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 102
+Info (10041): Inferred latch for "matriz_barcos[1][3][1]" at Battleship.sv(102) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 102
+Info (10041): Inferred latch for "matriz_barcos[1][4][0]" at Battleship.sv(102) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 102
+Info (10041): Inferred latch for "matriz_barcos[1][4][1]" at Battleship.sv(102) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 102
+Info (10041): Inferred latch for "matriz_barcos[2][0][0]" at Battleship.sv(102) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 102
+Info (10041): Inferred latch for "matriz_barcos[2][0][1]" at Battleship.sv(102) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 102
+Info (10041): Inferred latch for "matriz_barcos[2][1][0]" at Battleship.sv(102) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 102
+Info (10041): Inferred latch for "matriz_barcos[2][1][1]" at Battleship.sv(102) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 102
+Info (10041): Inferred latch for "matriz_barcos[2][2][0]" at Battleship.sv(102) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 102
+Info (10041): Inferred latch for "matriz_barcos[2][2][1]" at Battleship.sv(102) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 102
+Info (10041): Inferred latch for "matriz_barcos[2][3][0]" at Battleship.sv(102) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 102
+Info (10041): Inferred latch for "matriz_barcos[2][3][1]" at Battleship.sv(102) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 102
+Info (10041): Inferred latch for "matriz_barcos[2][4][0]" at Battleship.sv(102) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 102
+Info (10041): Inferred latch for "matriz_barcos[2][4][1]" at Battleship.sv(102) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 102
+Info (10041): Inferred latch for "matriz_barcos[3][0][0]" at Battleship.sv(102) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 102
+Info (10041): Inferred latch for "matriz_barcos[3][0][1]" at Battleship.sv(102) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 102
+Info (10041): Inferred latch for "matriz_barcos[3][1][0]" at Battleship.sv(102) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 102
+Info (10041): Inferred latch for "matriz_barcos[3][1][1]" at Battleship.sv(102) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 102
+Info (10041): Inferred latch for "matriz_barcos[3][2][0]" at Battleship.sv(102) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 102
+Info (10041): Inferred latch for "matriz_barcos[3][2][1]" at Battleship.sv(102) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 102
+Info (10041): Inferred latch for "matriz_barcos[3][3][0]" at Battleship.sv(102) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 102
+Info (10041): Inferred latch for "matriz_barcos[3][3][1]" at Battleship.sv(102) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 102
+Info (10041): Inferred latch for "matriz_barcos[3][4][0]" at Battleship.sv(102) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 102
+Info (10041): Inferred latch for "matriz_barcos[3][4][1]" at Battleship.sv(102) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 102
+Info (10041): Inferred latch for "matriz_barcos[4][0][0]" at Battleship.sv(102) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 102
+Info (10041): Inferred latch for "matriz_barcos[4][0][1]" at Battleship.sv(102) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 102
+Info (10041): Inferred latch for "matriz_barcos[4][1][0]" at Battleship.sv(102) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 102
+Info (10041): Inferred latch for "matriz_barcos[4][1][1]" at Battleship.sv(102) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 102
+Info (10041): Inferred latch for "matriz_barcos[4][2][0]" at Battleship.sv(102) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 102
+Info (10041): Inferred latch for "matriz_barcos[4][2][1]" at Battleship.sv(102) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 102
+Info (10041): Inferred latch for "matriz_barcos[4][3][0]" at Battleship.sv(102) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 102
+Info (10041): Inferred latch for "matriz_barcos[4][3][1]" at Battleship.sv(102) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 102
+Info (10041): Inferred latch for "matriz_barcos[4][4][0]" at Battleship.sv(102) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 102
+Info (10041): Inferred latch for "matriz_barcos[4][4][1]" at Battleship.sv(102) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 102
+Info (10041): Inferred latch for "matriz_posicion[0][0][0]" at Battleship.sv(108) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_posicion[0][0][1]" at Battleship.sv(108) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_posicion[0][1][0]" at Battleship.sv(108) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_posicion[0][1][1]" at Battleship.sv(108) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_posicion[0][2][0]" at Battleship.sv(108) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_posicion[0][2][1]" at Battleship.sv(108) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_posicion[0][3][0]" at Battleship.sv(108) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_posicion[0][3][1]" at Battleship.sv(108) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_posicion[0][4][0]" at Battleship.sv(108) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_posicion[0][4][1]" at Battleship.sv(108) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_posicion[1][0][0]" at Battleship.sv(108) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_posicion[1][0][1]" at Battleship.sv(108) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_posicion[1][1][0]" at Battleship.sv(108) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_posicion[1][1][1]" at Battleship.sv(108) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_posicion[1][2][0]" at Battleship.sv(108) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_posicion[1][2][1]" at Battleship.sv(108) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_posicion[1][3][0]" at Battleship.sv(108) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_posicion[1][3][1]" at Battleship.sv(108) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_posicion[1][4][0]" at Battleship.sv(108) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_posicion[1][4][1]" at Battleship.sv(108) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_posicion[2][0][0]" at Battleship.sv(108) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_posicion[2][0][1]" at Battleship.sv(108) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_posicion[2][1][0]" at Battleship.sv(108) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_posicion[2][1][1]" at Battleship.sv(108) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_posicion[2][2][0]" at Battleship.sv(108) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_posicion[2][2][1]" at Battleship.sv(108) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_posicion[2][3][0]" at Battleship.sv(108) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_posicion[2][3][1]" at Battleship.sv(108) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_posicion[2][4][0]" at Battleship.sv(108) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_posicion[2][4][1]" at Battleship.sv(108) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_posicion[3][0][0]" at Battleship.sv(108) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_posicion[3][0][1]" at Battleship.sv(108) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_posicion[3][1][0]" at Battleship.sv(108) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_posicion[3][1][1]" at Battleship.sv(108) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_posicion[3][2][0]" at Battleship.sv(108) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_posicion[3][2][1]" at Battleship.sv(108) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_posicion[3][3][0]" at Battleship.sv(108) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_posicion[3][3][1]" at Battleship.sv(108) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_posicion[3][4][0]" at Battleship.sv(108) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_posicion[3][4][1]" at Battleship.sv(108) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_posicion[4][0][0]" at Battleship.sv(108) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_posicion[4][0][1]" at Battleship.sv(108) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_posicion[4][1][0]" at Battleship.sv(108) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_posicion[4][1][1]" at Battleship.sv(108) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_posicion[4][2][0]" at Battleship.sv(108) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_posicion[4][2][1]" at Battleship.sv(108) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_posicion[4][3][0]" at Battleship.sv(108) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_posicion[4][3][1]" at Battleship.sv(108) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_posicion[4][4][0]" at Battleship.sv(108) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10041): Inferred latch for "matriz_posicion[4][4][1]" at Battleship.sv(108) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 108
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_barcos" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_posicion" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_posicion_jugador_atacar" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_posicion_jugador_colocar" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_golpes" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_disparos" into its bus
+Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:divider" File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 46
+Info (12128): Elaborating entity "time_counter" for hierarchy "time_counter:counter" File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 49
+Warning (10230): Verilog HDL assignment warning at time_counter.sv(14): truncated value with size 32 to match size of target (6) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/time_counter.sv Line: 14
+Info (12128): Elaborating entity "seven_segment_display" for hierarchy "seven_segment_display:disp_seconds_units" File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 57
+Info (12128): Elaborating entity "contar_unos_operador" for hierarchy "contar_unos_operador:unos1" File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 60
+Warning (10230): Verilog HDL assignment warning at contar_unos_operador.sv(4): truncated value with size 5 to match size of target (4) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/contar_unos_operador.sv Line: 4
+Info (12128): Elaborating entity "segmentOutput" for hierarchy "segmentOutput:segment1" File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 61
+Warning (10270): Verilog HDL Case Statement warning at segmentOutput.sv(10): incomplete case statement has no default case item File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 10
+Warning (10240): Verilog HDL Always Construct warning at segmentOutput.sv(8): inferring latch(es) for variable "segments1", which holds its previous value in one or more paths through the always construct File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
+Info (10041): Inferred latch for "segments1[0]" at segmentOutput.sv(8) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
+Info (10041): Inferred latch for "segments1[1]" at segmentOutput.sv(8) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
+Info (10041): Inferred latch for "segments1[2]" at segmentOutput.sv(8) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
+Info (10041): Inferred latch for "segments1[3]" at segmentOutput.sv(8) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
+Info (10041): Inferred latch for "segments1[4]" at segmentOutput.sv(8) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
+Info (10041): Inferred latch for "segments1[5]" at segmentOutput.sv(8) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
+Info (10041): Inferred latch for "segments1[6]" at segmentOutput.sv(8) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
+Info (12128): Elaborating entity "movement" for hierarchy "movement:m" File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 63
+Info (12128): Elaborating entity "cambiarIndices" for hierarchy "cambiarIndices:ci" File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 64
+Info (12128): Elaborating entity "colocar_barcos" for hierarchy "colocar_barcos:cb" File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 65
+Warning (10235): Verilog HDL Always Construct warning at colocar_barcos.sv(17): variable "cantidad_barcos" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/colocar_barcos.sv Line: 17
+Warning (10235): Verilog HDL Always Construct warning at colocar_barcos.sv(18): variable "columna" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/colocar_barcos.sv Line: 18
+Warning (10235): Verilog HDL Always Construct warning at colocar_barcos.sv(19): variable "fila" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/colocar_barcos.sv Line: 19
+Warning (10235): Verilog HDL Always Construct warning at colocar_barcos.sv(20): variable "cantidad_barcos" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/colocar_barcos.sv Line: 20
+Warning (10230): Verilog HDL assignment warning at colocar_barcos.sv(20): truncated value with size 32 to match size of target (3) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/colocar_barcos.sv Line: 20
+Warning (10235): Verilog HDL Always Construct warning at colocar_barcos.sv(21): variable "cantidad_barcos" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/colocar_barcos.sv Line: 21
+Warning (10240): Verilog HDL Always Construct warning at colocar_barcos.sv(15): inferring latch(es) for variable "i_next_2", which holds its previous value in one or more paths through the always construct File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/colocar_barcos.sv Line: 15
+Warning (10240): Verilog HDL Always Construct warning at colocar_barcos.sv(15): inferring latch(es) for variable "j_next_2", which holds its previous value in one or more paths through the always construct File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/colocar_barcos.sv Line: 15
+Warning (10240): Verilog HDL Always Construct warning at colocar_barcos.sv(15): inferring latch(es) for variable "barcos_restantes", which holds its previous value in one or more paths through the always construct File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/colocar_barcos.sv Line: 15
+Warning (10240): Verilog HDL Always Construct warning at colocar_barcos.sv(15): inferring latch(es) for variable "completo", which holds its previous value in one or more paths through the always construct File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/colocar_barcos.sv Line: 15
+Info (10041): Inferred latch for "completo" at colocar_barcos.sv(16) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/colocar_barcos.sv Line: 16
+Info (10041): Inferred latch for "barcos_restantes[0]" at colocar_barcos.sv(16) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/colocar_barcos.sv Line: 16
+Info (10041): Inferred latch for "barcos_restantes[1]" at colocar_barcos.sv(16) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/colocar_barcos.sv Line: 16
+Info (10041): Inferred latch for "barcos_restantes[2]" at colocar_barcos.sv(16) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/colocar_barcos.sv Line: 16
+Info (10041): Inferred latch for "j_next_2[0]" at colocar_barcos.sv(16) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/colocar_barcos.sv Line: 16
+Info (10041): Inferred latch for "j_next_2[1]" at colocar_barcos.sv(16) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/colocar_barcos.sv Line: 16
+Info (10041): Inferred latch for "j_next_2[2]" at colocar_barcos.sv(16) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/colocar_barcos.sv Line: 16
+Info (10041): Inferred latch for "i_next_2[0]" at colocar_barcos.sv(16) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/colocar_barcos.sv Line: 16
+Info (10041): Inferred latch for "i_next_2[1]" at colocar_barcos.sv(16) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/colocar_barcos.sv Line: 16
+Info (10041): Inferred latch for "i_next_2[2]" at colocar_barcos.sv(16) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/colocar_barcos.sv Line: 16
+Info (12128): Elaborating entity "manejo_matrices_seleccionar" for hierarchy "manejo_matrices_seleccionar:m1" File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 66
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_posicion" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_posicion_jugador_colocar" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_posicion_jugador_atacar" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_posicion" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_posicion_jugador_colocar" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_posicion_jugador_atacar" into its bus
+Info (12128): Elaborating entity "vga" for hierarchy "vga:vga_inst" File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 154
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_barcos" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_golpes" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_disparos" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_posicion_jugador_colocar" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_posicion_jugador_atacar" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_barcos" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_golpes" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_disparos" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_posicion_jugador_colocar" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_posicion_jugador_atacar" into its bus
+Info (12128): Elaborating entity "pll" for hierarchy "vga:vga_inst|pll:vgapll" File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/vga.sv Line: 23
+Info (12128): Elaborating entity "vgaController" for hierarchy "vga:vga_inst|vgaController:vgaCont" File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/vga.sv Line: 25
+Info (12128): Elaborating entity "videoGen" for hierarchy "vga:vga_inst|videoGen:videoGen_inst" File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/vga.sv Line: 41
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_barcos" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_golpes" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_disparos" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_posicion_jugador_colocar" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_posicion_jugador_atacar" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_barcos" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_golpes" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_disparos" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_posicion_jugador_colocar" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matriz_posicion_jugador_atacar" into its bus
+Info (12128): Elaborating entity "you_lose" for hierarchy "vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message" File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv Line: 58
+Warning (10230): Verilog HDL assignment warning at you_lose.sv(26): truncated value with size 32 to match size of target (3) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/you_lose.sv Line: 26
+Warning (10230): Verilog HDL assignment warning at you_lose.sv(27): truncated value with size 32 to match size of target (3) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/you_lose.sv Line: 27
+Warning (10762): Verilog HDL Case Statement warning at you_lose.sv(30): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/you_lose.sv Line: 30
+Warning (10230): Verilog HDL assignment warning at you_lose.sv(55): truncated value with size 32 to match size of target (1) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/you_lose.sv Line: 55
+Info (12128): Elaborating entity "chargenrom" for hierarchy "vga:vga_inst|videoGen:videoGen_inst|you_lose:lose_message|chargenrom:char_gen_rom" File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/you_lose.sv Line: 52
+Warning (10230): Verilog HDL assignment warning at chargenrom.sv(32): truncated value with size 32 to match size of target (1) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/chargenrom.sv Line: 32
+Warning (10030): Net "charrom.data_a" at chargenrom.sv(7) has no driver or initial value, using a default initial value '0' File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/chargenrom.sv Line: 7
+Warning (10030): Net "charrom.waddr_a" at chargenrom.sv(7) has no driver or initial value, using a default initial value '0' File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/chargenrom.sv Line: 7
+Warning (10030): Net "charrom.we_a" at chargenrom.sv(7) has no driver or initial value, using a default initial value '0' File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/chargenrom.sv Line: 7
+Info (12128): Elaborating entity "you_win" for hierarchy "vga:vga_inst|videoGen:videoGen_inst|you_win:win_message" File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv Line: 65
+Warning (10230): Verilog HDL assignment warning at you_win.sv(26): truncated value with size 32 to match size of target (3) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/you_win.sv Line: 26
+Warning (10230): Verilog HDL assignment warning at you_win.sv(27): truncated value with size 32 to match size of target (3) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/you_win.sv Line: 27
+Warning (10762): Verilog HDL Case Statement warning at you_win.sv(30): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/you_win.sv Line: 30
+Warning (10230): Verilog HDL assignment warning at you_win.sv(54): truncated value with size 32 to match size of target (1) File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/you_win.sv Line: 54
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "clk_ms" is missing source, defaulting to GND File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 63
+    Warning (12110): Net "rst" is missing source, defaulting to GND File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 63
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "clk_ms" is missing source, defaulting to GND File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 63
+    Warning (12110): Net "rst" is missing source, defaulting to GND File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 63
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "clk_ms" is missing source, defaulting to GND File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 63
+    Warning (12110): Net "rst" is missing source, defaulting to GND File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 63
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "clk_ms" is missing source, defaulting to GND File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 63
+    Warning (12110): Net "rst" is missing source, defaulting to GND File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 63
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "clk_ms" is missing source, defaulting to GND File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 63
+    Warning (12110): Net "rst" is missing source, defaulting to GND File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 63
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "clk_ms" is missing source, defaulting to GND File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 63
+    Warning (12110): Net "rst" is missing source, defaulting to GND File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 63
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "clk_ms" is missing source, defaulting to GND File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 63
+    Warning (12110): Net "rst" is missing source, defaulting to GND File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 63
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "clk_ms" is missing source, defaulting to GND File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 63
+    Warning (12110): Net "rst" is missing source, defaulting to GND File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 63
+Warning (14026): LATCH primitive "matriz_barcos[4][0][0]" is permanently enabled File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 76
+Warning (14026): LATCH primitive "matriz_barcos[4][1][0]" is permanently enabled File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 76
+Warning (14026): LATCH primitive "matriz_barcos[4][2][0]" is permanently enabled File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 76
+Warning (14026): LATCH primitive "matriz_posicion[4][0][0]" is permanently enabled File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 77
+Warning (14026): LATCH primitive "matriz_posicion[4][1][0]" is permanently enabled File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 77
+Warning (14026): LATCH primitive "matriz_posicion[4][2][0]" is permanently enabled File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 77
+Warning (14026): LATCH primitive "segmentOutput:segment2|segments1[0]" is permanently enabled File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment2|segments1[1]" is permanently enabled File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment2|segments1[2]" is permanently enabled File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment2|segments1[3]" is permanently enabled File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment2|segments1[4]" is permanently enabled File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment2|segments1[5]" is permanently enabled File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment2|segments1[6]" is permanently enabled File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment1|segments1[0]" is permanently enabled File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment1|segments1[1]" is permanently enabled File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment1|segments1[2]" is permanently enabled File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment1|segments1[3]" is permanently enabled File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment1|segments1[4]" is permanently enabled File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment1|segments1[5]" is permanently enabled File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "segmentOutput:segment1|segments1[6]" is permanently enabled File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/segmentOutput.sv Line: 8
+Warning (14026): LATCH primitive "matriz_barcos[3][4][0]" is permanently enabled File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 76
+Warning (14026): LATCH primitive "matriz_barcos[4][3][0]" is permanently enabled File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 76
+Warning (14026): LATCH primitive "matriz_posicion[3][3][0]" is permanently enabled File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 77
+Warning (14026): LATCH primitive "matriz_posicion[4][4][0]" is permanently enabled File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 77
+Info (278001): Inferred 6 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 53
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 54
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "vga:vga_inst|videoGen:videoGen_inst|Mod0" File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv Line: 49
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "vga:vga_inst|videoGen:videoGen_inst|Mod1" File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv Line: 49
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "vga:vga_inst|videoGen:videoGen_inst|Div1" File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv Line: 44
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "vga:vga_inst|videoGen:videoGen_inst|Div0" File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv Line: 43
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 53
+Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 53
+    Info (12134): Parameter "LPM_WIDTHN" = "6"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_62m.tdf
+    Info (12023): Found entity 1: lpm_divide_62m File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/db/lpm_divide_62m.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_9kh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_9kh File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/db/sign_div_unsign_9kh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_ose.tdf
+    Info (12023): Found entity 1: alt_u_div_ose File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/db/alt_u_div_ose.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 54
+Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 54
+    Info (12134): Parameter "LPM_WIDTHN" = "6"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_3am.tdf
+    Info (12023): Found entity 1: lpm_divide_3am File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/db/lpm_divide_3am.tdf Line: 25
+Info (12130): Elaborated megafunction instantiation "vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Mod0" File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv Line: 49
+Info (12133): Instantiated megafunction "vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Mod0" with the following parameter: File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv Line: 49
+    Info (12134): Parameter "LPM_WIDTHN" = "10"
+    Info (12134): Parameter "LPM_WIDTHD" = "6"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_j3m.tdf
+    Info (12023): Found entity 1: lpm_divide_j3m File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/db/lpm_divide_j3m.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_mlh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_mlh File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/db/sign_div_unsign_mlh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_ive.tdf
+    Info (12023): Found entity 1: alt_u_div_ive File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/db/alt_u_div_ive.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Div1" File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv Line: 44
+Info (12133): Instantiated megafunction "vga:vga_inst|videoGen:videoGen_inst|lpm_divide:Div1" with the following parameter: File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/videoGen.sv Line: 44
+    Info (12134): Parameter "LPM_WIDTHN" = "10"
+    Info (12134): Parameter "LPM_WIDTHD" = "6"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_gbm.tdf
+    Info (12023): Found entity 1: lpm_divide_gbm File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/db/lpm_divide_gbm.tdf Line: 25
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "NUM_SHIPS_PLAYER[1]" merged with LATCH primitive "NUM_SHIPS_PC[1]" File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 118
+    Info (13026): Duplicate LATCH primitive "NUM_SHIPS_2[1]" merged with LATCH primitive "NUM_SHIPS_PC[1]" File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 118
+    Info (13026): Duplicate LATCH primitive "NUM_SHIPS_PLAYER[2]" merged with LATCH primitive "NUM_SHIPS_PC[2]" File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 118
+    Info (13026): Duplicate LATCH primitive "NUM_SHIPS_2[2]" merged with LATCH primitive "NUM_SHIPS_PC[2]" File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 118
+    Info (13026): Duplicate LATCH primitive "NUM_SHIPS_PLAYER[0]" merged with LATCH primitive "NUM_SHIPS_PC[0]" File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 118
+    Info (13026): Duplicate LATCH primitive "NUM_SHIPS_2[0]" merged with LATCH primitive "NUM_SHIPS_PC[0]" File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 118
+    Info (13026): Duplicate LATCH primitive "colocar_barcos:cb|i_next_2[0]" merged with LATCH primitive "colocar_barcos:cb|j_next_2[0]" File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/colocar_barcos.sv Line: 16
+Warning (13012): Latch matriz_barcos[4][4][0] has unsafe behavior File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 76
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal down File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 9
+Warning (13012): Latch matriz_barcos[3][3][0] has unsafe behavior File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 76
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal down File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 9
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "player" is stuck at GND File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 12
+    Warning (13410): Pin "pc" is stuck at GND File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 13
+    Warning (13410): Pin "r[2]" is stuck at GND File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 21
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/output_files/Battleship.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 4 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "disparo" File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 5
+    Warning (15610): No output dependent on input pin "right" File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 6
+    Warning (15610): No output dependent on input pin "left" File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 7
+    Warning (15610): No output dependent on input pin "up" File: C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/Battleship.sv Line: 8
+Info (21057): Implemented 585 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 14 input pins
+    Info (21059): Implemented 59 output pins
+    Info (21061): Implemented 512 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 118 warnings
+    Info: Peak virtual memory: 4862 megabytes
+    Info: Processing ended: Fri Apr 19 10:44:13 2024
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:11
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/nicva/PycharmProjects/proyecto/nvalverdea_digital_design_lab_2024/laboratorio_3/output_files/Battleship.map.smsg.
+
+
