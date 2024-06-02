@@ -1,38 +1,108 @@
-|arm
+|top
+clk => clk.IN2
+reset => reset.IN1
+WriteData[0] << WriteData[0].DB_MAX_OUTPUT_PORT_TYPE
+WriteData[1] << WriteData[1].DB_MAX_OUTPUT_PORT_TYPE
+WriteData[2] << WriteData[2].DB_MAX_OUTPUT_PORT_TYPE
+WriteData[3] << WriteData[3].DB_MAX_OUTPUT_PORT_TYPE
+WriteData[4] << WriteData[4].DB_MAX_OUTPUT_PORT_TYPE
+WriteData[5] << WriteData[5].DB_MAX_OUTPUT_PORT_TYPE
+WriteData[6] << WriteData[6].DB_MAX_OUTPUT_PORT_TYPE
+WriteData[7] << WriteData[7].DB_MAX_OUTPUT_PORT_TYPE
+WriteData[8] << arm:arm.WriteData
+WriteData[9] << arm:arm.WriteData
+WriteData[10] << arm:arm.WriteData
+WriteData[11] << arm:arm.WriteData
+WriteData[12] << arm:arm.WriteData
+WriteData[13] << arm:arm.WriteData
+WriteData[14] << arm:arm.WriteData
+WriteData[15] << arm:arm.WriteData
+WriteData[16] << arm:arm.WriteData
+WriteData[17] << arm:arm.WriteData
+WriteData[18] << arm:arm.WriteData
+WriteData[19] << arm:arm.WriteData
+WriteData[20] << arm:arm.WriteData
+WriteData[21] << arm:arm.WriteData
+WriteData[22] << arm:arm.WriteData
+WriteData[23] << arm:arm.WriteData
+WriteData[24] << arm:arm.WriteData
+WriteData[25] << arm:arm.WriteData
+WriteData[26] << arm:arm.WriteData
+WriteData[27] << arm:arm.WriteData
+WriteData[28] << arm:arm.WriteData
+WriteData[29] << arm:arm.WriteData
+WriteData[30] << arm:arm.WriteData
+WriteData[31] << arm:arm.WriteData
+DataAdr[0] << DataAdr[0].DB_MAX_OUTPUT_PORT_TYPE
+DataAdr[1] << DataAdr[1].DB_MAX_OUTPUT_PORT_TYPE
+DataAdr[2] << DataAdr[2].DB_MAX_OUTPUT_PORT_TYPE
+DataAdr[3] << DataAdr[3].DB_MAX_OUTPUT_PORT_TYPE
+DataAdr[4] << DataAdr[4].DB_MAX_OUTPUT_PORT_TYPE
+DataAdr[5] << arm:arm.ALUResult
+DataAdr[6] << arm:arm.ALUResult
+DataAdr[7] << arm:arm.ALUResult
+DataAdr[8] << arm:arm.ALUResult
+DataAdr[9] << arm:arm.ALUResult
+DataAdr[10] << arm:arm.ALUResult
+DataAdr[11] << arm:arm.ALUResult
+DataAdr[12] << arm:arm.ALUResult
+DataAdr[13] << arm:arm.ALUResult
+DataAdr[14] << arm:arm.ALUResult
+DataAdr[15] << arm:arm.ALUResult
+DataAdr[16] << arm:arm.ALUResult
+DataAdr[17] << arm:arm.ALUResult
+DataAdr[18] << arm:arm.ALUResult
+DataAdr[19] << arm:arm.ALUResult
+DataAdr[20] << arm:arm.ALUResult
+DataAdr[21] << arm:arm.ALUResult
+DataAdr[22] << arm:arm.ALUResult
+DataAdr[23] << arm:arm.ALUResult
+DataAdr[24] << arm:arm.ALUResult
+DataAdr[25] << arm:arm.ALUResult
+DataAdr[26] << arm:arm.ALUResult
+DataAdr[27] << arm:arm.ALUResult
+DataAdr[28] << arm:arm.ALUResult
+DataAdr[29] << arm:arm.ALUResult
+DataAdr[30] << arm:arm.ALUResult
+DataAdr[31] << arm:arm.ALUResult
+MemWrite << MemWrite.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|arm:arm
 clk => clk.IN2
 reset => reset.IN2
-PC[0] << datapath:dp.port10
-PC[1] << datapath:dp.port10
-PC[2] << datapath:dp.port10
-PC[3] << datapath:dp.port10
-PC[4] << datapath:dp.port10
-PC[5] << datapath:dp.port10
-PC[6] << datapath:dp.port10
-PC[7] << datapath:dp.port10
-PC[8] << datapath:dp.port10
-PC[9] << datapath:dp.port10
-PC[10] << datapath:dp.port10
-PC[11] << datapath:dp.port10
-PC[12] << datapath:dp.port10
-PC[13] << datapath:dp.port10
-PC[14] << datapath:dp.port10
-PC[15] << datapath:dp.port10
-PC[16] << datapath:dp.port10
-PC[17] << datapath:dp.port10
-PC[18] << datapath:dp.port10
-PC[19] << datapath:dp.port10
-PC[20] << datapath:dp.port10
-PC[21] << datapath:dp.port10
-PC[22] << datapath:dp.port10
-PC[23] << datapath:dp.port10
-PC[24] << datapath:dp.port10
-PC[25] << datapath:dp.port10
-PC[26] << datapath:dp.port10
-PC[27] << datapath:dp.port10
-PC[28] << datapath:dp.port10
-PC[29] << datapath:dp.port10
-PC[30] << datapath:dp.port10
-PC[31] << datapath:dp.port10
+PC[0] <= datapath:dp.port10
+PC[1] <= datapath:dp.port10
+PC[2] <= datapath:dp.port10
+PC[3] <= datapath:dp.port10
+PC[4] <= datapath:dp.port10
+PC[5] <= datapath:dp.port10
+PC[6] <= datapath:dp.port10
+PC[7] <= datapath:dp.port10
+PC[8] <= datapath:dp.port10
+PC[9] <= datapath:dp.port10
+PC[10] <= datapath:dp.port10
+PC[11] <= datapath:dp.port10
+PC[12] <= datapath:dp.port10
+PC[13] <= datapath:dp.port10
+PC[14] <= datapath:dp.port10
+PC[15] <= datapath:dp.port10
+PC[16] <= datapath:dp.port10
+PC[17] <= datapath:dp.port10
+PC[18] <= datapath:dp.port10
+PC[19] <= datapath:dp.port10
+PC[20] <= datapath:dp.port10
+PC[21] <= datapath:dp.port10
+PC[22] <= datapath:dp.port10
+PC[23] <= datapath:dp.port10
+PC[24] <= datapath:dp.port10
+PC[25] <= datapath:dp.port10
+PC[26] <= datapath:dp.port10
+PC[27] <= datapath:dp.port10
+PC[28] <= datapath:dp.port10
+PC[29] <= datapath:dp.port10
+PC[30] <= datapath:dp.port10
+PC[31] <= datapath:dp.port10
 Instr[0] => Instr[0].IN1
 Instr[1] => Instr[1].IN1
 Instr[2] => Instr[2].IN1
@@ -65,71 +135,71 @@ Instr[28] => Instr[28].IN2
 Instr[29] => Instr[29].IN2
 Instr[30] => Instr[30].IN2
 Instr[31] => Instr[31].IN2
-MemWrite << controller:c.port9
-ALUResult[0] << datapath:dp.port12
-ALUResult[1] << datapath:dp.port12
-ALUResult[2] << datapath:dp.port12
-ALUResult[3] << datapath:dp.port12
-ALUResult[4] << datapath:dp.port12
-ALUResult[5] << datapath:dp.port12
-ALUResult[6] << datapath:dp.port12
-ALUResult[7] << datapath:dp.port12
-ALUResult[8] << datapath:dp.port12
-ALUResult[9] << datapath:dp.port12
-ALUResult[10] << datapath:dp.port12
-ALUResult[11] << datapath:dp.port12
-ALUResult[12] << datapath:dp.port12
-ALUResult[13] << datapath:dp.port12
-ALUResult[14] << datapath:dp.port12
-ALUResult[15] << datapath:dp.port12
-ALUResult[16] << datapath:dp.port12
-ALUResult[17] << datapath:dp.port12
-ALUResult[18] << datapath:dp.port12
-ALUResult[19] << datapath:dp.port12
-ALUResult[20] << datapath:dp.port12
-ALUResult[21] << datapath:dp.port12
-ALUResult[22] << datapath:dp.port12
-ALUResult[23] << datapath:dp.port12
-ALUResult[24] << datapath:dp.port12
-ALUResult[25] << datapath:dp.port12
-ALUResult[26] << datapath:dp.port12
-ALUResult[27] << datapath:dp.port12
-ALUResult[28] << datapath:dp.port12
-ALUResult[29] << datapath:dp.port12
-ALUResult[30] << datapath:dp.port12
-ALUResult[31] << datapath:dp.port12
-WriteData[0] << datapath:dp.port13
-WriteData[1] << datapath:dp.port13
-WriteData[2] << datapath:dp.port13
-WriteData[3] << datapath:dp.port13
-WriteData[4] << datapath:dp.port13
-WriteData[5] << datapath:dp.port13
-WriteData[6] << datapath:dp.port13
-WriteData[7] << datapath:dp.port13
-WriteData[8] << datapath:dp.port13
-WriteData[9] << datapath:dp.port13
-WriteData[10] << datapath:dp.port13
-WriteData[11] << datapath:dp.port13
-WriteData[12] << datapath:dp.port13
-WriteData[13] << datapath:dp.port13
-WriteData[14] << datapath:dp.port13
-WriteData[15] << datapath:dp.port13
-WriteData[16] << datapath:dp.port13
-WriteData[17] << datapath:dp.port13
-WriteData[18] << datapath:dp.port13
-WriteData[19] << datapath:dp.port13
-WriteData[20] << datapath:dp.port13
-WriteData[21] << datapath:dp.port13
-WriteData[22] << datapath:dp.port13
-WriteData[23] << datapath:dp.port13
-WriteData[24] << datapath:dp.port13
-WriteData[25] << datapath:dp.port13
-WriteData[26] << datapath:dp.port13
-WriteData[27] << datapath:dp.port13
-WriteData[28] << datapath:dp.port13
-WriteData[29] << datapath:dp.port13
-WriteData[30] << datapath:dp.port13
-WriteData[31] << datapath:dp.port13
+MemWrite <= controller:c.port9
+ALUResult[0] <= datapath:dp.port12
+ALUResult[1] <= datapath:dp.port12
+ALUResult[2] <= datapath:dp.port12
+ALUResult[3] <= datapath:dp.port12
+ALUResult[4] <= datapath:dp.port12
+ALUResult[5] <= datapath:dp.port12
+ALUResult[6] <= datapath:dp.port12
+ALUResult[7] <= datapath:dp.port12
+ALUResult[8] <= datapath:dp.port12
+ALUResult[9] <= datapath:dp.port12
+ALUResult[10] <= datapath:dp.port12
+ALUResult[11] <= datapath:dp.port12
+ALUResult[12] <= datapath:dp.port12
+ALUResult[13] <= datapath:dp.port12
+ALUResult[14] <= datapath:dp.port12
+ALUResult[15] <= datapath:dp.port12
+ALUResult[16] <= datapath:dp.port12
+ALUResult[17] <= datapath:dp.port12
+ALUResult[18] <= datapath:dp.port12
+ALUResult[19] <= datapath:dp.port12
+ALUResult[20] <= datapath:dp.port12
+ALUResult[21] <= datapath:dp.port12
+ALUResult[22] <= datapath:dp.port12
+ALUResult[23] <= datapath:dp.port12
+ALUResult[24] <= datapath:dp.port12
+ALUResult[25] <= datapath:dp.port12
+ALUResult[26] <= datapath:dp.port12
+ALUResult[27] <= datapath:dp.port12
+ALUResult[28] <= datapath:dp.port12
+ALUResult[29] <= datapath:dp.port12
+ALUResult[30] <= datapath:dp.port12
+ALUResult[31] <= datapath:dp.port12
+WriteData[0] <= datapath:dp.port13
+WriteData[1] <= datapath:dp.port13
+WriteData[2] <= datapath:dp.port13
+WriteData[3] <= datapath:dp.port13
+WriteData[4] <= datapath:dp.port13
+WriteData[5] <= datapath:dp.port13
+WriteData[6] <= datapath:dp.port13
+WriteData[7] <= datapath:dp.port13
+WriteData[8] <= datapath:dp.port13
+WriteData[9] <= datapath:dp.port13
+WriteData[10] <= datapath:dp.port13
+WriteData[11] <= datapath:dp.port13
+WriteData[12] <= datapath:dp.port13
+WriteData[13] <= datapath:dp.port13
+WriteData[14] <= datapath:dp.port13
+WriteData[15] <= datapath:dp.port13
+WriteData[16] <= datapath:dp.port13
+WriteData[17] <= datapath:dp.port13
+WriteData[18] <= datapath:dp.port13
+WriteData[19] <= datapath:dp.port13
+WriteData[20] <= datapath:dp.port13
+WriteData[21] <= datapath:dp.port13
+WriteData[22] <= datapath:dp.port13
+WriteData[23] <= datapath:dp.port13
+WriteData[24] <= datapath:dp.port13
+WriteData[25] <= datapath:dp.port13
+WriteData[26] <= datapath:dp.port13
+WriteData[27] <= datapath:dp.port13
+WriteData[28] <= datapath:dp.port13
+WriteData[29] <= datapath:dp.port13
+WriteData[30] <= datapath:dp.port13
+WriteData[31] <= datapath:dp.port13
 ReadData[0] => ReadData[0].IN1
 ReadData[1] => ReadData[1].IN1
 ReadData[2] => ReadData[2].IN1
@@ -164,7 +234,7 @@ ReadData[30] => ReadData[30].IN1
 ReadData[31] => ReadData[31].IN1
 
 
-|arm|controller:c
+|top|arm:arm|controller:c
 clk => clk.IN1
 reset => reset.IN1
 Instr[12] => Instr[12].IN1
@@ -204,7 +274,7 @@ MemtoReg <= decoder:dec.port7
 PCSrc <= condlogic:cl.port8
 
 
-|arm|controller:c|decoder:dec
+|top|arm:arm|controller:c|decoder:dec
 Op[0] => controls.OUTPUTSELECT
 Op[0] => Mux0.IN4
 Op[0] => Mux1.IN4
@@ -249,7 +319,7 @@ ALUControl[0] <= ALUControl.DB_MAX_OUTPUT_PORT_TYPE
 ALUControl[1] <= ALUControl.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|controller:c|condlogic:cl
+|top|arm:arm|controller:c|condlogic:cl
 clk => clk.IN2
 reset => reset.IN2
 Cond[0] => Cond[0].IN1
@@ -270,7 +340,7 @@ RegWrite <= RegWrite.DB_MAX_OUTPUT_PORT_TYPE
 MemWrite <= MemWrite.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|controller:c|condlogic:cl|flopenr:flagreg1
+|top|arm:arm|controller:c|condlogic:cl|flopenr:flagreg1
 clk => q[0]~reg0.CLK
 clk => q[1]~reg0.CLK
 reset => q[0]~reg0.ACLR
@@ -283,7 +353,7 @@ q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|controller:c|condlogic:cl|flopenr:flagreg0
+|top|arm:arm|controller:c|condlogic:cl|flopenr:flagreg0
 clk => q[0]~reg0.CLK
 clk => q[1]~reg0.CLK
 reset => q[0]~reg0.ACLR
@@ -296,7 +366,7 @@ q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|controller:c|condlogic:cl|condcheck:cc
+|top|arm:arm|controller:c|condlogic:cl|condcheck:cc
 Cond[0] => Mux0.IN14
 Cond[1] => Mux0.IN13
 Cond[2] => Mux0.IN12
@@ -317,7 +387,7 @@ Flags[3] => Mux0.IN4
 CondEx <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp
+|top|arm:arm|datapath:dp
 clk => clk.IN2
 reset => reset.IN1
 RegSrc[0] => RegSrc[0].IN1
@@ -496,7 +566,7 @@ ReadData[30] => ReadData[30].IN1
 ReadData[31] => ReadData[31].IN1
 
 
-|arm|datapath:dp|mux2:pcmux
+|top|arm:arm|datapath:dp|mux2:pcmux
 d0[0] => y.DATAA
 d0[1] => y.DATAA
 d0[2] => y.DATAA
@@ -627,7 +697,7 @@ y[30] <= y.DB_MAX_OUTPUT_PORT_TYPE
 y[31] <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|flopr:pcreg
+|top|arm:arm|datapath:dp|flopr:pcreg
 clk => q[0]~reg0.CLK
 clk => q[1]~reg0.CLK
 clk => q[2]~reg0.CLK
@@ -758,7 +828,7 @@ q[30] <= q[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q[31] <= q[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1
 a[0] => a[0].IN1
 a[1] => a[1].IN1
 a[2] => a[2].IN1
@@ -858,7 +928,7 @@ sum[31] <= full_adder:ADD_LOOP[31].FA.sum
 cout <= full_adder:ADD_LOOP[31].FA.cout
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[0].FA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[0].FA1
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -866,7 +936,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[0].FA1|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[0].FA1|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -875,7 +945,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[0].FA1|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[0].FA1|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -884,7 +954,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[1].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[1].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -892,7 +962,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[1].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[1].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -901,7 +971,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[1].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[1].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -910,7 +980,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[2].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[2].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -918,7 +988,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[2].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[2].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -927,7 +997,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[2].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[2].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -936,7 +1006,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[3].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[3].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -944,7 +1014,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[3].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[3].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -953,7 +1023,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[3].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[3].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -962,7 +1032,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[4].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[4].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -970,7 +1040,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[4].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[4].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -979,7 +1049,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[4].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[4].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -988,7 +1058,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[5].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[5].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -996,7 +1066,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[5].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[5].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1005,7 +1075,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[5].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[5].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1014,7 +1084,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[6].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[6].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -1022,7 +1092,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[6].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[6].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1031,7 +1101,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[6].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[6].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1040,7 +1110,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[7].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[7].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -1048,7 +1118,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[7].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[7].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1057,7 +1127,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[7].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[7].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1066,7 +1136,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[8].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[8].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -1074,7 +1144,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[8].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[8].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1083,7 +1153,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[8].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[8].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1092,7 +1162,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[9].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[9].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -1100,7 +1170,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[9].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[9].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1109,7 +1179,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[9].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[9].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1118,7 +1188,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[10].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[10].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -1126,7 +1196,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[10].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[10].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1135,7 +1205,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[10].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[10].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1144,7 +1214,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[11].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[11].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -1152,7 +1222,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[11].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[11].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1161,7 +1231,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[11].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[11].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1170,7 +1240,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[12].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[12].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -1178,7 +1248,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[12].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[12].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1187,7 +1257,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[12].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[12].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1196,7 +1266,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[13].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[13].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -1204,7 +1274,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[13].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[13].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1213,7 +1283,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[13].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[13].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1222,7 +1292,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[14].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[14].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -1230,7 +1300,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[14].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[14].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1239,7 +1309,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[14].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[14].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1248,7 +1318,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[15].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[15].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -1256,7 +1326,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[15].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[15].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1265,7 +1335,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[15].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[15].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1274,7 +1344,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[16].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[16].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -1282,7 +1352,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[16].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[16].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1291,7 +1361,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[16].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[16].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1300,7 +1370,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[17].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[17].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -1308,7 +1378,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[17].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[17].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1317,7 +1387,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[17].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[17].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1326,7 +1396,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[18].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[18].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -1334,7 +1404,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[18].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[18].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1343,7 +1413,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[18].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[18].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1352,7 +1422,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[19].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[19].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -1360,7 +1430,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[19].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[19].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1369,7 +1439,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[19].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[19].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1378,7 +1448,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[20].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[20].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -1386,7 +1456,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[20].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[20].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1395,7 +1465,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[20].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[20].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1404,7 +1474,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[21].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[21].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -1412,7 +1482,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[21].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[21].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1421,7 +1491,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[21].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[21].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1430,7 +1500,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[22].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[22].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -1438,7 +1508,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[22].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[22].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1447,7 +1517,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[22].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[22].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1456,7 +1526,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[23].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[23].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -1464,7 +1534,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[23].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[23].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1473,7 +1543,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[23].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[23].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1482,7 +1552,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[24].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[24].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -1490,7 +1560,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[24].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[24].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1499,7 +1569,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[24].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[24].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1508,7 +1578,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[25].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[25].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -1516,7 +1586,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[25].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[25].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1525,7 +1595,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[25].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[25].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1534,7 +1604,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[26].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[26].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -1542,7 +1612,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[26].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[26].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1551,7 +1621,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[26].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[26].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1560,7 +1630,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[27].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[27].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -1568,7 +1638,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[27].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[27].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1577,7 +1647,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[27].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[27].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1586,7 +1656,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[28].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[28].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -1594,7 +1664,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[28].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[28].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1603,7 +1673,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[28].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[28].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1612,7 +1682,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[29].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[29].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -1620,7 +1690,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[29].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[29].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1629,7 +1699,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[29].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[29].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1638,7 +1708,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[30].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[30].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -1646,7 +1716,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[30].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[30].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1655,7 +1725,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[30].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[30].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1664,7 +1734,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[31].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[31].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -1672,7 +1742,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[31].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[31].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1681,7 +1751,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[31].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[31].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1690,7 +1760,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2
 a[0] => a[0].IN1
 a[1] => a[1].IN1
 a[2] => a[2].IN1
@@ -1790,7 +1860,7 @@ sum[31] <= full_adder:ADD_LOOP[31].FA.sum
 cout <= full_adder:ADD_LOOP[31].FA.cout
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[0].FA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[0].FA1
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -1798,7 +1868,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[0].FA1|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[0].FA1|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1807,7 +1877,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[0].FA1|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[0].FA1|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1816,7 +1886,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[1].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[1].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -1824,7 +1894,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[1].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[1].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1833,7 +1903,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[1].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[1].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1842,7 +1912,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[2].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[2].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -1850,7 +1920,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[2].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[2].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1859,7 +1929,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[2].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[2].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1868,7 +1938,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[3].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[3].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -1876,7 +1946,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[3].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[3].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1885,7 +1955,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[3].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[3].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1894,7 +1964,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[4].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[4].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -1902,7 +1972,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[4].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[4].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1911,7 +1981,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[4].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[4].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1920,7 +1990,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[5].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[5].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -1928,7 +1998,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[5].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[5].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1937,7 +2007,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[5].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[5].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1946,7 +2016,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[6].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[6].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -1954,7 +2024,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[6].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[6].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1963,7 +2033,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[6].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[6].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1972,7 +2042,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[7].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[7].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -1980,7 +2050,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[7].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[7].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1989,7 +2059,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[7].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[7].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -1998,7 +2068,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[8].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[8].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -2006,7 +2076,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[8].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[8].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -2015,7 +2085,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[8].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[8].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -2024,7 +2094,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[9].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[9].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -2032,7 +2102,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[9].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[9].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -2041,7 +2111,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[9].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[9].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -2050,7 +2120,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[10].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[10].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -2058,7 +2128,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[10].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[10].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -2067,7 +2137,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[10].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[10].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -2076,7 +2146,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[11].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[11].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -2084,7 +2154,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[11].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[11].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -2093,7 +2163,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[11].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[11].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -2102,7 +2172,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[12].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[12].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -2110,7 +2180,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[12].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[12].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -2119,7 +2189,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[12].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[12].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -2128,7 +2198,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[13].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[13].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -2136,7 +2206,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[13].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[13].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -2145,7 +2215,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[13].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[13].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -2154,7 +2224,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[14].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[14].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -2162,7 +2232,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[14].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[14].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -2171,7 +2241,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[14].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[14].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -2180,7 +2250,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[15].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[15].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -2188,7 +2258,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[15].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[15].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -2197,7 +2267,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[15].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[15].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -2206,7 +2276,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[16].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[16].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -2214,7 +2284,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[16].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[16].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -2223,7 +2293,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[16].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[16].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -2232,7 +2302,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[17].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[17].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -2240,7 +2310,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[17].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[17].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -2249,7 +2319,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[17].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[17].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -2258,7 +2328,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[18].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[18].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -2266,7 +2336,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[18].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[18].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -2275,7 +2345,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[18].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[18].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -2284,7 +2354,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[19].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[19].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -2292,7 +2362,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[19].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[19].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -2301,7 +2371,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[19].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[19].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -2310,7 +2380,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[20].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[20].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -2318,7 +2388,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[20].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[20].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -2327,7 +2397,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[20].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[20].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -2336,7 +2406,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[21].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[21].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -2344,7 +2414,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[21].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[21].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -2353,7 +2423,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[21].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[21].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -2362,7 +2432,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[22].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[22].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -2370,7 +2440,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[22].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[22].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -2379,7 +2449,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[22].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[22].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -2388,7 +2458,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[23].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[23].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -2396,7 +2466,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[23].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[23].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -2405,7 +2475,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[23].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[23].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -2414,7 +2484,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[24].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[24].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -2422,7 +2492,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[24].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[24].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -2431,7 +2501,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[24].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[24].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -2440,7 +2510,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[25].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[25].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -2448,7 +2518,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[25].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[25].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -2457,7 +2527,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[25].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[25].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -2466,7 +2536,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[26].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[26].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -2474,7 +2544,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[26].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[26].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -2483,7 +2553,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[26].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[26].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -2492,7 +2562,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[27].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[27].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -2500,7 +2570,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[27].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[27].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -2509,7 +2579,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[27].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[27].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -2518,7 +2588,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[28].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[28].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -2526,7 +2596,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[28].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[28].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -2535,7 +2605,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[28].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[28].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -2544,7 +2614,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[29].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[29].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -2552,7 +2622,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[29].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[29].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -2561,7 +2631,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[29].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[29].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -2570,7 +2640,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[30].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[30].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -2578,7 +2648,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[30].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[30].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -2587,7 +2657,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[30].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[30].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -2596,7 +2666,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[31].FA
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[31].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -2604,7 +2674,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[31].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[31].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -2613,7 +2683,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[31].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|adder_n_bit:pcadd2|full_adder:ADD_LOOP[31].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -2622,7 +2692,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|mux2:ra1mux
+|top|arm:arm|datapath:dp|mux2:ra1mux
 d0[0] => y.DATAA
 d0[1] => y.DATAA
 d0[2] => y.DATAA
@@ -2641,7 +2711,7 @@ y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
 y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|mux2:ra2mux
+|top|arm:arm|datapath:dp|mux2:ra2mux
 d0[0] => y.DATAA
 d0[1] => y.DATAA
 d0[2] => y.DATAA
@@ -2660,7 +2730,7 @@ y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
 y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|regfile:rf
+|top|arm:arm|datapath:dp|regfile:rf
 clk => rf.we_a.CLK
 clk => rf.waddr_a[3].CLK
 clk => rf.waddr_a[2].CLK
@@ -2919,7 +2989,7 @@ rd2[30] <= rd2.DB_MAX_OUTPUT_PORT_TYPE
 rd2[31] <= rd2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|mux2:resmux
+|top|arm:arm|datapath:dp|mux2:resmux
 d0[0] => y.DATAA
 d0[1] => y.DATAA
 d0[2] => y.DATAA
@@ -3050,7 +3120,7 @@ y[30] <= y.DB_MAX_OUTPUT_PORT_TYPE
 y[31] <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|extend:ext
+|top|arm:arm|datapath:dp|extend:ext
 Instr[0] => ExtImm.DATAB
 Instr[0] => ExtImm.DATAA
 Instr[1] => ExtImm.DATAB
@@ -3163,7 +3233,7 @@ ExtImm[30] <= ExtImm.DB_MAX_OUTPUT_PORT_TYPE
 ExtImm[31] <= ExtImm.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|mux2:srcbmux
+|top|arm:arm|datapath:dp|mux2:srcbmux
 d0[0] => y.DATAA
 d0[1] => y.DATAA
 d0[2] => y.DATAA
@@ -3294,7 +3364,7 @@ y[30] <= y.DB_MAX_OUTPUT_PORT_TYPE
 y[31] <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|alu:alu
+|top|arm:arm|datapath:dp|alu:alu
 A[0] => A[0].IN2
 A[1] => A[1].IN2
 A[2] => A[2].IN2
@@ -3335,7 +3405,7 @@ seg2[5] <= <GND>
 seg2[6] <= <GND>
 
 
-|arm|datapath:dp|alu:alu|adder_n_bit:adder
+|top|arm:arm|datapath:dp|alu:alu|adder_n_bit:adder
 a[0] => a[0].IN1
 a[1] => a[1].IN1
 a[2] => a[2].IN1
@@ -3351,7 +3421,7 @@ sum[3] <= full_adder:ADD_LOOP[3].FA.sum
 cout <= full_adder:ADD_LOOP[3].FA.cout
 
 
-|arm|datapath:dp|alu:alu|adder_n_bit:adder|full_adder:ADD_LOOP[0].FA1
+|top|arm:arm|datapath:dp|alu:alu|adder_n_bit:adder|full_adder:ADD_LOOP[0].FA1
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -3359,7 +3429,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|alu:alu|adder_n_bit:adder|full_adder:ADD_LOOP[0].FA1|half_adder:HA1
+|top|arm:arm|datapath:dp|alu:alu|adder_n_bit:adder|full_adder:ADD_LOOP[0].FA1|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -3368,7 +3438,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|alu:alu|adder_n_bit:adder|full_adder:ADD_LOOP[0].FA1|half_adder:HA2
+|top|arm:arm|datapath:dp|alu:alu|adder_n_bit:adder|full_adder:ADD_LOOP[0].FA1|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -3377,7 +3447,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|alu:alu|adder_n_bit:adder|full_adder:ADD_LOOP[1].FA
+|top|arm:arm|datapath:dp|alu:alu|adder_n_bit:adder|full_adder:ADD_LOOP[1].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -3385,7 +3455,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|alu:alu|adder_n_bit:adder|full_adder:ADD_LOOP[1].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|alu:alu|adder_n_bit:adder|full_adder:ADD_LOOP[1].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -3394,7 +3464,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|alu:alu|adder_n_bit:adder|full_adder:ADD_LOOP[1].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|alu:alu|adder_n_bit:adder|full_adder:ADD_LOOP[1].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -3403,7 +3473,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|alu:alu|adder_n_bit:adder|full_adder:ADD_LOOP[2].FA
+|top|arm:arm|datapath:dp|alu:alu|adder_n_bit:adder|full_adder:ADD_LOOP[2].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -3411,7 +3481,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|alu:alu|adder_n_bit:adder|full_adder:ADD_LOOP[2].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|alu:alu|adder_n_bit:adder|full_adder:ADD_LOOP[2].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -3420,7 +3490,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|alu:alu|adder_n_bit:adder|full_adder:ADD_LOOP[2].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|alu:alu|adder_n_bit:adder|full_adder:ADD_LOOP[2].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -3429,7 +3499,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|alu:alu|adder_n_bit:adder|full_adder:ADD_LOOP[3].FA
+|top|arm:arm|datapath:dp|alu:alu|adder_n_bit:adder|full_adder:ADD_LOOP[3].FA
 a => a.IN1
 b => b.IN1
 cin => cin.IN1
@@ -3437,7 +3507,7 @@ sum <= half_adder:HA2.sum
 cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|alu:alu|adder_n_bit:adder|full_adder:ADD_LOOP[3].FA|half_adder:HA1
+|top|arm:arm|datapath:dp|alu:alu|adder_n_bit:adder|full_adder:ADD_LOOP[3].FA|half_adder:HA1
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -3446,7 +3516,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|alu:alu|adder_n_bit:adder|full_adder:ADD_LOOP[3].FA|half_adder:HA2
+|top|arm:arm|datapath:dp|alu:alu|adder_n_bit:adder|full_adder:ADD_LOOP[3].FA|half_adder:HA2
 a => sum.IN0
 a => carry.IN0
 b => sum.IN1
@@ -3455,7 +3525,7 @@ sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|alu:alu|subtractor_n_bit:subtractor
+|top|arm:arm|datapath:dp|alu:alu|subtractor_n_bit:subtractor
 a[0] => a[0].IN1
 a[1] => a[1].IN1
 a[2] => a[2].IN1
@@ -3471,7 +3541,7 @@ difference[3] <= full_subtractor:SUB_LOOP[3].FS.difference
 bout <= full_subtractor:SUB_LOOP[3].FS.bout
 
 
-|arm|datapath:dp|alu:alu|subtractor_n_bit:subtractor|full_subtractor:SUB_LOOP[0].FS1
+|top|arm:arm|datapath:dp|alu:alu|subtractor_n_bit:subtractor|full_subtractor:SUB_LOOP[0].FS1
 a => a.IN1
 b => b.IN1
 bin => bin.IN1
@@ -3479,7 +3549,7 @@ difference <= half_subtractor:HS2.difference
 bout <= bout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|alu:alu|subtractor_n_bit:subtractor|full_subtractor:SUB_LOOP[0].FS1|half_subtractor:HS1
+|top|arm:arm|datapath:dp|alu:alu|subtractor_n_bit:subtractor|full_subtractor:SUB_LOOP[0].FS1|half_subtractor:HS1
 a => difference.IN0
 a => borrow.IN0
 b => difference.IN1
@@ -3488,7 +3558,7 @@ difference <= difference.DB_MAX_OUTPUT_PORT_TYPE
 borrow <= borrow.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|alu:alu|subtractor_n_bit:subtractor|full_subtractor:SUB_LOOP[0].FS1|half_subtractor:HS2
+|top|arm:arm|datapath:dp|alu:alu|subtractor_n_bit:subtractor|full_subtractor:SUB_LOOP[0].FS1|half_subtractor:HS2
 a => difference.IN0
 a => borrow.IN0
 b => difference.IN1
@@ -3497,7 +3567,7 @@ difference <= difference.DB_MAX_OUTPUT_PORT_TYPE
 borrow <= borrow.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|alu:alu|subtractor_n_bit:subtractor|full_subtractor:SUB_LOOP[1].FS
+|top|arm:arm|datapath:dp|alu:alu|subtractor_n_bit:subtractor|full_subtractor:SUB_LOOP[1].FS
 a => a.IN1
 b => b.IN1
 bin => bin.IN1
@@ -3505,7 +3575,7 @@ difference <= half_subtractor:HS2.difference
 bout <= bout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|alu:alu|subtractor_n_bit:subtractor|full_subtractor:SUB_LOOP[1].FS|half_subtractor:HS1
+|top|arm:arm|datapath:dp|alu:alu|subtractor_n_bit:subtractor|full_subtractor:SUB_LOOP[1].FS|half_subtractor:HS1
 a => difference.IN0
 a => borrow.IN0
 b => difference.IN1
@@ -3514,7 +3584,7 @@ difference <= difference.DB_MAX_OUTPUT_PORT_TYPE
 borrow <= borrow.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|alu:alu|subtractor_n_bit:subtractor|full_subtractor:SUB_LOOP[1].FS|half_subtractor:HS2
+|top|arm:arm|datapath:dp|alu:alu|subtractor_n_bit:subtractor|full_subtractor:SUB_LOOP[1].FS|half_subtractor:HS2
 a => difference.IN0
 a => borrow.IN0
 b => difference.IN1
@@ -3523,7 +3593,7 @@ difference <= difference.DB_MAX_OUTPUT_PORT_TYPE
 borrow <= borrow.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|alu:alu|subtractor_n_bit:subtractor|full_subtractor:SUB_LOOP[2].FS
+|top|arm:arm|datapath:dp|alu:alu|subtractor_n_bit:subtractor|full_subtractor:SUB_LOOP[2].FS
 a => a.IN1
 b => b.IN1
 bin => bin.IN1
@@ -3531,7 +3601,7 @@ difference <= half_subtractor:HS2.difference
 bout <= bout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|alu:alu|subtractor_n_bit:subtractor|full_subtractor:SUB_LOOP[2].FS|half_subtractor:HS1
+|top|arm:arm|datapath:dp|alu:alu|subtractor_n_bit:subtractor|full_subtractor:SUB_LOOP[2].FS|half_subtractor:HS1
 a => difference.IN0
 a => borrow.IN0
 b => difference.IN1
@@ -3540,7 +3610,7 @@ difference <= difference.DB_MAX_OUTPUT_PORT_TYPE
 borrow <= borrow.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|alu:alu|subtractor_n_bit:subtractor|full_subtractor:SUB_LOOP[2].FS|half_subtractor:HS2
+|top|arm:arm|datapath:dp|alu:alu|subtractor_n_bit:subtractor|full_subtractor:SUB_LOOP[2].FS|half_subtractor:HS2
 a => difference.IN0
 a => borrow.IN0
 b => difference.IN1
@@ -3549,7 +3619,7 @@ difference <= difference.DB_MAX_OUTPUT_PORT_TYPE
 borrow <= borrow.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|alu:alu|subtractor_n_bit:subtractor|full_subtractor:SUB_LOOP[3].FS
+|top|arm:arm|datapath:dp|alu:alu|subtractor_n_bit:subtractor|full_subtractor:SUB_LOOP[3].FS
 a => a.IN1
 b => b.IN1
 bin => bin.IN1
@@ -3557,7 +3627,7 @@ difference <= half_subtractor:HS2.difference
 bout <= bout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|alu:alu|subtractor_n_bit:subtractor|full_subtractor:SUB_LOOP[3].FS|half_subtractor:HS1
+|top|arm:arm|datapath:dp|alu:alu|subtractor_n_bit:subtractor|full_subtractor:SUB_LOOP[3].FS|half_subtractor:HS1
 a => difference.IN0
 a => borrow.IN0
 b => difference.IN1
@@ -3566,12 +3636,226 @@ difference <= difference.DB_MAX_OUTPUT_PORT_TYPE
 borrow <= borrow.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|arm|datapath:dp|alu:alu|subtractor_n_bit:subtractor|full_subtractor:SUB_LOOP[3].FS|half_subtractor:HS2
+|top|arm:arm|datapath:dp|alu:alu|subtractor_n_bit:subtractor|full_subtractor:SUB_LOOP[3].FS|half_subtractor:HS2
 a => difference.IN0
 a => borrow.IN0
 b => difference.IN1
 b => borrow.IN1
 difference <= difference.DB_MAX_OUTPUT_PORT_TYPE
 borrow <= borrow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|imem:imem
+a[0] => ~NO_FANOUT~
+a[1] => ~NO_FANOUT~
+a[2] => ~NO_FANOUT~
+a[3] => ~NO_FANOUT~
+a[4] => ~NO_FANOUT~
+a[5] => ~NO_FANOUT~
+a[6] => ~NO_FANOUT~
+a[7] => ~NO_FANOUT~
+a[8] => ~NO_FANOUT~
+a[9] => ~NO_FANOUT~
+a[10] => ~NO_FANOUT~
+a[11] => ~NO_FANOUT~
+a[12] => ~NO_FANOUT~
+a[13] => ~NO_FANOUT~
+a[14] => ~NO_FANOUT~
+a[15] => ~NO_FANOUT~
+a[16] => ~NO_FANOUT~
+a[17] => ~NO_FANOUT~
+a[18] => ~NO_FANOUT~
+a[19] => ~NO_FANOUT~
+a[20] => ~NO_FANOUT~
+a[21] => ~NO_FANOUT~
+a[22] => ~NO_FANOUT~
+a[23] => ~NO_FANOUT~
+a[24] => ~NO_FANOUT~
+a[25] => ~NO_FANOUT~
+a[26] => ~NO_FANOUT~
+a[27] => ~NO_FANOUT~
+a[28] => ~NO_FANOUT~
+a[29] => ~NO_FANOUT~
+a[30] => ~NO_FANOUT~
+a[31] => ~NO_FANOUT~
+rd[0] <= <GND>
+rd[1] <= <GND>
+rd[2] <= <GND>
+rd[3] <= <GND>
+rd[4] <= <GND>
+rd[5] <= <GND>
+rd[6] <= <GND>
+rd[7] <= <GND>
+rd[8] <= <GND>
+rd[9] <= <GND>
+rd[10] <= <GND>
+rd[11] <= <GND>
+rd[12] <= <GND>
+rd[13] <= <GND>
+rd[14] <= <GND>
+rd[15] <= <GND>
+rd[16] <= <GND>
+rd[17] <= <GND>
+rd[18] <= <GND>
+rd[19] <= <GND>
+rd[20] <= <GND>
+rd[21] <= <GND>
+rd[22] <= <GND>
+rd[23] <= <GND>
+rd[24] <= <GND>
+rd[25] <= <GND>
+rd[26] <= <GND>
+rd[27] <= <GND>
+rd[28] <= <GND>
+rd[29] <= <GND>
+rd[30] <= <GND>
+rd[31] <= <GND>
+
+
+|top|ram1:ram1_inst
+address[0] => address[0].IN1
+address[1] => address[1].IN1
+address[2] => address[2].IN1
+address[3] => address[3].IN1
+address[4] => address[4].IN1
+clock => clock.IN1
+data[0] => data[0].IN1
+data[1] => data[1].IN1
+data[2] => data[2].IN1
+data[3] => data[3].IN1
+data[4] => data[4].IN1
+data[5] => data[5].IN1
+data[6] => data[6].IN1
+data[7] => data[7].IN1
+wren => wren.IN1
+q[0] <= altsyncram:altsyncram_component.q_a
+q[1] <= altsyncram:altsyncram_component.q_a
+q[2] <= altsyncram:altsyncram_component.q_a
+q[3] <= altsyncram:altsyncram_component.q_a
+q[4] <= altsyncram:altsyncram_component.q_a
+q[5] <= altsyncram:altsyncram_component.q_a
+q[6] <= altsyncram:altsyncram_component.q_a
+q[7] <= altsyncram:altsyncram_component.q_a
+
+
+|top|ram1:ram1_inst|altsyncram:altsyncram_component
+wren_a => altsyncram_jho1:auto_generated.wren_a
+rden_a => ~NO_FANOUT~
+wren_b => ~NO_FANOUT~
+rden_b => ~NO_FANOUT~
+data_a[0] => altsyncram_jho1:auto_generated.data_a[0]
+data_a[1] => altsyncram_jho1:auto_generated.data_a[1]
+data_a[2] => altsyncram_jho1:auto_generated.data_a[2]
+data_a[3] => altsyncram_jho1:auto_generated.data_a[3]
+data_a[4] => altsyncram_jho1:auto_generated.data_a[4]
+data_a[5] => altsyncram_jho1:auto_generated.data_a[5]
+data_a[6] => altsyncram_jho1:auto_generated.data_a[6]
+data_a[7] => altsyncram_jho1:auto_generated.data_a[7]
+data_b[0] => ~NO_FANOUT~
+address_a[0] => altsyncram_jho1:auto_generated.address_a[0]
+address_a[1] => altsyncram_jho1:auto_generated.address_a[1]
+address_a[2] => altsyncram_jho1:auto_generated.address_a[2]
+address_a[3] => altsyncram_jho1:auto_generated.address_a[3]
+address_a[4] => altsyncram_jho1:auto_generated.address_a[4]
+address_b[0] => ~NO_FANOUT~
+addressstall_a => ~NO_FANOUT~
+addressstall_b => ~NO_FANOUT~
+clock0 => altsyncram_jho1:auto_generated.clock0
+clock1 => ~NO_FANOUT~
+clocken0 => ~NO_FANOUT~
+clocken1 => ~NO_FANOUT~
+clocken2 => ~NO_FANOUT~
+clocken3 => ~NO_FANOUT~
+aclr0 => ~NO_FANOUT~
+aclr1 => ~NO_FANOUT~
+byteena_a[0] => ~NO_FANOUT~
+byteena_b[0] => ~NO_FANOUT~
+q_a[0] <= altsyncram_jho1:auto_generated.q_a[0]
+q_a[1] <= altsyncram_jho1:auto_generated.q_a[1]
+q_a[2] <= altsyncram_jho1:auto_generated.q_a[2]
+q_a[3] <= altsyncram_jho1:auto_generated.q_a[3]
+q_a[4] <= altsyncram_jho1:auto_generated.q_a[4]
+q_a[5] <= altsyncram_jho1:auto_generated.q_a[5]
+q_a[6] <= altsyncram_jho1:auto_generated.q_a[6]
+q_a[7] <= altsyncram_jho1:auto_generated.q_a[7]
+q_b[0] <= <GND>
+eccstatus[0] <= <GND>
+eccstatus[1] <= <GND>
+eccstatus[2] <= <GND>
+
+
+|top|ram1:ram1_inst|altsyncram:altsyncram_component|altsyncram_jho1:auto_generated
+address_a[0] => ram_block1a0.PORTAADDR
+address_a[0] => ram_block1a1.PORTAADDR
+address_a[0] => ram_block1a2.PORTAADDR
+address_a[0] => ram_block1a3.PORTAADDR
+address_a[0] => ram_block1a4.PORTAADDR
+address_a[0] => ram_block1a5.PORTAADDR
+address_a[0] => ram_block1a6.PORTAADDR
+address_a[0] => ram_block1a7.PORTAADDR
+address_a[1] => ram_block1a0.PORTAADDR1
+address_a[1] => ram_block1a1.PORTAADDR1
+address_a[1] => ram_block1a2.PORTAADDR1
+address_a[1] => ram_block1a3.PORTAADDR1
+address_a[1] => ram_block1a4.PORTAADDR1
+address_a[1] => ram_block1a5.PORTAADDR1
+address_a[1] => ram_block1a6.PORTAADDR1
+address_a[1] => ram_block1a7.PORTAADDR1
+address_a[2] => ram_block1a0.PORTAADDR2
+address_a[2] => ram_block1a1.PORTAADDR2
+address_a[2] => ram_block1a2.PORTAADDR2
+address_a[2] => ram_block1a3.PORTAADDR2
+address_a[2] => ram_block1a4.PORTAADDR2
+address_a[2] => ram_block1a5.PORTAADDR2
+address_a[2] => ram_block1a6.PORTAADDR2
+address_a[2] => ram_block1a7.PORTAADDR2
+address_a[3] => ram_block1a0.PORTAADDR3
+address_a[3] => ram_block1a1.PORTAADDR3
+address_a[3] => ram_block1a2.PORTAADDR3
+address_a[3] => ram_block1a3.PORTAADDR3
+address_a[3] => ram_block1a4.PORTAADDR3
+address_a[3] => ram_block1a5.PORTAADDR3
+address_a[3] => ram_block1a6.PORTAADDR3
+address_a[3] => ram_block1a7.PORTAADDR3
+address_a[4] => ram_block1a0.PORTAADDR4
+address_a[4] => ram_block1a1.PORTAADDR4
+address_a[4] => ram_block1a2.PORTAADDR4
+address_a[4] => ram_block1a3.PORTAADDR4
+address_a[4] => ram_block1a4.PORTAADDR4
+address_a[4] => ram_block1a5.PORTAADDR4
+address_a[4] => ram_block1a6.PORTAADDR4
+address_a[4] => ram_block1a7.PORTAADDR4
+clock0 => ram_block1a0.CLK0
+clock0 => ram_block1a1.CLK0
+clock0 => ram_block1a2.CLK0
+clock0 => ram_block1a3.CLK0
+clock0 => ram_block1a4.CLK0
+clock0 => ram_block1a5.CLK0
+clock0 => ram_block1a6.CLK0
+clock0 => ram_block1a7.CLK0
+data_a[0] => ram_block1a0.PORTADATAIN
+data_a[1] => ram_block1a1.PORTADATAIN
+data_a[2] => ram_block1a2.PORTADATAIN
+data_a[3] => ram_block1a3.PORTADATAIN
+data_a[4] => ram_block1a4.PORTADATAIN
+data_a[5] => ram_block1a5.PORTADATAIN
+data_a[6] => ram_block1a6.PORTADATAIN
+data_a[7] => ram_block1a7.PORTADATAIN
+q_a[0] <= ram_block1a0.PORTADATAOUT
+q_a[1] <= ram_block1a1.PORTADATAOUT
+q_a[2] <= ram_block1a2.PORTADATAOUT
+q_a[3] <= ram_block1a3.PORTADATAOUT
+q_a[4] <= ram_block1a4.PORTADATAOUT
+q_a[5] <= ram_block1a5.PORTADATAOUT
+q_a[6] <= ram_block1a6.PORTADATAOUT
+q_a[7] <= ram_block1a7.PORTADATAOUT
+wren_a => ram_block1a0.PORTAWE
+wren_a => ram_block1a1.PORTAWE
+wren_a => ram_block1a2.PORTAWE
+wren_a => ram_block1a3.PORTAWE
+wren_a => ram_block1a4.PORTAWE
+wren_a => ram_block1a5.PORTAWE
+wren_a => ram_block1a6.PORTAWE
+wren_a => ram_block1a7.PORTAWE
 
 

@@ -1,5 +1,5 @@
 Flow report for ProyectoFinal
-Sat Jun  1 18:33:22 2024
+Sat Jun  1 20:00:08 2024
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -41,16 +41,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +---------------------------------+------------------------------------------------+
-; Flow Status                     ; Successful - Sat Jun  1 18:33:22 2024          ;
+; Flow Status                     ; Successful - Sat Jun  1 20:00:08 2024          ;
 ; Quartus Prime Version           ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                   ; ProyectoFinal                                  ;
-; Top-level Entity Name           ; arm                                            ;
+; Top-level Entity Name           ; top                                            ;
 ; Family                          ; Cyclone V                                      ;
 ; Device                          ; 5CSEMA5F31C6                                   ;
 ; Timing Models                   ; Final                                          ;
-; Logic utilization (in ALMs)     ; 323 / 32,070 ( 1 % )                           ;
-; Total registers                 ; 513                                            ;
-; Total pins                      ; 163 / 457 ( 36 % )                             ;
+; Logic utilization (in ALMs)     ; 1 / 32,070 ( < 1 % )                           ;
+; Total registers                 ; 0                                              ;
+; Total pins                      ; 67 / 457 ( 15 % )                              ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                          ;
 ; Total DSP Blocks                ; 0 / 87 ( 0 % )                                 ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/01/2024 18:21:14 ;
+; Start date & time ; 06/01/2024 19:57:26 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ProyectoFinal       ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 127564572755082.171728767418904        ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 127564572755082.171729344503280        ; --            ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
@@ -87,11 +87,12 @@ https://fpgasoftware.intel.com/eula.
 ; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl                      ; --            ; --          ; eda_simulation                    ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim (SystemVerilog)               ; <None>        ; --          ; --                                ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation                    ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; arm         ; Top                               ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; arm         ; Top                               ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; arm         ; Top                               ;
+; MISC_FILE                           ; ram1_bb.v                              ; --            ; --          ; --                                ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; top         ; Top                               ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; top         ; Top                               ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; top         ; Top                               ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --                                ;
-; TOP_LEVEL_ENTITY                    ; arm                                    ; ProyectoFinal ; --          ; --                                ;
+; TOP_LEVEL_ENTITY                    ; top                                    ; ProyectoFinal ; --          ; --                                ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 
 
@@ -100,12 +101,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:25     ; 1.0                     ; 4870 MB             ; 00:00:33                           ;
-; Fitter               ; 00:11:01     ; 1.0                     ; 7086 MB             ; 00:08:42                           ;
-; Assembler            ; 00:00:15     ; 1.0                     ; 4880 MB             ; 00:00:08                           ;
-; Timing Analyzer      ; 00:00:16     ; 1.8                     ; 5240 MB             ; 00:00:14                           ;
-; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 4739 MB             ; 00:00:02                           ;
-; Total                ; 00:12:00     ; --                      ; --                  ; 00:09:39                           ;
+; Analysis & Synthesis ; 00:00:20     ; 1.0                     ; 4817 MB             ; 00:00:34                           ;
+; Fitter               ; 00:01:48     ; 1.0                     ; 7032 MB             ; 00:02:42                           ;
+; Assembler            ; 00:00:13     ; 1.0                     ; 4884 MB             ; 00:00:13                           ;
+; Timing Analyzer      ; 00:00:11     ; 1.0                     ; 5184 MB             ; 00:00:11                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4740 MB             ; 00:00:02                           ;
+; Total                ; 00:02:34     ; --                      ; --                  ; 00:03:42                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
