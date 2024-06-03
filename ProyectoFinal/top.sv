@@ -7,6 +7,13 @@ module top (
 );
     logic [31:0] PC, Instr, ReadData;
 
+    // Dummy VGA signals
+    logic [7:0] vga_address;
+    logic [7:0] vga_data_in;
+    logic vga_read_enable;
+    logic vga_write_enable;
+    logic [7:0] vga_data_out;
+
     // Instanciar el procesador ARM
     arm arm (
         .clk(clk),
@@ -19,25 +26,43 @@ module top (
         .ReadData(ReadData)
     );
 
-    // Instanciar la memoria de instrucciones
-    imem imem (
-        .a(PC),
-        .rd(Instr)
+    // Instanciar la memoria de instrucciones (ROM)
+    rom rom_inst (
+        .address(PC[8:2]), // Assuming PC is word-addressed
+        .clock(clk),
+        .q(Instr)
     );
 
     // Instanciar la memoria de datos (RAM)
-    // Conversión para coincidir con el ancho de la memoria de 8 bits
-    wire [7:0] ram_read_data;
-    
-    ram1 ram1_inst (
-        .address(DataAdr[4:0]),  // Usando los 5 bits menos significativos para direccionar 32 palabras
+    ram ram_inst (
+        .address_a(DataAdr[7:2]), // Use appropriate bits for addressing
+        .address_b(vga_address),
         .clock(clk),
-        .data(WriteData[7:0]),  // Usando solo 8 bits menos significativos de WriteData
-        .wren(MemWrite),
-        .q(ram_read_data) // Leyendo solo 8 bits menos significativos a ReadData
+        .data_a(WriteData), // 32-bit data for writing
+        .data_b(vga_data_in), // Dummy VGA data
+        .wren_a(MemWrite),
+        .wren_b(vga_write_enable),
+        .q_a(ReadData),
+        .q_b(vga_data_out)
     );
 
-    // Extensión de signo para convertir 8 bits a 32 bits en la entrada ReadData del ARM
-    assign ReadData = {24'b0, ram_read_data};
+    // Dummy VGA data generation logic
+    always @(posedge clk) begin
+        if (reset) begin
+            // Reset dummy VGA data
+            vga_address <= 0;
+            vga_data_in <= 0;
+            vga_read_enable <= 0;
+            vga_write_enable <= 0;
+        end else begin
+            // Generate dummy VGA data
+            vga_address <= vga_address + 1; // Increment address
+            vga_data_in <= vga_data_in + 1; // Increment data
+            vga_write_enable <= 1; // Enable write for demonstration
+            // Add any additional logic needed for dummy data generation
+        end
+    end
+
+    // Add any additional logic needed for VGA read enable
 
 endmodule

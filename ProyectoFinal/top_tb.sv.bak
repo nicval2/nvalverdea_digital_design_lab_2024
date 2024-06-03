@@ -1,0 +1,88 @@
+`timescale 1ns / 1ps
+
+module top_tb;
+
+// Parameters of the testbench
+localparam WIDTH = 32;
+localparam ADDR_WIDTH = 8; // Adjust as needed for your memory depth
+
+// Testbench signals
+reg clk;
+reg [ADDR_WIDTH-1:0] PC;
+reg [ADDR_WIDTH-1:0] DataAdr;
+reg [WIDTH-1:0] WriteData;
+reg MemWrite;
+wire [WIDTH-1:0] Instr;
+wire [WIDTH-1:0] ReadData;
+// Dummy VGA signals
+reg [WIDTH-1:0] vga_data;
+reg vga_read_enable;
+reg vga_write_enable;
+wire [WIDTH-1:0] vga_data_out;
+
+// Instantiate the top module
+top_module top_inst (
+    .clk(clk),
+    .PC(PC),
+    .DataAdr(DataAdr),
+    .WriteData(WriteData),
+    .MemWrite(MemWrite),
+    .Instr(Instr),
+    .ReadData(ReadData),
+    // Connect dummy VGA signals
+    .vga_data(vga_data),
+    .vga_read_enable(vga_read_enable),
+    .vga_write_enable(vga_write_enable),
+    .vga_data_out(vga_data_out)
+    // ... other ports as necessary
+);
+
+// Clock generation
+initial begin
+    clk = 0;
+    forever #10 clk = ~clk; // 50MHz clock
+end
+
+// Test sequence
+initial begin
+    // Initialize signals
+    PC = 0;
+    DataAdr = 0;
+    WriteData = 0;
+    MemWrite = 0;
+    vga_data = 0;
+    vga_read_enable = 0;
+    vga_write_enable = 0;
+
+    // Reset sequence if necessary
+    // ...
+
+    // Test writing to RAM
+    #100; // Wait for a few clock cycles
+    DataAdr = 'h10; // Example address
+    WriteData = 'hDEADBEEF; // Example data
+    MemWrite = 1'b1; // Enable writing
+    #20; // Wait for one clock cycle
+    MemWrite = 1'b0; // Disable writing
+    $display("Time: %t, WriteData: %h", $time, WriteData);
+
+    // Test reading from RAM
+    #40; // Wait for two clock cycles
+    DataAdr = 'h10; // Same address as before
+    #20; // Wait for one clock cycle to read
+    $display("Time: %t, ReadData: %h", $time, ReadData);
+
+    // Test instruction fetch from ROM
+    #60; // Wait for three clock cycles
+    PC = 'h04; // Example program counter value
+    #20; // Wait for one clock cycle to fetch
+    $display("Time: %t, Instr: %h", $time, Instr);
+
+    // Add more test cases as needed
+
+    // Finish the simulation
+    #1000;
+    $finish;
+end
+
+endmodule

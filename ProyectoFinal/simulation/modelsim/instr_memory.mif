@@ -1,0 +1,132 @@
+-- Copyright (C) 2023  Intel Corporation. All rights reserved.
+-- Your use of Intel Corporation's design tools, logic functions 
+-- and other software and tools, and any partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Intel Program License 
+-- Subscription Agreement, the Intel Quartus Prime License Agreement,
+-- the Intel FPGA IP License Agreement, or other applicable license
+-- agreement, including, without limitation, that your use is for
+-- the sole purpose of programming logic devices manufactured by
+-- Intel and sold by Intel or its authorized distributors.  Please
+-- refer to the applicable agreement for further details, at
+-- https://fpgasoftware.intel.com/eula.
+
+-- Quartus Prime generated Memory Initialization File (.mif)
+
+WIDTH=32;
+DEPTH=110;
+
+ADDRESS_RADIX=UNS;
+DATA_RADIX=HEX;
+
+CONTENT BEGIN
+0:  e3a02000;
+1:  e3a03001;
+2:  e5d25000;
+3:  e5d39000;
+4:  e3a00002;
+5:  e3a010c7;
+6:  e3a0b000;
+7:  e1500001;
+8:  aa000048;
+9:  e5d04000;
+10: e3540020;
+11: 0a000040;
+12: e3a06000;
+13: e1a07000;
+14: e1500001;
+15: aa000048;
+16: e5d04000;
+17: e3540020;
+18: 0a000040;
+19: e3a06000;
+20: e1a07000;
+21: e1500001;
+22: aa000041;
+23: e5d04000;
+24: e3540020;
+25: 0a000015;
+26: e3540041;
+27: 02866001;
+28: e3540045;
+29: 02866001;
+30: e3540049;
+31: 02866001;
+32: e354004f;
+33: 02866001;
+34: e3540055;
+35: 02866001;
+36: e3540061;
+37: 02866001;
+38: e3540065;
+39: 02866001;
+40: e3540069;
+41: 02866001;
+42: e354006f;
+43: 02866001;
+44: e3540075;
+45: 02866001;
+46: e2800001;
+47: eaffffe4;
+48: e1560009;
+49: 1a00001c;
+50: e1a00007;
+51: e1500001;
+52: aa000023;
+53: e5d04000;
+54: e3540020;
+55: 0a00001b;
+56: e3540041;
+57: 01a04005;
+58: e3540045;
+59: 01a04005;
+60: e3540049;
+61: 01a04005;
+62: e354004f;
+63: 01a04005;
+64: e3540055;
+65: 01a04005;
+66: e3540061;
+67: 01a04005;
+68: e3540065;
+69: 01a04005;
+70: e3540069;
+71: 01a04005;
+72: e354006f;
+73: 01a04005;
+74: e3540075;
+75: 01a04005;
+76: e5c04000;
+77: e2800001;
+78: eaffffe3;
+79: e28bb001;
+80: e35b0096;
+81: 0a000006;
+82: e2800001;
+83: eaffffb9;
+84: e28bb001;
+85: e35b0096;
+86: 0a000001;
+87: e2800001;
+88: eaffffb4;
+89: e3a00018;
+90: e51f1000;
+91: e5810000;
+92: 00020026;
+93: 00000169;
+94: 0000016a;
+95: 00000185;
+96: 00020026;
+97: 2a48022a;
+98: 6d20616c;
+99: 6f646e75;
+100: 6d6f6320;
+101: 7365206f;
+102: 6f6d6174;
+103: 6f682073;
+104: 00000079;
+105: 002e2e2e;
+106: 0000022a;
+END;
