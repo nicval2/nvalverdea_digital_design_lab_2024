@@ -1,0 +1,133 @@
+-- Copyright (C) 2023  Intel Corporation. All rights reserved.
+-- Your use of Intel Corporation's design tools, logic functions 
+-- and other software and tools, and any partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Intel Program License 
+-- Subscription Agreement, the Intel Quartus Prime License Agreement,
+-- the Intel FPGA IP License Agreement, or other applicable license
+-- agreement, including, without limitation, that your use is for
+-- the sole purpose of programming logic devices manufactured by
+-- Intel and sold by Intel or its authorized distributors.  Please
+-- refer to the applicable agreement for further details, at
+-- https://fpgasoftware.intel.com/eula.
+
+-- Quartus Prime generated Memory Initialization File (.mif)
+
+WIDTH=32;
+DEPTH=110;
+
+ADDRESS_RADIX=HEX;
+DATA_RADIX=HEX;
+
+CONTENT BEGIN
+0:  e3a02000;
+1:  e3a03001;
+2:  e5d25000;
+3:  e5d39000;
+4:  e3a00002;
+5:  e3a010c7;
+6:  e3a0b000;
+7:  e1500001;
+8:  aa000048;
+9:  e5d04000;
+A:  e3540020;
+B:  0a000040;
+C:  e3a06000;
+D:  e1a07000;
+E:  e1500001;
+F:  aa000048;
+10: e5d04000;
+11: e3540020;
+12: 0a000040;
+13: e3a06000;
+14: e1a07000;
+15: e1500001;
+16: aa000041;
+17: e5d04000;
+18: e3540020;
+19: 0a000015;
+1A: e3540041;
+1B: 02866001;
+1C: e3540045;
+1D: 02866001;
+1E: e3540049;
+1F: 02866001;
+20: e354004f;
+21: 02866001;
+22: e3540055;
+23: 02866001;
+24: e3540061;
+25: 02866001;
+26: e3540065;
+27: 02866001;
+28: e3540069;
+29: 02866001;
+2A: e354006f;
+2B: 02866001;
+2C: e3540075;
+2D: 02866001;
+2E: e2800001;
+2F: eaffffe4;
+30: e1560009;
+31: 1a00001c;
+32: e1a00007;
+33: e1500001;
+34: aa000023;
+35: e5d04000;
+36: e3540020;
+37: 0a00001b;
+38: e3540041;
+39: 01a04005;
+3A: e3540045;
+3B: 01a04005;
+3C: e3540049;
+3D: 01a04005;
+3E: e354004f;
+3F: 01a04005;
+40: e3540055;
+41: 01a04005;
+42: e3540061;
+43: 01a04005;
+44: e3540065;
+45: 01a04005;
+46: e3540069;
+47: 01a04005;
+48: e354006f;
+49: 01a04005;
+4A: e3540075;
+4B: 01a04005;
+4C: e5c04000;
+4D: e2800001;
+4E: eaffffe3;
+4F: e28bb001;
+50: e35b0096;
+51: 0a000006;
+52: e2800001;
+53: eaffffb9;
+54: e28bb001;
+55: e35b0096;
+56: 0a000001;
+57: e2800001;
+58: eaffffb4;
+59: e3a00018;
+5A: e51f1000;
+5B: e5810000;
+5C: 00020026;
+5D: 00000169;
+5E: 0000016a;
+5F: 00000185;
+60: 00020026;
+61: 2a48022a;
+62: 6d20616c;
+63: 6f646e75;
+64: 6d6f6320;
+65: 7365206f;
+66: 6f6d6174;
+67: 6f682073;
+68: 00000079;
+69: 002e2e2e;
+6A: 0000022a;
+END;
+
