@@ -3,14 +3,14 @@ module alu #(parameter WIDTH = 4) (
     input logic [WIDTH - 1:0] A, B,
     input logic [1:0] opcode,
     output logic [WIDTH - 1:0] result,
-    output logic N, Z, C, V,
-    output logic [6:0]seg1, seg2
+    output logic [3:0] Flags
 );
 
 	logic [WIDTH-1:0] addResult;
 	logic [WIDTH-1:0] subResult;
 	logic [WIDTH-1:0] andResult;
 	logic [WIDTH-1:0] orResult;
+	logic N, Z, C, V;
 
 	adder_n_bit #(WIDTH) adder(
 		 .a(A), 
@@ -34,6 +34,8 @@ module alu #(parameter WIDTH = 4) (
 	assign Z = (result == 0);
 	assign C = (opcode == 2'b00) && (result < A);
 	assign V = (opcode == 2'b00) && (result > 0) && (result < A);
+	
+	assign Flags = {N, Z, C, V};
 
 	assign andResult = A & B;
 	assign orResult = A | B;

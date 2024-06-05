@@ -1,7 +1,7 @@
-Analysis & Elaboration Status : Successful - Sun Jun  2 23:12:29 2024
+Analysis & Elaboration Status : Successful - Tue Jun  4 19:33:52 2024
 Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 Revision Name : ProyectoFinal
-Top-level Entity Name : top
+Top-level Entity Name : vga
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A until Partition Merge
 Total registers : N/A until Partition Merge
