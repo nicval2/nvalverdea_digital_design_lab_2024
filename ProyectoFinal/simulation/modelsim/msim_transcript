@@ -13,7 +13,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work altera_ver {c:/misappsinstaladas/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_primitives.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:53:59 on Jun 04,2024
+# Start time: 21:06:54 on Jun 04,2024
 # vlog -reportprogress 300 -vlog01compat -work altera_ver c:/misappsinstaladas/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_primitives.v 
 # -- Compiling module global
 # -- Compiling module carry
@@ -95,7 +95,7 @@
 # 	alt_iobuf_diff
 # 	alt_bidir_diff
 # 	alt_bidir_buf
-# End time: 19:54:01 on Jun 04,2024, Elapsed time: 0:00:02
+# End time: 21:06:56 on Jun 04,2024, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/lpm_ver
@@ -106,7 +106,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work lpm_ver {c:/misappsinstaladas/intelfpga_lite/22.1std/quartus/eda/sim_lib/220model.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:54:03 on Jun 04,2024
+# Start time: 21:06:58 on Jun 04,2024
 # vlog -reportprogress 300 -vlog01compat -work lpm_ver c:/misappsinstaladas/intelfpga_lite/22.1std/quartus/eda/sim_lib/220model.v 
 # -- Compiling module LPM_MEMORY_INITIALIZATION
 # -- Compiling module LPM_HINT_EVALUATION
@@ -170,7 +170,7 @@
 # 	lpm_inpad
 # 	lpm_outpad
 # 	lpm_bipad
-# End time: 19:54:04 on Jun 04,2024, Elapsed time: 0:00:01
+# End time: 21:06:58 on Jun 04,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/sgate_ver
@@ -181,7 +181,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work sgate_ver {c:/misappsinstaladas/intelfpga_lite/22.1std/quartus/eda/sim_lib/sgate.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:54:05 on Jun 04,2024
+# Start time: 21:06:59 on Jun 04,2024
 # vlog -reportprogress 300 -vlog01compat -work sgate_ver c:/misappsinstaladas/intelfpga_lite/22.1std/quartus/eda/sim_lib/sgate.v 
 # -- Compiling module oper_add
 # -- Compiling module oper_addsub
@@ -223,7 +223,7 @@
 # 	oper_decoder
 # 	oper_bus_mux
 # 	oper_latch
-# End time: 19:54:06 on Jun 04,2024, Elapsed time: 0:00:01
+# End time: 21:07:00 on Jun 04,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/altera_mf_ver
@@ -234,7 +234,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work altera_mf_ver {c:/misappsinstaladas/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_mf.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:54:08 on Jun 04,2024
+# Start time: 21:07:01 on Jun 04,2024
 # vlog -reportprogress 300 -vlog01compat -work altera_mf_ver c:/misappsinstaladas/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_mf.v 
 # -- Compiling module lcell
 # -- Compiling module ALTERA_MF_MEMORY_INITIALIZATION
@@ -364,7 +364,7 @@
 # 	alt_fault_injection
 # 	sld_virtual_jtag_basic
 # 	altsource_probe
-# End time: 19:54:11 on Jun 04,2024, Elapsed time: 0:00:03
+# End time: 21:07:04 on Jun 04,2024, Elapsed time: 0:00:03
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/altera_lnsim_ver
@@ -375,7 +375,7 @@
 # Modifying modelsim.ini
 # vlog -sv -work altera_lnsim_ver {c:/misappsinstaladas/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_lnsim.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:54:15 on Jun 04,2024
+# Start time: 21:07:05 on Jun 04,2024
 # vlog -reportprogress 300 -sv -work altera_lnsim_ver c:/misappsinstaladas/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_lnsim.sv 
 # -- Compiling package altera_lnsim_functions
 # -- Compiling package altera_generic_pll_functions
@@ -458,7 +458,7 @@
 # 	altera_iopll
 # 	fourteennm_altera_iopll
 # 	fourteennm_simple_iopll
-# End time: 19:54:17 on Jun 04,2024, Elapsed time: 0:00:02
+# End time: 21:07:07 on Jun 04,2024, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/cyclonev_ver
@@ -469,7 +469,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work cyclonev_ver {c:/misappsinstaladas/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_atoms_ncrypt.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:54:18 on Jun 04,2024
+# Start time: 21:07:08 on Jun 04,2024
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_ver c:/misappsinstaladas/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_atoms_ncrypt.v 
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
@@ -483,19 +483,19 @@
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # 
 # Top level modules:
-# End time: 19:54:25 on Jun 04,2024, Elapsed time: 0:00:07
+# End time: 21:07:14 on Jun 04,2024, Elapsed time: 0:00:06
 # Errors: 0, Warnings: 10
 # vlog -vlog01compat -work cyclonev_ver {c:/misappsinstaladas/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_hmi_atoms_ncrypt.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:54:25 on Jun 04,2024
+# Start time: 21:07:15 on Jun 04,2024
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_ver c:/misappsinstaladas/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_hmi_atoms_ncrypt.v 
 # 
 # Top level modules:
-# End time: 19:54:30 on Jun 04,2024, Elapsed time: 0:00:05
+# End time: 21:07:19 on Jun 04,2024, Elapsed time: 0:00:04
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work cyclonev_ver {c:/misappsinstaladas/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_atoms.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:54:30 on Jun 04,2024
+# Start time: 21:07:19 on Jun 04,2024
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_ver c:/misappsinstaladas/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_atoms.v 
 # -- Compiling UDP CYCLONEV_PRIM_DFFE
 # -- Compiling UDP CYCLONEV_PRIM_DFFEAS
@@ -635,7 +635,7 @@
 # 	cyclonev_mem_phy
 # 	cyclonev_oscillator
 # 	cyclonev_hps_interface_fpga2sdram
-# End time: 19:54:32 on Jun 04,2024, Elapsed time: 0:00:02
+# End time: 21:07:20 on Jun 04,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/cyclonev_hssi_ver
@@ -646,15 +646,15 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work cyclonev_hssi_ver {c:/misappsinstaladas/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_hssi_atoms_ncrypt.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:54:35 on Jun 04,2024
+# Start time: 21:07:22 on Jun 04,2024
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_hssi_ver c:/misappsinstaladas/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_hssi_atoms_ncrypt.v 
 # 
 # Top level modules:
-# End time: 19:54:40 on Jun 04,2024, Elapsed time: 0:00:05
+# End time: 21:07:27 on Jun 04,2024, Elapsed time: 0:00:05
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work cyclonev_hssi_ver {c:/misappsinstaladas/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_hssi_atoms.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:54:40 on Jun 04,2024
+# Start time: 21:07:27 on Jun 04,2024
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_hssi_ver c:/misappsinstaladas/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_hssi_atoms.v 
 # -- Compiling module cyclonev_hssi_8g_pcs_aggregate
 # -- Compiling module cyclonev_hssi_8g_rx_pcs
@@ -754,7 +754,7 @@
 # 	arriav_hssi_avmm_interface
 # 	arriav_hssi_pma_hi_pmaif
 # 	arriav_hssi_pma_hi_xcvrif
-# End time: 19:54:41 on Jun 04,2024, Elapsed time: 0:00:01
+# End time: 21:07:28 on Jun 04,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/cyclonev_pcie_hip_ver
@@ -765,7 +765,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work cyclonev_pcie_hip_ver {c:/misappsinstaladas/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_pcie_hip_atoms_ncrypt.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:54:43 on Jun 04,2024
+# Start time: 21:07:29 on Jun 04,2024
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_pcie_hip_ver c:/misappsinstaladas/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_pcie_hip_atoms_ncrypt.v 
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
@@ -775,18 +775,18 @@
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # 
 # Top level modules:
-# End time: 19:54:50 on Jun 04,2024, Elapsed time: 0:00:07
+# End time: 21:07:36 on Jun 04,2024, Elapsed time: 0:00:07
 # Errors: 0, Warnings: 6
 # vlog -vlog01compat -work cyclonev_pcie_hip_ver {c:/misappsinstaladas/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_pcie_hip_atoms.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:54:50 on Jun 04,2024
+# Start time: 21:07:36 on Jun 04,2024
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_pcie_hip_ver c:/misappsinstaladas/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_pcie_hip_atoms.v 
 # -- Compiling module cyclonev_hd_altpe2_hip_top
 # -- Compiling module arriav_hd_altpe2_hip_top
 # 
 # Top level modules:
 # 	cyclonev_hd_altpe2_hip_top
-# End time: 19:54:51 on Jun 04,2024, Elapsed time: 0:00:01
+# End time: 21:07:36 on Jun 04,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # if {[file exists rtl_work]} {
@@ -798,85 +798,309 @@
 # vmap work rtl_work 
 # Modifying modelsim.ini
 # 
+# vlog -vlog01compat -work work +incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal {C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/rom.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:07:37 on Jun 04,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal" C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/rom.v 
+# -- Compiling module rom
+# 
+# Top level modules:
+# 	rom
+# End time: 21:07:38 on Jun 04,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal {C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/ram2.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:07:38 on Jun 04,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal" C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/ram2.v 
+# -- Compiling module ram2
+# 
+# Top level modules:
+# 	ram2
+# End time: 21:07:38 on Jun 04,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal {C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/arm.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:07:38 on Jun 04,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal" C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/arm.sv 
+# -- Compiling module arm
+# 
+# Top level modules:
+# 	arm
+# End time: 21:07:38 on Jun 04,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal {C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/controller.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:07:39 on Jun 04,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal" C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/controller.sv 
+# -- Compiling module controller
+# 
+# Top level modules:
+# 	controller
+# End time: 21:07:39 on Jun 04,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal {C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/decoder.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:07:39 on Jun 04,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal" C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/decoder.sv 
+# -- Compiling module decoder
+# 
+# Top level modules:
+# 	decoder
+# End time: 21:07:39 on Jun 04,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal {C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/condlogic.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:07:39 on Jun 04,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal" C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/condlogic.sv 
+# -- Compiling module condlogic
+# 
+# Top level modules:
+# 	condlogic
+# End time: 21:07:40 on Jun 04,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal {C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/condcheck.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:07:40 on Jun 04,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal" C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/condcheck.sv 
+# -- Compiling module condcheck
+# 
+# Top level modules:
+# 	condcheck
+# End time: 21:07:40 on Jun 04,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal {C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/datapath.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:07:40 on Jun 04,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal" C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/datapath.sv 
+# -- Compiling module datapath
+# 
+# Top level modules:
+# 	datapath
+# End time: 21:07:40 on Jun 04,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal {C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/alu.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:07:41 on Jun 04,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal" C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/alu.sv 
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# End time: 21:07:41 on Jun 04,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal {C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/adder_n_bit.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:07:41 on Jun 04,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal" C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/adder_n_bit.sv 
+# -- Compiling module half_adder
+# -- Compiling module full_adder
+# -- Compiling module adder_n_bit
+# 
+# Top level modules:
+# 	adder_n_bit
+# End time: 21:07:41 on Jun 04,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal {C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/subtractor_n_bit.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:07:42 on Jun 04,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal" C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/subtractor_n_bit.sv 
+# -- Compiling module half_subtractor
+# -- Compiling module full_subtractor
+# -- Compiling module subtractor_n_bit
+# 
+# Top level modules:
+# 	subtractor_n_bit
+# End time: 21:07:42 on Jun 04,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal {C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/mux2.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:07:42 on Jun 04,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal" C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/mux2.sv 
+# -- Compiling module mux2
+# 
+# Top level modules:
+# 	mux2
+# End time: 21:07:42 on Jun 04,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal {C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/flopr.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:07:42 on Jun 04,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal" C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/flopr.sv 
+# -- Compiling module flopr
+# 
+# Top level modules:
+# 	flopr
+# End time: 21:07:43 on Jun 04,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal {C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/regfile.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:07:43 on Jun 04,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal" C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/regfile.sv 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 21:07:43 on Jun 04,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal {C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/extend.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:07:43 on Jun 04,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal" C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/extend.sv 
+# -- Compiling module extend
+# 
+# Top level modules:
+# 	extend
+# End time: 21:07:43 on Jun 04,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal {C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/flopenr.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:07:44 on Jun 04,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal" C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/flopenr.sv 
+# -- Compiling module flopenr
+# 
+# Top level modules:
+# 	flopenr
+# End time: 21:07:44 on Jun 04,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal {C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:07:44 on Jun 04,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal" C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 21:07:44 on Jun 04,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal {C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/vga.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:54:52 on Jun 04,2024
+# Start time: 21:07:44 on Jun 04,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal" C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/vga.sv 
 # -- Compiling module vga
 # 
 # Top level modules:
 # 	vga
-# End time: 19:54:52 on Jun 04,2024, Elapsed time: 0:00:00
+# End time: 21:07:45 on Jun 04,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal {C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/vgaController.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:54:53 on Jun 04,2024
+# Start time: 21:07:45 on Jun 04,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal" C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/vgaController.sv 
 # -- Compiling module vgaController
 # 
 # Top level modules:
 # 	vgaController
-# End time: 19:54:53 on Jun 04,2024, Elapsed time: 0:00:00
+# End time: 21:07:45 on Jun 04,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal {C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/pll.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:54:53 on Jun 04,2024
+# Start time: 21:07:45 on Jun 04,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal" C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/pll.sv 
 # -- Compiling module pll
 # 
 # Top level modules:
 # 	pll
-# End time: 19:54:53 on Jun 04,2024, Elapsed time: 0:00:00
+# End time: 21:07:45 on Jun 04,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal {C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/videoGen.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:54:54 on Jun 04,2024
+# Start time: 21:07:46 on Jun 04,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal" C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/videoGen.sv 
 # -- Compiling module videoGen
 # 
 # Top level modules:
 # 	videoGen
-# End time: 19:54:54 on Jun 04,2024, Elapsed time: 0:00:00
+# End time: 21:07:46 on Jun 04,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal {C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/clockDivider.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:07:46 on Jun 04,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal" C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/clockDivider.sv 
+# -- Compiling module clockDivider
+# 
+# Top level modules:
+# 	clockDivider
+# End time: 21:07:46 on Jun 04,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal {C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/chargenrom.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:54:54 on Jun 04,2024
+# Start time: 21:07:46 on Jun 04,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal" C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/chargenrom.sv 
 # -- Compiling module chargenrom
 # 
 # Top level modules:
 # 	chargenrom
-# End time: 19:54:55 on Jun 04,2024, Elapsed time: 0:00:01
+# End time: 21:07:47 on Jun 04,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
-# vlog -sv -work work +incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal {C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/vga_tb.sv}
+# vlog -sv -work work +incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal {C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top_tb.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:54:55 on Jun 04,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal" C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/vga_tb.sv 
-# -- Compiling module vga_tb
+# Start time: 21:07:47 on Jun 04,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal" C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top_tb.sv 
+# -- Compiling module top_tb
 # 
 # Top level modules:
-# 	vga_tb
-# End time: 19:54:55 on Jun 04,2024, Elapsed time: 0:00:00
+# 	top_tb
+# End time: 21:07:47 on Jun 04,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  vga_tb
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" vga_tb 
-# Start time: 19:54:56 on Jun 04,2024
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  top_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" top_tb 
+# Start time: 21:07:47 on Jun 04,2024
 # Loading sv_std.std
-# Loading work.vga_tb
+# Loading work.top_tb
+# Loading work.top
+# Loading work.clockDivider
+# Loading work.arm
+# Loading work.controller
+# Loading work.decoder
+# Loading work.condlogic
+# Loading work.flopenr
+# Loading work.condcheck
+# Loading work.datapath
+# Loading work.mux2
+# Loading work.flopr
+# Loading work.adder_n_bit
+# Loading work.regfile
+# Loading work.extend
+# Loading work.alu
+# Loading work.subtractor_n_bit
+# Loading work.rom
+# Loading altera_mf_ver.altsyncram
 # Loading work.vga
 # Loading work.pll
 # Loading work.vgaController
 # Loading work.videoGen
 # Loading work.chargenrom
+# Loading work.ram2
+# Loading work.full_adder
+# Loading work.half_adder
+# Loading work.full_subtractor
+# Loading work.half_subtractor
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pcadd1'.  Expected 4, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/uut/arm_inst/dp/pcadd1 File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/datapath.sv Line: 22
+# ** Warning: (vsim-3722) C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/datapath.sv(22): [TFMPC] - Missing connection for port 'cout'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pcadd2'.  Expected 4, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/uut/arm_inst/dp/pcadd2 File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/datapath.sv Line: 23
+# ** Warning: (vsim-3722) C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/datapath.sv(23): [TFMPC] - Missing connection for port 'cout'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (1) for port 'address'. The port definition is at: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/vga.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/uut/vga File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data'. The port definition is at: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/vga.sv(8).
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/uut/vga File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 41
+# ** Warning: (vsim-3015) [PCDPC] - Port size (9) does not match connection size (1) for port 'address_b'. The port definition is at: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/ram2.v(42).
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/uut/ram_inst File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 56
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'q_b'. The port definition is at: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/ram2.v(49).
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/uut/ram_inst File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 56
 # 
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: alero  Hostname: ALE_XPS  ProcessID: 4244
-#           Attempting to use alternate WLF file "./wlft2igqm5".
+#           Attempting to use alternate WLF file "./wlftks3hc7".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft2igqm5
+#           Using alternate file: ./wlftks3hc7
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
@@ -884,11 +1108,108 @@
 # run -all
 # ** Warning: (vsim-7) Failed to open readmem file "charrom.txt" in read mode.
 # No such file or directory. (errno = ENOENT)    : C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/chargenrom.sv(10)
-#    Time: 0 ps  Iteration: 0  Instance: /vga_tb/vga_inst/videoGen_inst/char_gen_rom
-# Time:                    0, HSync: x, VSync: x, Address: 000, Data: 2a000000, R: xx, G: xx, B: xx
-# ** Note: $finish    : C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/vga_tb.sv(58)
-#    Time: 1 ms  Iteration: 0  Instance: /vga_tb
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/uut/vga/videoGen_inst/char_gen_rom
+# Time:                25000 | PC: 00000000 | Instr: e3a02000 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:                35000 | PC: 00000000 | Instr: e3a02000 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:                45000 | PC: 00000000 | Instr: e3a02000 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:                55000 | PC: 00000000 | Instr: e3a02000 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:                65000 | PC: 00000000 | Instr: e3a02000 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:                75000 | PC: 00000000 | Instr: e3a02000 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:                85000 | PC: 00000000 | Instr: e3a02000 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:                95000 | PC: 00000000 | Instr: e3a02000 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:               105000 | PC: 00000000 | Instr: e3a02000 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:               115000 | PC: 00000000 | Instr: e3a02000 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:               125000 | PC: 00000004 | Instr: e3a02000 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:               135000 | PC: 00000004 | Instr: e3a03001 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:               145000 | PC: 00000004 | Instr: e3a03001 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:               155000 | PC: 00000004 | Instr: e3a03001 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:               165000 | PC: 00000004 | Instr: e3a03001 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:               175000 | PC: 00000004 | Instr: e3a03001 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:               185000 | PC: 00000004 | Instr: e3a03001 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:               195000 | PC: 00000004 | Instr: e3a03001 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:               205000 | PC: 00000004 | Instr: e3a03001 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:               215000 | PC: 00000004 | Instr: e3a03001 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:               225000 | PC: 00000004 | Instr: e3a03001 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:               235000 | PC: 00000004 | Instr: e3a03001 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:               245000 | PC: 00000004 | Instr: e3a03001 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:               255000 | PC: 00000004 | Instr: e3a03001 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:               265000 | PC: 00000004 | Instr: e3a03001 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:               275000 | PC: 00000004 | Instr: e3a03001 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:               285000 | PC: 00000004 | Instr: e3a03001 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:               295000 | PC: 00000004 | Instr: e3a03001 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:               305000 | PC: 00000004 | Instr: e3a03001 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:               315000 | PC: 00000004 | Instr: e3a03001 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:               325000 | PC: 00000008 | Instr: e3a03001 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:               335000 | PC: 00000008 | Instr: e5d25000 | MemWrite: 0 | ALUResult: 00000000 | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:               345000 | PC: 00000008 | Instr: e5d25000 | MemWrite: 0 | ALUResult: 00000000 | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:               355000 | PC: 00000008 | Instr: e5d25000 | MemWrite: 0 | ALUResult: 00000000 | WriteData: xxxxxxxx | ReadData: 2a000000
+# Time:               365000 | PC: 00000008 | Instr: e5d25000 | MemWrite: 0 | ALUResult: 00000000 | WriteData: xxxxxxxx | ReadData: 2a000000
+# Time:               375000 | PC: 00000008 | Instr: e5d25000 | MemWrite: 0 | ALUResult: 00000000 | WriteData: xxxxxxxx | ReadData: 2a000000
+# Time:               385000 | PC: 00000008 | Instr: e5d25000 | MemWrite: 0 | ALUResult: 00000000 | WriteData: xxxxxxxx | ReadData: 2a000000
+# Time:               395000 | PC: 00000008 | Instr: e5d25000 | MemWrite: 0 | ALUResult: 00000000 | WriteData: xxxxxxxx | ReadData: 2a000000
+# Time:               405000 | PC: 00000008 | Instr: e5d25000 | MemWrite: 0 | ALUResult: 00000000 | WriteData: xxxxxxxx | ReadData: 2a000000
+# Time:               415000 | PC: 00000008 | Instr: e5d25000 | MemWrite: 0 | ALUResult: 00000000 | WriteData: xxxxxxxx | ReadData: 2a000000
+# Time:               425000 | PC: 00000008 | Instr: e5d25000 | MemWrite: 0 | ALUResult: 00000000 | WriteData: xxxxxxxx | ReadData: 2a000000
+# Time:               435000 | PC: 00000008 | Instr: e5d25000 | MemWrite: 0 | ALUResult: 00000000 | WriteData: xxxxxxxx | ReadData: 2a000000
+# Time:               445000 | PC: 00000008 | Instr: e5d25000 | MemWrite: 0 | ALUResult: 00000000 | WriteData: xxxxxxxx | ReadData: 2a000000
+# Time:               455000 | PC: 00000008 | Instr: e5d25000 | MemWrite: 0 | ALUResult: 00000000 | WriteData: xxxxxxxx | ReadData: 2a000000
+# Time:               465000 | PC: 00000008 | Instr: e5d25000 | MemWrite: 0 | ALUResult: 00000000 | WriteData: xxxxxxxx | ReadData: 2a000000
+# Time:               475000 | PC: 00000008 | Instr: e5d25000 | MemWrite: 0 | ALUResult: 00000000 | WriteData: xxxxxxxx | ReadData: 2a000000
+# Time:               485000 | PC: 00000008 | Instr: e5d25000 | MemWrite: 0 | ALUResult: 00000000 | WriteData: xxxxxxxx | ReadData: 2a000000
+# Time:               495000 | PC: 00000008 | Instr: e5d25000 | MemWrite: 0 | ALUResult: 00000000 | WriteData: xxxxxxxx | ReadData: 2a000000
+# Time:               505000 | PC: 00000008 | Instr: e5d25000 | MemWrite: 0 | ALUResult: 00000000 | WriteData: xxxxxxxx | ReadData: 2a000000
+# Time:               515000 | PC: 00000008 | Instr: e5d25000 | MemWrite: 0 | ALUResult: 00000000 | WriteData: xxxxxxxx | ReadData: 2a000000
+# Time:               525000 | PC: 0000000c | Instr: e5d25000 | MemWrite: 0 | ALUResult: 00000000 | WriteData: xxxxxxxx | ReadData: 2a000000
+# Time:               535000 | PC: 0000000c | Instr: e5d39000 | MemWrite: 0 | ALUResult: 00000000 | WriteData: xxxxxxxx | ReadData: 2a000000
+# Time:               545000 | PC: 0000000c | Instr: e5d39000 | MemWrite: 0 | ALUResult: 00000000 | WriteData: xxxxxxxx | ReadData: 2a000000
+# Time:               555000 | PC: 0000000c | Instr: e5d39000 | MemWrite: 0 | ALUResult: 00000000 | WriteData: xxxxxxxx | ReadData: 2a000000
+# Time:               565000 | PC: 0000000c | Instr: e5d39000 | MemWrite: 0 | ALUResult: 00000000 | WriteData: xxxxxxxx | ReadData: 2a000000
+# Time:               575000 | PC: 0000000c | Instr: e5d39000 | MemWrite: 0 | ALUResult: 00000000 | WriteData: xxxxxxxx | ReadData: 2a000000
+# Time:               585000 | PC: 0000000c | Instr: e5d39000 | MemWrite: 0 | ALUResult: 00000000 | WriteData: xxxxxxxx | ReadData: 2a000000
+# Time:               595000 | PC: 0000000c | Instr: e5d39000 | MemWrite: 0 | ALUResult: 00000000 | WriteData: xxxxxxxx | ReadData: 2a000000
+# Time:               605000 | PC: 0000000c | Instr: e5d39000 | MemWrite: 0 | ALUResult: 00000000 | WriteData: xxxxxxxx | ReadData: 2a000000
+# Time:               615000 | PC: 0000000c | Instr: e5d39000 | MemWrite: 0 | ALUResult: 00000000 | WriteData: xxxxxxxx | ReadData: 2a000000
+# Time:               625000 | PC: 0000000c | Instr: e5d39000 | MemWrite: 0 | ALUResult: 00000000 | WriteData: xxxxxxxx | ReadData: 2a000000
+# Time:               635000 | PC: 0000000c | Instr: e5d39000 | MemWrite: 0 | ALUResult: 00000000 | WriteData: xxxxxxxx | ReadData: 2a000000
+# Time:               645000 | PC: 0000000c | Instr: e5d39000 | MemWrite: 0 | ALUResult: 00000000 | WriteData: xxxxxxxx | ReadData: 2a000000
+# Time:               655000 | PC: 0000000c | Instr: e5d39000 | MemWrite: 0 | ALUResult: 00000000 | WriteData: xxxxxxxx | ReadData: 2a000000
+# Time:               665000 | PC: 0000000c | Instr: e5d39000 | MemWrite: 0 | ALUResult: 00000000 | WriteData: xxxxxxxx | ReadData: 2a000000
+# Time:               675000 | PC: 0000000c | Instr: e5d39000 | MemWrite: 0 | ALUResult: 00000000 | WriteData: xxxxxxxx | ReadData: 2a000000
+# Time:               685000 | PC: 0000000c | Instr: e5d39000 | MemWrite: 0 | ALUResult: 00000000 | WriteData: xxxxxxxx | ReadData: 2a000000
+# Time:               695000 | PC: 0000000c | Instr: e5d39000 | MemWrite: 0 | ALUResult: 00000000 | WriteData: xxxxxxxx | ReadData: 2a000000
+# Time:               705000 | PC: 0000000c | Instr: e5d39000 | MemWrite: 0 | ALUResult: 00000000 | WriteData: xxxxxxxx | ReadData: 2a000000
+# Time:               715000 | PC: 0000000c | Instr: e5d39000 | MemWrite: 0 | ALUResult: 00000000 | WriteData: xxxxxxxx | ReadData: 2a000000
+# Time:               725000 | PC: 00000010 | Instr: e5d39000 | MemWrite: 0 | ALUResult: 00000000 | WriteData: xxxxxxxx | ReadData: 2a000000
+# Time:               735000 | PC: 00000010 | Instr: e3a00002 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: 2a000000
+# Time:               745000 | PC: 00000010 | Instr: e3a00002 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: 2a000000
+# Time:               755000 | PC: 00000010 | Instr: e3a00002 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:               765000 | PC: 00000010 | Instr: e3a00002 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:               775000 | PC: 00000010 | Instr: e3a00002 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:               785000 | PC: 00000010 | Instr: e3a00002 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:               795000 | PC: 00000010 | Instr: e3a00002 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:               805000 | PC: 00000010 | Instr: e3a00002 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:               815000 | PC: 00000010 | Instr: e3a00002 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:               825000 | PC: 00000010 | Instr: e3a00002 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:               835000 | PC: 00000010 | Instr: e3a00002 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:               845000 | PC: 00000010 | Instr: e3a00002 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:               855000 | PC: 00000010 | Instr: e3a00002 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:               865000 | PC: 00000010 | Instr: e3a00002 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:               875000 | PC: 00000010 | Instr: e3a00002 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:               885000 | PC: 00000010 | Instr: e3a00002 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:               895000 | PC: 00000010 | Instr: e3a00002 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:               905000 | PC: 00000010 | Instr: e3a00002 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:               915000 | PC: 00000010 | Instr: e3a00002 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:               925000 | PC: 00000014 | Instr: e3a00002 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:               935000 | PC: 00000014 | Instr: e3a010c7 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:               945000 | PC: 00000014 | Instr: e3a010c7 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:               955000 | PC: 00000014 | Instr: e3a010c7 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:               965000 | PC: 00000014 | Instr: e3a010c7 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:               975000 | PC: 00000014 | Instr: e3a010c7 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:               985000 | PC: 00000014 | Instr: e3a010c7 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# Time:               995000 | PC: 00000014 | Instr: e3a010c7 | MemWrite: 0 | ALUResult: xxxxxxxx | WriteData: xxxxxxxx | ReadData: xxxxxxxx
+# ** Note: $finish    : C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top_tb.sv(55)
+#    Time: 1 us  Iteration: 0  Instance: /top_tb
 # 1
-# Break in Module vga_tb at C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/vga_tb.sv line 58
-# End time: 20:05:43 on Jun 04,2024, Elapsed time: 0:10:47
-# Errors: 0, Warnings: 3
+# Break in Module top_tb at C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top_tb.sv line 55
+# End time: 21:09:43 on Jun 04,2024, Elapsed time: 0:01:56
+# Errors: 0, Warnings: 11

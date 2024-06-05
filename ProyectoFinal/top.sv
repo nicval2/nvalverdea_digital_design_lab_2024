@@ -9,14 +9,23 @@ module top(input logic clk, reset,
   logic [31:0] WriteData, DataAdr;
   logic MemWrite;
   
+  logic clk_M;
+	logic clk_V;
+	logic clk_P;
+
+	assign clk_M = ~clk;
+	
+	clockDivider clockDiv(.refclk(clk), .rst(reset), .clk_VGA(clk_V), .clk_Processor(clk_P));
+
+  
   // Instantiate processor and memories
   arm arm_inst(
-    .clk(clk),
+    .clk(clk_P),
     .reset(reset),
     .PC(PC),
     .Instr(Instr),
     .MemWrite(MemWrite),
-    .ALUResult(DataAdr), // ALUResult is used for addressing RAM
+    .ALUResult(DataAdr),
     .WriteData(WriteData),
     .ReadData(ReadData)
   );
@@ -24,17 +33,18 @@ module top(input logic clk, reset,
 
   // Instantiate ROM
   rom rom_inst(
-    .address(PC[11:2]),
-    .clock(clk),
+    .address(PC[10:2]),
+    .clock(clk_M),
     .q(Instr)
   );
   
   vga vga(
-		.clk(clk),
+		.clk(clk_V),
 		.vgaclk(vgaclk),
 		.hsync(hsync),
 		.vsync(vsync),
-		.syncb(syncb),
+		.sync_b(sync_b),
+		.blank_b(blank_b),
 		.r(r),
 		.g(g),
 		.b(b),
@@ -44,8 +54,8 @@ module top(input logic clk, reset,
 
   // Instantiate RAM
   ram2 ram_inst(
-    .address_a(PC[11:2]),
-    .clock(clk),
+    .address_a(DataAdr[10:2]),
+    .clock(clk_M),
     .data_a(WriteData),
     .wren_a(MemWrite),
     .q_a(ReadData),

@@ -19,8 +19,8 @@ module datapath(input logic clk,reset,
 	 //nextPClogic
 	 mux2 #(32) pcmux(PCPlus4,Result,PCSrc,PCNext);
 	 flopr #(32) pcreg(clk,reset,PCNext,PC);
-	 adder #(32) pcadd1(PC,32'b100,PCPlus4);
-	 adder #(32) pcadd2(PCPlus4,32'b100,PCPlus8);
+	 adder_n_bit #(32) pcadd1(PC,32'b100,PCPlus4);
+	 adder_n_bit #(32) pcadd2(PCPlus4,32'b100,PCPlus8);
 	 //registerfilelogic
 	 
 	 mux2# (4) ra1mux(Instr[19:16],4'b1111,RegSrc[0],RA1);

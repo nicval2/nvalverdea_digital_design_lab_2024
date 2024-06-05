@@ -16,7 +16,7 @@
 	 FlagW,PCS,RegW,MemW,
 	 MemtoReg,ALUSrc,ImmSrc,RegSrc,ALUControl);
 	 
-	 condlogiccl(clk,reset,Instr[31:28],ALUFlags,
+	 condlogic cl(clk,reset,Instr[31:28],ALUFlags,
 	 FlagW,PCS,RegW,MemW,
 	 PCSrc,RegWrite,MemWrite);
 	 
