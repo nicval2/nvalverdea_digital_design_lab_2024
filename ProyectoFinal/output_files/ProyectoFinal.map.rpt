@@ -1,5 +1,5 @@
 Analysis & Elaboration report for ProyectoFinal
-Tue Jun  4 21:06:30 2024
+Wed Jun  5 12:03:11 2024
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                 ;
 +-------------------------------+------------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Tue Jun  4 21:06:30 2024          ;
+; Analysis & Elaboration Status ; Successful - Wed Jun  5 12:03:11 2024          ;
 ; Quartus Prime Version         ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                 ; ProyectoFinal                                  ;
 ; Top-level Entity Name         ; top                                            ;
@@ -516,16 +516,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ram2:ram_inst"                                                                                                                                         ;
-+-----------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port      ; Type   ; Severity ; Details                                                                                                                                           ;
-+-----------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; address_b ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (9 bits) it drives.  Extra input bit(s) "address_b[8..1]" will be connected to GND. ;
-; data_b    ; Input  ; Info     ; Stuck at GND                                                                                                                                      ;
-; wren_b    ; Input  ; Info     ; Stuck at GND                                                                                                                                      ;
-; q_b       ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "q_b[31..1]" have no fanouts                          ;
-+-----------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ram2:ram_inst"                                                                                                                                                                              ;
++---------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                                                                                                                            ;
++---------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; address_a     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (9 bits) it drives.  The 23 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; data_a[31..9] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; address_b     ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (9 bits) it drives.  Extra input bit(s) "address_b[8..1]" will be connected to GND.                                  ;
+; data_b        ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; wren_b        ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; q_b           ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "q_b[31..1]" have no fanouts                                                           ;
++---------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -616,6 +618,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; PC[1..0]          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; ALUResult[31..11] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; ALUResult[1..0]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; WriteData         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +-------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
@@ -625,7 +628,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Tue Jun  4 21:06:07 2024
+    Info: Processing started: Wed Jun  5 12:02:50 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ProyectoFinal -c ProyectoFinal --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
@@ -695,13 +698,17 @@ Info (12021): Found 1 design units, including 1 entities, in source file ram2.v
     Info (12023): Found entity 1: ram2 File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/ram2.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file vga_tb.sv
     Info (12023): Found entity 1: vga_tb File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/vga_tb.sv Line: 3
-Warning (10236): Verilog HDL Implicit Net warning at top.sv(51): created implicit net for "vga_address" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 51
-Warning (10236): Verilog HDL Implicit Net warning at top.sv(52): created implicit net for "vga_data" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 52
+Info (12021): Found 1 design units, including 1 entities, in source file segmentoutput.sv
+    Info (12023): Found entity 1: segmentOutput File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/segmentOutput.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at top.sv(89): created implicit net for "vga_address" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 89
+Warning (10236): Verilog HDL Implicit Net warning at top.sv(90): created implicit net for "vga_data" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 90
 Info (12127): Elaborating entity "top" for the top level hierarchy
-Info (12128): Elaborating entity "clockDivider" for hierarchy "clockDivider:clockDiv" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 18
+Warning (10230): Verilog HDL assignment warning at top.sv(39): truncated value with size 32 to match size of target (1) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 39
+Info (12128): Elaborating entity "segmentOutput" for hierarchy "segmentOutput:seg" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 19
+Info (12128): Elaborating entity "clockDivider" for hierarchy "clockDivider:clockDiv" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 21
 Warning (10230): Verilog HDL assignment warning at clockDivider.sv(18): truncated value with size 32 to match size of target (3) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/clockDivider.sv Line: 18
 Warning (10230): Verilog HDL assignment warning at clockDivider.sv(30): truncated value with size 32 to match size of target (5) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/clockDivider.sv Line: 30
-Info (12128): Elaborating entity "arm" for hierarchy "arm:arm_inst" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 31
+Info (12128): Elaborating entity "arm" for hierarchy "arm:arm_inst" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 69
 Info (12128): Elaborating entity "controller" for hierarchy "arm:arm_inst|controller:c" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/arm.sv Line: 14
 Info (12128): Elaborating entity "decoder" for hierarchy "arm:arm_inst|controller:c|decoder:dec" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/controller.sv Line: 17
 Info (12128): Elaborating entity "condlogic" for hierarchy "arm:arm_inst|controller:c|condlogic:cl" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/controller.sv Line: 21
@@ -720,7 +727,7 @@ Info (12128): Elaborating entity "alu" for hierarchy "arm:arm_inst|datapath:dp|a
 Info (12128): Elaborating entity "subtractor_n_bit" for hierarchy "arm:arm_inst|datapath:dp|alu:alu|subtractor_n_bit:subtractor" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/alu.sv Line: 25
 Info (12128): Elaborating entity "full_subtractor" for hierarchy "arm:arm_inst|datapath:dp|alu:alu|subtractor_n_bit:subtractor|full_subtractor:SUB_LOOP[0].FS1" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/subtractor_n_bit.sv Line: 40
 Info (12128): Elaborating entity "half_subtractor" for hierarchy "arm:arm_inst|datapath:dp|alu:alu|subtractor_n_bit:subtractor|full_subtractor:SUB_LOOP[0].FS1|half_subtractor:HS1" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/subtractor_n_bit.sv Line: 22
-Info (12128): Elaborating entity "rom" for hierarchy "rom:rom_inst" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 39
+Info (12128): Elaborating entity "rom" for hierarchy "rom:rom_inst" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 77
 Info (12128): Elaborating entity "altsyncram" for hierarchy "rom:rom_inst|altsyncram:altsyncram_component" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/rom.v Line: 82
 Info (12130): Elaborated megafunction instantiation "rom:rom_inst|altsyncram:altsyncram_component" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/rom.v Line: 82
 Info (12133): Instantiated megafunction "rom:rom_inst|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/rom.v Line: 82
@@ -742,7 +749,7 @@ Warning (287001): Assertion warning: Not using extra address lines in altsyncram
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_45g1.tdf
     Info (12023): Found entity 1: altsyncram_45g1 File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_45g1.tdf Line: 28
 Info (12128): Elaborating entity "altsyncram_45g1" for hierarchy "rom:rom_inst|altsyncram:altsyncram_component|altsyncram_45g1:auto_generated" File: c:/misappsinstaladas/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Info (12128): Elaborating entity "vga" for hierarchy "vga:vga" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 53
+Info (12128): Elaborating entity "vga" for hierarchy "vga:vga" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 91
 Info (12128): Elaborating entity "pll" for hierarchy "vga:vga|pll:vgapll" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/vga.sv Line: 18
 Info (12128): Elaborating entity "vgaController" for hierarchy "vga:vga|vgaController:vgaCont" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/vga.sv Line: 20
 Info (12128): Elaborating entity "videoGen" for hierarchy "vga:vga|videoGen:videoGen_inst" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/vga.sv Line: 31
@@ -750,11 +757,12 @@ Warning (10230): Verilog HDL assignment warning at videoGen.sv(24): truncated va
 Warning (10230): Verilog HDL assignment warning at videoGen.sv(25): truncated value with size 32 to match size of target (3) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/videoGen.sv Line: 25
 Warning (10230): Verilog HDL assignment warning at videoGen.sv(31): truncated value with size 32 to match size of target (9) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/videoGen.sv Line: 31
 Info (12128): Elaborating entity "chargenrom" for hierarchy "vga:vga|videoGen:videoGen_inst|chargenrom:char_gen_rom" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/videoGen.sv Line: 55
-Warning (10230): Verilog HDL assignment warning at chargenrom.sv(31): truncated value with size 32 to match size of target (1) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/chargenrom.sv Line: 31
+Warning (10850): Verilog HDL warning at chargenrom.sv(10): number of words (360) in memory file does not match the number of elements in the address range [0:371] File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/chargenrom.sv Line: 10
+Warning (10230): Verilog HDL assignment warning at chargenrom.sv(38): truncated value with size 32 to match size of target (1) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/chargenrom.sv Line: 38
 Warning (10030): Net "charrom.data_a" at chargenrom.sv(7) has no driver or initial value, using a default initial value '0' File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/chargenrom.sv Line: 7
 Warning (10030): Net "charrom.waddr_a" at chargenrom.sv(7) has no driver or initial value, using a default initial value '0' File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/chargenrom.sv Line: 7
 Warning (10030): Net "charrom.we_a" at chargenrom.sv(7) has no driver or initial value, using a default initial value '0' File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/chargenrom.sv Line: 7
-Info (12128): Elaborating entity "ram2" for hierarchy "ram2:ram_inst" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 67
+Info (12128): Elaborating entity "ram2" for hierarchy "ram2:ram_inst" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 105
 Info (12128): Elaborating entity "altsyncram" for hierarchy "ram2:ram_inst|altsyncram:altsyncram_component" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/ram2.v Line: 98
 Info (12130): Elaborated megafunction instantiation "ram2:ram_inst|altsyncram:altsyncram_component" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/ram2.v Line: 98
 Info (12133): Instantiated megafunction "ram2:ram_inst|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/ram2.v Line: 98
@@ -792,10 +800,10 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alts
 Info (12128): Elaborating entity "altsyncram_tmo2" for hierarchy "ram2:ram_inst|altsyncram:altsyncram_component|altsyncram_tmo2:auto_generated" File: c:/misappsinstaladas/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (144001): Generated suppressed messages file C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/output_files/ProyectoFinal.map.smsg
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 16 warnings
-    Info: Peak virtual memory: 4816 megabytes
-    Info: Processing ended: Tue Jun  4 21:06:30 2024
-    Info: Elapsed time: 00:00:23
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 18 warnings
+    Info: Peak virtual memory: 4812 megabytes
+    Info: Processing ended: Wed Jun  5 12:03:11 2024
+    Info: Elapsed time: 00:00:21
     Info: Total CPU time (on all processors): 00:00:37
 
 
