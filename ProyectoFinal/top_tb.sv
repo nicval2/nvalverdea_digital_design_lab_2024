@@ -62,7 +62,7 @@ module top_tb;
     // Monitor signals at every clock cycle after reset deassertion
     forever begin
       @(posedge clk) begin
-        $display("Time: %t | PC: %h | Instr: %h | MemWrite: %b | ALUResult: %h | WriteData: %h | ReadData: %h | Segments: %b",
+        $display("Time: %t | PC: %h | Instr: %b | MemWrite: %b | ALUResult: %h | WriteData: %h | ReadData: %h | Segments: %b",
                  $time, uut.PC, uut.Instr, uut.MemWrite, uut.DataAdr, uut.WriteData, uut.ReadData, segs);
       end
     end
