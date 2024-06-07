@@ -4,11 +4,11 @@ module vga(
     output logic hsync, vsync,
     output logic sync_b, blank_b, // To monitor & DAC
     output logic [7:0] r, g, b, // To video DAC,
-	 output logic [8:0] address,
-	 input logic [31:0] data
+    output logic [8:0] address,
+    input logic [31:0] data
 );
 
-    logic [9:0] x, y;
+    logic [9:0] x,y;
 
     // Use a PLL to create the 25.175 MHz VGA pixel clock
     // 25.175 MHz clk period = 39.772 ns
@@ -26,9 +26,8 @@ module vga(
         .r(r),
         .g(g),
         .b(b),
-		  .address(address),
-		  .data(data)
+        .address(address),
+        .data(data)
     );
-
 
 endmodule

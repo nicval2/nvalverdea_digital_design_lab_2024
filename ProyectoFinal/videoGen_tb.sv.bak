@@ -1,0 +1,54 @@
+`timescale 1ns / 1ps
+
+module videoGen_tb;
+
+    // Inputs
+    logic vgaclk;
+    
+    // Outputs
+    logic [9:0] x, y;
+    logic [8:0] address;
+    logic [31:0] data;
+
+    // Instantiate the module under test
+    videoGen dut (
+        .x(x),
+        .y(y),
+        .r(),
+        .g(),
+        .b(),
+        .address(address),
+        .data(data)
+    );
+
+    // Instantiate the VGA controller to drive inputs
+    vgaController vga_ctrl (
+        .vgaclk(vgaclk),
+        .hsync(),
+        .vsync(),
+        .sync_b(),
+        .blank_b(),
+        .x(x),
+        .y(y)
+    );
+
+    // Clock generation
+    always #5 vgaclk = ~vgaclk;
+
+    // Stimulus
+    initial begin
+        // Initialize inputs
+        x = 0;
+        y = 0;
+
+        // Apply clock and simulate VGA display
+        repeat (100000) begin
+            #1 vgaclk = 0;
+            #1 vgaclk = 1;
+        end
+
+        // Finish simulation
+        $finish;
+    end
+
+endmodule

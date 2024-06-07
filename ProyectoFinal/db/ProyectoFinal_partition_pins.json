@@ -4,30 +4,6 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "segs[0]",
-					"strict" : false
-				},
-				{
-					"name" : "segs[2]",
-					"strict" : false
-				},
-				{
-					"name" : "segs[3]",
-					"strict" : false
-				},
-				{
-					"name" : "segs[4]",
-					"strict" : false
-				},
-				{
-					"name" : "segs[5]",
-					"strict" : false
-				},
-				{
-					"name" : "segs[6]",
-					"strict" : false
-				},
-				{
 					"name" : "vgaclk",
 					"strict" : false
 				},
@@ -48,19 +24,43 @@
 					"strict" : false
 				},
 				{
-					"name" : "num[0]",
+					"name" : "address[0]",
 					"strict" : false
 				},
 				{
-					"name" : "num[1]",
+					"name" : "address[1]",
+					"strict" : false
+				},
+				{
+					"name" : "address[2]",
+					"strict" : false
+				},
+				{
+					"name" : "address[3]",
+					"strict" : false
+				},
+				{
+					"name" : "address[4]",
+					"strict" : false
+				},
+				{
+					"name" : "address[5]",
+					"strict" : false
+				},
+				{
+					"name" : "address[6]",
+					"strict" : false
+				},
+				{
+					"name" : "address[7]",
+					"strict" : false
+				},
+				{
+					"name" : "address[8]",
 					"strict" : false
 				},
 				{
 					"name" : "clk",
-					"strict" : false
-				},
-				{
-					"name" : "reset",
 					"strict" : false
 				}
 			]

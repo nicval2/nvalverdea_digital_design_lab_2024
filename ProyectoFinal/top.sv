@@ -77,7 +77,7 @@ end
   );
   
   vga vga(
-		.clk(clk_V),
+		.clk(clk),
 		.vgaclk(vgaclk),
 		.hsync(hsync),
 		.vsync(vsync),

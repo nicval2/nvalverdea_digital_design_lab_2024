@@ -18,7 +18,14 @@ module vga_tb();
     initial begin
         memory[0] = 32'h2A000000;
         memory[1] = 32'h00000002;
-        // ... (initialize all memory locations with the provided MIF data)
+        memory[2] = 32'h4C6F7265;
+        memory[3] = 32'h69707375;
+        memory[4] = 32'h646F6C6F;
+        memory[5] = 32'h73697400;
+        memory[6] = 32'h616D6574;
+        memory[7] = 32'h636F6E73;
+        // Initialize remaining memory locations with appropriate data
+        // ...
         memory[255] = 32'h61756775;
     end
 
@@ -38,12 +45,14 @@ module vga_tb();
     );
 
     // Simulate the system clock
-    initial clk = 0;
-    always #10 clk = ~clk; // 50MHz clock for system
+    initial begin
+        clk = 0;
+        forever #5 clk = ~clk; // Adjust the clock period as needed
+    end
 
     // Provide data from memory based on the address
-    always @(address) begin
-        data = memory[address];
+    always @(posedge clk) begin
+        data <= memory[address];
     end
 
     // Display the output for verification
