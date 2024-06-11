@@ -9,16 +9,9 @@ module top(input logic clk, reset, btn,
   logic [31:0] PC, Instr, ReadData;
   logic [31:0] WriteData, DataAdr;
   logic MemWrite;
-  
-  logic clk_M;
-	logic clk_V;
-	logic clk_P;
-
-	assign clk_M = ~clk;
 	
 	segmentOutput seg(num, segs);
 	
-	clockDivider clockDiv(.refclk(clk), .rst(reset), .clk_VGA(clk_V), .clk_Processor(clk_P));
 
 	  // State machine for controlling the ARM processor and RAM write
   typedef enum logic {IDLE, RUNNING} state_t;
@@ -58,7 +51,7 @@ end
   
   // Instantiate processor and memories
   arm arm_inst(
-    .clk(clk_P),
+    .clk(clk),
     .reset(arm_rst),
     .PC(PC),
     .Instr(Instr),
@@ -72,7 +65,7 @@ end
   // Instantiate ROM
   rom rom_inst(
     .address(PC[10:2]),
-    .clock(clk_M),
+    .clock(clk),
     .q(Instr)
   );
   
@@ -93,7 +86,7 @@ end
   // Instantiate RAM
   ram2 ram_inst(
     .address_a(write_enable_one_shot ? 32'd1 : DataAdr[10:2]),
-    .clock(clk_M),
+    .clock(clk),
     .data_a(write_enable_one_shot ? 32'd1 : DataAdr[10:2]),
     .wren_a(MemWrite | write_enable_one_shot),
     .q_a(ReadData),

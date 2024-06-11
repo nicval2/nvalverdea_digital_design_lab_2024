@@ -73,7 +73,7 @@ module videoGen_tb;
             #1 clk = 1;
 				
 				// Print x and y values
-            $display("x = %d, y = %d", x, y);
+            $display("address = %d, data = %d", address, data);
         end
 
         // Finish simulation

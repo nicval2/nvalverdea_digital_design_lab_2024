@@ -4,10 +4,10 @@ module vgaController_tb;
 
     // Inputs
     logic vgaclk;
-	 logic clk;
-	 
-	 // Instantiate PLL module to generate vgaclk
-	 pll vgapll (.inclk0(clk), .c0(vgaclk));
+    logic clk;
+     
+    // Instantiate PLL module to generate vgaclk
+    pll vgapll (.inclk0(clk), .c0(vgaclk));
     
     // Outputs
     logic hsync, vsync, sync_b, blank_b;
@@ -34,7 +34,7 @@ module vgaController_tb;
 
         // Run simulation for some time
         repeat (10000) begin
-            #1 clk = !clk;
+            #10; // Wait for some time (one clock period)
 
             // Print outputs
             $display("x = %d, y = %d, hsync = %b, vsync = %b, sync_b = %b, blank_b = %b", x, y, hsync, vsync, sync_b, blank_b);
