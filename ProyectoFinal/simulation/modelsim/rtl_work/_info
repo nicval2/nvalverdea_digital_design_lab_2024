@@ -11,7 +11,7 @@ cModel Technology
 Z0 dC:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/simulation/modelsim
 vadder_n_bit
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1718070543
+Z2 !s110 1718156868
 !i10b 1
 !s100 N2EOOKchJ?2PmVZnozb`R3
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -28,7 +28,7 @@ Z9 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z10 !s108 1718070543.000000
+Z10 !s108 1718156868.000000
 Z11 !s107 C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/adder_n_bit.sv|
 Z12 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal|C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/adder_n_bit.sv|
 !i113 1
@@ -63,7 +63,7 @@ R14
 R15
 varm
 R1
-Z16 !s110 1718070541
+Z16 !s110 1718156867
 !i10b 1
 !s100 [T;ic4ahGNU3]MB3ol;;I1
 R3
@@ -80,7 +80,7 @@ R9
 r1
 !s85 0
 31
-Z17 !s108 1718070541.000000
+Z17 !s108 1718156866.000000
 !s107 C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/arm.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal|C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/arm.sv|
 !i113 1
@@ -89,7 +89,7 @@ R14
 R15
 vchargenrom
 R1
-Z18 !s110 1718070547
+Z18 !s110 1718156872
 !i10b 1
 !s100 I1cBkR0KWf[ZOJzzojk453
 R3
@@ -106,7 +106,7 @@ R9
 r1
 !s85 0
 31
-Z20 !s108 1718070547.000000
+Z20 !s108 1718156872.000000
 !s107 C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/chargenrom.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal|C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/chargenrom.sv|
 !i113 1
@@ -115,7 +115,7 @@ R14
 R15
 vcondcheck
 R1
-Z21 !s110 1718070542
+R2
 !i10b 1
 !s100 hhST6^E[L:>Z[5eo6TUo_1
 R3
@@ -132,7 +132,7 @@ R9
 r1
 !s85 0
 31
-Z22 !s108 1718070542.000000
+Z21 !s108 1718156867.000000
 !s107 C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/condcheck.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal|C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/condcheck.sv|
 !i113 1
@@ -141,7 +141,7 @@ R14
 R15
 vcondlogic
 R1
-R21
+R16
 !i10b 1
 !s100 Z?Mag2l=YlPOgB9I_gWhK3
 R3
@@ -158,7 +158,7 @@ R9
 r1
 !s85 0
 31
-R22
+R21
 !s107 C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/condlogic.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal|C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/condlogic.sv|
 !i113 1
@@ -184,7 +184,7 @@ R9
 r1
 !s85 0
 31
-R17
+R21
 !s107 C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/controller.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal|C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/controller.sv|
 !i113 1
@@ -210,7 +210,7 @@ R9
 r1
 !s85 0
 31
-R22
+R10
 !s107 C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/datapath.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal|C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/datapath.sv|
 !i113 1
@@ -219,7 +219,7 @@ R14
 R15
 vdecoder
 R1
-R21
+R16
 !i10b 1
 !s100 iZXYP<IC=j[<3Wa64DCYh1
 R3
@@ -236,7 +236,7 @@ R9
 r1
 !s85 0
 31
-R17
+R21
 !s107 C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/decoder.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal|C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/decoder.sv|
 !i113 1
@@ -245,7 +245,7 @@ R14
 R15
 vextend
 R1
-Z23 !s110 1718070545
+Z22 !s110 1718156870
 !i10b 1
 !s100 T_T^ZdaV5P;Z@Q3IZeXmL2
 R3
@@ -262,7 +262,7 @@ R9
 r1
 !s85 0
 31
-Z24 !s108 1718070544.000000
+Z23 !s108 1718156870.000000
 !s107 C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/extend.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal|C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/extend.sv|
 !i113 1
@@ -271,7 +271,7 @@ R14
 R15
 vflopenr
 R1
-R23
+R22
 !i10b 1
 !s100 gJRQW1:S;[PTE>c7>CTE81
 R3
@@ -288,7 +288,7 @@ R9
 r1
 !s85 0
 31
-Z25 !s108 1718070545.000000
+R23
 !s107 C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/flopenr.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal|C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/flopenr.sv|
 !i113 1
@@ -297,7 +297,7 @@ R14
 R15
 vflopr
 R1
-Z26 !s110 1718070544
+Z24 !s110 1718156869
 !i10b 1
 !s100 H8i5_UkdA;llS8<J:HJ@>3
 R3
@@ -314,7 +314,7 @@ R9
 r1
 !s85 0
 31
-R24
+Z25 !s108 1718156869.000000
 !s107 C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/flopr.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal|C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/flopr.sv|
 !i113 1
@@ -335,7 +335,7 @@ R5
 R6
 R7
 !i122 9
-Z27 L0 14 12
+Z26 L0 14 12
 R9
 r1
 !s85 0
@@ -349,7 +349,7 @@ R14
 R15
 vfull_subtractor
 R1
-R2
+R24
 !i10b 1
 !s100 `5_jgAjH<^71@cE?VX?AC3
 R3
@@ -357,18 +357,18 @@ IR9;EhnIShnbz=FXiJUDkR0
 R4
 S1
 R0
-Z28 w1717287493
-Z29 8C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/subtractor_n_bit.sv
-Z30 FC:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/subtractor_n_bit.sv
+Z27 w1717287493
+Z28 8C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/subtractor_n_bit.sv
+Z29 FC:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/subtractor_n_bit.sv
 !i122 10
-R27
+R26
 R9
 r1
 !s85 0
 31
-R10
-Z31 !s107 C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/subtractor_n_bit.sv|
-Z32 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal|C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/subtractor_n_bit.sv|
+R25
+Z30 !s107 C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/subtractor_n_bit.sv|
+Z31 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal|C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/subtractor_n_bit.sv|
 !i113 1
 R13
 R14
@@ -387,7 +387,7 @@ R5
 R6
 R7
 !i122 9
-Z33 L0 2 9
+Z32 L0 2 9
 R9
 r1
 !s85 0
@@ -401,7 +401,7 @@ R14
 R15
 vhalf_subtractor
 R1
-R2
+R24
 !i10b 1
 !s100 oVE9bX8YI_b^Bd7EUEH5]2
 R3
@@ -409,25 +409,25 @@ Ii==Z26kM6KMaiDDJon6L>2
 R4
 S1
 R0
+R27
 R28
 R29
-R30
 !i122 10
-R33
+R32
 R9
 r1
 !s85 0
 31
-R10
+R25
+R30
 R31
-R32
 !i113 1
 R13
 R14
 R15
 vmux2
 R1
-R26
+R24
 !i10b 1
 !s100 chEUMf29dLm;hkSPWAcdA0
 R3
@@ -444,7 +444,7 @@ R9
 r1
 !s85 0
 31
-R10
+R25
 !s107 C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/mux2.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal|C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/mux2.sv|
 !i113 1
@@ -453,7 +453,7 @@ R14
 R15
 vpll
 R1
-Z34 !s110 1718070546
+Z33 !s110 1718156871
 !i10b 1
 !s100 >9fZUH_Fo_SFSCg9EM=433
 R3
@@ -470,7 +470,7 @@ R9
 r1
 !s85 0
 31
-Z35 !s108 1718070546.000000
+Z34 !s108 1718156871.000000
 !s107 C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/pll.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal|C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/pll.sv|
 !i113 1
@@ -478,7 +478,7 @@ R13
 R14
 R15
 vram2
-R16
+Z35 !s110 1718156866
 !i10b 1
 !s100 @=k1T3?V@b^I?EPP:j0680
 R3
@@ -503,7 +503,7 @@ Z37 !s92 -vlog01compat -work work +incdir+C:/Users/alero/Documents/GitHub/nvalve
 R15
 vregfile
 R1
-R26
+R22
 !i10b 1
 !s100 1USi;:A?f4`?8;M8]S6A40
 R3
@@ -520,7 +520,7 @@ R9
 r1
 !s85 0
 31
-R24
+R25
 !s107 C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/regfile.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal|C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/regfile.sv|
 !i113 1
@@ -528,14 +528,14 @@ R13
 R14
 R15
 vrom
-!s110 1718070540
+R35
 !i10b 1
-!s100 HoF?Ig;?OCoT@E8]A:k?>0
+!s100 1NOPCO_W47EQhR=NhTX`80
 R3
-I63L2Q=oWfz]g[8z8Bh1GF1
+I2YKEd76>d:8P<NHBX[HBL2
 R4
 R0
-w1717522301
+w1718156311
 8C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/rom.v
 FC:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/rom.v
 !i122 0
@@ -544,7 +544,7 @@ R9
 r1
 !s85 0
 31
-!s108 1718070540.000000
+R17
 !s107 C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/rom.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal|C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/rom.v|
 !i113 1
@@ -570,7 +570,7 @@ R9
 r1
 !s85 0
 31
-R35
+R34
 !s107 C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/segmentOutput.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal|C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/segmentOutput.sv|
 !i113 1
@@ -580,7 +580,7 @@ R15
 nsegment@output
 vsubtractor_n_bit
 R1
-R2
+R24
 !i10b 1
 !s100 >hJe]GT?2^I9D1TPAa[Z>2
 R3
@@ -588,42 +588,42 @@ I6_L:AjXE0W;oNDG^G@>i40
 R4
 S1
 R0
+R27
 R28
 R29
-R30
 !i122 10
 R8
 R9
 r1
 !s85 0
 31
-R10
+R25
+R30
 R31
-R32
 !i113 1
 R13
 R14
 R15
 vtop
 R1
-R23
+R22
 !i10b 1
-!s100 <5Jc3P@HgIbGD6GCN^jJX2
+!s100 [OGJCfBkQ2:H3Y02BnNd]1
 R3
-IlJFVGN4B9Bza7m51dV3?P1
+IDA[aiz]W`chfXfjz8R12S0
 R4
 S1
 R0
-w1718070452
+w1718143701
 8C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv
 FC:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv
 !i122 16
-L0 1 100
+L0 1 102
 R9
 r1
 !s85 0
 31
-R25
+R23
 !s107 C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal|C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv|
 !i113 1
@@ -634,13 +634,13 @@ vtop_tb
 R1
 R18
 !i10b 1
-!s100 90Y2:9V8Q[V9=gAeZE@2A3
+!s100 _LJJ<Y=9c^<AERA40ei6?2
 R3
-I>X>@^R`]D];RW3=aa?O8i1
+IV34`>Onn^M8daGzTD_:d21
 R4
 S1
 R0
-w1717613502
+w1718156807
 8C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top_tb.sv
 FC:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top_tb.sv
 !i122 23
@@ -658,7 +658,7 @@ R14
 R15
 vvga
 R1
-R23
+R33
 !i10b 1
 !s100 aXTcii:jYY1EL>79INCX:0
 R3
@@ -675,7 +675,7 @@ R9
 r1
 !s85 0
 31
-R25
+R23
 !s107 C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/vga.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal|C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/vga.sv|
 !i113 1
@@ -684,7 +684,7 @@ R14
 R15
 vvgaController
 R1
-R34
+R33
 !i10b 1
 !s100 8Ti1>7JPDikW^bS^Oj4Wz0
 R3
@@ -701,7 +701,7 @@ R9
 r1
 !s85 0
 31
-R25
+R34
 !s107 C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/vgaController.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal|C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/vgaController.sv|
 !i113 1
@@ -711,24 +711,24 @@ R15
 nvga@controller
 vvideoGen
 R1
-R34
+R33
 !i10b 1
-!s100 jR49f>ElmNa94HSBzG@jG0
+!s100 O]?g2Q3:Mdkgmjjg0LBeG1
 R3
-Il[=9ZGdUjU9fJfk<:Tz<43
+ImS2c53foEAFGGD;5R;nKW0
 R4
 S1
 R0
-w1717786974
+w1718148314
 8C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/videoGen.sv
 FC:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/videoGen.sv
 !i122 20
-L0 1 62
+L0 1 64
 R9
 r1
 !s85 0
 31
-R35
+R34
 !s107 C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/videoGen.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal|C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/videoGen.sv|
 !i113 1

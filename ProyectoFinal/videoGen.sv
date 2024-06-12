@@ -1,5 +1,6 @@
 module videoGen(
     input logic [9:0] x, y,
+	 input logic clk,
     output logic [7:0] r, g, b,
     output logic [8:0] address,
     input logic [31:0] data
@@ -48,6 +49,7 @@ module videoGen(
 
 	logic pixel;      // 1 bit for pixel
     chargenrom char_gen_rom(
+			.clk(clk),
         .ch(character),
         .xoff(xoff),
         .yoff(yoff),

@@ -1,5 +1,5 @@
-Analysis & Elaboration report for ProyectoFinal
-Mon Jun 10 19:47:56 2024
+Analysis & Synthesis report for ProyectoFinal
+Tue Jun 11 19:58:02 2024
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -7,42 +7,50 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Analysis & Elaboration IP Cores Summary
-  5. Source assignments for rom:rom_inst|altsyncram:altsyncram_component|altsyncram_45g1:auto_generated
-  6. Source assignments for ram2:ram_inst|altsyncram:altsyncram_component|altsyncram_tmo2:auto_generated
-  7. Parameter Settings for User Entity Instance: arm:arm_inst|controller:c|condlogic:cl|flopenr:flagreg1
-  8. Parameter Settings for User Entity Instance: arm:arm_inst|controller:c|condlogic:cl|flopenr:flagreg0
-  9. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|mux2:pcmux
- 10. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|flopr:pcreg
- 11. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|adder_n_bit:pcadd1
- 12. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|adder_n_bit:pcadd2
- 13. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|mux2:ra1mux
- 14. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|mux2:ra2mux
- 15. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|mux2:resmux
- 16. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|mux2:srcbmux
- 17. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|alu:alu
- 18. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|alu:alu|adder_n_bit:adder
- 19. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|alu:alu|subtractor_n_bit:subtractor
- 20. Parameter Settings for User Entity Instance: rom:rom_inst|altsyncram:altsyncram_component
- 21. Parameter Settings for User Entity Instance: vga:vga|vgaController:vgaCont
- 22. Parameter Settings for User Entity Instance: ram2:ram_inst|altsyncram:altsyncram_component
- 23. altsyncram Parameter Settings by Entity Instance
- 24. Analysis & Elaboration Settings
- 25. Port Connectivity Checks: "ram2:ram_inst"
- 26. Port Connectivity Checks: "vga:vga|videoGen:videoGen_inst|chargenrom:char_gen_rom"
- 27. Port Connectivity Checks: "vga:vga"
- 28. Port Connectivity Checks: "arm:arm_inst|datapath:dp|alu:alu|subtractor_n_bit:subtractor|full_subtractor:SUB_LOOP[0].FS1"
- 29. Port Connectivity Checks: "arm:arm_inst|datapath:dp|alu:alu|subtractor_n_bit:subtractor"
- 30. Port Connectivity Checks: "arm:arm_inst|datapath:dp|alu:alu|adder_n_bit:adder"
- 31. Port Connectivity Checks: "arm:arm_inst|datapath:dp|mux2:ra1mux"
- 32. Port Connectivity Checks: "arm:arm_inst|datapath:dp|adder_n_bit:pcadd2"
- 33. Port Connectivity Checks: "arm:arm_inst|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[0].FA1"
- 34. Port Connectivity Checks: "arm:arm_inst|datapath:dp|adder_n_bit:pcadd1"
- 35. Port Connectivity Checks: "arm:arm_inst"
- 36. Analysis & Elaboration Messages
- 37. Analysis & Elaboration Suppressed Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis IP Cores Summary
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Source assignments for rom:rom_inst|altsyncram:altsyncram_component|altsyncram_55g1:auto_generated
+ 13. Source assignments for ram2:ram_inst|altsyncram:altsyncram_component|altsyncram_tmo2:auto_generated
+ 14. Parameter Settings for User Entity Instance: arm:arm_inst|controller:c|condlogic:cl|flopenr:flagreg1
+ 15. Parameter Settings for User Entity Instance: arm:arm_inst|controller:c|condlogic:cl|flopenr:flagreg0
+ 16. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|mux2:pcmux
+ 17. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|flopr:pcreg
+ 18. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|adder_n_bit:pcadd1
+ 19. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|adder_n_bit:pcadd2
+ 20. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|mux2:ra1mux
+ 21. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|mux2:ra2mux
+ 22. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|mux2:resmux
+ 23. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|mux2:srcbmux
+ 24. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|alu:alu
+ 25. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|alu:alu|adder_n_bit:adder
+ 26. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|alu:alu|subtractor_n_bit:subtractor
+ 27. Parameter Settings for User Entity Instance: rom:rom_inst|altsyncram:altsyncram_component
+ 28. Parameter Settings for User Entity Instance: vga:vga|vgaController:vgaCont
+ 29. Parameter Settings for User Entity Instance: ram2:ram_inst|altsyncram:altsyncram_component
+ 30. altsyncram Parameter Settings by Entity Instance
+ 31. Port Connectivity Checks: "ram2:ram_inst"
+ 32. Port Connectivity Checks: "vga:vga|videoGen:videoGen_inst"
+ 33. Port Connectivity Checks: "vga:vga"
+ 34. Port Connectivity Checks: "arm:arm_inst|datapath:dp|alu:alu|subtractor_n_bit:subtractor|full_subtractor:SUB_LOOP[0].FS1"
+ 35. Port Connectivity Checks: "arm:arm_inst|datapath:dp|alu:alu|subtractor_n_bit:subtractor"
+ 36. Port Connectivity Checks: "arm:arm_inst|datapath:dp|alu:alu|adder_n_bit:adder"
+ 37. Port Connectivity Checks: "arm:arm_inst|datapath:dp|mux2:ra1mux"
+ 38. Port Connectivity Checks: "arm:arm_inst|datapath:dp|adder_n_bit:pcadd2"
+ 39. Port Connectivity Checks: "arm:arm_inst|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[0].FA1"
+ 40. Port Connectivity Checks: "arm:arm_inst|datapath:dp|adder_n_bit:pcadd1"
+ 41. Port Connectivity Checks: "arm:arm_inst"
+ 42. Post-Synthesis Netlist Statistics for Top Partition
+ 43. Elapsed Time Per Partition
+ 44. Analysis & Synthesis Messages
+ 45. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -66,22 +74,114 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+--------------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                                 ;
-+-------------------------------+------------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Mon Jun 10 19:47:56 2024          ;
-; Quartus Prime Version         ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
-; Revision Name                 ; ProyectoFinal                                  ;
-; Top-level Entity Name         ; top                                            ;
-; Family                        ; Cyclone V                                      ;
-; Logic utilization (in ALMs)   ; N/A until Partition Merge                      ;
-; Total registers               ; N/A until Partition Merge                      ;
-; Total pins                    ; N/A until Partition Merge                      ;
-; Total virtual pins            ; N/A until Partition Merge                      ;
-; Total block memory bits       ; N/A until Partition Merge                      ;
-; Total PLLs                    ; N/A until Partition Merge                      ;
-; Total DLLs                    ; N/A until Partition Merge                      ;
-+-------------------------------+------------------------------------------------+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++---------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Tue Jun 11 19:58:02 2024          ;
+; Quartus Prime Version           ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
+; Revision Name                   ; ProyectoFinal                                  ;
+; Top-level Entity Name           ; top                                            ;
+; Family                          ; Cyclone V                                      ;
+; Logic utilization (in ALMs)     ; N/A                                            ;
+; Total registers                 ; 21                                             ;
+; Total pins                      ; 41                                             ;
+; Total virtual pins              ; 0                                              ;
+; Total block memory bits         ; 0                                              ;
+; Total DSP Blocks                ; 0                                              ;
+; Total HSSI RX PCSs              ; 0                                              ;
+; Total HSSI PMA RX Deserializers ; 0                                              ;
+; Total HSSI TX PCSs              ; 0                                              ;
+; Total HSSI PMA TX Serializers   ; 0                                              ;
+; Total PLLs                      ; 0                                              ;
+; Total DLLs                      ; 0                                              ;
++---------------------------------+------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; top                ; ProyectoFinal      ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
 +------------------------------------------+
@@ -93,15 +193,102 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 10          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 10          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-10        ;   0.0%      ;
 +----------------------------+-------------+
 
 
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                    ;
++----------------------------------+-----------------+----------------------------------+---------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                        ; File Name with Absolute Path                                                                            ; Library ;
++----------------------------------+-----------------+----------------------------------+---------------------------------------------------------------------------------------------------------+---------+
+; arm.sv                           ; yes             ; User SystemVerilog HDL File      ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/arm.sv                 ;         ;
+; controller.sv                    ; yes             ; User SystemVerilog HDL File      ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/controller.sv          ;         ;
+; decoder.sv                       ; yes             ; User SystemVerilog HDL File      ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/decoder.sv             ;         ;
+; condlogic.sv                     ; yes             ; User SystemVerilog HDL File      ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/condlogic.sv           ;         ;
+; condcheck.sv                     ; yes             ; User SystemVerilog HDL File      ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/condcheck.sv           ;         ;
+; datapath.sv                      ; yes             ; User SystemVerilog HDL File      ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/datapath.sv            ;         ;
+; alu.sv                           ; yes             ; User SystemVerilog HDL File      ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/alu.sv                 ;         ;
+; adder_n_bit.sv                   ; yes             ; User SystemVerilog HDL File      ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/adder_n_bit.sv         ;         ;
+; subtractor_n_bit.sv              ; yes             ; User SystemVerilog HDL File      ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/subtractor_n_bit.sv    ;         ;
+; mux2.sv                          ; yes             ; User SystemVerilog HDL File      ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/mux2.sv                ;         ;
+; flopr.sv                         ; yes             ; User SystemVerilog HDL File      ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/flopr.sv               ;         ;
+; regfile.sv                       ; yes             ; User SystemVerilog HDL File      ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/regfile.sv             ;         ;
+; extend.sv                        ; yes             ; User SystemVerilog HDL File      ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/extend.sv              ;         ;
+; flopenr.sv                       ; yes             ; User SystemVerilog HDL File      ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/flopenr.sv             ;         ;
+; top.sv                           ; yes             ; User SystemVerilog HDL File      ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv                 ;         ;
+; data_memory.mif                  ; yes             ; User Memory Initialization File  ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/data_memory.mif        ;         ;
+; rom.v                            ; yes             ; User Wizard-Generated File       ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/rom.v                  ;         ;
+; vga.sv                           ; yes             ; User SystemVerilog HDL File      ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/vga.sv                 ;         ;
+; vgaController.sv                 ; yes             ; User SystemVerilog HDL File      ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/vgaController.sv       ;         ;
+; pll.sv                           ; yes             ; User SystemVerilog HDL File      ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/pll.sv                 ;         ;
+; videoGen.sv                      ; yes             ; User SystemVerilog HDL File      ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/videoGen.sv            ;         ;
+; chargenrom.sv                    ; yes             ; User SystemVerilog HDL File      ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/chargenrom.sv          ;         ;
+; ram2.v                           ; yes             ; User Wizard-Generated File       ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/ram2.v                 ;         ;
+; instr_memory.mif                 ; yes             ; User Memory Initialization File  ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/instr_memory.mif       ;         ;
+; charrom.txt                      ; yes             ; User File                        ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/charrom.txt            ;         ;
+; segmentOutput.sv                 ; yes             ; User SystemVerilog HDL File      ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/segmentOutput.sv       ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                     ; c:/misappsinstaladas/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsyncram.tdf              ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                     ; c:/misappsinstaladas/intelfpga_lite/22.1std/quartus/libraries/megafunctions/stratix_ram_block.inc       ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                     ; c:/misappsinstaladas/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_mux.inc                 ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                     ; c:/misappsinstaladas/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_decode.inc              ;         ;
+; aglobal221.inc                   ; yes             ; Megafunction                     ; c:/misappsinstaladas/intelfpga_lite/22.1std/quartus/libraries/megafunctions/aglobal221.inc              ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                     ; c:/misappsinstaladas/intelfpga_lite/22.1std/quartus/libraries/megafunctions/a_rdenreg.inc               ;         ;
+; altrom.inc                       ; yes             ; Megafunction                     ; c:/misappsinstaladas/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altrom.inc                  ;         ;
+; altram.inc                       ; yes             ; Megafunction                     ; c:/misappsinstaladas/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altram.inc                  ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                     ; c:/misappsinstaladas/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altdpram.inc                ;         ;
+; db/altsyncram_55g1.tdf           ; yes             ; Auto-Generated Megafunction      ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_55g1.tdf ;         ;
+; db/altsyncram_tmo2.tdf           ; yes             ; Auto-Generated Megafunction      ; C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_tmo2.tdf ;         ;
++----------------------------------+-----------------+----------------------------------+---------------------------------------------------------------------------------------------------------+---------+
+
+
++-------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                             ;
++---------------------------------------------+---------------------------+
+; Resource                                    ; Usage                     ;
++---------------------------------------------+---------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 19                        ;
+;                                             ;                           ;
+; Combinational ALUT usage for logic          ; 34                        ;
+;     -- 7 input functions                    ; 0                         ;
+;     -- 6 input functions                    ; 4                         ;
+;     -- 5 input functions                    ; 4                         ;
+;     -- 4 input functions                    ; 1                         ;
+;     -- <=3 input functions                  ; 25                        ;
+;                                             ;                           ;
+; Dedicated logic registers                   ; 21                        ;
+;                                             ;                           ;
+; I/O pins                                    ; 41                        ;
+;                                             ;                           ;
+; Total DSP Blocks                            ; 0                         ;
+;                                             ;                           ;
+; Maximum fan-out node                        ; vga:vga|pll:vgapll|toggle ;
+; Maximum fan-out                             ; 22                        ;
+; Total fan-out                               ; 220                       ;
+; Average fan-out                             ; 1.61                      ;
++---------------------------------------------+---------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                        ;
++-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+---------------+--------------+
+; Compilation Hierarchy Node    ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                ; Entity Name   ; Library Name ;
++-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+---------------+--------------+
+; |top                          ; 34 (0)              ; 21 (0)                    ; 0                 ; 0          ; 41   ; 0            ; |top                               ; top           ; work         ;
+;    |segmentOutput:seg|        ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|segmentOutput:seg             ; segmentOutput ; work         ;
+;    |vga:vga|                  ; 31 (0)              ; 21 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |top|vga:vga                       ; vga           ; work         ;
+;       |pll:vgapll|            ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |top|vga:vga|pll:vgapll            ; pll           ; work         ;
+;       |vgaController:vgaCont| ; 30 (30)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |top|vga:vga|vgaController:vgaCont ; vgaController ; work         ;
++-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+---------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
 +------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration IP Cores Summary                                                              ;
+; Analysis & Synthesis IP Cores Summary                                                                ;
 +--------+--------------+---------+--------------+--------------+--------------------+-----------------+
 ; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance    ; IP Include File ;
 +--------+--------------+---------+--------------+--------------+--------------------+-----------------+
@@ -110,8 +297,50 @@ https://fpgasoftware.intel.com/eula.
 +--------+--------------+---------+--------------+--------------+--------------------+-----------------+
 
 
++-------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                    ;
++----------------------------------------------------------------+--------------------------------------+
+; Register name                                                  ; Reason for Removal                   ;
++----------------------------------------------------------------+--------------------------------------+
+; vga:vga|videoGen:videoGen_inst|chargenrom:char_gen_rom|pixel   ; Stuck at GND due to stuck port clock ;
+; write_enable_one_shot                                          ; Lost fanout                          ;
+; current_state                                                  ; Lost fanout                          ;
+; arm_rst                                                        ; Lost fanout                          ;
+; arm:arm_inst|datapath:dp|flopr:pcreg|q[0..31]                  ; Lost fanout                          ;
+; arm:arm_inst|controller:c|condlogic:cl|flopenr:flagreg0|q[0,1] ; Lost fanout                          ;
+; arm:arm_inst|controller:c|condlogic:cl|flopenr:flagreg1|q[0,1] ; Lost fanout                          ;
+; Total Number of Removed Registers = 40                         ;                                      ;
++----------------------------------------------------------------+--------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                     ;
++--------------------------------------------+--------------------+---------------------------------------------------------------+
+; Register name                              ; Reason for Removal ; Registers Removed due to This Register                        ;
++--------------------------------------------+--------------------+---------------------------------------------------------------+
+; arm:arm_inst|datapath:dp|flopr:pcreg|q[31] ; Lost Fanouts       ; arm:arm_inst|controller:c|condlogic:cl|flopenr:flagreg0|q[1], ;
+;                                            ;                    ; arm:arm_inst|controller:c|condlogic:cl|flopenr:flagreg1|q[1]  ;
+; write_enable_one_shot                      ; Lost Fanouts       ; current_state                                                 ;
++--------------------------------------------+--------------------+---------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 21    ;
+; Number of registers using Synchronous Clear  ; 20    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 10    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
 +----------------------------------------------------------------------------------------------------+
-; Source assignments for rom:rom_inst|altsyncram:altsyncram_component|altsyncram_45g1:auto_generated ;
+; Source assignments for rom:rom_inst|altsyncram:altsyncram_component|altsyncram_55g1:auto_generated ;
 +---------------------------------+--------------------+------+--------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                   ;
 +---------------------------------+--------------------+------+--------------------------------------+
@@ -272,7 +501,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; OPERATION_MODE                     ; ROM                  ; Untyped                       ;
 ; WIDTH_A                            ; 32                   ; Signed Integer                ;
 ; WIDTHAD_A                          ; 9                    ; Signed Integer                ;
-; NUMWORDS_A                         ; 128                  ; Signed Integer                ;
+; NUMWORDS_A                         ; 183                  ; Signed Integer                ;
 ; OUTDATA_REG_A                      ; CLOCK0               ; Untyped                       ;
 ; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                       ;
 ; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                       ;
@@ -314,7 +543,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                       ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                       ;
 ; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                       ;
-; CBXI_PARAMETER                     ; altsyncram_45g1      ; Untyped                       ;
+; CBXI_PARAMETER                     ; altsyncram_55g1      ; Untyped                       ;
 +------------------------------------+----------------------+-------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -408,7 +637,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Entity Instance                           ; rom:rom_inst|altsyncram:altsyncram_component  ;
 ;     -- OPERATION_MODE                     ; ROM                                           ;
 ;     -- WIDTH_A                            ; 32                                            ;
-;     -- NUMWORDS_A                         ; 128                                           ;
+;     -- NUMWORDS_A                         ; 183                                           ;
 ;     -- OUTDATA_REG_A                      ; CLOCK0                                        ;
 ;     -- WIDTH_B                            ; 1                                             ;
 ;     -- NUMWORDS_B                         ; 1                                             ;
@@ -430,109 +659,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+-----------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                                           ;
-+---------------------------------------------------------------------------------+--------------------+--------------------+
-; Option                                                                          ; Setting            ; Default Value      ;
-+---------------------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; top                ; ProyectoFinal      ;
-; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
-; Use smart compilation                                                           ; Off                ; Off                ;
-; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
-; Enable compact report table                                                     ; Off                ; Off                ;
-; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
-; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
-; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
-; Preserve fewer node names                                                       ; On                 ; On                 ;
-; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
-; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
-; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
-; State Machine Processing                                                        ; Auto               ; Auto               ;
-; Safe State Machine                                                              ; Off                ; Off                ;
-; Extract Verilog State Machines                                                  ; On                 ; On                 ;
-; Extract VHDL State Machines                                                     ; On                 ; On                 ;
-; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
-; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
-; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
-; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
-; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
-; Parallel Synthesis                                                              ; On                 ; On                 ;
-; DSP Block Balancing                                                             ; Auto               ; Auto               ;
-; NOT Gate Push-Back                                                              ; On                 ; On                 ;
-; Power-Up Don't Care                                                             ; On                 ; On                 ;
-; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
-; Remove Duplicate Registers                                                      ; On                 ; On                 ;
-; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
-; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
-; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
-; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
-; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
-; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
-; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
-; Optimization Technique                                                          ; Balanced           ; Balanced           ;
-; Carry Chain Length                                                              ; 70                 ; 70                 ;
-; Auto Carry Chains                                                               ; On                 ; On                 ;
-; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
-; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
-; Auto ROM Replacement                                                            ; On                 ; On                 ;
-; Auto RAM Replacement                                                            ; On                 ; On                 ;
-; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
-; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
-; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
-; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
-; Strict RAM Replacement                                                          ; Off                ; Off                ;
-; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
-; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
-; Auto Resource Sharing                                                           ; Off                ; Off                ;
-; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
-; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
-; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
-; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
-; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
-; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
-; Report Parameter Settings                                                       ; On                 ; On                 ;
-; Report Source Assignments                                                       ; On                 ; On                 ;
-; Report Connectivity Checks                                                      ; On                 ; On                 ;
-; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
-; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
-; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
-; HDL message level                                                               ; Level2             ; Level2             ;
-; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
-; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
-; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
-; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
-; Clock MUX Protection                                                            ; On                 ; On                 ;
-; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
-; Block Design Naming                                                             ; Auto               ; Auto               ;
-; SDC constraint protection                                                       ; Off                ; Off                ;
-; Synthesis Effort                                                                ; Auto               ; Auto               ;
-; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
-; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
-; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
-; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
-; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
-; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
-; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
-+---------------------------------------------------------------------------------+--------------------+--------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ram2:ram_inst"                                                                                                                                                                              ;
-+---------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port          ; Type   ; Severity ; Details                                                                                                                                                                            ;
-+---------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; address_a     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (9 bits) it drives.  The 23 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; data_a[31..9] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; address_b     ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (9 bits) it drives.  Extra input bit(s) "address_b[8..1]" will be connected to GND.                                  ;
-; data_b        ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; wren_b        ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; q_b           ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "q_b[31..1]" have no fanouts                                                           ;
-+---------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ram2:ram_inst"                                                                                                                                                                          ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                                                            ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; address_a ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (9 bits) it drives.  The 23 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; address_b ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (9 bits) it drives.  Extra input bit(s) "address_b[8..1]" will be connected to GND.                                  ;
+; data_b    ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; wren_b    ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; q_b       ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "q_b[31..1]" have no fanouts                                                           ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "vga:vga|videoGen:videoGen_inst|chargenrom:char_gen_rom"                                                                                     ;
+; Port Connectivity Checks: "vga:vga|videoGen:videoGen_inst"                                                                                                             ;
 +------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port ; Type  ; Severity ; Details                                                                                                                                      ;
 +------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
@@ -628,18 +769,53 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; PC[1..0]          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; ALUResult[31..11] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; ALUResult[1..0]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; WriteData         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +-------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 21                          ;
+;     ENA SCLR          ; 10                          ;
+;     SCLR              ; 10                          ;
+;     plain             ; 1                           ;
+; arriav_lcell_comb     ; 37                          ;
+;     arith             ; 20                          ;
+;         1 data inputs ; 20                          ;
+;     normal            ; 17                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 3                           ;
+;         3 data inputs ; 1                           ;
+;         4 data inputs ; 1                           ;
+;         5 data inputs ; 4                           ;
+;         6 data inputs ; 4                           ;
+; boundary_port         ; 41                          ;
+;                       ;                             ;
+; Max LUT depth         ; 3.40                        ;
+; Average LUT depth     ; 2.76                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Mon Jun 10 19:47:34 2024
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ProyectoFinal -c ProyectoFinal --analysis_and_elaboration
+    Info: Processing started: Tue Jun 11 19:57:39 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ProyectoFinal -c ProyectoFinal
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file arm.sv
@@ -702,12 +878,12 @@ Info (12021): Found 1 design units, including 1 entities, in source file videoge
     Info (12023): Found entity 1: videoGen_tb File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/videoGen_tb.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file vgacontroller_tb.sv
     Info (12023): Found entity 1: vgaController_tb File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/vgaController_tb.sv Line: 3
-Warning (10236): Verilog HDL Implicit Net warning at top.sv(82): created implicit net for "vga_address" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 82
-Warning (10236): Verilog HDL Implicit Net warning at top.sv(83): created implicit net for "vga_data" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 83
+Warning (10236): Verilog HDL Implicit Net warning at top.sv(84): created implicit net for "vga_address" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 84
+Warning (10236): Verilog HDL Implicit Net warning at top.sv(85): created implicit net for "vga_data" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 85
 Info (12127): Elaborating entity "top" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at top.sv(32): truncated value with size 32 to match size of target (1) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 32
+Warning (10230): Verilog HDL assignment warning at top.sv(35): truncated value with size 32 to match size of target (1) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 35
 Info (12128): Elaborating entity "segmentOutput" for hierarchy "segmentOutput:seg" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 13
-Info (12128): Elaborating entity "arm" for hierarchy "arm:arm_inst" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 62
+Info (12128): Elaborating entity "arm" for hierarchy "arm:arm_inst" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 65
 Info (12128): Elaborating entity "controller" for hierarchy "arm:arm_inst|controller:c" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/arm.sv Line: 14
 Info (12128): Elaborating entity "decoder" for hierarchy "arm:arm_inst|controller:c|decoder:dec" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/controller.sv Line: 17
 Info (12128): Elaborating entity "condlogic" for hierarchy "arm:arm_inst|controller:c|condlogic:cl" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/controller.sv Line: 21
@@ -726,7 +902,7 @@ Info (12128): Elaborating entity "alu" for hierarchy "arm:arm_inst|datapath:dp|a
 Info (12128): Elaborating entity "subtractor_n_bit" for hierarchy "arm:arm_inst|datapath:dp|alu:alu|subtractor_n_bit:subtractor" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/alu.sv Line: 25
 Info (12128): Elaborating entity "full_subtractor" for hierarchy "arm:arm_inst|datapath:dp|alu:alu|subtractor_n_bit:subtractor|full_subtractor:SUB_LOOP[0].FS1" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/subtractor_n_bit.sv Line: 40
 Info (12128): Elaborating entity "half_subtractor" for hierarchy "arm:arm_inst|datapath:dp|alu:alu|subtractor_n_bit:subtractor|full_subtractor:SUB_LOOP[0].FS1|half_subtractor:HS1" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/subtractor_n_bit.sv Line: 22
-Info (12128): Elaborating entity "rom" for hierarchy "rom:rom_inst" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 70
+Info (12128): Elaborating entity "rom" for hierarchy "rom:rom_inst" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 72
 Info (12128): Elaborating entity "altsyncram" for hierarchy "rom:rom_inst|altsyncram:altsyncram_component" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/rom.v Line: 82
 Info (12130): Elaborated megafunction instantiation "rom:rom_inst|altsyncram:altsyncram_component" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/rom.v Line: 82
 Info (12133): Instantiated megafunction "rom:rom_inst|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/rom.v Line: 82
@@ -737,30 +913,30 @@ Info (12133): Instantiated megafunction "rom:rom_inst|altsyncram:altsyncram_comp
     Info (12134): Parameter "intended_device_family" = "Cyclone V"
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "altsyncram"
-    Info (12134): Parameter "numwords_a" = "128"
+    Info (12134): Parameter "numwords_a" = "183"
     Info (12134): Parameter "operation_mode" = "ROM"
     Info (12134): Parameter "outdata_aclr_a" = "NONE"
     Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
     Info (12134): Parameter "widthad_a" = "9"
     Info (12134): Parameter "width_a" = "32"
     Info (12134): Parameter "width_byteena_a" = "1"
-Warning (287001): Assertion warning: Not using extra address lines in altsyncram megafunction design -- 128 memory words in side A specified but total number of address lines is 9 File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_45g1.tdf Line: 747
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_45g1.tdf
-    Info (12023): Found entity 1: altsyncram_45g1 File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_45g1.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_45g1" for hierarchy "rom:rom_inst|altsyncram:altsyncram_component|altsyncram_45g1:auto_generated" File: c:/misappsinstaladas/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Info (12128): Elaborating entity "vga" for hierarchy "vga:vga" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 84
+Warning (287001): Assertion warning: Not using extra address lines in altsyncram megafunction design -- 183 memory words in side A specified but total number of address lines is 9 File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_55g1.tdf Line: 747
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_55g1.tdf
+    Info (12023): Found entity 1: altsyncram_55g1 File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_55g1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_55g1" for hierarchy "rom:rom_inst|altsyncram:altsyncram_component|altsyncram_55g1:auto_generated" File: c:/misappsinstaladas/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12128): Elaborating entity "vga" for hierarchy "vga:vga" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 86
 Info (12128): Elaborating entity "pll" for hierarchy "vga:vga|pll:vgapll" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/vga.sv Line: 18
 Info (12128): Elaborating entity "vgaController" for hierarchy "vga:vga|vgaController:vgaCont" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/vga.sv Line: 20
 Info (12128): Elaborating entity "videoGen" for hierarchy "vga:vga|videoGen:videoGen_inst" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/vga.sv Line: 31
-Warning (10230): Verilog HDL assignment warning at videoGen.sv(24): truncated value with size 32 to match size of target (3) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/videoGen.sv Line: 24
 Warning (10230): Verilog HDL assignment warning at videoGen.sv(25): truncated value with size 32 to match size of target (3) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/videoGen.sv Line: 25
-Warning (10230): Verilog HDL assignment warning at videoGen.sv(31): truncated value with size 32 to match size of target (9) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/videoGen.sv Line: 31
-Info (12128): Elaborating entity "chargenrom" for hierarchy "vga:vga|videoGen:videoGen_inst|chargenrom:char_gen_rom" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/videoGen.sv Line: 55
+Warning (10230): Verilog HDL assignment warning at videoGen.sv(26): truncated value with size 32 to match size of target (3) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/videoGen.sv Line: 26
+Warning (10230): Verilog HDL assignment warning at videoGen.sv(32): truncated value with size 32 to match size of target (9) File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/videoGen.sv Line: 32
+Info (12128): Elaborating entity "chargenrom" for hierarchy "vga:vga|videoGen:videoGen_inst|chargenrom:char_gen_rom" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/videoGen.sv Line: 57
 Warning (10850): Verilog HDL warning at chargenrom.sv(21): number of words (224) in memory file does not match the number of elements in the address range [0:255] File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/chargenrom.sv Line: 21
 Warning (10030): Net "charrom.waddr_a" at chargenrom.sv(9) has no driver or initial value, using a default initial value '0' File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/chargenrom.sv Line: 9
 Warning (10030): Net "charrom.data_a" at chargenrom.sv(9) has no driver or initial value, using a default initial value '0' File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/chargenrom.sv Line: 9
 Warning (10030): Net "charrom.we_a" at chargenrom.sv(9) has no driver or initial value, using a default initial value '0' File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/chargenrom.sv Line: 9
-Info (12128): Elaborating entity "ram2" for hierarchy "ram2:ram_inst" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 98
+Info (12128): Elaborating entity "ram2" for hierarchy "ram2:ram_inst" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 100
 Info (12128): Elaborating entity "altsyncram" for hierarchy "ram2:ram_inst|altsyncram:altsyncram_component" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/ram2.v Line: 98
 Info (12130): Elaborated megafunction instantiation "ram2:ram_inst|altsyncram:altsyncram_component" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/ram2.v Line: 98
 Info (12133): Instantiated megafunction "ram2:ram_inst|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/ram2.v Line: 98
@@ -796,18 +972,121 @@ Warning (287001): Assertion warning: Not using extra address lines in altsyncram
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_tmo2.tdf
     Info (12023): Found entity 1: altsyncram_tmo2 File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_tmo2.tdf Line: 28
 Info (12128): Elaborating entity "altsyncram_tmo2" for hierarchy "ram2:ram_inst|altsyncram:altsyncram_component|altsyncram_tmo2:auto_generated" File: c:/misappsinstaladas/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "ram2:ram_inst|altsyncram:altsyncram_component|altsyncram_tmo2:auto_generated|q_a[0]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_tmo2.tdf Line: 41
+        Warning (14320): Synthesized away node "ram2:ram_inst|altsyncram:altsyncram_component|altsyncram_tmo2:auto_generated|q_a[1]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_tmo2.tdf Line: 79
+        Warning (14320): Synthesized away node "ram2:ram_inst|altsyncram:altsyncram_component|altsyncram_tmo2:auto_generated|q_a[2]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_tmo2.tdf Line: 117
+        Warning (14320): Synthesized away node "ram2:ram_inst|altsyncram:altsyncram_component|altsyncram_tmo2:auto_generated|q_a[3]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_tmo2.tdf Line: 155
+        Warning (14320): Synthesized away node "ram2:ram_inst|altsyncram:altsyncram_component|altsyncram_tmo2:auto_generated|q_a[4]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_tmo2.tdf Line: 193
+        Warning (14320): Synthesized away node "ram2:ram_inst|altsyncram:altsyncram_component|altsyncram_tmo2:auto_generated|q_a[5]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_tmo2.tdf Line: 231
+        Warning (14320): Synthesized away node "ram2:ram_inst|altsyncram:altsyncram_component|altsyncram_tmo2:auto_generated|q_a[6]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_tmo2.tdf Line: 269
+        Warning (14320): Synthesized away node "ram2:ram_inst|altsyncram:altsyncram_component|altsyncram_tmo2:auto_generated|q_a[7]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_tmo2.tdf Line: 307
+        Warning (14320): Synthesized away node "ram2:ram_inst|altsyncram:altsyncram_component|altsyncram_tmo2:auto_generated|q_a[8]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_tmo2.tdf Line: 345
+        Warning (14320): Synthesized away node "ram2:ram_inst|altsyncram:altsyncram_component|altsyncram_tmo2:auto_generated|q_a[9]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_tmo2.tdf Line: 383
+        Warning (14320): Synthesized away node "ram2:ram_inst|altsyncram:altsyncram_component|altsyncram_tmo2:auto_generated|q_a[10]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_tmo2.tdf Line: 421
+        Warning (14320): Synthesized away node "ram2:ram_inst|altsyncram:altsyncram_component|altsyncram_tmo2:auto_generated|q_a[11]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_tmo2.tdf Line: 459
+        Warning (14320): Synthesized away node "ram2:ram_inst|altsyncram:altsyncram_component|altsyncram_tmo2:auto_generated|q_a[12]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_tmo2.tdf Line: 497
+        Warning (14320): Synthesized away node "ram2:ram_inst|altsyncram:altsyncram_component|altsyncram_tmo2:auto_generated|q_a[13]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_tmo2.tdf Line: 535
+        Warning (14320): Synthesized away node "ram2:ram_inst|altsyncram:altsyncram_component|altsyncram_tmo2:auto_generated|q_a[14]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_tmo2.tdf Line: 573
+        Warning (14320): Synthesized away node "ram2:ram_inst|altsyncram:altsyncram_component|altsyncram_tmo2:auto_generated|q_a[15]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_tmo2.tdf Line: 611
+        Warning (14320): Synthesized away node "ram2:ram_inst|altsyncram:altsyncram_component|altsyncram_tmo2:auto_generated|q_a[16]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_tmo2.tdf Line: 649
+        Warning (14320): Synthesized away node "ram2:ram_inst|altsyncram:altsyncram_component|altsyncram_tmo2:auto_generated|q_a[17]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_tmo2.tdf Line: 687
+        Warning (14320): Synthesized away node "ram2:ram_inst|altsyncram:altsyncram_component|altsyncram_tmo2:auto_generated|q_a[18]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_tmo2.tdf Line: 725
+        Warning (14320): Synthesized away node "ram2:ram_inst|altsyncram:altsyncram_component|altsyncram_tmo2:auto_generated|q_a[19]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_tmo2.tdf Line: 763
+        Warning (14320): Synthesized away node "ram2:ram_inst|altsyncram:altsyncram_component|altsyncram_tmo2:auto_generated|q_a[20]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_tmo2.tdf Line: 801
+        Warning (14320): Synthesized away node "ram2:ram_inst|altsyncram:altsyncram_component|altsyncram_tmo2:auto_generated|q_a[21]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_tmo2.tdf Line: 839
+        Warning (14320): Synthesized away node "ram2:ram_inst|altsyncram:altsyncram_component|altsyncram_tmo2:auto_generated|q_a[22]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_tmo2.tdf Line: 877
+        Warning (14320): Synthesized away node "ram2:ram_inst|altsyncram:altsyncram_component|altsyncram_tmo2:auto_generated|q_a[23]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_tmo2.tdf Line: 915
+        Warning (14320): Synthesized away node "ram2:ram_inst|altsyncram:altsyncram_component|altsyncram_tmo2:auto_generated|q_a[24]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_tmo2.tdf Line: 953
+        Warning (14320): Synthesized away node "ram2:ram_inst|altsyncram:altsyncram_component|altsyncram_tmo2:auto_generated|q_a[25]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_tmo2.tdf Line: 991
+        Warning (14320): Synthesized away node "ram2:ram_inst|altsyncram:altsyncram_component|altsyncram_tmo2:auto_generated|q_a[26]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_tmo2.tdf Line: 1029
+        Warning (14320): Synthesized away node "ram2:ram_inst|altsyncram:altsyncram_component|altsyncram_tmo2:auto_generated|q_a[27]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_tmo2.tdf Line: 1067
+        Warning (14320): Synthesized away node "ram2:ram_inst|altsyncram:altsyncram_component|altsyncram_tmo2:auto_generated|q_a[28]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_tmo2.tdf Line: 1105
+        Warning (14320): Synthesized away node "ram2:ram_inst|altsyncram:altsyncram_component|altsyncram_tmo2:auto_generated|q_a[29]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_tmo2.tdf Line: 1143
+        Warning (14320): Synthesized away node "ram2:ram_inst|altsyncram:altsyncram_component|altsyncram_tmo2:auto_generated|q_a[30]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_tmo2.tdf Line: 1181
+        Warning (14320): Synthesized away node "ram2:ram_inst|altsyncram:altsyncram_component|altsyncram_tmo2:auto_generated|q_a[31]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_tmo2.tdf Line: 1219
+        Warning (14320): Synthesized away node "rom:rom_inst|altsyncram:altsyncram_component|altsyncram_55g1:auto_generated|q_a[0]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_55g1.tdf Line: 35
+        Warning (14320): Synthesized away node "rom:rom_inst|altsyncram:altsyncram_component|altsyncram_55g1:auto_generated|q_a[1]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_55g1.tdf Line: 57
+        Warning (14320): Synthesized away node "rom:rom_inst|altsyncram:altsyncram_component|altsyncram_55g1:auto_generated|q_a[2]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_55g1.tdf Line: 79
+        Warning (14320): Synthesized away node "rom:rom_inst|altsyncram:altsyncram_component|altsyncram_55g1:auto_generated|q_a[3]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_55g1.tdf Line: 101
+        Warning (14320): Synthesized away node "rom:rom_inst|altsyncram:altsyncram_component|altsyncram_55g1:auto_generated|q_a[4]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_55g1.tdf Line: 123
+        Warning (14320): Synthesized away node "rom:rom_inst|altsyncram:altsyncram_component|altsyncram_55g1:auto_generated|q_a[5]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_55g1.tdf Line: 145
+        Warning (14320): Synthesized away node "rom:rom_inst|altsyncram:altsyncram_component|altsyncram_55g1:auto_generated|q_a[6]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_55g1.tdf Line: 167
+        Warning (14320): Synthesized away node "rom:rom_inst|altsyncram:altsyncram_component|altsyncram_55g1:auto_generated|q_a[7]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_55g1.tdf Line: 189
+        Warning (14320): Synthesized away node "rom:rom_inst|altsyncram:altsyncram_component|altsyncram_55g1:auto_generated|q_a[8]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_55g1.tdf Line: 211
+        Warning (14320): Synthesized away node "rom:rom_inst|altsyncram:altsyncram_component|altsyncram_55g1:auto_generated|q_a[9]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_55g1.tdf Line: 233
+        Warning (14320): Synthesized away node "rom:rom_inst|altsyncram:altsyncram_component|altsyncram_55g1:auto_generated|q_a[10]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_55g1.tdf Line: 255
+        Warning (14320): Synthesized away node "rom:rom_inst|altsyncram:altsyncram_component|altsyncram_55g1:auto_generated|q_a[11]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_55g1.tdf Line: 277
+        Warning (14320): Synthesized away node "rom:rom_inst|altsyncram:altsyncram_component|altsyncram_55g1:auto_generated|q_a[12]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_55g1.tdf Line: 299
+        Warning (14320): Synthesized away node "rom:rom_inst|altsyncram:altsyncram_component|altsyncram_55g1:auto_generated|q_a[13]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_55g1.tdf Line: 321
+        Warning (14320): Synthesized away node "rom:rom_inst|altsyncram:altsyncram_component|altsyncram_55g1:auto_generated|q_a[14]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_55g1.tdf Line: 343
+        Warning (14320): Synthesized away node "rom:rom_inst|altsyncram:altsyncram_component|altsyncram_55g1:auto_generated|q_a[15]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_55g1.tdf Line: 365
+        Warning (14320): Synthesized away node "rom:rom_inst|altsyncram:altsyncram_component|altsyncram_55g1:auto_generated|q_a[16]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_55g1.tdf Line: 387
+        Warning (14320): Synthesized away node "rom:rom_inst|altsyncram:altsyncram_component|altsyncram_55g1:auto_generated|q_a[17]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_55g1.tdf Line: 409
+        Warning (14320): Synthesized away node "rom:rom_inst|altsyncram:altsyncram_component|altsyncram_55g1:auto_generated|q_a[18]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_55g1.tdf Line: 431
+        Warning (14320): Synthesized away node "rom:rom_inst|altsyncram:altsyncram_component|altsyncram_55g1:auto_generated|q_a[19]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_55g1.tdf Line: 453
+        Warning (14320): Synthesized away node "rom:rom_inst|altsyncram:altsyncram_component|altsyncram_55g1:auto_generated|q_a[20]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_55g1.tdf Line: 475
+        Warning (14320): Synthesized away node "rom:rom_inst|altsyncram:altsyncram_component|altsyncram_55g1:auto_generated|q_a[21]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_55g1.tdf Line: 497
+        Warning (14320): Synthesized away node "rom:rom_inst|altsyncram:altsyncram_component|altsyncram_55g1:auto_generated|q_a[22]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_55g1.tdf Line: 519
+        Warning (14320): Synthesized away node "rom:rom_inst|altsyncram:altsyncram_component|altsyncram_55g1:auto_generated|q_a[23]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_55g1.tdf Line: 541
+        Warning (14320): Synthesized away node "rom:rom_inst|altsyncram:altsyncram_component|altsyncram_55g1:auto_generated|q_a[24]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_55g1.tdf Line: 563
+        Warning (14320): Synthesized away node "rom:rom_inst|altsyncram:altsyncram_component|altsyncram_55g1:auto_generated|q_a[25]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_55g1.tdf Line: 585
+        Warning (14320): Synthesized away node "rom:rom_inst|altsyncram:altsyncram_component|altsyncram_55g1:auto_generated|q_a[26]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_55g1.tdf Line: 607
+        Warning (14320): Synthesized away node "rom:rom_inst|altsyncram:altsyncram_component|altsyncram_55g1:auto_generated|q_a[27]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_55g1.tdf Line: 629
+        Warning (14320): Synthesized away node "rom:rom_inst|altsyncram:altsyncram_component|altsyncram_55g1:auto_generated|q_a[28]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_55g1.tdf Line: 651
+        Warning (14320): Synthesized away node "rom:rom_inst|altsyncram:altsyncram_component|altsyncram_55g1:auto_generated|q_a[29]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_55g1.tdf Line: 673
+        Warning (14320): Synthesized away node "rom:rom_inst|altsyncram:altsyncram_component|altsyncram_55g1:auto_generated|q_a[30]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_55g1.tdf Line: 695
+        Warning (14320): Synthesized away node "rom:rom_inst|altsyncram:altsyncram_component|altsyncram_55g1:auto_generated|q_a[31]" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/db/altsyncram_55g1.tdf Line: 717
 Warning (12241): 5 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "segs[1]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 3
+    Warning (13410): Pin "r[0]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 7
+    Warning (13410): Pin "r[1]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 7
+    Warning (13410): Pin "r[2]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 7
+    Warning (13410): Pin "r[3]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 7
+    Warning (13410): Pin "r[4]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 7
+    Warning (13410): Pin "r[5]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 7
+    Warning (13410): Pin "r[6]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 7
+    Warning (13410): Pin "r[7]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 7
+    Warning (13410): Pin "g[0]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 7
+    Warning (13410): Pin "g[1]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 7
+    Warning (13410): Pin "g[2]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 7
+    Warning (13410): Pin "g[3]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 7
+    Warning (13410): Pin "g[4]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 7
+    Warning (13410): Pin "g[5]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 7
+    Warning (13410): Pin "g[6]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 7
+    Warning (13410): Pin "g[7]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 7
+    Warning (13410): Pin "b[0]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 7
+    Warning (13410): Pin "b[1]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 7
+    Warning (13410): Pin "b[2]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 7
+    Warning (13410): Pin "b[3]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 7
+    Warning (13410): Pin "b[4]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 7
+    Warning (13410): Pin "b[5]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 7
+    Warning (13410): Pin "b[6]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 7
+    Warning (13410): Pin "b[7]" is stuck at GND File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 7
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 39 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/output_files/ProyectoFinal.map.smsg
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 15 warnings
-    Info: Peak virtual memory: 4812 megabytes
-    Info: Processing ended: Mon Jun 10 19:47:57 2024
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "reset" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 1
+    Warning (15610): No output dependent on input pin "btn" File: C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/top.sv Line: 1
+Info (21057): Implemented 95 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 36 output pins
+    Info (21061): Implemented 54 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 110 warnings
+    Info: Peak virtual memory: 4900 megabytes
+    Info: Processing ended: Tue Jun 11 19:58:02 2024
     Info: Elapsed time: 00:00:23
-    Info: Total CPU time (on all processors): 00:00:31
+    Info: Total CPU time (on all processors): 00:00:40
 
 
-+--------------------------------------------+
-; Analysis & Elaboration Suppressed Messages ;
-+--------------------------------------------+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
 The suppressed messages can be found in C:/Users/alero/Documents/GitHub/nvalverdea_digital_design_lab_2024/ProyectoFinal/output_files/ProyectoFinal.map.smsg.
 
 

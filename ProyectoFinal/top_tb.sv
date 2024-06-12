@@ -14,6 +14,7 @@ module top_tb;
   logic [31:0] ram_data_b;
   logic [31:0] WriteData, DataAdr;
   logic MemWrite;
+  logic [31:0] vga_address; // Signal to monitor VGA address
 
   // Instantiate the top module
   top uut(
@@ -39,7 +40,7 @@ module top_tb;
   end
 
   // Test sequence
- initial begin
+  initial begin
     // Initialize inputs
     reset = 1;
     btn = 1;
@@ -47,23 +48,22 @@ module top_tb;
 
     // Reset the system
     #20 reset = 0; // Assert reset (active high)
-	 
-	 // Set a number to test the display segments
+    
+    // Set a number to test the display segments
     num = 2'b11; // Example number to be displayed
 
     // Simulate button press
     #10 btn = 0; // Press the button
     #20 btn = 1; // Release the button after enough time for the clock to capture the event
 
-
     // Wait for some time and observe the outputs
-    #80;
+    //#10;
 
     // Monitor signals at every clock cycle after reset deassertion
     forever begin
       @(posedge clk) begin
-        $display("Time: %t | PC: %h | Instr: %b | MemWrite: %b | ALUResult: %h | WriteData: %h | ReadData: %h | Segments: %b",
-                 $time, uut.PC, uut.Instr, uut.MemWrite, uut.DataAdr, uut.WriteData, uut.ReadData, segs);
+        $display("Time: %t | PC: %h | Instr: %h | MemWrite: %b |\n ALUResult: %h | WriteData: %d | ReadData: %d | Segments: %b | VGA Address: %h",
+                 $time, uut.PC, uut.Instr, uut.MemWrite, uut.DataAdr, uut.WriteData, uut.ReadData, segs, uut.vga_address);
       end
     end
   end
